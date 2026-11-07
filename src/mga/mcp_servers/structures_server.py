@@ -20,8 +20,11 @@ add(server, t.structure_summary,
     "Composition, size and space-group distribution of a set, plus a few examples. Use this instead of reading files.",
     read_only=True, idempotent=True)
 add(server, t.list_sets, "List existing named sets (name, size, how they were made).", read_only=True, idempotent=True)
+add(server, t.merge_sets,
+    "Union of several sets (e.g. one MatterGen set per chemical system) into one new set, in the given order.",
+    read_only=False, idempotent=True)
 add(server, t.filter_structures,
-    "Filter a set by atom count, elements, space group, minimum interatomic distance etc.; creates a new set and records "
+    "Filter a set by atom count (max_primitive_sites counts the standardized primitive cell, symprec 0.1), elements, space group, minimum interatomic distance etc.; creates a new set and records "
     "why each structure was removed.",
     read_only=False, idempotent=True)
 add(server, t.deduplicate,

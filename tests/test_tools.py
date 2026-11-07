@@ -93,6 +93,13 @@ def test_structure_pipeline(project):
     assert filt["n_kept"] == 2 and filt["removed_by_criterion"] == {"max_sites": 2}  # conventional Si and NaCl (8 sites)
     with pytest.raises(ToolInputError, match="at least one"):
         structures.filter_structures("mix", "mix.none", **A)
+    prim = structures.filter_structures("mix", "mix.prim2", max_primitive_sites=2, **A)
+    assert prim["n_kept"] == 4  # conventional Si and rock-salt NaCl reduce to 2-atom primitive cells
+    assert structures.filter_structures("mix", "mix.prim1", max_primitive_sites=1, **A)["n_kept"] == 1  # bcc
+
+    merged = structures.merge_sets(["mix.prim1", "mix.small"], "mix.merged", **A)  # bcc is in both
+    assert merged["n_merged"] == 2 and merged["n_in"] == {"mix.prim1": 1, "mix.small": 2}
+    assert registry.set_sids("mix.merged")[0] == registry.set_sids("mix.prim1")[0]
 
     dedup = structures.deduplicate("mix", "mix.unique", **A)
     assert dedup["n_unique"] == 3 and dedup["n_removed"] == 1  # primitive and conventional diamond Si match
@@ -105,7 +112,7 @@ def test_structure_pipeline(project):
         structures.assert_no_leakage(registry.set_sids("mix"))
 
     names = {s["name"] for s in structures.list_sets()["sets"]}
-    assert names == {"mix", "mix.small", "mix.unique", "mix.clean"}
+    assert names == {"mix", "mix.small", "mix.prim2", "mix.prim1", "mix.merged", "mix.unique", "mix.clean"}
 
 
 def test_leakage_follows_descendants(project):

@@ -183,9 +183,9 @@ class MatterGenParams(ParamSpec):
         "DESIGN §4.1: chemical-system checkpoint; other properties are post-filters",
     )
     diffusion_guidance_factor: float = P(
-        2.0, "MatterGen README conditional-generation example; TODO verify on datalab", ge=0, le=10
+        2.0, "MatterGen README conditional-generation example (runs on datalab, job 966244)", ge=0, le=10
     )
-    batch_size: int = P(64, "MatterGen default; TODO verify on datalab", ge=1, le=512)
+    batch_size: int = P(64, "MatterGen default; batch 8 checked on L40S (job 966244), 64 not yet", ge=1, le=512)
     record_trajectories: Literal[False] = P(False, "storage: trajectories are not needed")
 
 

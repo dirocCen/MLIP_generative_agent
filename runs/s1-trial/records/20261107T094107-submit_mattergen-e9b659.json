@@ -1,0 +1,130 @@
+{
+  "step_id": "20261107T094107-submit_mattergen-e9b659",
+  "run_id": "s1-trial",
+  "tool": "submit_mattergen",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "DESIGN \u00a74.1 trial generation: 16 per system to check validity rate before setting quotas (plan set by the user; submitted by Claude on request)",
+  "parent_ids": [],
+  "params": {
+    "pretrained_name": {
+      "value": "chemical_system",
+      "source": "default",
+      "ref": "DESIGN \u00a74.1: chemical-system checkpoint; other properties are post-filters",
+      "reason": null
+    },
+    "diffusion_guidance_factor": {
+      "value": 2.0,
+      "source": "default",
+      "ref": "MatterGen README conditional-generation example (runs on datalab, job 966244)",
+      "reason": null
+    },
+    "batch_size": {
+      "value": 64,
+      "source": "default",
+      "ref": "MatterGen default; batch 8 checked on L40S (job 966244), 64 not yet",
+      "reason": null
+    },
+    "record_trajectories": {
+      "value": false,
+      "source": "default",
+      "ref": "storage: trajectories are not needed",
+      "reason": null
+    },
+    "resources.partition": {
+      "value": "GPU-l40s",
+      "source": "default",
+      "ref": "datalab default partition, DESIGN \u00a72.1",
+      "reason": null
+    },
+    "resources.gpus": {
+      "value": 1,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.cpus_per_task": {
+      "value": 8,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.time": {
+      "value": "1-00:00:00",
+      "source": "default",
+      "ref": "datalab limit is 7 days, DESIGN \u00a72.1",
+      "reason": null
+    },
+    "resources.nodelist": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); one node, e.g. 'a-a100-o-1' (A100-SXM4-80GB): the GPU partitions mix 40 and 80 GB cards and 512-atom supercells do not fit 48 GB (configs/models.yaml)",
+      "reason": null
+    },
+    "resources.exclude_nodes": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); comma-separated node names",
+      "reason": null
+    },
+    "resources.mem": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); host memory per job, Slurm --mem (e.g. '200G'); unset = the partition default per CPU. L3 needs >= 2x the FC4 estimate (MLIPFc4Params.max_fc4_gb)",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "chemical_system": "C-N",
+    "n_samples": 16,
+    "tag": "trial"
+  },
+  "outputs": {
+    "kind": "mattergen",
+    "model": null,
+    "param_hash": "f22beaeba029",
+    "n_structures": 1,
+    "n_cached": 0,
+    "n_to_compute": 1,
+    "chemical_system": "C-N",
+    "n_samples": 16,
+    "key": "C-N__n16__trial",
+    "command_preview": [
+      "mattergen-generate",
+      "<run_dir>/mattergen_out",
+      "--pretrained-name=chemical_system",
+      "--batch_size=16",
+      "--num_batches=1",
+      "--properties_to_condition_on={'chemical_system': 'C-N'}",
+      "--diffusion_guidance_factor=2.0",
+      "--record_trajectories=False"
+    ],
+    "submission_extra": {
+      "key": "C-N__n16__trial",
+      "chemical_system": "C-N"
+    },
+    "n_jobs": 1,
+    "flow_uuid": "42857226-6d37-4e25-9c83-e735b83ac12e",
+    "worker": "datalab_mattergen"
+  },
+  "status": "submitted",
+  "error": null,
+  "wall_time_s": 0.14,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:41:07+00:00"
+}

@@ -41,7 +41,7 @@ datalab:
     datalab_upet: /share/yujie.cen/mga/envs/pet    # PET-OAM-XL, smoke ok 11-03 (slow, see models.yaml)
     datalab_nequip: TODO
     datalab_nep: TODO
-    datalab_mattergen: TODO
+    datalab_mattergen: /share/yujie.cen/mga/envs/mattergen  # python 3.10, own env (torch 2.2.1 pin), no phono3py
 
 dirona:
   host: dirona   # ssh alias in ~/.ssh/config

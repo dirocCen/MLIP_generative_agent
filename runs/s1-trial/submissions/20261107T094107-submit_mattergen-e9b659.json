@@ -1,0 +1,30 @@
+{
+  "step_id": "20261107T094107-submit_mattergen-e9b659",
+  "kind": "mattergen",
+  "model": null,
+  "worker": "datalab_mattergen",
+  "param_hash": "f22beaeba029",
+  "all_sids": [
+    "C-N__n16__trial"
+  ],
+  "mode": "live",
+  "key": "C-N__n16__trial",
+  "chemical_system": "C-N",
+  "sids": [
+    "C-N__n16__trial"
+  ],
+  "db_ids": [
+    "42"
+  ],
+  "flow_uuid": "42857226-6d37-4e25-9c83-e735b83ac12e",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "67268758-9440-47be-b417-73fecf0bc793",
+      "name": "mattergen-C-N__n16__trial",
+      "sids": [],
+      "kind": "mattergen",
+      "key": "C-N__n16__trial"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "name": "s1trial.unique",
+  "n": 50,
+  "sids": [
+    "B3C2N3-5106319c48",
+    "B5C2N-2726571334",
+    "B3N2-af8a53391a",
+    "B2N3-eda2e09bc2",
+    "Al1C2N2-e5fffd3576",
+    "Si2N3-63342d7844",
+    "Si2N-46fc735d22",
+    "Al2Si2CN3-882a1e6550",
+    "Al1Si3C2N2-5238bc094c",
+    "Al3SiC3N-e2f3d8a240",
+    "Al1Si2N2-4b485ccff6",
+    "Si3C4N-d99df09b1c",
+    "SiCN2-7e2f0477dc",
+    "Si2CN-15ab574aaf",
+    "SiCN2-fedb00747c",
+    "Si5C2N-7ee4d269bb",
+    "Si3C2N-0e359407ff",
+    "Si2CN-04d48fab2e",
+    "AlBN2-b2c72921b5",
+    "AlB2N-a6c568cf8e",
+    "AlBN2-6c075e66c3",
+    "Al2BN-236cb965b0",
+    "AlB3N4-6362a3d037",
+    "AlBN2-b54964aa16",
+    "AlN-fe318ffa60",
+    "N2-d386f998f4",
+    "CN-aa597e36c5",
+    "CN2-60e6eca7a3",
+    "CN-e9452ac86a",
+    "CN-da383d035f",
+    "CN-a15da0be07",
+    "CN-f9dcb9563a",
+    "BN-af301be308",
+    "B3N2-db6f112f98",
+    "B2N3-ec2ac57933",
+    "B2N-01dc0dde88",
+    "B-dd9aacc10f",
+    "BN-69b07746d8",
+    "B4N3-59fad88ba3",
+    "BN-5b24d14b65",
+    "BPC-89f3250b18",
+    "B2PC-c1d325ab1e",
+    "B3P2-8429cd08f1",
+    "B2P-00e71c77e2",
+    "B2PC-7ed0c43dd1",
+    "B2P-8f142e3c43",
+    "BC-4b0df16edd",
+    "B3P2C-a274383a8a",
+    "B4PC3-777580f110",
+    "B4P3C-7a39752235"
+  ],
+  "operation": "deduplicate",
+  "parent_sets": [
+    "s1trial.small"
+  ],
+  "description": "",
+  "details": {
+    "matcher": {
+      "ltol": 0.2,
+      "stol": 0.3,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true,
+      "attempt_supercell": false
+    },
+    "duplicates_of_kept": {
+      "AlBN2-b54964aa16": [
+        "AlBN2-e889020504"
+      ],
+      "N2-d386f998f4": [
+        "N2-bfd136a403"
+      ],
+      "BN-af301be308": [
+        "BN-0249942b6b",
+        "BN-1bdb37f5e6"
+      ],
+      "BN-5b24d14b65": [
+        "BN-4b9121295a",
+        "BN-9669e016bf"
+      ],
+      "B2PC-7ed0c43dd1": [
+        "B2PC-c1bdfbb483"
+      ]
+    }
+  },
+  "created_by_step": "20261107T100030-deduplicate-a9877c",
+  "created_at": "2026-11-07T10:00:33+00:00"
+}

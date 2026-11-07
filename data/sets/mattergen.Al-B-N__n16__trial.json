@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.Al-B-N__n16__trial",
+  "n": 16,
+  "sids": [
+    "Al6B3N5-773fd89faa",
+    "Al2BN2-8c2445b98e",
+    "AlBN2-b2c72921b5",
+    "Al2BN3-3e9a543e2e",
+    "AlB14N-ac18904250",
+    "AlB2N-a6c568cf8e",
+    "AlBN2-6c075e66c3",
+    "Al2BN-236cb965b0",
+    "AlB3N4-6362a3d037",
+    "Al4B2N5-69e73871a9",
+    "Al3B5N4-b741d9123d",
+    "AlBN2-b54964aa16",
+    "Al5B3N2-fe8a79836a",
+    "AlBN2-e889020504",
+    "AlN-fe318ffa60",
+    "AlBN2-272872ef23"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for Al-B-N",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095313-fetch_results-b0372d",
+  "created_at": "2026-11-07T09:53:14+00:00"
+}

@@ -11,7 +11,7 @@ from conftest import si_primitive, write_json_structures
 from mga import approvals
 
 EXPECTED_TOOLS = {
-    "structures": {"import_structures", "structure_summary", "list_sets", "filter_structures", "deduplicate",
+    "structures": {"import_structures", "structure_summary", "list_sets", "merge_sets", "filter_structures", "deduplicate",
                    "check_novelty", "check_benchmark_leakage"},
     "mlip": {"list_models", "describe_parameters", "submit_mattergen", "submit_mlip_relax", "submit_mlip_phonon_kappa",
              "submit_mlip_convergence", "submit_mlip_fc2_descriptors", "submit_mlip_kappa_lbte",

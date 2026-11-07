@@ -1,0 +1,49 @@
+{
+  "step_id": "20261107T100026-filter_structures-bb7476",
+  "run_id": "s1-trial",
+  "tool": "filter_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "DESIGN \u00a74.1: standardized primitive cell <= 8 atoms; 1.0 A minimum distance as a sanity floor (shortest real bond here N#N 1.10 A); thresholds set by Claude for the shakedown",
+  "parent_ids": [
+    "20261107T100024-merge_sets-e70020"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1trial.all",
+    "new_set_name": "s1trial.small",
+    "criteria": {
+      "max_primitive_sites": 8,
+      "min_distance_angstrom": 1.0
+    }
+  },
+  "outputs": {
+    "new_set_name": "s1trial.small",
+    "n_in": 112,
+    "n_kept": 57,
+    "removed_by_criterion": {
+      "max_primitive_sites": 55
+    },
+    "details_file": "runs/s1-trial/outputs/20261107T100026-filter_structures-bb7476.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 3.931,
+  "host": "cenyj",
+  "created_at": "2026-11-07T10:00:26+00:00"
+}

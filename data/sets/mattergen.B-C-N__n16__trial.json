@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.B-C-N__n16__trial",
+  "n": 16,
+  "sids": [
+    "B4C3N3-2b39cdf230",
+    "B3C7N2-01b99c36c3",
+    "B3C2N3-5106319c48",
+    "B3C5N4-ea6c933995",
+    "B3CN2-53632f817c",
+    "B3CN4-8e2f94aa3b",
+    "B7C8N5-575438e8fe",
+    "B5C2N-2726571334",
+    "B8C5N-e54eb59b36",
+    "B7C3N2-60a1f794bb",
+    "B6C2N5-891cf2a136",
+    "B2C7N9-ffccf2fd14",
+    "B2C4N5-9641d84438",
+    "B3N2-af8a53391a",
+    "B2N3-eda2e09bc2",
+    "BC4N5-47459249b1"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for B-C-N",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095311-fetch_results-4b872f",
+  "created_at": "2026-11-07T09:53:13+00:00"
+}

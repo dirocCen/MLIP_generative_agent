@@ -1,8 +1,8 @@
 """MatterGen generation as a jobflow job (runs ``mattergen-generate`` in a subprocess).
 
-TODO verify on datalab: CLI flag names and the output file name below follow the
-MatterGen README (``generated_crystals.extxyz``); check them against the
-installed version before the first live run.
+CLI flags and the output file name (``generated_crystals.extxyz``) checked on datalab
+11-07 against mattergen @ 9242366 (torch 2.2.1+cu121): install job 966244 ran this exact
+command for 8 B-C-N samples on an L40S in 90 s (scripts/cluster/datalab_install.sh mattergen).
 """
 
 from __future__ import annotations

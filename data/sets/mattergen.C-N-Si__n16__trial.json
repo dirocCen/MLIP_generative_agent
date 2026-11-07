@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.C-N-Si__n16__trial",
+  "n": 16,
+  "sids": [
+    "Si2C2N5-2745a64eb9",
+    "Si5C3N2-819c51c274",
+    "Si3C4N-d99df09b1c",
+    "Si3C2N-f70a4e3e25",
+    "SiCN2-7e2f0477dc",
+    "Si4C3N3-588bf7df55",
+    "Si7C5N2-0752e738be",
+    "Si2CN-15ab574aaf",
+    "Si6CN7-f0f4a4eaf6",
+    "SiCN2-fedb00747c",
+    "Si5C2N-7ee4d269bb",
+    "Si3C2N-0e359407ff",
+    "Si5C2N3-048e8a26ab",
+    "Si2CN-04d48fab2e",
+    "Si3C2N6-731bad863d",
+    "Si3C2N-10196c9c17"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for C-N-Si",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095315-fetch_results-25d0dd",
+  "created_at": "2026-11-07T09:53:16+00:00"
+}

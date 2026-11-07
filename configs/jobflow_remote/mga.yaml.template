@@ -123,6 +123,9 @@ workers:
 
   datalab_mattergen:
     <<: *datalab
-    work_dir: TODO/mga_jobs/mattergen
+    work_dir: /share/yujie.cen/mga/jobs/mattergen
     pre_run: |
-      source TODO/conda.sh && conda activate TODO_mattergen_env
+      source ~/modules/ll/etc/profile.d/conda.sh && conda activate /share/yujie.cen/mga/envs/mattergen
+      export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}
+      export TMPDIR=/share/yujie.cen/mga/tmp && mkdir -p $TMPDIR
+      export HF_HOME=/share/yujie.cen/mga/hf_cache   # checkpoints from Hugging Face, not on /home

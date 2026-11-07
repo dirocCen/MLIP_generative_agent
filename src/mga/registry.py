@@ -43,7 +43,10 @@ def _canonical_payload(structure: Structure) -> dict[str, Any]:
 
 def structure_id(structure: Structure) -> str:
     digest = hashlib.sha1(canonical_json(_canonical_payload(structure)).encode()).hexdigest()
-    return f"{structure.composition.reduced_formula}-{digest[:10]}"
+    formula = structure.composition.reduced_formula
+    if "(" in formula:  # pymatgen groups units, e.g. B4(CN)3; ids allow no brackets. Others keep their old id
+        formula = structure.composition.reduced_composition.formula.replace(" ", "")
+    return f"{formula}-{digest[:10]}"
 
 
 def _entry_path(sid: str):

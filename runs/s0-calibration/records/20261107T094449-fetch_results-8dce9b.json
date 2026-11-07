@@ -1,0 +1,119 @@
+{
+  "step_id": "20261107T094449-fetch_results-8dce9b",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T084023-submit_mlip_fc2_descriptors-00c124"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T084023-submit_mlip_fc2_descriptors-00c124",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 2,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 2,
+      "n_missing": 0,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 2,
+        "min": 23.8,
+        "median": 29.025,
+        "max": 34.25
+      },
+      "n_imaginary": 0,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 2,
+          "min": 270.0531262853095,
+          "median": 842.6736440943471,
+          "max": 1415.2941619033847
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 2,
+          "min": 29.84049275581408,
+          "median": 189.1028612853478,
+          "max": 348.36522981488156
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 2,
+          "min": 4.029659798656788,
+          "median": 18.884603234178016,
+          "max": 33.739546669699244
+        },
+        "theta_acoustic_K": {
+          "n": 2,
+          "min": 450.15104142792967,
+          "median": 907.5813260668626,
+          "max": 1365.0116107057956
+        },
+        "ao_gap_ratio": {
+          "n": 2,
+          "min": -0.07115070518277672,
+          "median": 0.42737444690392945,
+          "max": 0.9258995989906357
+        },
+        "acoustic_branch_spread": {
+          "n": 2,
+          "min": 0.3184993650172945,
+          "median": 0.34143886169232174,
+          "max": 0.364378358367349
+        },
+        "gamma_acoustic_rms": {
+          "n": 2,
+          "min": 0.6974729632535802,
+          "median": 0.7275738215771135,
+          "max": 0.7576746799006469
+        },
+        "wjdos_cv_mean": {
+          "n": 2,
+          "min": 0.15499791338811086,
+          "median": 0.2996992982976442,
+          "max": 0.44440068320717746
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.368,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:44:49+00:00"
+}

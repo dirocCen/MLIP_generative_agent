@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.B-N__n16__trial",
+  "n": 16,
+  "sids": [
+    "B2N3-0a58e57164",
+    "BN-af301be308",
+    "B3N2-db6f112f98",
+    "B2N3-aff5496fde",
+    "B2N3-ec2ac57933",
+    "B2N-01dc0dde88",
+    "B-dd9aacc10f",
+    "BN-72c6a52fe6",
+    "BN-69b07746d8",
+    "BN-0249942b6b",
+    "B4N3-59fad88ba3",
+    "BN-5b24d14b65",
+    "BN-4b9121295a",
+    "B11N5-776e722bd3",
+    "BN-1bdb37f5e6",
+    "BN-9669e016bf"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for B-N",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095317-fetch_results-b1d89c",
+  "created_at": "2026-11-07T09:53:18+00:00"
+}

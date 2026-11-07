@@ -97,6 +97,18 @@ def test_structure_id_is_translation_and_order_invariant(project):
     assert registry.structure_id(s) != registry.structure_id(si_conventional())
 
 
+def test_structure_id_has_no_brackets(project):
+    # MatterGen B-C-N sample (11-07): pymatgen's reduced_formula is "B4(CN)3"
+    from pymatgen.core import Lattice, Structure
+
+    s = Structure(Lattice.cubic(6.0), ["B"] * 4 + ["C"] * 3 + ["N"] * 3, [[i / 10, i / 7 % 1, i / 3 % 1] for i in range(10)])
+    assert s.composition.reduced_formula == "B4(CN)3"
+    sid = registry.structure_id(s)
+    assert sid.startswith("B4C3N3-")
+    registry.register_structure(s, origin={"kind": "file"})
+    assert registry.structure_id(si_primitive()).startswith("Si-")
+
+
 def test_register_is_immutable_and_detects_tampering(project):
     s = si_primitive()
     sid, created = registry.register_structure(s, origin={"kind": "file"})

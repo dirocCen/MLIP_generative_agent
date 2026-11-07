@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.B-C-P__n16__trial",
+  "n": 16,
+  "sids": [
+    "B2PC-e9c796928d",
+    "B4P2C3-bb28a89d28",
+    "BPC-89f3250b18",
+    "B2PC-c1d325ab1e",
+    "B15P2C3-29085aa804",
+    "B3P2-8429cd08f1",
+    "B7P2C3-1db361ac5b",
+    "B5P2C3-94731e8d5c",
+    "B2P-00e71c77e2",
+    "B2PC-7ed0c43dd1",
+    "B2PC-c1bdfbb483",
+    "B2P-8f142e3c43",
+    "BC-4b0df16edd",
+    "B3P2C-a274383a8a",
+    "B4PC3-777580f110",
+    "B4P3C-7a39752235"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for B-C-P",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095316-fetch_results-eca43f",
+  "created_at": "2026-11-07T09:53:17+00:00"
+}

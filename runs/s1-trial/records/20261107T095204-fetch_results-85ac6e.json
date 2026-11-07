@@ -1,0 +1,41 @@
+{
+  "step_id": "20261107T095204-fetch_results-85ac6e",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T094105-submit_mattergen-f941a3"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T094105-submit_mattergen-f941a3",
+    "kind": "mattergen",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "traceback": "Traceback (most recent call last):\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/records.py\", line 122, in recorded_step\n    yield rec\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/analysis.py\", line 381, in fetch_results\n    derived = _derive_mattergen(sub, rec.step_id)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/analysis.py\", line 267, in _derive_mattergen\n    sid, _ = registry.register_structure(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/registry.py\", line 73, in register_structure\n    path = _entry_path(sid)\n           ^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/registry.py\", line 50, in _entry_path\n    return paths.structures / f\"{check_name(sid, 'structure id')}.json\"\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/utils.py\", line 59, in check_name\n    raise ValueError(\nValueError: Invalid structure id 'B4(CN)3-2b39cdf230': use 1-100 chars of letters, digits, '_', '-', '.'\n"
+  },
+  "status": "error",
+  "error": "ValueError: Invalid structure id 'B4(CN)3-2b39cdf230': use 1-100 chars of letters, digits, '_', '-', '.'",
+  "wall_time_s": 1.028,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:52:04+00:00"
+}

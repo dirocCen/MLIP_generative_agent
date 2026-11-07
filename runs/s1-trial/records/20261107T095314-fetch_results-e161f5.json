@@ -1,0 +1,62 @@
+{
+  "step_id": "20261107T095314-fetch_results-e161f5",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T094106-submit_mattergen-dad542"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T094106-submit_mattergen-dad542",
+    "kind": "mattergen",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mattergen",
+    "model": null,
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "generated_set": "mattergen.Al-C-N-Si__n16__trial",
+      "n_returned": 16,
+      "n_unique_ids": 16,
+      "next": "filter_structures / deduplicate / check_benchmark_leakage on this set"
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.929,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:53:14+00:00"
+}

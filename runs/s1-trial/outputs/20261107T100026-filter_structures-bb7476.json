@@ -1,0 +1,169 @@
+{
+  "removed": {
+    "B4C3N3-2b39cdf230": [
+      "max_primitive_sites"
+    ],
+    "B3C7N2-01b99c36c3": [
+      "max_primitive_sites"
+    ],
+    "B3C5N4-ea6c933995": [
+      "max_primitive_sites"
+    ],
+    "B3CN2-53632f817c": [
+      "max_primitive_sites"
+    ],
+    "B3CN4-8e2f94aa3b": [
+      "max_primitive_sites"
+    ],
+    "B7C8N5-575438e8fe": [
+      "max_primitive_sites"
+    ],
+    "B8C5N-e54eb59b36": [
+      "max_primitive_sites"
+    ],
+    "B7C3N2-60a1f794bb": [
+      "max_primitive_sites"
+    ],
+    "B6C2N5-891cf2a136": [
+      "max_primitive_sites"
+    ],
+    "B2C7N9-ffccf2fd14": [
+      "max_primitive_sites"
+    ],
+    "B2C4N5-9641d84438": [
+      "max_primitive_sites"
+    ],
+    "BC4N5-47459249b1": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C2N3-a111dfc137": [
+      "max_primitive_sites"
+    ],
+    "AlSi2CN-fae4787e6a": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C3N2-8a51f83445": [
+      "max_primitive_sites"
+    ],
+    "Al3SiC2N3-f173e4ef64": [
+      "max_primitive_sites"
+    ],
+    "AlSi2C2N-d47203f77a": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C5N2-6cb9480aa2": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C3N2-7501dd1bf0": [
+      "max_primitive_sites"
+    ],
+    "Al4Si5C6N3-dd1f337472": [
+      "max_primitive_sites"
+    ],
+    "Al5Si1C2N4-eb1c067446": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N5-2745a64eb9": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-819c51c274": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N-f70a4e3e25": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N3-588bf7df55": [
+      "max_primitive_sites"
+    ],
+    "Si7C5N2-0752e738be": [
+      "max_primitive_sites"
+    ],
+    "Si6CN7-f0f4a4eaf6": [
+      "max_primitive_sites"
+    ],
+    "Si5C2N3-048e8a26ab": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N6-731bad863d": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N-10196c9c17": [
+      "max_primitive_sites"
+    ],
+    "Al6B3N5-773fd89faa": [
+      "max_primitive_sites"
+    ],
+    "Al2BN2-8c2445b98e": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-3e9a543e2e": [
+      "max_primitive_sites"
+    ],
+    "AlB14N-ac18904250": [
+      "max_primitive_sites"
+    ],
+    "Al4B2N5-69e73871a9": [
+      "max_primitive_sites"
+    ],
+    "Al3B5N4-b741d9123d": [
+      "max_primitive_sites"
+    ],
+    "Al5B3N2-fe8a79836a": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-272872ef23": [
+      "max_primitive_sites"
+    ],
+    "CN5-8bcb7bd6b9": [
+      "max_primitive_sites"
+    ],
+    "C2N5-03a299f0f7": [
+      "max_primitive_sites"
+    ],
+    "CN3-2790e6970b": [
+      "max_primitive_sites"
+    ],
+    "CN4-3fd9ffe3af": [
+      "max_primitive_sites"
+    ],
+    "C7N13-32ae7e3f23": [
+      "max_primitive_sites"
+    ],
+    "CN-3c52383aaf": [
+      "max_primitive_sites"
+    ],
+    "CN-95b040282e": [
+      "max_primitive_sites"
+    ],
+    "CN-43b13d1769": [
+      "max_primitive_sites"
+    ],
+    "B2N3-0a58e57164": [
+      "max_primitive_sites"
+    ],
+    "B2N3-aff5496fde": [
+      "max_primitive_sites"
+    ],
+    "BN-72c6a52fe6": [
+      "max_primitive_sites"
+    ],
+    "B11N5-776e722bd3": [
+      "max_primitive_sites"
+    ],
+    "B2PC-e9c796928d": [
+      "max_primitive_sites"
+    ],
+    "B4P2C3-bb28a89d28": [
+      "max_primitive_sites"
+    ],
+    "B15P2C3-29085aa804": [
+      "max_primitive_sites"
+    ],
+    "B7P2C3-1db361ac5b": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-94731e8d5c": [
+      "max_primitive_sites"
+    ]
+  }
+}

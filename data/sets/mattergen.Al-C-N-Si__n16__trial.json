@@ -1,0 +1,32 @@
+{
+  "name": "mattergen.Al-C-N-Si__n16__trial",
+  "n": 16,
+  "sids": [
+    "Al3Si2C2N3-a111dfc137",
+    "AlSi2CN-fae4787e6a",
+    "Al2Si2C3N2-8a51f83445",
+    "Al3SiC2N3-f173e4ef64",
+    "AlSi2C2N-d47203f77a",
+    "Al1C2N2-e5fffd3576",
+    "Si2N3-63342d7844",
+    "Si2N-46fc735d22",
+    "Al4Si3C5N2-6cb9480aa2",
+    "Al2Si3C3N2-7501dd1bf0",
+    "Al2Si2CN3-882a1e6550",
+    "Al1Si3C2N2-5238bc094c",
+    "Al3SiC3N-e2f3d8a240",
+    "Al1Si2N2-4b485ccff6",
+    "Al4Si5C6N3-dd1f337472",
+    "Al5Si1C2N4-eb1c067446"
+  ],
+  "operation": "mattergen",
+  "parent_sets": [],
+  "description": "MatterGen samples for Al-C-N-Si",
+  "details": {
+    "n_returned": 16,
+    "n_requested": 16,
+    "param_hash": "f22beaeba029"
+  },
+  "created_by_step": "20261107T095314-fetch_results-e161f5",
+  "created_at": "2026-11-07T09:53:15+00:00"
+}

@@ -197,6 +197,43 @@ def _min_distance(struct: Structure, cutoff: float = 4.0) -> float:
     return float(dists.min()) if len(dists) else float("inf")
 
 
+PRIMITIVE_SYMPREC = 0.1  # generated cells are not exactly symmetric; 0.1 A is the usual tolerance for them
+
+
+def _primitive_sites(struct: Structure) -> int:
+    """Atoms in the standardized primitive cell (DESIGN §4.1: <= 8); the input size if spglib fails."""
+    from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+
+    try:
+        return len(SpacegroupAnalyzer(struct, symprec=PRIMITIVE_SYMPREC).get_primitive_standard_structure())
+    except Exception:  # noqa: BLE001 - spglib can fail on odd cells
+        return len(struct)
+
+
+def merge_sets(
+    set_names: list[str],
+    new_set_name: str,
+    decided_by: Literal["agent", "human"],
+    rationale: str,
+) -> dict[str, Any]:
+    """Union of sets in the given order (repeats dropped), e.g. one generated set per chemical system."""
+    require_decision(decided_by, rationale)
+    if len(set_names) < 2:
+        raise ToolInputError("Give at least two sets to merge")
+    with recorded_step(
+        "merge_sets",
+        inputs={"set_names": set_names, "new_set_name": new_set_name},
+        parent_ids=parent_steps(*set_names),
+        decided_by=decided_by,
+        rationale=rationale,
+    ) as rec:
+        sizes = {name: len(registry.set_sids(name)) for name in set_names}
+        sids = [sid for name in set_names for sid in registry.set_sids(name)]
+        doc = registry.create_set(new_set_name, sids, operation="merge", parent_sets=set_names, step_id=rec.step_id)
+        rec.outputs = {"new_set_name": new_set_name, "n_in": sizes, "n_merged": len(doc["sids"])}
+    return {"step_id": rec.step_id, **rec.outputs}
+
+
 def filter_structures(
     set_name: str,
     new_set_name: str,
@@ -204,6 +241,7 @@ def filter_structures(
     rationale: str,
     min_sites: int | None = None,
     max_sites: int | None = None,
+    max_primitive_sites: int | None = None,
     max_elements: int | None = None,
     elements_allowed: list[str] | None = None,
     elements_required: list[str] | None = None,
@@ -241,6 +279,8 @@ def filter_structures(
                 "min_volume_per_atom": min_volume_per_atom is None or entry["volume_per_atom"] >= min_volume_per_atom,
                 "max_volume_per_atom": max_volume_per_atom is None or entry["volume_per_atom"] <= max_volume_per_atom,
             }
+            if max_primitive_sites is not None and all(checks.values()):
+                checks["max_primitive_sites"] = _primitive_sites(Structure.from_dict(entry["structure"])) <= max_primitive_sites
             if min_distance_angstrom is not None and all(checks.values()):
                 checks["min_distance_angstrom"] = _min_distance(Structure.from_dict(entry["structure"])) >= min_distance_angstrom
             failed = [k for k, ok in checks.items() if not ok]
