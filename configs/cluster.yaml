@@ -1,0 +1,58 @@
+# Facts about the clusters used by mga (DESIGN §2; plan §2.1). Checked 2026-10-20.
+datalab:
+  host: cluster.datalab.tuwien.ac.at
+  user: yujie.cen
+  login_node: slurm-head-3   # never compute here (DESIGN §11)
+  default_partition: GPU-l40s
+  max_time: 7-00:00:00
+  # directories that outlive one job (config.worker_storage; overridable by MGA_FC_CACHE / MGA_LADDER_WORK)
+  fc_cache: /share/yujie.cen/mga/fc_cache        # L1 compact fc2/fc3 per <model>/<sid>/<kappa hash>, read by L2
+  ladder_work: /share/yujie.cen/mga/ladder       # L3 ShengBTE/FourPhonon inputs + outputs per fc4/<model>/<sid>/<hash>
+  # GPUs (sinfo 11-04): GPU-l40s (default), GPU-a100, GPU-a100s, GPU-a40, GPU-rtx6000. L40S/A40/RTX6000
+  # have weak FP64 (1/64 of FP32). The A100s have full FP64, but the avm-* VMs were slow in practice
+  # (PET f64 292 s vs 45 s on L40S per 64-atom call); bare-metal a-a100-o-1 ran PET f32 c-BN in 1010 s.
+  # GPU memory (nvidia-smi probes 11-05/06):
+  #   80 GB: a-a100-o-1 (8 GPUs), a-a100-q-5 (4), avm-a100-d-10 (2, PCIe)  -- all GPU-a100
+  #   40 GB: a-a100-os-3, a-a100-qs-7, avm-a100-qs-9                       -- all GPU-a100s
+  #   not probed: a-a100-o-2, a-a100-q-6, a-a100-os-4, a-a100-qs-8
+  # The probed nodes split by partition (GPU-a100 80 GB, GPU-a100s 40 GB), but four are unprobed, so
+  # 300-512-atom supercells pin an 80 GB node with GpuResources.nodelist.
+  # FourPhonon 1.3 CPU build (11-05, job 960800): env /share/yujie.cen/mga/envs/fourphonon (conda-forge
+  # gfortran + openmpi + openblas), static spglib 2.5.0 in /share/yujie.cen/mga/opt/spglib, binary
+  # /share/yujie.cen/mga/opt/FourPhonon/ShengBTE_cpu; scripts/cluster/fourphonon_{install,run,check}.sh;
+  # the workers' pre_run sets MGA_FOURPHONON to fourphonon_run.sh.
+  # Rebuilt 11-06 (job 963769) with the 4ph-sampling off-by-one fix (iter=0 -> 1, see fourphonon_install.sh);
+  # 4ph is only feasible sampled (MLIPFc4Params.num_sample_4ph): exact Example-Si timed out at 12 h.
+  # Sampled Example-Si (32^3) took 1608 s on 4 ranks x 8 threads, kappa within 0.07% of the reference
+  # (job 963770). Placement: FourPhonon runs inside the L3 GPU job (1 rank, cpus_per_task OpenMP threads),
+  # which is fine for S0 (3 structures, cpus_per_task 32 on L40S, 11-07). At pool scale the GPU would sit
+  # idle for hours: split L3 into a GPU force/symfc job and a CPU FourPhonon job (CPU partition) first.
+  # L3 host memory (11-07): symfc's FC4 compression matrix is a CSR with n_a*N^3*81 rows, so its int64
+  # indptr alone is as large as the dense FC4 (R3m-BNC2 256-atom L3 cell: 43.5 GB) and
+  # compact_compression_matrix copies it (>= 2x). The sparse FC4 writer only avoids a further dense
+  # copy; BNC2 L3 needs GpuResources.mem ~300G (CPU/A100 nodes have 1-2 TB; the default was 75000M
+  # for 32 CPUs, where c-BN L3 with the old 3 A FC4 cutoff OOMed at 128 atoms).
+  # Batch jobs: put $ENV/bin on PATH (console scripts dp / mtt); /tmp is not writable, set TMPDIR;
+  # LD_LIBRARY_PATH=$ENV/lib (system libstdc++ too old for conda libs once torch is imported).
+  conda_envs:              # built by scripts/cluster/datalab_install.sh (mga[worker]: phono3py==3.30.0 + symfc)
+    datalab_mace: TODO
+    datalab_dpa: /share/yujie.cen/mga/envs/dpa     # DPA-4.1-Max-OAM, smoke ok 11-04 (needs LD_LIBRARY_PATH, see above)
+    datalab_tace: /share/yujie.cen/mga/envs/tace   # TECE-OAM-RRA-1.0, smoke ok 11-03
+    datalab_upet: /share/yujie.cen/mga/envs/pet    # PET-OAM-XL, smoke ok 11-03 (slow, see models.yaml)
+    datalab_nequip: TODO
+    datalab_nep: TODO
+    datalab_mattergen: TODO
+
+dirona:
+  host: dirona   # ssh alias in ~/.ssh/config
+  user: yjcen
+  partitions: [normal, perform]
+  vasp_module: vasp/6.4.2_intel
+  pre_run: |
+    module purge
+    module load vasp/6.4.2_intel
+    source /opt/intel/oneapi/setvars.sh --force
+  vasp_cmd: mpirun -np $SLURM_NTASKS vasp_std
+  potcar_pbe_54: /home/yjcen/vasp/potpaw/potpaw_PBE
+  pmg_vasp_psp_dir: /home/yjcen/pmg_psp   # contains POT_GGA_PAW_PBE_54 -> potcar_pbe_54 (plan §8 item 3)
+  home_quota_gb: 200

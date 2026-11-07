@@ -1,0 +1,47 @@
+{
+  "step_id": "20261105T165521-import_structures-51281f",
+  "run_id": "s0-calibration",
+  "tool": "import_structures",
+  "actor": "agent",
+  "mode": "dry_run",
+  "decided_by": "agent",
+  "rationale": "DESIGN S0 full-ladder hit baseline: R3m-BNC2 (Wu et al.: 3ph ~2300, 3+4ph 1554-2100 W/mK)",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/reference/s0/R3m-BNC2.extxyz",
+    "sha256": "554a83e4fac6b00c23880086bcc46d9b1302dec658d07154c6aeef6ad92874b3",
+    "set_name": "s0_bnc2",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "s0_bnc2",
+    "n_read": 1,
+    "n_in_set": 1,
+    "n_newly_registered": 1,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "BC2N-321270e629"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.111,
+  "host": "cenyj",
+  "created_at": "2026-11-05T16:55:21+00:00"
+}

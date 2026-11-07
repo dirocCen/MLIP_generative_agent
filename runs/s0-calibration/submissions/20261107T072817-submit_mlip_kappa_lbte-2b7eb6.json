@@ -1,0 +1,164 @@
+{
+  "step_id": "20261107T072817-submit_mlip_kappa_lbte-2b7eb6",
+  "kind": "mlip_lbte",
+  "model": "tece_oam_rra",
+  "worker": "datalab_tace",
+  "param_hash": "134f7ea6f17b",
+  "all_sids": [
+    "BN-4826268f1d",
+    "BAs-204a4c990a"
+  ],
+  "mode": "live",
+  "set_name": "s0_ladder_ref",
+  "rung": "lbte",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "temperatures": [
+      300.0
+    ],
+    "max_collision_matrix_gb": 32.0,
+    "min_mesh_scale": 0.5,
+    "pinv_cutoff": 1e-08
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "BN-4826268f1d": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    },
+    "BAs-204a4c990a": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    }
+  },
+  "sids": [
+    "BN-4826268f1d",
+    "BAs-204a4c990a"
+  ],
+  "db_ids": [
+    "8"
+  ],
+  "flow_uuid": "5d676ba4-ef48-495e-8b29-680e9c769e8f",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "38d41d28-8d5c-4270-afda-cd709ad4c87a",
+      "name": "s0_ladder_ref-lbte-tece_oam_rra-000",
+      "sids": [
+        "BN-4826268f1d",
+        "BAs-204a4c990a"
+      ],
+      "kind": "mlip_lbte"
+    }
+  ]
+}

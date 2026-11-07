@@ -1,0 +1,23 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# Local MongoDB data and dumps
+db/
+# Large / regenerable data; small curated files are whitelisted below
+data/structures/
+data/results/
+data/reference/mp/
+runs/*/previews/
+*.h5
+*.hdf5
+# Local environments and editor/agent state
+.venv/
+venv/
+*.pyc
+.env
+.claude/settings.local.json
+# Private notes (personal background moved out of DESIGN.md, 11-07)
+DESIGN.private.md
+personal_information/
+# Leaderboard predictions from figshare 68221399 (download separately, see data/reference/kappa_srme/SOURCE.txt)
+data/reference/kappa_srme/leaderboard_preds/

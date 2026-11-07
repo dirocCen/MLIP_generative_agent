@@ -1,0 +1,8 @@
+S0 calibration structures that are not in the kappa_SRME reference set (DESIGN §3, S0).
+
+R3m-BNC2.extxyz  rhombohedral BC2N (4 atoms, R3m No. 160), built 2026-11-06 from
+  Matar & Solozhenko, arXiv:2103.06802, Table 2c. Same bonding as the R3m phase of
+  Wu, Fan, Hu, PRB 103, L041203 (2021) (C bonded to 3 C + 1 B or N; "more C-C bonds than
+  Pmm2 / P-4m2"): a 1:1 diamond / c-BN [111] bilayer superlattice. Wu et al.'s own coordinates
+  are in their Supplemental Material, which could not be downloaded; their numbers to compare
+  with (DFT, 300 K): 3ph 2300 (a/b); 3+4ph 2100 (a/b) and 1554 (c) W/mK.

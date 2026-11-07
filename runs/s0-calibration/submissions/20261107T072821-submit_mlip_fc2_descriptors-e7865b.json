@@ -1,0 +1,118 @@
+{
+  "step_id": "20261107T072821-submit_mlip_fc2_descriptors-e7865b",
+  "kind": "mlip_fc2_descriptors",
+  "model": "pet_oam_xl",
+  "worker": "datalab_upet",
+  "param_hash": "9758c15e31dc",
+  "all_sids": [
+    "BC2N-321270e629"
+  ],
+  "mode": "live",
+  "set_name": "s0_bnc2",
+  "rung": "fc2_descriptors",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float32",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float32",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "temperature": 300.0,
+    "weighted_phase_space": true,
+    "gruneisen": true,
+    "volume_strain": 0.01
+  },
+  "kappa_param_hash": "deebc13f29ab",
+  "settings": {
+    "BC2N-321270e629": {
+      "source": "length_rule_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 192,
+      "n_atoms_fc2_supercell": 1176
+    }
+  },
+  "sids": [
+    "BC2N-321270e629"
+  ],
+  "db_ids": [
+    "19"
+  ],
+  "flow_uuid": "a19f3166-0b21-4f83-892b-f31705499f9c",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "c7d4fc36-2548-4b58-9154-9ef00d9bb935",
+      "name": "s0_bnc2-fc2_descriptors-pet_oam_xl-000",
+      "sids": [
+        "BC2N-321270e629"
+      ],
+      "kind": "mlip_fc2_descriptors"
+    }
+  ]
+}

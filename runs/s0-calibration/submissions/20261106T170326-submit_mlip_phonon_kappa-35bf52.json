@@ -1,0 +1,202 @@
+{
+  "step_id": "20261106T170326-submit_mlip_phonon_kappa-35bf52",
+  "kind": "mlip_kappa",
+  "model": "pet_oam_xl",
+  "worker": "datalab_upet",
+  "param_hash": "deebc13f29ab",
+  "all_sids": [
+    "BN-4826268f1d",
+    "AlN-9b63652b41",
+    "SiC-7c509e11aa",
+    "BAs-204a4c990a"
+  ],
+  "mode": "live",
+  "set_name": "s0_ksrme",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float32",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float32",
+    "chunk_size": 4
+  },
+  "settings": {
+    "AlN-9b63652b41": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        15
+      ],
+      "n_atoms_fc3_supercell": 72,
+      "n_atoms_fc2_supercell": 300
+    },
+    "SiC-7c509e11aa": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    },
+    "BAs-204a4c990a": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    }
+  },
+  "sids": [
+    "AlN-9b63652b41",
+    "SiC-7c509e11aa",
+    "BAs-204a4c990a"
+  ],
+  "db_ids": [
+    "3"
+  ],
+  "flow_uuid": "5eabc4b4-2da3-4f05-99fd-797d5bedf5e0",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "fcd453c9-e1ca-4b25-a284-d210f268cd41",
+      "name": "s0_ksrme-kappa-pet_oam_xl-000",
+      "sids": [
+        "AlN-9b63652b41",
+        "SiC-7c509e11aa",
+        "BAs-204a4c990a"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}

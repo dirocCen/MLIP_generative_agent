@@ -1,0 +1,128 @@
+# jobflow-remote project for mga. Copy to ~/.jfremote/mga.yaml, fill the TODOs,
+# then run `jf project check --errors`. Plan §7.
+name: mga
+log_level: info
+
+queue:
+  store:
+    type: MongoStore
+    host: localhost
+    port: 27017
+    database: mga_queue
+    collection_name: jobs
+
+jobstore:
+  docs_store:
+    type: MongoStore
+    host: localhost
+    port: 27017
+    database: mga
+    collection_name: outputs
+  additional_stores:
+    arrays:            # @job(data="arrays") outputs: mode kappa, frequencies
+      type: GridFSStore
+      host: localhost
+      port: 27017
+      database: mga
+      collection_name: outputs_arrays
+    data:              # atomate2 VASP outputs (force constants, etc.)
+      type: GridFSStore
+      host: localhost
+      port: 27017
+      database: mga
+      collection_name: outputs_data
+
+exec_config:
+  vasp_642_intel:
+    modules: []
+    pre_run: |
+      module purge
+      module load vasp/6.4.2_intel
+      source /opt/intel/oneapi/setvars.sh --force
+      source ~/miniconda3/etc/profile.d/conda.sh && conda activate TODO_mga_env
+    export:
+      PMG_VASP_PSP_DIR: /home/yjcen/pmg_psp
+
+# pre_run: no comments inside the block. `jf project check` joins its lines with "; " to test the
+# environment, so a `#` there comments out everything after it. Why the lines are there:
+#   LD_LIBRARY_PATH: pip torch loads libstdc++ by name -> the system one (CXXABI <= 1.3.13); conda libs need 1.3.15
+#   TMPDIR: /tmp is not writable on the datalab GPU nodes
+#   CUDA_HOME / CPATH (dpa): the first job on a new GPU type runs `dp --pt freeze` (AOTInductor), which
+#     compiles against cuda.h; conda keeps it in targets/x86_64-linux/include (job 963850)
+#   MGA_FOURPHONON: L3 runs FourPhonon (scripts/cluster/fourphonon_install.sh) inside the GPU job
+workers:
+  dirona_vasp:
+    type: remote
+    host: dirona   # ssh alias (or the full hostname); fabric reads ~/.ssh/config
+    user: yjcen
+    scheduler_type: slurm
+    work_dir: /home/yjcen/mga_jobs
+    resources:
+      partition: normal
+      ntasks: 16
+      nodes: 1
+      time: "1-00:00:00"
+    max_jobs: 20          # TODO: agree on a ceiling with the dirona admins
+    pre_run: |
+      source ~/miniconda3/etc/profile.d/conda.sh && conda activate TODO_mga_env
+
+  datalab_mace: &datalab
+    type: remote
+    host: cluster.datalab.tuwien.ac.at
+    user: yujie.cen
+    scheduler_type: slurm
+    work_dir: TODO/mga_jobs/mace
+    resources:
+      partition: GPU-l40s
+      gres: "gpu:1"
+      cpus_per_task: 8
+      time: "1-00:00:00"
+    max_jobs: 8
+    pre_run: |
+      source TODO/conda.sh && conda activate TODO_mace_env
+
+  datalab_dpa:
+    <<: *datalab
+    work_dir: /share/yujie.cen/mga/jobs/dpa
+    pre_run: |
+      source ~/modules/ll/etc/profile.d/conda.sh && conda activate /share/yujie.cen/mga/envs/dpa
+      export CUDA_HOME=$CONDA_PREFIX CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:${CPATH:-}
+      export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}
+      export TMPDIR=/share/yujie.cen/mga/tmp && mkdir -p $TMPDIR
+      export MGA_FOURPHONON="bash /share/yujie.cen/mga/src/MLIP_generative_agent/scripts/cluster/fourphonon_run.sh"
+
+  datalab_tace:
+    <<: *datalab
+    work_dir: /share/yujie.cen/mga/jobs/tace
+    pre_run: |
+      source ~/modules/ll/etc/profile.d/conda.sh && conda activate /share/yujie.cen/mga/envs/tace
+      export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}
+      export TMPDIR=/share/yujie.cen/mga/tmp && mkdir -p $TMPDIR
+      export MGA_FOURPHONON="bash /share/yujie.cen/mga/src/MLIP_generative_agent/scripts/cluster/fourphonon_run.sh"
+
+  datalab_upet:
+    <<: *datalab
+    work_dir: /share/yujie.cen/mga/jobs/pet
+    pre_run: |
+      source ~/modules/ll/etc/profile.d/conda.sh && conda activate /share/yujie.cen/mga/envs/pet
+      export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}
+      export TMPDIR=/share/yujie.cen/mga/tmp && mkdir -p $TMPDIR
+      export MGA_FOURPHONON="bash /share/yujie.cen/mga/src/MLIP_generative_agent/scripts/cluster/fourphonon_run.sh"
+
+  datalab_nequip:
+    <<: *datalab
+    work_dir: TODO/mga_jobs/nequip
+    pre_run: |
+      source TODO/conda.sh && conda activate TODO_nequip_env
+
+  datalab_nep:
+    <<: *datalab
+    work_dir: TODO/mga_jobs/nep
+    pre_run: |
+      source TODO/conda.sh && conda activate TODO_nep_env
+
+  datalab_mattergen:
+    <<: *datalab
+    work_dir: TODO/mga_jobs/mattergen
+    pre_run: |
+      source TODO/conda.sh && conda activate TODO_mattergen_env

@@ -1,0 +1,84 @@
+{
+  "step_id": "20261107T083559-kappa_srme-714ef6",
+  "run_id": "s0-calibration",
+  "tool": "kappa_srme",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261106T170327-submit_mlip_phonon_kappa-c9d7ec"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "kappa_step_id": "20261106T170327-submit_mlip_phonon_kappa-c9d7ec"
+  },
+  "outputs": {
+    "model": "dpa41_max_oam",
+    "param_hash": "cc4191d4d8d0",
+    "n_benchmark": 4,
+    "n_scored": 4,
+    "n_missing": 0,
+    "n_not_benchmark": 0,
+    "srme_mean": 0.037021537496199956,
+    "sre_mean": 0.02666499111171579,
+    "srme_mean_missing_as_2": 0.037021537496199956,
+    "censored": {},
+    "non_reference_settings": 0,
+    "worst": [
+      {
+        "name": "BN",
+        "mp_id": "mp-1639",
+        "kappa_ref": 655.9004118265,
+        "kappa_pred": 620.8880326744735,
+        "srme": 0.05611132035165483,
+        "censored": null
+      },
+      {
+        "name": "BAs",
+        "mp_id": "mp-10044",
+        "kappa_ref": 1257.6942439325,
+        "kappa_pred": 1242.0501849238267,
+        "srme": 0.038056430276407566,
+        "censored": null
+      },
+      {
+        "name": "SiC",
+        "mp_id": "mp-8062",
+        "kappa_ref": 367.8729380806,
+        "kappa_pred": 358.6126843898912,
+        "srme": 0.03430054254691165,
+        "censored": null
+      },
+      {
+        "name": "AlN",
+        "mp_id": "mp-661",
+        "kappa_ref": 234.366176764,
+        "kappa_pred": 231.1527691269757,
+        "srme": 0.019617856809825772,
+        "censored": null
+      }
+    ],
+    "note": "Official kappa_SRME averages over all 103 entries with failures scored 2; srme_mean_missing_as_2 is the comparable number when jobs are missing. Rows whose settings are not phonondb_pbe are not on the reference q-mesh.",
+    "details_file": "runs/s0-calibration/outputs/20261107T083559-kappa_srme-714ef6.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.85,
+  "host": "cenyj",
+  "created_at": "2026-11-07T08:35:59+00:00"
+}

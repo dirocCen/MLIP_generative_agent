@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mga"
+version = "0.1.0"
+description = "MLIP x generative model x agent: an auditable workflow for high thermal-conductivity materials"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+# Core deps are what the cluster workers need; keep them light.
+dependencies = ["numpy", "pydantic>=2", "pyyaml", "ase", "pymatgen", "jobflow"]
+
+[project.optional-dependencies]
+# Local machine: MCP servers, job submission, MP queries, VASP flow construction.
+# phono3py + symfc locally too: the dft tools plan the phono3py displacements (counts shown at approval).
+local = ["mcp>=2.3", "jobflow-remote>=1.0", "atomate2>=0.1.5", "mp-api", "phono3py==3.30.0", "symfc>=1.7"]
+# Workers (datalab MLIP and dirona VASP: phono3py_fd runs its phono3py jobs there).
+# The kappa_SRME protocol needs the MS-SMM19 Wigner solver,
+# which phono3py removed in 3.31 (see docs/mcp_servers_plan.md §2.2).
+# jobflow-remote must be importable on the worker too: the worker executes the jobs through it.
+worker = ["phono3py==3.30.0", "phonopy>=3.5,<3.6", "symfc>=1.7", "jobflow-remote>=1.0"]
+# dirona only: the VASP flows are atomate2 makers (custodian comes with atomate2).
+dft = ["atomate2>=0.1.5"]
+test = ["pytest"]
+
+[project.scripts]
+mga = "mga.cli:main"
+mga-structures-server = "mga.mcp_servers.structures_server:main"
+mga-mlip-server = "mga.mcp_servers.mlip_server:main"
+mga-dft-server = "mga.mcp_servers.dft_server:main"
+mga-analysis-server = "mga.mcp_servers.analysis_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["slow: runs a real (EMT) phonon / kappa calculation, a few seconds"]

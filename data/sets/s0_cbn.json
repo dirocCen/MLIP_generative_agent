@@ -1,0 +1,22 @@
+{
+  "name": "s0_cbn",
+  "n": 1,
+  "sids": [
+    "BN-4826268f1d"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s0_ksrme"
+  ],
+  "description": "",
+  "details": {
+    "criteria": {
+      "elements_required": [
+        "B",
+        "N"
+      ]
+    }
+  },
+  "created_by_step": "20261105T165521-filter_structures-a9c407",
+  "created_at": "2026-11-05T16:55:22+00:00"
+}

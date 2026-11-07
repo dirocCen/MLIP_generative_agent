@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "mp_id": "mp-1639",
+      "name": "BN",
+      "kappa_ref": 655.9004118265,
+      "kappa_pred": 620.8880326744735,
+      "srd": -0.05484444866778364,
+      "sre": 0.05484444866778364,
+      "srme": 0.05611132035165483,
+      "censored": null,
+      "sid": "BN-4826268f1d",
+      "settings_source": "phonondb_pbe"
+    },
+    {
+      "mp_id": "mp-661",
+      "name": "AlN",
+      "kappa_ref": 234.366176764,
+      "kappa_pred": 231.1527691269757,
+      "srd": -0.013805700779262667,
+      "sre": 0.013805700779262667,
+      "srme": 0.019617856809825772,
+      "censored": null,
+      "sid": "AlN-9b63652b41",
+      "settings_source": "phonondb_pbe"
+    },
+    {
+      "mp_id": "mp-8062",
+      "name": "SiC",
+      "kappa_ref": 367.8729380806,
+      "kappa_pred": 358.6126843898912,
+      "srd": -0.025493288247655392,
+      "sre": 0.025493288247655392,
+      "srme": 0.03430054254691165,
+      "censored": null,
+      "sid": "SiC-7c509e11aa",
+      "settings_source": "phonondb_pbe"
+    },
+    {
+      "mp_id": "mp-10044",
+      "name": "BAs",
+      "kappa_ref": 1257.6942439325,
+      "kappa_pred": 1242.0501849238267,
+      "srd": -0.01251652675216144,
+      "sre": 0.01251652675216144,
+      "srme": 0.038056430276407566,
+      "censored": null,
+      "sid": "BAs-204a4c990a",
+      "settings_source": "phonondb_pbe"
+    }
+  ],
+  "missing": []
+}

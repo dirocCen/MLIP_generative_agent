@@ -1,0 +1,60 @@
+{
+  "step_id": "20261107T065408-kappa_srme-f12e81",
+  "run_id": "s0-calibration",
+  "tool": "kappa_srme",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261106T170326-submit_mlip_phonon_kappa-35bf52"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "kappa_step_id": "20261106T170326-submit_mlip_phonon_kappa-35bf52"
+  },
+  "outputs": {
+    "model": "pet_oam_xl",
+    "param_hash": "deebc13f29ab",
+    "n_benchmark": 4,
+    "n_scored": 1,
+    "n_missing": 3,
+    "n_not_benchmark": 0,
+    "srme_mean": 0.03682838161420511,
+    "sre_mean": 0.029456879660058964,
+    "srme_mean_missing_as_2": 1.5092070954035512,
+    "censored": {},
+    "non_reference_settings": 0,
+    "worst": [
+      {
+        "name": "BN",
+        "mp_id": "mp-1639",
+        "kappa_ref": 655.9004118265,
+        "kappa_pred": 636.860066900923,
+        "srme": 0.03682838161420511,
+        "censored": null
+      }
+    ],
+    "note": "Official kappa_SRME averages over all 103 entries with failures scored 2; srme_mean_missing_as_2 is the comparable number when jobs are missing. Rows whose settings are not phonondb_pbe are not on the reference q-mesh.",
+    "details_file": "runs/s0-calibration/outputs/20261107T065408-kappa_srme-f12e81.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.793,
+  "host": "cenyj",
+  "created_at": "2026-11-07T06:54:09+00:00"
+}

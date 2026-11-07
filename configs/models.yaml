@@ -1,0 +1,125 @@
+# MLIP registry (DESIGN §1.2, §1.4, §8 items 1 and 4; committee changed 11-03). Read by mga.models; every field is validated.
+#
+# dtype    : what dtype="model_default" in the MLIP params resolves to (float64 unless set;
+#            deepmd / tace / nequip_compiled / nep take the dtype of the model file)
+# energy_reference
+#   mp_pbe : trained on MP-compatible PBE/PBE+U energies -> E_hull vs MP with MP2020 corrections
+#   other  : different reference (e.g. +D3) -> no E_hull against MP
+# committee: member of the disagreement committee (all members must share the PBE reference)
+# todo     : facts still to verify on datalab; tools report them back to the agent
+#
+# Committee (11-03): three of DPA-4.1-Max-OAM / TECE-OAM-RRA-1.0 / PET-OAM-XL, decided by the
+# datalab install test; NequIP-OAM-L fills in for one that will not install. MACE-MPA-0 is the old
+# reference and the side-experiment fine-tuning target. Not used: DPA-4.1-Max-OAM-PFT (trained on
+# MDR phonon frequencies, possible test overlap); DPA-3.1-MPtrj (0.6503, superseded by DPA-4).
+models:
+  dpa41_max_oam:
+    loader: deepmd
+    checkpoint: /share/yujie.cen/mga/checkpoints/dpa-4.1-max-oam-inference.pt  # figshare 70537500 (leaderboard yml)
+    head: null        # set if multi-head (record the head used)
+    energy_reference: mp_pbe
+    committee: true
+    worker: datalab_dpa
+    training_data: OAM (OMat24 + sAlex + MPtrj)
+    ksrme_reported: 0.0903
+    role: committee member (install test passed 11-04, job 954885; deepmd-kit 3.2.1.dev45 @ 1ded5d24)
+    # the loader freezes once per GPU type to <ckpt>-frozen-<GPU>.pt2 (AOTInductor + Triton tuning,
+    # ~1 h on L40S, job 954846); a new GPU type (A100) freezes again
+    # A100 freeze failed in the jobflow job (963850): AOTInductor needs cuda.h -> CUDA_HOME/CPATH in pre_run
+    # smoke on L40S: 64 atoms 0.30 s / 8.5 GB, 216 atoms 0.96 s / 26.9 GB, 512 atoms OOM
+    # single head (head: null loads it). Not the -PFT variant (0.0806, trained on MDR phonon frequencies)
+    todo: []
+
+  tece_oam_rra:
+    loader: tace
+    checkpoint: /share/yujie.cen/mga/checkpoints/TECE-OAM-RRA-1.0.pt  # HF xvzemin/tace-foundations (CC-BY)
+    energy_reference: mp_pbe
+    committee: true
+    worker: datalab_tace
+    training_data: OAM (OMat24 + sAlex + MPtrj)
+    ksrme_reported: 0.0927
+    role: committee member (install test passed 11-03, job 954294)
+    # smoke on L40S (float64): 64 atoms 0.47 s / 9.2 GB, 216 atoms 1.73 s / 28.8 GB, 512 atoms OOM
+    # -> fc3 supercells above ~300 atoms need an A100-80GB or a smaller supercell
+    # S0 kappa_SRME subset on A100-80GB a-a100-q-5 (job 963849, 512-atom FC2 fits): BN 666.4 / AlN 233.2 /
+    #   SiC 369.6 / BAs 1225.2 vs 655.9 / 234.4 / 367.9 / 1257.7; SRME mean 0.028; 183-196 s per cubic
+    #   compound, AlN 847 s (1254 FC3 calcs): ~5x faster than PET f32
+    todo: []
+
+  pet_oam_xl:
+    loader: upet
+    dtype: float32    # decided 11-04 (leaderboard ran float64): 10x faster, see timing below
+    checkpoint: /share/yujie.cen/mga/checkpoints/pet-oam-xl-v1.0.0.ckpt  # HF lab-cosmo/upet; the loader runs mtt export once
+    energy_reference: mp_pbe
+    committee: true
+    worker: datalab_upet
+    training_data: OAM (OMat24 + sAlex + MPtrj)
+    ksrme_reported: 0.1192
+    role: committee member (install test passed 11-03 job 954295, but see the speed note)
+    # timing 11-04 (64-atom c-BN, one force call; scripts/cluster/pet_timing.py, jobs 954837/8):
+    #   symmetrizer = 42 quadrature rotations (l_max 3)
+    #   L40S: base f64 2.0 s, f32 1.4 s; symmetrized f64 45 s, f32 4.7 s
+    #   A100 (avm-a100-d-10): base f64 7.2 s, symmetrized f64 292 s -> slower than L40S, not FP64-bound
+    #   f32 vs f64 symmetrized forces: max 1.1e-5 eV/A; without symmetrizer rotation error 0.013 eV/A
+    # S0 c-BN kappa (11-06/07, bare-metal A100-80GB a-a100-o-1, phononDB settings, 222 FC3 + 2 FC2 calcs):
+    #   f32 636.86 W/mK in 1011 s (job 963761); f64 636.97 W/mK in 1238 s (job 965975, rotation batch 2;
+    #   batch 4 OOMs at 79 GB, job 963847). f32 error +0.02 %, phononDB 655.9 -> -2.9 %. On bare-metal
+    #   A100 f64 costs only +22 %, unlike the 10x on L40S: the f32 default is an L40S decision.
+    # Rotation batch (11-07): floor(2048 f32 | 1024 f64 rotated atoms x GPU_GB/80 / n_atoms) per
+    #   structure (calculators._pet), from the 512-atom fits above; 1 for the 1176-atom R3m-BNC2 FC2 cell of length_rule v1
+    #   (v2, 11-07: any-shape minimum FC2 cell, 540 atoms; FC3 keeps the point group, 192 atoms).
+    # S0 kappa_SRME subset, f32 (job 963848): BN 636.9 / AlN 230.6 / SiC 377.4 / BAs 1228.4 vs
+    #   655.9 / 234.4 / 367.9 / 1257.7; SRME mean 0.040; AlN (1254 FC3 calcs) 5350 s
+    # vs the leaderboard PET-OAM-XL 1.0.0 predictions (figshare 68221399, md5 961875be..., downloaded
+    #   11-07 via the browser to data/reference/kappa_srme/leaderboard_preds/), kappa_tot_rta xyz mean:
+    #   BN 636.6 (ours +0.04 %), AlN 233.0 (-1.0 %), SiC 378.5 (-0.3 %), BAs 1258.1 (-2.4 %)
+    todo:
+      - "BAs is 2.4 % below the leaderboard PET (see below); check whether f64 or the relaxation explains it"
+      - not rotationally equivariant by construction, so check force-constant symmetry (the kappa protocol symmetrizes)
+
+  nequip_oam_l:
+    loader: nequip_compiled
+    checkpoint: TODO  # compiled model (.nequip.pt2 / .nequip.pth) on datalab
+    energy_reference: mp_pbe
+    committee: false
+    worker: datalab_nequip
+    training_data: OMat24 pre-training, fine-tuned on sAlex + MPtrj
+    ksrme_reported: 0.1657
+    role: committee fallback if one of the three candidates will not install
+    todo:
+      - compiled model path and compile target (AOTInductor vs TorchScript)
+
+  mace_mpa_0:
+    loader: mace_mp
+    checkpoint: medium-mpa-0
+    energy_reference: mp_pbe
+    committee: false
+    worker: datalab_mace
+    training_data: MPtrj + sAlex
+    ksrme_reported: 0.4123
+    role: old reference (10-20 committee) and side-experiment fine-tuning target (DESIGN §3.4)
+    todo: []
+
+  nep89:
+    loader: calorine_nep
+    checkpoint: TODO  # nep89 nep.txt on datalab
+    energy_reference: other
+    committee: false
+    worker: datalab_nep
+    training_data: mixed datasets + D3
+    ksrme_reported: null
+    role: speed baseline, not in the committee (different reference, DESIGN §1.4)
+    todo:
+      - whether D3 is built into the potential or must be added
+      - CPU (CPUNEP) vs GPU (GPUMD) evaluation for phono3py displacements
+
+  emt_test:
+    loader: emt
+    checkpoint: null
+    energy_reference: other
+    committee: false
+    worker: local
+    training_data: none (ASE EMT, for local smoke tests only)
+    ksrme_reported: null
+    role: tests
+    todo: []

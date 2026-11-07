@@ -1,0 +1,64 @@
+{
+  "mcpServers": {
+    "mga-structures": {
+      "command": "/home/yjcen/.venvs/mga/bin/python",
+      "args": [
+        "-m",
+        "mga.mcp_servers.structures_server"
+      ],
+      "env": {
+        "PYTHONPATH": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src",
+        "MGA_PROJECT_ROOT": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent",
+        "MGA_ACTOR": "agent",
+        "MGA_MODE": "${MGA_MODE:-dry_run}",
+        "MGA_RUN_ID": "${MGA_RUN_ID:-}",
+        "MP_API_KEY": "${MP_API_KEY:-}"
+      }
+    },
+    "mga-mlip": {
+      "command": "/home/yjcen/.venvs/mga/bin/python",
+      "args": [
+        "-m",
+        "mga.mcp_servers.mlip_server"
+      ],
+      "env": {
+        "PYTHONPATH": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src",
+        "MGA_PROJECT_ROOT": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent",
+        "MGA_ACTOR": "agent",
+        "MGA_MODE": "${MGA_MODE:-dry_run}",
+        "MGA_RUN_ID": "${MGA_RUN_ID:-}",
+        "MP_API_KEY": "${MP_API_KEY:-}"
+      }
+    },
+    "mga-dft": {
+      "command": "/home/yjcen/.venvs/mga/bin/python",
+      "args": [
+        "-m",
+        "mga.mcp_servers.dft_server"
+      ],
+      "env": {
+        "PYTHONPATH": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src",
+        "MGA_PROJECT_ROOT": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent",
+        "MGA_ACTOR": "agent",
+        "MGA_MODE": "${MGA_MODE:-dry_run}",
+        "MGA_RUN_ID": "${MGA_RUN_ID:-}",
+        "MP_API_KEY": "${MP_API_KEY:-}"
+      }
+    },
+    "mga-analysis": {
+      "command": "/home/yjcen/.venvs/mga/bin/python",
+      "args": [
+        "-m",
+        "mga.mcp_servers.analysis_server"
+      ],
+      "env": {
+        "PYTHONPATH": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src",
+        "MGA_PROJECT_ROOT": "/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent",
+        "MGA_ACTOR": "agent",
+        "MGA_MODE": "${MGA_MODE:-dry_run}",
+        "MGA_RUN_ID": "${MGA_RUN_ID:-}",
+        "MP_API_KEY": "${MP_API_KEY:-}"
+      }
+    }
+  }
+}

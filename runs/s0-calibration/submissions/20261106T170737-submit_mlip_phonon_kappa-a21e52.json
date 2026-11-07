@@ -1,0 +1,107 @@
+{
+  "step_id": "20261106T170737-submit_mlip_phonon_kappa-a21e52",
+  "kind": "mlip_kappa",
+  "model": "pet_oam_xl",
+  "worker": "datalab_upet",
+  "param_hash": "cc4191d4d8d0",
+  "all_sids": [
+    "BN-4826268f1d"
+  ],
+  "mode": "live",
+  "set_name": "s0_cbn",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "settings": {
+    "BN-4826268f1d": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    }
+  },
+  "sids": [
+    "BN-4826268f1d"
+  ],
+  "db_ids": [
+    "6"
+  ],
+  "flow_uuid": "3b35ce69-2b0c-4530-84b8-0c3480830ccb",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "7cfa074b-55bc-45f6-8d47-afe8fe73d58d",
+      "name": "s0_cbn-kappa-pet_oam_xl-000",
+      "sids": [
+        "BN-4826268f1d"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}

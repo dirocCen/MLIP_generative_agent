@@ -1,0 +1,20 @@
+{
+  "name": "s0_ksrme",
+  "n": 4,
+  "sids": [
+    "BN-4826268f1d",
+    "AlN-9b63652b41",
+    "SiC-7c509e11aa",
+    "BAs-204a4c990a"
+  ],
+  "operation": "import",
+  "parent_sets": [],
+  "description": "c-BN mp-1639, w-AlN mp-661, 3C-SiC mp-8062, zb-BAs mp-10044 (phononDB settings)",
+  "details": {
+    "file": "data/reference/s0/ksrme_s0.extxyz",
+    "sha256": "46961344380f80fc92bb81ac7a5106c8dca96f9de3796364e59d1beca6702edc",
+    "origin_kind": "kappa_srme_reference"
+  },
+  "created_by_step": "20261105T165520-import_structures-79005a",
+  "created_at": "2026-11-05T16:55:21+00:00"
+}

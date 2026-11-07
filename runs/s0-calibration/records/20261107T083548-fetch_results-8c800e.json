@@ -1,0 +1,96 @@
+{
+  "step_id": "20261107T083548-fetch_results-8c800e",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T072820-submit_mlip_fc4_fourphonon-497ba5"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T072820-submit_mlip_fc4_fourphonon-497ba5",
+    "kind": "mlip_fc4",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc4",
+    "model": "pet_oam_xl",
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 2,
+        "states": {
+          "FAILED": 1,
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 1,
+        "failed_examples": [
+          {
+            "name": "s0_ladder_ref-fc4-pet_oam_xl-000",
+            "state": "FAILED",
+            "error": "The output file jfremote_out.json was downloaded, but it does not contain the response. The job was likely killed before completing",
+            "run_dir": "/share/yujie.cen/mga/jobs/pet/35/99/6d/35996d2b-8338-4e80-8c4c-83573367e726_1"
+          }
+        ]
+      }
+    },
+    "derived": {
+      "n_results": 1,
+      "n_missing": 1,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 1,
+        "min": 140.28,
+        "median": 140.28,
+        "max": 140.28
+      },
+      "kappa_fit_phono3py_W_mK": {
+        "n": 1,
+        "min": 1279.1494413435084,
+        "median": 1279.1494413435084,
+        "max": 1279.1494413435084
+      },
+      "four_phonon_ratio": {
+        "n": 1,
+        "min": 0.49647668121043437,
+        "median": 0.49647668121043437,
+        "max": 0.49647668121043437
+      },
+      "n_fourphonon_run": 1,
+      "roundtrip_max_rel_dev": 8.683314623949076e-12,
+      "held_out_force_rmse_fc234": {
+        "n": 1,
+        "min": 0.0006229769373362932,
+        "median": 0.0006229769373362932,
+        "max": 0.0006229769373362932
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.205,
+  "host": "cenyj",
+  "created_at": "2026-11-07T08:35:48+00:00"
+}

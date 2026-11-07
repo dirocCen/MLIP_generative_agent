@@ -1,0 +1,184 @@
+{
+  "step_id": "20261107T084004-submit_mlip_fc4_fourphonon-42652a",
+  "kind": "mlip_fc4",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "b26128cabdeb",
+  "all_sids": [
+    "BN-4826268f1d",
+    "BAs-204a4c990a"
+  ],
+  "mode": "live",
+  "set_name": "s0_ladder_ref",
+  "rung": "fc4",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "supercell_min_width": 8.0,
+    "displacement": 0.03,
+    "fc3_cutoff": 5.0,
+    "fc4_shells": 2,
+    "fc4_shell_gap": 0.1,
+    "snapshot_factor": 3.0,
+    "min_snapshots": 20,
+    "random_seed": 0,
+    "max_fc4_gb": 64.0,
+    "temperature": 300.0,
+    "q_mesh": null,
+    "scalebroad": 1.0,
+    "num_sample_4ph": 100000,
+    "is_isotope": true,
+    "iterative": false,
+    "fourphonon_cmd": null,
+    "fourphonon_timeout_s": 86400,
+    "chunk_size": 1
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "BN-4826268f1d": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    },
+    "BAs-204a4c990a": {
+      "source": "phonondb_pbe",
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 512
+    }
+  },
+  "sids": [
+    "BN-4826268f1d",
+    "BAs-204a4c990a"
+  ],
+  "db_ids": [
+    "33",
+    "34"
+  ],
+  "flow_uuid": "e47b7e0b-1577-4b20-8336-c5f60f16880a",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "uuid": "5ae8e31c-894e-4c7b-80c1-67f846f2f370",
+      "name": "s0_ladder_ref-fc4-dpa41_max_oam-000",
+      "sids": [
+        "BN-4826268f1d"
+      ],
+      "kind": "mlip_fc4"
+    },
+    {
+      "uuid": "95def303-b5f0-44fd-b62f-f63ef5a8bafb",
+      "name": "s0_ladder_ref-fc4-dpa41_max_oam-001",
+      "sids": [
+        "BAs-204a4c990a"
+      ],
+      "kind": "mlip_fc4"
+    }
+  ]
+}

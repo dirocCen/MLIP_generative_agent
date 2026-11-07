@@ -1,0 +1,79 @@
+{
+  "step_id": "20261107T083548-fetch_results-0cf467",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T072821-submit_mlip_fc4_fourphonon-9c9059"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T072821-submit_mlip_fc4_fourphonon-9c9059",
+    "kind": "mlip_fc4",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc4",
+    "model": "pet_oam_xl",
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 1,
+      "n_missing": 0,
+      "n_failed": 1,
+      "failed_examples": [
+        {
+          "sid": "BC2N-321270e629",
+          "stage": "fit",
+          "error": "MemoryError: dense FC4 would need 43.5 GB (> max_fc4_gb=16.0); 4 atoms/primitive cell, 256-atom supercell"
+        }
+      ],
+      "wall_time_s": {
+        "n": 1,
+        "min": 41.12,
+        "median": 41.12,
+        "max": 41.12
+      },
+      "kappa_fit_phono3py_W_mK": null,
+      "four_phonon_ratio": null,
+      "n_fourphonon_run": 0,
+      "roundtrip_max_rel_dev": 0.0,
+      "held_out_force_rmse_fc234": null
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.209,
+  "host": "cenyj",
+  "created_at": "2026-11-07T08:35:48+00:00"
+}

@@ -1,0 +1,83 @@
+{
+  "step_id": "20261107T073514-fetch_results-1ddd1d",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T072817-submit_mlip_kappa_lbte-2b7eb6"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T072817-submit_mlip_kappa_lbte-2b7eb6",
+    "kind": "mlip_lbte",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_lbte",
+    "model": "tece_oam_rra",
+    "ingest": {
+      "n_saved": 2,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 2,
+      "n_missing": 0,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 2,
+        "min": 50.17,
+        "median": 50.635000000000005,
+        "max": 51.1
+      },
+      "n_from_fc_cache": 2,
+      "n_mesh_reduced": 0,
+      "skipped": {},
+      "kappa_lbte_300K_W_mK": {
+        "n": 2,
+        "min": 748.1918348145309,
+        "median": 1536.3592353031058,
+        "max": 2324.5266357916807
+      },
+      "lbte_over_rta": {
+        "n": 2,
+        "min": 1.122233865297173,
+        "median": 1.51007725772568,
+        "max": 1.897920650154187
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.319,
+  "host": "cenyj",
+  "created_at": "2026-11-07T07:35:14+00:00"
+}

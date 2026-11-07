@@ -1,0 +1,23 @@
+{
+  "name": "s0_ladder_ref",
+  "n": 2,
+  "sids": [
+    "BN-4826268f1d",
+    "BAs-204a4c990a"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s0_ksrme"
+  ],
+  "description": "",
+  "details": {
+    "criteria": {
+      "elements_excluded": [
+        "Al",
+        "Si"
+      ]
+    }
+  },
+  "created_by_step": "20261107T072504-filter_structures-15a7d5",
+  "created_at": "2026-11-07T07:25:04+00:00"
+}

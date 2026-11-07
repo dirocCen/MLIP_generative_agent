@@ -1,0 +1,8 @@
+source: https://github.com/MPA2suite/k_SRME/tree/d4cf9c56c2618335ec664a0bc4033c4ce801b47a/data
+retrieved_on: 2026-10-20
+license: GPL-3.0 (as distributed by k_SRME)
+note: phononDB-PBE 103 compounds (Togo), no-NAC reference kappas used by kappa_SRME. TEST SET ONLY - never use for training/fine-tuning/hyperparameter selection.
+
+leaderboard_preds/ (not in git): PET-OAM-XL 1.0.0 kappa predictions from the Matbench Discovery leaderboard,
+  figshare file 68221399 (md5 961875be...), downloaded 2026-11-07; used only to compare our PET kappas
+  with the leaderboard run (configs/models.yaml, pet_oam_xl).

@@ -1,0 +1,6 @@
+4
+Lattice="1.2700000000000002 0.7332348418708248 4.1866666666666665 -1.2699999999999998 0.7332348418708248 4.1866666666666665 -4.910886512258609e-16 -1.4664696837416495 4.1866666666666665" Properties=species:S:1:pos:R:3:spacegroup_kinds:I:1 spacegroup="R 3 m" unit_cell=primitive name=R3m-BNC2 source="Matar & Solozhenko, arXiv:2103.06802 Table 2c (rh-BC2N; a_hex 2.54, c_hex 12.56 A, 3a z = C1 0.184, C2 0.811, B 0.314, N 0.690)" matches="Wu, Fan, Hu PRB 103 L041203 (2021) R3m-BNC2 bonding: C3B / C3N carbon, B(N3C), N(B3C); their SM coordinates not accessible (APS 403)" note="DFT geometry of another group; relaxed with the MLIP before use" pbc="T T T"
+C        0.00000000       0.00000000       2.31104000        0
+C        0.00000000       0.00000000      10.18616000        1
+B        0.00000000       0.00000000       3.94384000        2
+N        0.00000000       0.00000000       8.66640000        3

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(mga approvals approve:*)",
+      "Bash(mga approvals reject:*)",
+      "Bash(*mga.cli approvals approve*)",
+      "Bash(*mga.cli approvals reject*)",
+      "Bash(*approvals approve*)",
+      "Edit(approvals/**)",
+      "Write(approvals/**)"
+    ]
+  }
+}

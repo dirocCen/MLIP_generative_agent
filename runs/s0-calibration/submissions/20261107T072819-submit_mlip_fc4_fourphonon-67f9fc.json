@@ -1,0 +1,131 @@
+{
+  "step_id": "20261107T072819-submit_mlip_fc4_fourphonon-67f9fc",
+  "kind": "mlip_fc4",
+  "model": "tece_oam_rra",
+  "worker": "datalab_tace",
+  "param_hash": "0aff3a0e0754",
+  "all_sids": [
+    "BC2N-321270e629"
+  ],
+  "mode": "live",
+  "set_name": "s0_bnc2",
+  "rung": "fc4",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "supercell_min_width": 8.0,
+    "displacement": 0.03,
+    "fc3_cutoff": 5.0,
+    "fc4_cutoff": 3.0,
+    "snapshot_factor": 3.0,
+    "min_snapshots": 20,
+    "random_seed": 0,
+    "max_fc4_gb": 16.0,
+    "temperature": 300.0,
+    "q_mesh": null,
+    "scalebroad": 1.0,
+    "num_sample_4ph": 100000,
+    "is_isotope": true,
+    "iterative": false,
+    "fourphonon_cmd": null,
+    "fourphonon_timeout_s": 86400,
+    "chunk_size": 1
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "BC2N-321270e629": {
+      "source": "length_rule_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 192,
+      "n_atoms_fc2_supercell": 1176
+    }
+  },
+  "sids": [
+    "BC2N-321270e629"
+  ],
+  "db_ids": [
+    "13"
+  ],
+  "flow_uuid": "4aecd048-8502-4cc9-b025-9d44561e879f",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "e4665656-d455-46ce-a551-82b199372b3d",
+      "name": "s0_bnc2-fc4-tece_oam_rra-000",
+      "sids": [
+        "BC2N-321270e629"
+      ],
+      "kind": "mlip_fc4"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "s0_bnc2",
+  "n": 1,
+  "sids": [
+    "BC2N-321270e629"
+  ],
+  "operation": "import",
+  "parent_sets": [],
+  "description": "",
+  "details": {
+    "file": "data/reference/s0/R3m-BNC2.extxyz",
+    "sha256": "554a83e4fac6b00c23880086bcc46d9b1302dec658d07154c6aeef6ad92874b3",
+    "origin_kind": "file"
+  },
+  "created_by_step": "20261105T165521-import_structures-51281f",
+  "created_at": "2026-11-05T16:55:21+00:00"
+}

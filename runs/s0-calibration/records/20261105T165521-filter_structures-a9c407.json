@@ -1,0 +1,51 @@
+{
+  "step_id": "20261105T165521-filter_structures-a9c407",
+  "run_id": "s0-calibration",
+  "tool": "filter_structures",
+  "actor": "agent",
+  "mode": "dry_run",
+  "decided_by": "agent",
+  "rationale": "single-structure live test + PET f32 vs f64 on c-BN (DESIGN S0)",
+  "parent_ids": [
+    "20261105T165520-import_structures-79005a"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s0_ksrme",
+    "new_set_name": "s0_cbn",
+    "criteria": {
+      "elements_required": [
+        "B",
+        "N"
+      ]
+    }
+  },
+  "outputs": {
+    "new_set_name": "s0_cbn",
+    "n_in": 4,
+    "n_kept": 1,
+    "removed_by_criterion": {
+      "elements_required": 3
+    },
+    "details_file": "runs/s0-calibration/outputs/20261105T165521-filter_structures-a9c407.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.19,
+  "host": "cenyj",
+  "created_at": "2026-11-05T16:55:21+00:00"
+}
