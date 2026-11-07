@@ -97,6 +97,16 @@ def test_structure_pipeline(project):
     assert prim["n_kept"] == 4  # conventional Si and rock-salt NaCl reduce to 2-atom primitive cells
     assert structures.filter_structures("mix", "mix.prim1", max_primitive_sites=1, **A)["n_kept"] == 1  # bcc
 
+    base = si_primitive()  # fixed small displacement: P-1 at symprec 1e-3, Fd-3m at 0.1
+    rattled = type(base)(base.lattice, ["Si", "Si"], [[0.003, 0.0, -0.002], [0.25, 0.252, 0.249]])
+    _import(project, "rattled", [rattled])
+    symm = structures.symmetrize_structures("rattled", "rattled.sym", **A)
+    assert symm["spacegroups"] == {"227": 1} and symm["n_p1"] == 0
+    # input -> output link is in the set details (an identical earlier entry is reused unchanged)
+    sym_sid, src = registry.set_sids("rattled.sym")[0], registry.set_sids("rattled")[0]
+    assert registry.load_entry(src)["spacegroup_number"] == 2 and registry.load_entry(sym_sid)["spacegroup_number"] == 227
+    assert registry.load_set("rattled.sym")["details"]["changes"][src]["sid"] == sym_sid
+
     merged = structures.merge_sets(["mix.prim1", "mix.small"], "mix.merged", **A)  # bcc is in both
     assert merged["n_merged"] == 2 and merged["n_in"] == {"mix.prim1": 1, "mix.small": 2}
     assert registry.set_sids("mix.merged")[0] == registry.set_sids("mix.prim1")[0]
@@ -112,7 +122,7 @@ def test_structure_pipeline(project):
         structures.assert_no_leakage(registry.set_sids("mix"))
 
     names = {s["name"] for s in structures.list_sets()["sets"]}
-    assert names == {"mix", "mix.small", "mix.prim2", "mix.prim1", "mix.merged", "mix.unique", "mix.clean"}
+    assert names == {"mix", "mix.small", "mix.prim2", "mix.prim1", "mix.merged", "rattled", "rattled.sym", "mix.unique", "mix.clean"}
 
 
 def test_leakage_follows_descendants(project):
@@ -187,6 +197,8 @@ def test_mlip_relax_and_kappa_end_to_end(project, cluster, monkeypatch):
     assert relaxed_set.startswith("al.relaxed.emt_test.") and fetched["derived"]["n_relaxed"] == 1
     child = registry.set_sids(relaxed_set)[0]
     assert registry.load_entry(child)["origin"]["kind"] == "mlip_relax"
+    assert fetched["derived"]["converged_set"] == relaxed_set + ".converged" and fetched["derived"]["n_unconverged"] == 0
+    assert registry.set_sids(relaxed_set + ".converged") == [child]
 
     again = mlip.submit_mlip_relax("al", "emt_test", **A)  # cached: nothing submitted
     assert again["n_cached"] == 1 and again["n_jobs"] == 0 and len(cluster.submitted) == 1

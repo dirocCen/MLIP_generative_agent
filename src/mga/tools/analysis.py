@@ -225,7 +225,7 @@ def _final_set(name: str, sids: list[str], n_missing: int, allow_partial: bool, 
 
 def _derive_relax(sub: dict[str, Any], step_id: str, allow_partial: bool) -> dict[str, Any]:
     model, phash = sub["model"], sub["param_hash"]
-    children, failures, missing = [], {}, []
+    children, failures, missing, unconverged = [], {}, [], []
     for sid in sub["all_sids"]:
         if not results.has_result("mlip_relax", model, sid, phash):
             missing.append(sid)
@@ -243,6 +243,8 @@ def _derive_relax(sub: dict[str, Any], step_id: str, allow_partial: bool) -> dic
             step_id=step_id,
         )
         children.append(child)
+        if (data.get("relax") or {}).get("reached_max_steps"):
+            unconverged.append(child)
     set_name = sub.get("set_name") or "set"
     created = _final_set(
         f"{set_name}.relaxed.{model}.{phash[:6]}", children, len(missing), allow_partial,
@@ -251,7 +253,18 @@ def _derive_relax(sub: dict[str, Any], step_id: str, allow_partial: bool) -> dic
         details={"model": model, "param_hash": phash, "n_failed": len(failures), "n_missing": len(missing)},
         step_id=step_id,
     )
-    return {"relaxed_set": created, "n_relaxed": len(children), "n_failed": len(failures), "n_missing": len(missing),
+    # generated structures can hit max_steps far from a minimum (S1 trial 11-07: 10/46 still at 5-10 GPa
+    # after 1000 steps); phonons of those mean nothing, so the next rungs take the converged subset
+    converged = None
+    if created:
+        converged = _final_set(
+            f"{created}.converged", [c for c in children if c not in unconverged], 0, allow_partial,
+            operation="filter", parent_sets=[created],
+            description="relaxations that converged (did not reach max_steps)",
+            details={"criterion": "relax.reached_max_steps is false", "unconverged": unconverged}, step_id=step_id,
+        )
+    return {"relaxed_set": created, "converged_set": converged, "n_unconverged": len(unconverged),
+            "n_relaxed": len(children), "n_failed": len(failures), "n_missing": len(missing),
             "failure_reasons": top((str(e).split(":")[0] for e in failures.values()), 10),
             "note": None if created else "some results are missing; the relaxed set is created once all jobs have finished "
             "(or pass allow_partial=true)"}

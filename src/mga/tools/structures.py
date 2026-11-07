@@ -234,6 +234,59 @@ def merge_sets(
     return {"step_id": rec.step_id, **rec.outputs}
 
 
+def symmetrize_structures(
+    set_name: str,
+    new_set_name: str,
+    decided_by: Literal["agent", "human"],
+    rationale: str,
+    symprec: float = PRIMITIVE_SYMPREC,
+) -> dict[str, Any]:
+    """Idealized standard primitive cell at a loose tolerance (S3, between pre-relax and kappa_SRME relax).
+
+    Generated and pre-relaxed cells are nearly symmetric; at the kappa_SRME tolerances they stay P1,
+    FixSymmetry then keeps them P1 and FC3 needs ~|G|^2 more displacements. Each output is registered
+    with its input as parent.
+    """
+    from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+
+    require_decision(decided_by, rationale)
+    if not 1e-4 <= symprec <= 0.3:
+        raise ToolInputError("symprec must be within 1e-4-0.3 Angstrom")
+    with recorded_step(
+        "symmetrize_structures",
+        inputs={"set_name": set_name, "new_set_name": new_set_name, "symprec": symprec},
+        parent_ids=parent_steps(set_name),
+        decided_by=decided_by,
+        rationale=rationale,
+    ) as rec:
+        out, changes, failed = [], {}, {}
+        for sid in registry.set_sids(set_name):
+            struct = registry.load_structure(sid)
+            try:
+                sga = SpacegroupAnalyzer(struct, symprec=symprec)
+                sym = sga.get_primitive_standard_structure()
+            except Exception as exc:  # noqa: BLE001 - spglib can fail on odd cells
+                failed[sid] = str(exc)
+                out.append(sid)
+                continue
+            child, _ = registry.register_structure(
+                sym, origin={"kind": "symmetrize", "source_sid": sid, "symprec": symprec},
+                parents=[] if registry.structure_id(sym) == sid else [sid], step_id=rec.step_id,
+            )
+            out.append(child)
+            changes[sid] = {"sid": child, "spacegroup": sga.get_space_group_number(), "nsites": [len(struct), len(sym)]}
+        registry.create_set(new_set_name, out, operation="symmetrize", parent_sets=[set_name],
+                            details={"symprec": symprec, "changes": changes, "failed": failed}, step_id=rec.step_id)
+        rec.outputs = {
+            "new_set_name": new_set_name,
+            "n": len(out),
+            "n_failed": len(failed),
+            "spacegroups": top(str(c["spacegroup"]) for c in changes.values()),
+            "n_p1": sum(c["spacegroup"] == 1 for c in changes.values()),
+        }
+    return {"step_id": rec.step_id, **rec.outputs}
+
+
 def filter_structures(
     set_name: str,
     new_set_name: str,

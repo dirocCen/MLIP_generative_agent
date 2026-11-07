@@ -23,6 +23,10 @@ add(server, t.list_sets, "List existing named sets (name, size, how they were ma
 add(server, t.merge_sets,
     "Union of several sets (e.g. one MatterGen set per chemical system) into one new set, in the given order.",
     read_only=False, idempotent=True)
+add(server, t.symmetrize_structures,
+    "S3: replace each structure by its idealized standard primitive cell at a loose tolerance (default 0.1 A). Use it "
+    "between a pre-relax and the kappa_SRME relax of generated structures, which otherwise stay P1.",
+    read_only=False, idempotent=True)
 add(server, t.filter_structures,
     "Filter a set by atom count (max_primitive_sites counts the standardized primitive cell, symprec 0.1), elements, space group, minimum interatomic distance etc.; creates a new set and records "
     "why each structure was removed.",
