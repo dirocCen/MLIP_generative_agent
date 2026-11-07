@@ -317,7 +317,7 @@ def _first(v):
     return v[0] if isinstance(v, list) and v else v
 
 
-def _derive_ladder(sub: dict[str, Any]) -> dict[str, Any]:
+def _derive_ladder(sub: dict[str, Any], step_id: str, allow_partial: bool) -> dict[str, Any]:
     kind, model, phash = sub["kind"], sub["model"], sub["param_hash"]
     rows = [results.load_result(kind, model, s, phash)["data"] for s in sub["all_sids"]
             if results.has_result(kind, model, s, phash)]
@@ -331,6 +331,19 @@ def _derive_ladder(sub: dict[str, Any]) -> dict[str, Any]:
     if kind == "mlip_fc2_descriptors":
         d = [r["descriptors"] for r in rows if r.get("descriptors")]
         out["n_imaginary"] = sum(bool(r.get("has_imaginary_modes")) for r in rows)
+        # L0's job in the ladder is to drop dynamically unstable candidates (DESIGN 3.2); the next rungs take
+        # the input IDs (each rung relaxes them again with the same protocol), not L0's relaxed cells
+        stable = [r["sid"] for r in rows if r.get("ok") and r.get("has_imaginary_modes") is False]
+        set_name = sub.get("set_name") or "set"
+        out["stable_set"] = _final_set(
+            f"{set_name}.l0stable.{model}.{phash[:6]}", stable, out["n_missing"], allow_partial,
+            operation="filter", parent_sets=[set_name] if sub.get("set_name") else [],
+            description=f"L0 ({model}): FC2 finished without imaginary modes",
+            details={"model": model, "param_hash": phash, "criterion": "ok and has_imaginary_modes is false",
+                     "dropped": [r["sid"] for r in rows if r["sid"] not in stable]},
+            step_id=step_id,
+        )
+        out["n_stable"] = len(stable)
         out["descriptors"] = {k: _stats([x.get(k) for x in d]) for k in (
             "kappa_slack_W_mK", "kappa_proxy_cv2_over_wjdos", "kappa_ctau_1ps_W_mK", "theta_acoustic_K",
             "ao_gap_ratio", "acoustic_branch_spread", "gamma_acoustic_rms", "wjdos_cv_mean")}
@@ -395,7 +408,7 @@ def fetch_results(step_id: str, allow_partial: bool = False, force: bool = False
         elif kind == "mlip_kappa":
             derived = _derive_kappa(sub)
         elif kind in LADDER_KINDS:
-            derived = _derive_ladder(sub)
+            derived = _derive_ladder(sub, rec.step_id, allow_partial)
         elif kind == "vasp_relax_static":
             derived = _derive_vasp_relax(sub, rec.step_id, allow_partial)
         else:
