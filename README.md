@@ -10,7 +10,7 @@
 
 ## 当前进展（2026-11-07，S0 校准）
 
-三个委员会模型都已在 datalab GPU 上跑完 L1（κ_SRME 子集），TECE 和 PET 也跑完了 L2；FourPhonon 已编译，L3（4ph）在跑。还没有开始生成候选（S1）。
+三个委员会模型都已跑完 c-BN、BAs 的 L1–L3 和 κ_SRME 子集。还没有开始生成候选（S1）。
 
 ![κ_SRME subset](docs/figures/s0_ksrme.png)
 
@@ -18,7 +18,7 @@
 
 ![L1 → L2](docs/figures/s0_ladder.png)
 
-**L1 → L2**：LBTE 直接解让 c-BN 的 κ 提高 12–13 %，BAs 提高 89–90 %（约 2320 W/mK，实验约 1300）。只算 3ph 时 BAs 的高估是已知现象，四声子散射会把它拉回实验附近（Feng, Lindsay & Ruan, [PRB 96, 161201 (2017)](https://doi.org/10.1103/PhysRevB.96.161201)），这正是 L3 要检查的。DPA 的 L2 还在跑。
+**L1 → L2**：LBTE 直接解让 c-BN 的 κ 提高 12–13 %，BAs 提高 89–90 %（约 2320 W/mK，实验约 1300）。只算 3ph 时 BAs 的高估是已知现象，四声子散射会把它拉回实验附近（Feng, Lindsay & Ruan, [PRB 96, 161201 (2017)](https://doi.org/10.1103/PhysRevB.96.161201)），这正是 L3 要检查的。
 
 **未解决**：R3m-BNC₂ 的 FC4 拟合在 300 GB 内存下 OOM。
 
@@ -28,20 +28,20 @@
 
 | 步骤 | 内容 | 在哪跑 |
 |---|---|---|
-| S0 校准 | 用 κ_SRME 表里的 c-BN、w-AlN、3C-SiC 检查 MLIP κ 流程；c-BN、BAs、R3m-BNC₂ 走一遍整个阶梯，定出「命中」基准 | datalab (GPU) |
-| S1 生成 | MatterGen 按化学体系生成，原胞 ≤ 8 原子（配额见文献调研） | datalab |
+| S0 校准 | 用 κ_SRME 表里的 c-BN、w-AlN、3C-SiC 检查 MLIP κ 流程；c-BN、BAs、R3m-BNC₂ 走一遍整个阶梯，定出「命中」基准 | GPU 集群 |
+| S1 生成 | MatterGen 按化学体系生成，原胞 ≤ 8 原子（配额见文献调研） | GPU 集群 |
 | S2 去重 / 新颖性 | 对称性去重，和 MP / Alexandria 比对，剔除 κ_SRME 测试化合物 | 本地 |
-| S3 弛豫 + E_hull | MLIP 弛豫，对照 MP 凸包初筛 | datalab |
+| S3 弛豫 + E_hull | MLIP 弛豫，对照 MP 凸包初筛 | GPU 集群 |
 
 S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量级：
 
 | 级 | 内容 | 在哪跑 | 工具状态 |
 |---|---|---|---|
-| L0 | FC2 描述符：虚频、声学–光学 gap、加权相空间、群速度、Grüneisen + Slack 估计 | datalab | 已有 |
-| L1 | 委员会各算 3ph Wigner-RTA κ（κ_SRME 协议），给出模型间分歧；力常数存入缓存 | datalab | 已有 |
-| L2 | LBTE 直接解，读 L1 的力常数缓存，不再调用 MLIP | datalab | 已有 |
-| L3 | MLIP 四阶力常数（随机位移 + symfc）→ ShengBTE / FourPhonon 输入，3+4ph κ | datalab | 已有 |
-| L4 | DFT：**人批准后才提交**。L4a 弛豫 + 带隙；L4b 有限位移 FC2 / FC3 → DFT κ（`phono3py_fd`） | dirona (CPU) | 已有 |
+| L0 | FC2 描述符：虚频、声学–光学 gap、加权相空间、群速度、Grüneisen + Slack 估计 | GPU 集群 | 已有 |
+| L1 | 委员会各算 3ph Wigner-RTA κ（κ_SRME 协议），给出模型间分歧；力常数存入缓存 | GPU 集群 | 已有 |
+| L2 | LBTE 直接解，读 L1 的力常数缓存，不再调用 MLIP | GPU 集群 | 已有 |
+| L3 | MLIP 四阶力常数（随机位移 + symfc）→ ShengBTE / FourPhonon 输入，3+4ph κ | GPU 集群 | 已有 |
+| L4 | DFT：**人批准后才提交**。L4a 弛豫 + 带隙；L4b 有限位移 FC2 / FC3 → DFT κ（`phono3py_fd`） | CPU 集群 | 已有 |
 
 另外两项：
 - **benchmark**：在 Li/Xia 公开的 773 个化合物四阶力常数上，检验 uMLIP 的 FC4 / 4ph 散射率。
@@ -94,7 +94,7 @@ MongoDB 的数据目录要放在 ext4 上（不要放 /mnt 下的 Windows 盘）
 ```bash
 python -m venv ~/.venvs/mga && source ~/.venvs/mga/bin/activate
 pip install -e ".[local,test]"   # 本地：MCP server、作业提交、测试
-pip install -e ".[worker]"       # 每个集群 worker（包括 dirona）：phono3py==3.30.0、phonopy、symfc
+pip install -e ".[worker]"       # 每个集群 worker（包括跑 VASP 的 CPU 集群）：phono3py==3.30.0、phonopy、symfc
 python -m pytest                 # 73 个测试，约 4 分钟
 ```
 

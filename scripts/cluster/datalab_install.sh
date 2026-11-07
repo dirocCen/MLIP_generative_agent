@@ -1,7 +1,7 @@
 #!/bin/bash
 # Build one mga worker environment on datalab, then run the calculator smoke test.
 # Runs as a batch job on a GPU compute node (compiling and testing are not for the login node,
-# DESIGN §11). Usage:  sbatch datalab_install.sh {dpa|tace|pet}
+# DESIGN §11). Usage:  sbatch datalab_install.sh {dpa|tace|pet|mattergen}
 # Versions follow the leaderboard runs (matbench-discovery c70947f, models/*/*.yml):
 #   DPA-4.1-Max-OAM : deepmd-kit @ 1ded5d24 (pt backend, CUDA ops), torch 2.13.0+cu130
 #   TECE-OAM-RRA-1.0: tace @ 81f65a4c, torch 2.13.0
@@ -15,7 +15,8 @@
 #SBATCH --output=/share/yujie.cen/mga/install_logs/%x-%j.out
 set -euo pipefail
 
-WHICH=${1:?usage: datalab_install.sh dpa|tace|pet}
+WHICH=${1:?usage: datalab_install.sh dpa|tace|pet|mattergen}
+export HF_HOME=/share/yujie.cen/mga/hf_cache  # model downloads; /home is 91% full
 ROOT=/share/yujie.cen/mga
 SRC=$ROOT/src/MLIP_generative_agent
 E=$ROOT/envs/$WHICH
@@ -83,6 +84,39 @@ pet)
   CKPT=$CK/pet-oam-xl-v1.0.0.ckpt
   [ -s "$CKPT" ] || curl -L --fail -o "$CKPT" https://huggingface.co/lab-cosmo/upet/resolve/main/models/pet-oam-xl-v1.0.0.ckpt
   NAME=pet_oam_xl LOADER=upet
+  ;;
+mattergen)
+  # MatterGen pins python 3.10 and torch==2.2.1 on linux (pyproject @ 9242366, which fixes the
+  # PyPI deps on Linux), so it gets its own env without the phono3py worker extras.
+  # Checkpoints come from Hugging Face (microsoft/mattergen) on first use -> HF_HOME on /share.
+  [ -x "$E/bin/python" ] || conda create -y -p "$E" -c conda-forge python=3.10
+  MG=$ROOT/src/mattergen
+  [ -d "$MG/.git" ] || git clone https://github.com/microsoft/mattergen.git "$MG"
+  git -C "$MG" fetch -q origin && git -C "$MG" checkout -q 92423660a8bd70e83679086e88f88596d484dc16
+  pipi -e "$MG"
+  pipi -e "$SRC" "jobflow-remote>=1.0"
+  "$UV" pip freeze --python "$E/bin/python" > "$LOG/$WHICH-freeze.txt"
+  # smoke: 8 B-C-N structures with the exact command the mga job builds (checks CLI flags + output name)
+  mkdir -p "$LOG/mattergen-smoke" && cd "$LOG/mattergen-smoke" && rm -rf out
+  "$E/bin/python" - <<'EOF'
+import json, subprocess, time, torch
+from ase.io import read
+from mga.specs import MatterGenParams
+from mga.workflows.mattergen_job import mattergen_command
+print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available())
+cmd = mattergen_command("out", "B-C-N", 8, MatterGenParams().model_dump())
+print(" ".join(cmd), flush=True)
+t0 = time.perf_counter()
+subprocess.run(cmd, check=True)
+frames = read("out/generated_crystals.extxyz", index=":")
+res = {"n": len(frames), "wall_s": round(time.perf_counter() - t0, 1),
+       "formulas": [a.get_chemical_formula() for a in frames], "n_atoms": [len(a) for a in frames]}
+print(json.dumps(res))
+json.dump(res, open("../mattergen-smoke.json", "w"))
+EOF
+  ls out
+  echo "done $(date -Is)"
+  exit 0
   ;;
 *) echo "unknown env $WHICH"; exit 2 ;;
 esac

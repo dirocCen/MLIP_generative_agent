@@ -1,0 +1,119 @@
+{
+  "step_id": "20261107T092514-fetch_results-4ca3ef",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T083801-submit_mlip_fc2_descriptors-9c62b0"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T083801-submit_mlip_fc2_descriptors-9c62b0",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "tece_oam_rra",
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 1,
+      "n_missing": 0,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 1,
+        "min": 331.7,
+        "median": 331.7,
+        "max": 331.7
+      },
+      "n_imaginary": 0,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 1,
+          "min": 1592.8617810154897,
+          "median": 1592.8617810154897,
+          "max": 1592.8617810154897
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 1,
+          "min": 83.91578002260427,
+          "median": 83.91578002260427,
+          "max": 83.91578002260427
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 1,
+          "min": 28.65534654590415,
+          "median": 28.65534654590415,
+          "max": 28.65534654590415
+        },
+        "theta_acoustic_K": {
+          "n": 1,
+          "min": 1169.693733378875,
+          "median": 1169.693733378875,
+          "max": 1169.693733378875
+        },
+        "ao_gap_ratio": {
+          "n": 1,
+          "min": -0.5286900459540226,
+          "median": -0.5286900459540226,
+          "max": -0.5286900459540226
+        },
+        "acoustic_branch_spread": {
+          "n": 1,
+          "min": 0.24271233327317127,
+          "median": 0.24271233327317127,
+          "max": 0.24271233327317127
+        },
+        "gamma_acoustic_rms": {
+          "n": 1,
+          "min": 0.607387805177998,
+          "median": 0.607387805177998,
+          "max": 0.607387805177998
+        },
+        "wjdos_cv_mean": {
+          "n": 1,
+          "min": 0.5928232926940443,
+          "median": 0.5928232926940443,
+          "max": 0.5928232926940443
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.472,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:25:14+00:00"
+}

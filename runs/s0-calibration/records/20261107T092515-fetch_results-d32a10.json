@@ -1,0 +1,74 @@
+{
+  "step_id": "20261107T092515-fetch_results-d32a10",
+  "run_id": "s0-calibration",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T083946-submit_mlip_fc2_descriptors-6cf4d5"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T083946-submit_mlip_fc2_descriptors-6cf4d5",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 0,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "RUN_FINISHED": 1
+        },
+        "all_final": false,
+        "n_completed": 0,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 0,
+      "n_missing": 1,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": null,
+      "n_imaginary": 0,
+      "descriptors": {
+        "kappa_slack_W_mK": null,
+        "kappa_proxy_cv2_over_wjdos": null,
+        "kappa_ctau_1ps_W_mK": null,
+        "theta_acoustic_K": null,
+        "ao_gap_ratio": null,
+        "acoustic_branch_spread": null,
+        "gamma_acoustic_rms": null,
+        "wjdos_cv_mean": null
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.065,
+  "host": "cenyj",
+  "created_at": "2026-11-07T09:25:15+00:00"
+}
