@@ -10,6 +10,29 @@ MLIP 委员会 × MatterGen × agent 组成的可审查工作流。
 2. **MLIP 委员会**（DPA-4.1-Max-OAM、TECE-OAM-RRA、PET-OAM-XL）让 3ph / LBTE / 4ph 对几十上百个候选都算得起，模型间的分歧也是决策依据；
 3. **agent**（Claude Code，通过 MCP 工具）在固定计算预算下决定每个候选升到哪一级保真度，并识别计算伪影。它的表现和「按委员会均值取 top-k」的固定规则、随机选择用同一预算比较。
 
+## 流程
+
+| 步骤 | 内容 | 在哪跑 |
+|---|---|---|
+| S0 校准 | 用 κ_SRME 表里的 c-BN、w-AlN、3C-SiC 检查 MLIP κ 流程；c-BN、BAs、R3m-BNC₂ 走一遍整个阶梯，定出「命中」基准 | GPU 集群 |
+| S1 生成 | MatterGen 按化学体系生成，原胞 ≤ 8 原子（配额见文献调研） | GPU 集群 |
+| S2 去重 / 新颖性 | 对称性去重，和 MP / Alexandria 比对，剔除 κ_SRME 测试化合物 | 本地 |
+| S3 弛豫 + E_hull | 对称化后用一个 MLIP 弛豫，得到委员会共用的候选池；对照 MP 凸包初筛 | GPU 集群 |
+
+S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量级：
+
+| 级 | 内容 | 在哪跑 | 工具状态 |
+|---|---|---|---|
+| L0 | FC2 描述符：虚频、声学–光学 gap、加权相空间、群速度、Grüneisen + Slack 估计 | GPU 集群 | 已有 |
+| L1 | 委员会各算 3ph Wigner-RTA κ（κ_SRME 协议），给出模型间分歧；力常数存入缓存 | GPU 集群 | 已有 |
+| L2 | LBTE 直接解，读 L1 的力常数缓存，不再调用 MLIP | GPU 集群 | 已有 |
+| L3 | MLIP 四阶力常数（随机位移 + symfc）→ ShengBTE / FourPhonon 输入，3+4ph κ | GPU 集群 | 已有 |
+| L4 | DFT：**人批准后才提交**。L4a 弛豫 + 带隙；L4b 有限位移 FC2 / FC3 → DFT κ（`phono3py_fd`） | CPU 集群 | 已有 |
+
+另外两项：
+- **benchmark**：在 Li/Xia 公开的 773 个化合物四阶力常数上，检验 uMLIP 的 FC4 / 4ph 散射率。
+- **附带实验**：用 L4b 的位移超胞力微调 MACE-MPA-0，报告 κ_SRME 前后变化，开始前要人确认。
+
 ## 当前进展（2026-11-08）
 
 **S0 校准**：三个委员会模型都已跑完 c-BN、BAs 的 L1–L3 和 κ_SRME 子集。
@@ -38,29 +61,6 @@ MLIP 委员会 × MatterGen × agent 组成的可审查工作流。
 - 生成结构直接按 κ_SRME 协议弛豫，大多数到 300 步上限也没收敛；先理想化对称性再弛豫，收敛的多了很多。
 - 36 个里 24 个有虚频，多数在 −1 到 −17 THz，是真的不稳定，不是 Γ 点附近的数值伪影。
 - L1（3ph Wigner-RTA）正在算；新颖性和 E_hull 检查还没接上（需要 Materials Project API key）。
-
-## 流程
-
-| 步骤 | 内容 | 在哪跑 |
-|---|---|---|
-| S0 校准 | 用 κ_SRME 表里的 c-BN、w-AlN、3C-SiC 检查 MLIP κ 流程；c-BN、BAs、R3m-BNC₂ 走一遍整个阶梯，定出「命中」基准 | GPU 集群 |
-| S1 生成 | MatterGen 按化学体系生成，原胞 ≤ 8 原子（配额见文献调研） | GPU 集群 |
-| S2 去重 / 新颖性 | 对称性去重，和 MP / Alexandria 比对，剔除 κ_SRME 测试化合物 | 本地 |
-| S3 弛豫 + E_hull | 对称化后用一个 MLIP 弛豫，得到委员会共用的候选池；对照 MP 凸包初筛 | GPU 集群 |
-
-S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量级：
-
-| 级 | 内容 | 在哪跑 | 工具状态 |
-|---|---|---|---|
-| L0 | FC2 描述符：虚频、声学–光学 gap、加权相空间、群速度、Grüneisen + Slack 估计 | GPU 集群 | 已有 |
-| L1 | 委员会各算 3ph Wigner-RTA κ（κ_SRME 协议），给出模型间分歧；力常数存入缓存 | GPU 集群 | 已有 |
-| L2 | LBTE 直接解，读 L1 的力常数缓存，不再调用 MLIP | GPU 集群 | 已有 |
-| L3 | MLIP 四阶力常数（随机位移 + symfc）→ ShengBTE / FourPhonon 输入，3+4ph κ | GPU 集群 | 已有 |
-| L4 | DFT：**人批准后才提交**。L4a 弛豫 + 带隙；L4b 有限位移 FC2 / FC3 → DFT κ（`phono3py_fd`） | CPU 集群 | 已有 |
-
-另外两项：
-- **benchmark**：在 Li/Xia 公开的 773 个化合物四阶力常数上，检验 uMLIP 的 FC4 / 4ph 散射率。
-- **附带实验**：用 L4b 的位移超胞力微调 MACE-MPA-0，报告 κ_SRME 前后变化，开始前要人确认。
 
 ## 设计原则
 
