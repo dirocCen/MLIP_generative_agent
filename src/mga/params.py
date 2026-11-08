@@ -26,15 +26,17 @@ class ParamSpec(BaseModel):
 SpecT = TypeVar("SpecT", bound=ParamSpec)
 
 
-def P(default: Any, source: str, *, affects_result: bool = True, **kwargs: Any) -> Any:
+def P(default: Any, source: str, *, affects_result: bool = True, hash_if_none: bool = True, **kwargs: Any) -> Any:
     """Declare a parameter with its default's source.
 
     ``affects_result=False`` marks execution-only knobs (chunk sizes, core counts)
     that are excluded from the result-cache hash.
+    ``hash_if_none=False`` leaves the field out of the hash while it is None, so adding an
+    optional parameter later does not invalidate results cached before it existed.
     """
     return Field(
         default,
-        json_schema_extra={"source": source, "affects_result": affects_result},
+        json_schema_extra={"source": source, "affects_result": affects_result, "hash_if_none": hash_if_none},
         **kwargs,
     )
 
@@ -97,6 +99,7 @@ def result_hash(params: ParamSpec) -> str:
         name: value
         for name, value in dumped.items()
         if _field_meta(spec_cls, name).get("affects_result", True)
+        and not (value is None and not _field_meta(spec_cls, name).get("hash_if_none", True))
     }
     return short_hash({"spec": spec_cls.__name__, "params": relevant})
 

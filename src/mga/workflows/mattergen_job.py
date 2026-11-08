@@ -18,13 +18,16 @@ from jobflow import job
 def mattergen_command(out_dir: str, chemical_system: str, n_samples: int, p: dict[str, Any]) -> list[str]:
     batch = min(p["batch_size"], n_samples)
     num_batches = -(-n_samples // batch)
+    cond: dict[str, Any] = {"chemical_system": chemical_system}
+    if p.get("energy_above_hull") is not None:  # README multi-property syntax
+        cond = {"energy_above_hull": p["energy_above_hull"], **cond}
     return [
         "mattergen-generate",
         out_dir,
         f"--pretrained-name={p['pretrained_name']}",
         f"--batch_size={batch}",
         f"--num_batches={num_batches}",
-        f"--properties_to_condition_on={{'chemical_system': '{chemical_system}'}}",
+        f"--properties_to_condition_on={cond!r}",
         f"--diffusion_guidance_factor={p['diffusion_guidance_factor']}",
         f"--record_trajectories={p['record_trajectories']}",
     ]

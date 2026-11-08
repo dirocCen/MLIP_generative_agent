@@ -251,3 +251,20 @@ def test_gpu_resources_nodelist_reaches_slurm_header():
     r, _ = resolve_params(GpuResources, {"partition": "GPU-a100", "nodelist": "a-a100-o-1"}, "512-atom FC2 needs 80 GB")
     header = SlurmIO().generate_header(gpu_qresources(r))
     assert "#SBATCH --nodelist=a-a100-o-1" in header and "exclude" not in header
+
+
+def test_mattergen_ehull_condition_keeps_old_hash():
+    import pytest
+
+    from mga.params import ParamError, resolve_params, result_hash
+    from mga.specs import MatterGenParams
+    from mga.workflows.mattergen_job import mattergen_command
+
+    # adding the optional energy_above_hull field must not invalidate results cached before it existed
+    assert result_hash(MatterGenParams()) == "f22beaeba029"
+    assert "--properties_to_condition_on={'chemical_system': 'B-N'}" in mattergen_command("o", "B-N", 8, MatterGenParams().model_dump())
+    q, _ = resolve_params(MatterGenParams, {"pretrained_name": "chemical_system_energy_above_hull", "energy_above_hull": 0.05}, "test")
+    assert "--properties_to_condition_on={'energy_above_hull': 0.05, 'chemical_system': 'B-N'}" in mattergen_command("o", "B-N", 8, q.model_dump())
+    for bad in ({"pretrained_name": "chemical_system_energy_above_hull"}, {"energy_above_hull": 0.05}):
+        with pytest.raises(ParamError):
+            resolve_params(MatterGenParams, bad, "test")

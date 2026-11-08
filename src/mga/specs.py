@@ -178,15 +178,30 @@ class StructureMatcherParams(ParamSpec):
 
 # --- MatterGen -------------------------------------------------------------------
 class MatterGenParams(ParamSpec):
-    pretrained_name: Literal["chemical_system", "mattergen_base"] = P(
+    pretrained_name: Literal["chemical_system", "chemical_system_energy_above_hull", "mattergen_base"] = P(
         "chemical_system",
         "DESIGN §4.1: chemical-system checkpoint; other properties are post-filters",
+    )
+    energy_above_hull: float | None = P(
+        None,
+        "target E_hull (eV/atom) for the chemical_system_energy_above_hull checkpoint; "
+        "MatterGen README multi-property example uses 0.05",
+        hash_if_none=False, ge=0.0, le=0.5,
     )
     diffusion_guidance_factor: float = P(
         2.0, "MatterGen README conditional-generation example (runs on datalab, job 966244)", ge=0, le=10
     )
     batch_size: int = P(64, "MatterGen default; batch 8 checked on L40S (job 966244), 64 not yet", ge=1, le=512)
     record_trajectories: Literal[False] = P(False, "storage: trajectories are not needed")
+
+    @model_validator(mode="after")
+    def _ehull_with_its_checkpoint(self) -> MatterGenParams:
+        joint = self.pretrained_name == "chemical_system_energy_above_hull"
+        if joint and self.energy_above_hull is None:
+            raise ValueError("chemical_system_energy_above_hull needs energy_above_hull (e.g. 0.05)")
+        if not joint and self.energy_above_hull is not None:
+            raise ValueError("energy_above_hull is only a condition of the chemical_system_energy_above_hull checkpoint")
+        return self
 
 
 # --- VASP --------------------------------------------------------------------------
