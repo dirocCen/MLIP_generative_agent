@@ -1,0 +1,433 @@
+{
+  "name": "s1trial.sym.tece_oam_rra",
+  "n": 46,
+  "sids": [
+    "B3C2N3-1f5d2c2f31",
+    "B5C2N-5f94f9d545",
+    "B3N2-a2cf279f2a",
+    "B2N3-1bf14c8d72",
+    "Al1C2N2-084b568f4f",
+    "Si2N3-8f90a632dd",
+    "Si2N-ef9d4dbd37",
+    "Al2Si2CN3-6d43a447f1",
+    "Al1Si3C2N2-462ca72c2e",
+    "Al3SiC3N-7f02f0f305",
+    "Al1Si2N2-cda6a9b418",
+    "Si3C4N-ab11e1f284",
+    "SiCN2-088b6727ad",
+    "Si2CN-350e72a716",
+    "SiCN2-3eb5dedf42",
+    "Si5C2N-8c02d838d6",
+    "Si3C2N-0bf9b864a0",
+    "Si2CN-5c2618486f",
+    "AlBN2-ef4a677b5e",
+    "AlB2N-0d19888cfe",
+    "AlBN2-6ae6c6899a",
+    "Al2BN-9e3afdc0fe",
+    "AlB3N4-97e08f59b4",
+    "AlBN2-d939e5f30a",
+    "N2-aee2bf7460",
+    "CN-bbaac6cf2e",
+    "CN2-3ac196207b",
+    "CN-f02fb7867c",
+    "CN-7ba90fe731",
+    "CN-c83e827cef",
+    "CN-5bc8779de4",
+    "B3N2-9d6a95413e",
+    "B2N3-0abab2474b",
+    "B2N-34fa16ade7",
+    "B-50627bbd0b",
+    "B4N3-7d6c92634d",
+    "BPC-d725051b9a",
+    "B2PC-338259457b",
+    "B3P2-ddc155bcec",
+    "B2P-99eab1ff77",
+    "B2PC-85a594c1b4",
+    "B2P-18cb7f7858",
+    "BC-0b31bf1548",
+    "B3P2C-30a76d710f",
+    "B4PC3-eb47dcfbd2",
+    "B4P3C-4707d28177"
+  ],
+  "operation": "symmetrize",
+  "parent_sets": [
+    "s1trial.clean.relaxed.tece_oam_rra.8af26d"
+  ],
+  "description": "",
+  "details": {
+    "symprec": 0.1,
+    "changes": {
+      "B3C2N3-778ad925b1": {
+        "sid": "B3C2N3-1f5d2c2f31",
+        "spacegroup": 8,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "B5C2N-a535fff241": {
+        "sid": "B5C2N-5f94f9d545",
+        "spacegroup": 6,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "B3N2-54fd3cdfbc": {
+        "sid": "B3N2-a2cf279f2a",
+        "spacegroup": 164,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "B2N3-fe8c9c9880": {
+        "sid": "B2N3-1bf14c8d72",
+        "spacegroup": 164,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "Al1C2N2-912f67860f": {
+        "sid": "Al1C2N2-084b568f4f",
+        "spacegroup": 160,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "Si2N3-6f36e6e69f": {
+        "sid": "Si2N3-8f90a632dd",
+        "spacegroup": 12,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "Si2N-43d3cee438": {
+        "sid": "Si2N-ef9d4dbd37",
+        "spacegroup": 8,
+        "nsites": [
+          3,
+          3
+        ]
+      },
+      "Al2Si2CN3-55c0da05ed": {
+        "sid": "Al2Si2CN3-6d43a447f1",
+        "spacegroup": 8,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "Al1Si3C2N2-723ff6ee04": {
+        "sid": "Al1Si3C2N2-462ca72c2e",
+        "spacegroup": 5,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "Al3SiC3N-69fda4255b": {
+        "sid": "Al3SiC3N-7f02f0f305",
+        "spacegroup": 156,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "Al1Si2N2-d45ef6ad50": {
+        "sid": "Al1Si2N2-cda6a9b418",
+        "spacegroup": 156,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "Si3C4N-74e9b34d99": {
+        "sid": "Si3C4N-ab11e1f284",
+        "spacegroup": 156,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "SiCN2-cd51d1f888": {
+        "sid": "SiCN2-088b6727ad",
+        "spacegroup": 8,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "Si2CN-17b24b106e": {
+        "sid": "Si2CN-350e72a716",
+        "spacegroup": 186,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "SiCN2-d92ba08c90": {
+        "sid": "SiCN2-3eb5dedf42",
+        "spacegroup": 36,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "Si5C2N-44a00c87f2": {
+        "sid": "Si5C2N-8c02d838d6",
+        "spacegroup": 8,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "Si3C2N-6e4e748bcd": {
+        "sid": "Si3C2N-0bf9b864a0",
+        "spacegroup": 156,
+        "nsites": [
+          6,
+          6
+        ]
+      },
+      "Si2CN-dd8084a512": {
+        "sid": "Si2CN-5c2618486f",
+        "spacegroup": 156,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "AlBN2-d5ad8b4b26": {
+        "sid": "AlBN2-ef4a677b5e",
+        "spacegroup": 38,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "AlB2N-839429616d": {
+        "sid": "AlB2N-0d19888cfe",
+        "spacegroup": 8,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "AlBN2-c8d57f128d": {
+        "sid": "AlBN2-6ae6c6899a",
+        "spacegroup": 160,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "Al2BN-7821698af2": {
+        "sid": "Al2BN-9e3afdc0fe",
+        "spacegroup": 8,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "AlB3N4-cff4d2641e": {
+        "sid": "AlB3N4-97e08f59b4",
+        "spacegroup": 156,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "AlBN2-55dbab8b4c": {
+        "sid": "AlBN2-d939e5f30a",
+        "spacegroup": 156,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "N2-8e12f67578": {
+        "sid": "N2-aee2bf7460",
+        "spacegroup": 136,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "CN-bc5265d287": {
+        "sid": "CN-bbaac6cf2e",
+        "spacegroup": 40,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "CN2-9e3a63c87a": {
+        "sid": "CN2-3ac196207b",
+        "spacegroup": 191,
+        "nsites": [
+          3,
+          3
+        ]
+      },
+      "CN-5e4cc44cb9": {
+        "sid": "CN-f02fb7867c",
+        "spacegroup": 2,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "CN-d80f85ef7d": {
+        "sid": "CN-7ba90fe731",
+        "spacegroup": 2,
+        "nsites": [
+          6,
+          6
+        ]
+      },
+      "CN-59442ed618": {
+        "sid": "CN-c83e827cef",
+        "spacegroup": 12,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "CN-6c3a1c3be1": {
+        "sid": "CN-5bc8779de4",
+        "spacegroup": 1,
+        "nsites": [
+          12,
+          12
+        ]
+      },
+      "B3N2-28b287dbe8": {
+        "sid": "B3N2-9d6a95413e",
+        "spacegroup": 1,
+        "nsites": [
+          10,
+          10
+        ]
+      },
+      "B2N3-e3021417f0": {
+        "sid": "B2N3-0abab2474b",
+        "spacegroup": 65,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "B2N-61b3fd0c6b": {
+        "sid": "B2N-34fa16ade7",
+        "spacegroup": 13,
+        "nsites": [
+          12,
+          12
+        ]
+      },
+      "B-a767784568": {
+        "sid": "B-50627bbd0b",
+        "spacegroup": 6,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "B4N3-3f85767ecd": {
+        "sid": "B4N3-7d6c92634d",
+        "spacegroup": 8,
+        "nsites": [
+          7,
+          7
+        ]
+      },
+      "BPC-fe814a5e18": {
+        "sid": "BPC-d725051b9a",
+        "spacegroup": 156,
+        "nsites": [
+          6,
+          6
+        ]
+      },
+      "B2PC-c5f67a8dea": {
+        "sid": "B2PC-338259457b",
+        "spacegroup": 115,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "B3P2-8e042e3a3a": {
+        "sid": "B3P2-ddc155bcec",
+        "spacegroup": 8,
+        "nsites": [
+          5,
+          5
+        ]
+      },
+      "B2P-050b4405c5": {
+        "sid": "B2P-99eab1ff77",
+        "spacegroup": 8,
+        "nsites": [
+          3,
+          3
+        ]
+      },
+      "B2PC-cc7fd95659": {
+        "sid": "B2PC-85a594c1b4",
+        "spacegroup": 160,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "B2P-f543cfaec6": {
+        "sid": "B2P-18cb7f7858",
+        "spacegroup": 12,
+        "nsites": [
+          3,
+          3
+        ]
+      },
+      "BC-6d225a4fad": {
+        "sid": "BC-0b31bf1548",
+        "spacegroup": 186,
+        "nsites": [
+          4,
+          4
+        ]
+      },
+      "B3P2C-f0be0811cc": {
+        "sid": "B3P2C-30a76d710f",
+        "spacegroup": 44,
+        "nsites": [
+          6,
+          6
+        ]
+      },
+      "B4PC3-6e976d9eb8": {
+        "sid": "B4PC3-eb47dcfbd2",
+        "spacegroup": 25,
+        "nsites": [
+          8,
+          8
+        ]
+      },
+      "B4P3C-f789bb45ec": {
+        "sid": "B4P3C-4707d28177",
+        "spacegroup": 1,
+        "nsites": [
+          8,
+          8
+        ]
+      }
+    },
+    "failed": {}
+  },
+  "created_by_step": "20261107T104349-symmetrize_structures-f3cb40",
+  "created_at": "2026-11-07T10:43:53+00:00"
+}

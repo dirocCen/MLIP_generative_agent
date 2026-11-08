@@ -1,0 +1,53 @@
+{
+  "name": "s1trial.sym.tece_oam_rra.relaxed.tece_oam_rra.e49a1f.converged.l0stable.tece_oam_rra.c7704b",
+  "n": 6,
+  "sids": [
+    "Al1Si3C2N2-b3f06feb13",
+    "AlBN2-3aebd56885",
+    "B3N2-5b52f17642",
+    "B2PC-2ce4fe08d3",
+    "B4PC3-ffc6334852",
+    "B4P3C-4707d28177"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s1trial.sym.tece_oam_rra.relaxed.tece_oam_rra.e49a1f.converged"
+  ],
+  "description": "L0 (tece_oam_rra): FC2 finished without imaginary modes",
+  "details": {
+    "model": "tece_oam_rra",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "B3C2N3-016735656e",
+      "B5C2N-0c0d056b55",
+      "B3N2-d84e22555b",
+      "B2N3-d8b81e50fc",
+      "Si2N-e3042abe12",
+      "Al2Si2CN3-be175f8b93",
+      "Al3SiC3N-7bcaf5f43b",
+      "Al1Si2N2-cda6a9b418",
+      "Si3C4N-6ac58858ab",
+      "Si2CN-ad1d15057f",
+      "SiCN2-ea210389bb",
+      "Si5C2N-f8e5f7a3ba",
+      "Si3C2N-7b3111d80d",
+      "Si2CN-72d971cf39",
+      "AlBN2-ed0a022cfa",
+      "AlB2N-967e97b2b7",
+      "Al2BN-563b924666",
+      "AlB3N4-30350d7488",
+      "CN2-e12b93a732",
+      "B2N3-78204e841a",
+      "B-720709bf81",
+      "BPC-bf7edee5ad",
+      "B3P2-7a4ffbeb54",
+      "B2P-4ab19f6e80",
+      "B2P-5e898deb70",
+      "BC-da58cecf31",
+      "B3P2C-ba8586613c"
+    ]
+  },
+  "created_by_step": "20261107T122653-fetch_results-6b8898",
+  "created_at": "2026-11-07T12:26:58+00:00"
+}

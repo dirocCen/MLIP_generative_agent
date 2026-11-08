@@ -1,0 +1,374 @@
+{
+  "step_id": "20261107T122659-submit_mlip_phonon_kappa-d0972e",
+  "kind": "mlip_kappa",
+  "model": "tece_oam_rra",
+  "worker": "datalab_tace",
+  "param_hash": "cc4191d4d8d0",
+  "all_sids": [
+    "Al1Si3C2N2-b3f06feb13",
+    "AlBN2-3aebd56885",
+    "B3N2-5b52f17642",
+    "B2PC-2ce4fe08d3",
+    "B4PC3-ffc6334852",
+    "B4P3C-4707d28177"
+  ],
+  "mode": "live",
+  "set_name": "s1trial.sym.tece_oam_rra.relaxed.tece_oam_rra.e49a1f.converged.l0stable.tece_oam_rra.c7704b",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "settings": {
+    "Al1Si3C2N2-b3f06feb13": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          -2,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -1,
+          -2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        10,
+        10,
+        10
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 320
+    },
+    "AlBN2-3aebd56885": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          -2,
+          -4,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          -5,
+          -5,
+          0
+        ],
+        [
+          3,
+          -3,
+          0
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 360
+    },
+    "B3N2-5b52f17642": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          0
+        ],
+        [
+          -1,
+          0,
+          -2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -2,
+          0,
+          -3
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          -3,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        12,
+        9,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 80,
+      "n_atoms_fc2_supercell": 380
+    },
+    "B2PC-2ce4fe08d3": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          5,
+          -1,
+          0
+        ],
+        [
+          -1,
+          -4,
+          -2
+        ],
+        [
+          1,
+          4,
+          -2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        14,
+        14,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 72,
+      "n_atoms_fc2_supercell": 336
+    },
+    "B4PC3-ffc6334852": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          -2,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -5,
+          1,
+          0
+        ],
+        [
+          -2,
+          -2,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        15,
+        8,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 400
+    },
+    "B4P3C-4707d28177": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          -1,
+          2,
+          3
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        9,
+        10,
+        10
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 280
+    }
+  },
+  "sids": [
+    "Al1Si3C2N2-b3f06feb13",
+    "AlBN2-3aebd56885",
+    "B3N2-5b52f17642",
+    "B2PC-2ce4fe08d3",
+    "B4PC3-ffc6334852",
+    "B4P3C-4707d28177"
+  ],
+  "db_ids": [
+    "71",
+    "72"
+  ],
+  "flow_uuid": "09d42898-619b-4b32-b4e9-6989647f8113",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "uuid": "296993a4-539e-4a91-a045-fac7519f73dc",
+      "name": "s1trial.sym.tece_oam_rra.relaxed.tece_oam_rra.e49a1f.converged.l0stable.tece_oam_rra.c7704b-kappa-tece_oam_rra-000",
+      "sids": [
+        "Al1Si3C2N2-b3f06feb13",
+        "AlBN2-3aebd56885",
+        "B3N2-5b52f17642",
+        "B2PC-2ce4fe08d3"
+      ],
+      "kind": "mlip_kappa"
+    },
+    {
+      "uuid": "ddf058f3-fe9c-4b3c-a9eb-1198bf94b2b8",
+      "name": "s1trial.sym.tece_oam_rra.relaxed.tece_oam_rra.e49a1f.converged.l0stable.tece_oam_rra.c7704b-kappa-tece_oam_rra-001",
+      "sids": [
+        "B4PC3-ffc6334852",
+        "B4P3C-4707d28177"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}

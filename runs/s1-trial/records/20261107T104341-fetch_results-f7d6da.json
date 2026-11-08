@@ -1,0 +1,64 @@
+{
+  "step_id": "20261107T104341-fetch_results-f7d6da",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T100110-submit_mlip_relax-ebc669"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T100110-submit_mlip_relax-ebc669",
+    "kind": "mlip_relax",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_relax",
+    "model": "tece_oam_rra",
+    "ingest": {
+      "n_saved": 46,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "relaxed_set": "s1trial.clean.relaxed.tece_oam_rra.8af26d",
+      "n_relaxed": 46,
+      "n_failed": 0,
+      "n_missing": 0,
+      "failure_reasons": {},
+      "note": null
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 6.557,
+  "host": "cenyj",
+  "created_at": "2026-11-07T10:43:41+00:00"
+}

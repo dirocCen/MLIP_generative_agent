@@ -1,0 +1,147 @@
+{
+  "step_id": "20261107T142756-fetch_results-8fd414",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T123140-submit_mlip_fc2_descriptors-bcf659"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T123140-submit_mlip_fc2_descriptors-bcf659",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "tece_oam_rra",
+    "ingest": {
+      "n_saved": 36,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 9,
+        "states": {
+          "COMPLETED": 9
+        },
+        "all_final": true,
+        "n_completed": 9,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 36,
+      "n_missing": 0,
+      "n_failed": 5,
+      "failed_examples": [
+        {
+          "sid": "B3C2N3-035a74b0c6",
+          "stage": "fc2",
+          "error": "SpglibCppError: Niggli reduction failed"
+        },
+        {
+          "sid": "B5C2N-9b026f772d",
+          "stage": "fc2",
+          "error": "orch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "sid": "B3N2-3757e97a62",
+          "stage": "fc2",
+          "error": "orch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "sid": "BC-17220d3d87",
+          "stage": "fc2",
+          "error": "orch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "sid": "B3P2C-b2b2d89dbf",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        }
+      ],
+      "wall_time_s": {
+        "n": 36,
+        "min": 8.58,
+        "median": 60.540000000000006,
+        "max": 616.3
+      },
+      "n_imaginary": 23,
+      "stable_set": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.tece_oam_rra.c7704b",
+      "n_stable": 8,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 8,
+          "min": 16.67275855872625,
+          "median": 110.84697011424795,
+          "max": 284.081015521421
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 8,
+          "min": 0.1954673453189488,
+          "median": 1.3897694921394426,
+          "max": 6.877472988604982
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 8,
+          "min": 2.000945295630033,
+          "median": 8.224719980856342,
+          "max": 10.92350790076024
+        },
+        "theta_acoustic_K": {
+          "n": 8,
+          "min": 320.979484751592,
+          "median": 520.4194162797428,
+          "max": 620.0789745984615
+        },
+        "ao_gap_ratio": {
+          "n": 8,
+          "min": -0.3824355204924376,
+          "median": -0.29779320301891515,
+          "max": -0.16509545335658168
+        },
+        "acoustic_branch_spread": {
+          "n": 8,
+          "min": 0.2060615781623006,
+          "median": 0.3176994068037611,
+          "max": 0.42237301796548643
+        },
+        "gamma_acoustic_rms": {
+          "n": 8,
+          "min": 0.46053278165261957,
+          "median": 0.8965692364037765,
+          "max": 2.701281388027951
+        },
+        "wjdos_cv_mean": {
+          "n": 8,
+          "min": 2.8869171452695803,
+          "median": 11.355311907012258,
+          "max": 21.87578970256862
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 6.202,
+  "host": "cenyj",
+  "created_at": "2026-11-07T14:27:56+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.dpa41_max_oam.c7704b",
+  "n": 8,
+  "sids": [
+    "Al1Si3C2N2-1daf0143f8",
+    "SiCN2-117e2eb2c7",
+    "AlB2N-5eab6f4de1",
+    "AlBN2-956408ab87",
+    "B3N2-7307dc80df",
+    "B2PC-67ccc87a7d",
+    "B4PC3-c3e9489237",
+    "B4P3C-1faa9d2573"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "B3C2N3-035a74b0c6",
+      "B5C2N-9b026f772d",
+      "B3N2-3757e97a62",
+      "B2N3-956f68325c",
+      "Si2N3-57923bfefb",
+      "Si2N-bf10355763",
+      "Al2Si2CN3-9e9b7a92a1",
+      "Al3SiC3N-7bc5659572",
+      "Al1Si2N2-2f4c3b8b0e",
+      "Si3C4N-c8c22a3c9c",
+      "SiCN2-9b58a49ff4",
+      "Si2CN-f07af760f0",
+      "Si5C2N-48d89d59f5",
+      "Si3C2N-be800fbbe4",
+      "Si2CN-d401b8c416",
+      "AlBN2-52319e0c96",
+      "Al2BN-a6d4a78b8d",
+      "AlB3N4-7d4139d6a2",
+      "CN2-23af05e768",
+      "B2N3-32aafeec59",
+      "B2N-e80eb3c23b",
+      "B-38f357eeff",
+      "BPC-4dc64271d6",
+      "B3P2-3788bd1c1b",
+      "B2P-bd0e111db6",
+      "B2P-c71bf458b1",
+      "BC-17220d3d87",
+      "B3P2C-b2b2d89dbf"
+    ]
+  },
+  "created_by_step": "20261107T112450-fetch_results-0167a7",
+  "created_at": "2026-11-07T11:24:56+00:00"
+}
