@@ -1,0 +1,137 @@
+{
+  "step_id": "20261108T142336-fetch_results-6f31ea",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T124107-submit_mlip_fc2_descriptors-467229"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261107T124107-submit_mlip_fc2_descriptors-467229",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "pet_oam_xl",
+    "ingest": {
+      "n_saved": 36,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 9,
+        "states": {
+          "COMPLETED": 9
+        },
+        "all_final": true,
+        "n_completed": 9,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 36,
+      "n_missing": 0,
+      "n_failed": 3,
+      "failed_examples": [
+        {
+          "sid": "B3C2N3-035a74b0c6",
+          "stage": "fc2",
+          "error": "SpglibCppError: Niggli reduction failed"
+        },
+        {
+          "sid": "Al2BN-a6d4a78b8d",
+          "stage": "fc2",
+          "error": "ch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n\n"
+        },
+        {
+          "sid": "B3P2C-b2b2d89dbf",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        }
+      ],
+      "wall_time_s": {
+        "n": 36,
+        "min": 49.86,
+        "median": 423.75,
+        "max": 3156.08
+      },
+      "n_imaginary": 24,
+      "stable_set": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.pet_oam_xl.9758c1",
+      "n_stable": 9,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 9,
+          "min": 2.414058187203981,
+          "median": 47.19669003941843,
+          "max": 281.5757669415907
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 9,
+          "min": 0.17722431549129566,
+          "median": 1.013957031020219,
+          "max": 6.937981013103169
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 9,
+          "min": 1.9244747294786702,
+          "median": 6.73124776930373,
+          "max": 11.19818586607506
+        },
+        "theta_acoustic_K": {
+          "n": 9,
+          "min": 319.5898034280842,
+          "median": 512.6101818221498,
+          "max": 622.5111826791833
+        },
+        "ao_gap_ratio": {
+          "n": 9,
+          "min": -0.6708817821760377,
+          "median": -0.2908886535897259,
+          "max": -0.1614980902497951
+        },
+        "acoustic_branch_spread": {
+          "n": 9,
+          "min": 0.2119680679928736,
+          "median": 0.3270236354524171,
+          "max": 0.4191948110311039
+        },
+        "gamma_acoustic_rms": {
+          "n": 9,
+          "min": 0.5199529109895884,
+          "median": 1.0438881070498707,
+          "max": 3.573158872825111
+        },
+        "wjdos_cv_mean": {
+          "n": 9,
+          "min": 2.85239548744322,
+          "median": 13.702468117791577,
+          "max": 29.701966467397632
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 6.52,
+  "host": "cenyj",
+  "created_at": "2026-11-08T14:23:36+00:00"
+}

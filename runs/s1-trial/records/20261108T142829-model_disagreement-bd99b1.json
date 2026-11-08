@@ -1,0 +1,111 @@
+{
+  "step_id": "20261108T142829-model_disagreement-bd99b1",
+  "run_id": "s1-trial",
+  "tool": "model_disagreement",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T112721-submit_mlip_phonon_kappa-f8a01b",
+    "20261107T142826-submit_mlip_phonon_kappa-388fb0"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "kappa_step_ids": [
+      "20261107T112721-submit_mlip_phonon_kappa-f8a01b",
+      "20261107T142826-submit_mlip_phonon_kappa-388fb0"
+    ],
+    "top_n": 0,
+    "out_set": null
+  },
+  "outputs": {
+    "models": [
+      "dpa41_max_oam",
+      "tece_oam_rra"
+    ],
+    "n_common_structures": 8,
+    "param_differences": [],
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "n_compared": 8,
+        "n_censored": 0,
+        "mean_abs_srd": 0.29478431907369856,
+        "median_abs_srd": 0.18663671026235173,
+        "mean_srme": 0.3681263798953828,
+        "n_mode_not_comparable": 2,
+        "mean_freq_mae_thz": 0.1481827070406526
+      }
+    },
+    "most_disagreeing": [
+      {
+        "sid": "SiCN2-117e2eb2c7",
+        "formula": "SiCN2",
+        "kappa": {
+          "dpa41_max_oam": 14.76525134008955,
+          "tece_oam_rra": 44.62259403518723
+        },
+        "max_abs_srd": 1.006
+      },
+      {
+        "sid": "B4PC3-c3e9489237",
+        "formula": "B4PC3",
+        "kappa": {
+          "dpa41_max_oam": 28.815647223583014,
+          "tece_oam_rra": 44.63596130727757
+        },
+        "max_abs_srd": 0.431
+      },
+      {
+        "sid": "Al1Si3C2N2-1daf0143f8",
+        "formula": "AlSi3(CN)2",
+        "kappa": {
+          "dpa41_max_oam": 43.46143292740055,
+          "tece_oam_rra": 29.033779788116533
+        },
+        "max_abs_srd": 0.398
+      },
+      {
+        "sid": "B2PC-67ccc87a7d",
+        "formula": "B2PC",
+        "kappa": {
+          "dpa41_max_oam": 53.589050935812566,
+          "tece_oam_rra": 68.49288933870749
+        },
+        "max_abs_srd": 0.244
+      },
+      {
+        "sid": "B3N2-7307dc80df",
+        "formula": "B3N2",
+        "kappa": {
+          "dpa41_max_oam": 64.01300353023886,
+          "tece_oam_rra": 56.24933650353196
+        },
+        "max_abs_srd": 0.129
+      }
+    ],
+    "n_censored_in_any_model": 0,
+    "out_set": null,
+    "note": "param_differences lists result-affecting settings that differ between the steps: if not empty, disagreement mixes model and parameter effects.",
+    "details_file": "runs/s1-trial/outputs/20261108T142829-model_disagreement-bd99b1.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.479,
+  "host": "cenyj",
+  "created_at": "2026-11-08T14:28:29+00:00"
+}

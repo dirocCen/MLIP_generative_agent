@@ -1,0 +1,486 @@
+{
+  "step_id": "20261108T142832-submit_mlip_kappa_lbte-9d26cb",
+  "kind": "mlip_lbte",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "134f7ea6f17b",
+  "all_sids": [
+    "Al1Si3C2N2-1daf0143f8",
+    "SiCN2-117e2eb2c7",
+    "AlB2N-5eab6f4de1",
+    "AlBN2-956408ab87",
+    "B3N2-7307dc80df",
+    "B2PC-67ccc87a7d",
+    "B4PC3-c3e9489237",
+    "B4P3C-1faa9d2573"
+  ],
+  "mode": "live",
+  "set_name": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.dpa41_max_oam.c7704b",
+  "rung": "lbte",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "temperatures": [
+      300.0
+    ],
+    "max_collision_matrix_gb": 32.0,
+    "min_mesh_scale": 0.5,
+    "pinv_cutoff": 1e-08
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "Al1Si3C2N2-1daf0143f8": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          -2,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -1,
+          -2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        10,
+        10,
+        10
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 320
+    },
+    "SiCN2-117e2eb2c7": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          -3,
+          1,
+          1
+        ],
+        [
+          -3,
+          -1,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        13,
+        13,
+        8
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 320
+    },
+    "AlB2N-5eab6f4de1": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          -2,
+          0
+        ],
+        [
+          -1,
+          0,
+          -2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          2,
+          -3,
+          0
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          -1,
+          -4,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        15,
+        15,
+        10
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 344
+    },
+    "AlBN2-956408ab87": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          -4,
+          -2,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -1,
+          0,
+          -3
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          -3,
+          -6,
+          0
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 360
+    },
+    "B3N2-7307dc80df": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          0
+        ],
+        [
+          -1,
+          0,
+          -2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -2,
+          0,
+          -3
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          -3,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        12,
+        9,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 80,
+      "n_atoms_fc2_supercell": 380
+    },
+    "B2PC-67ccc87a7d": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          -2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          5,
+          -1,
+          0
+        ],
+        [
+          -1,
+          -4,
+          -2
+        ],
+        [
+          1,
+          4,
+          -2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        14,
+        14,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 336
+    },
+    "B4PC3-c3e9489237": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          -2,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -5,
+          1,
+          0
+        ],
+        [
+          -2,
+          -2,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        15,
+        8,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 400
+    },
+    "B4P3C-1faa9d2573": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -2,
+          1,
+          -2
+        ],
+        [
+          1,
+          -2,
+          -3
+        ],
+        [
+          -2,
+          -3,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        9,
+        10,
+        10
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 280
+    }
+  },
+  "sids": [
+    "Al1Si3C2N2-1daf0143f8",
+    "SiCN2-117e2eb2c7",
+    "AlB2N-5eab6f4de1",
+    "AlBN2-956408ab87",
+    "B3N2-7307dc80df",
+    "B2PC-67ccc87a7d",
+    "B4PC3-c3e9489237",
+    "B4P3C-1faa9d2573"
+  ],
+  "db_ids": [
+    "95",
+    "96"
+  ],
+  "flow_uuid": "7a194e7a-0dd2-46f7-90a4-a7d5aa143827",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "uuid": "38a4010c-59c7-4191-8cf0-85da1edae367",
+      "name": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.dpa41_max_oam.c7704b-lbte-dpa41_max_oam-000",
+      "sids": [
+        "Al1Si3C2N2-1daf0143f8",
+        "SiCN2-117e2eb2c7",
+        "AlB2N-5eab6f4de1",
+        "AlBN2-956408ab87"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "d5335618-363e-4080-bcab-f09731bf4364",
+      "name": "s1trial.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged.l0stable.dpa41_max_oam.c7704b-lbte-dpa41_max_oam-001",
+      "sids": [
+        "B3N2-7307dc80df",
+        "B2PC-67ccc87a7d",
+        "B4PC3-c3e9489237",
+        "B4P3C-1faa9d2573"
+      ],
+      "kind": "mlip_lbte"
+    }
+  ]
+}

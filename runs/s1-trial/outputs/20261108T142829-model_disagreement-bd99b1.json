@@ -1,0 +1,168 @@
+{
+  "Al1Si3C2N2-1daf0143f8": {
+    "kappa": {
+      "dpa41_max_oam": 43.46143292740055,
+      "tece_oam_rra": 29.033779788116533
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 43.46143292740055,
+        "kappa_b": 29.033779788116533,
+        "srd": 0.39803050708742543,
+        "mode_comparable": false,
+        "srme": null,
+        "note": "q-points differ (different mesh or symmetry); mode-resolved comparison not possible"
+      }
+    },
+    "max_abs_srd": 0.39803050708742543,
+    "log10_kappa_std": 0.08760023121419824
+  },
+  "SiCN2-117e2eb2c7": {
+    "kappa": {
+      "dpa41_max_oam": 14.76525134008955,
+      "tece_oam_rra": 44.62259403518723
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 14.76525134008955,
+        "kappa_b": 44.62259403518723,
+        "srd": -1.0055034832944898,
+        "mode_comparable": true,
+        "srme": 1.012046051899941,
+        "freq_mae_thz": 0.09754133214856157,
+        "freq_max_abs_thz": 0.5289438860735327
+      }
+    },
+    "max_abs_srd": 1.0055034832944898,
+    "log10_kappa_std": 0.24015698466207624
+  },
+  "AlB2N-5eab6f4de1": {
+    "kappa": {
+      "dpa41_max_oam": 54.34655036427881,
+      "tece_oam_rra": 53.776069400466326
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 54.34655036427881,
+        "kappa_b": 53.776069400466326,
+        "srd": 0.010552481341161489,
+        "mode_comparable": false,
+        "srme": null,
+        "note": "q-points differ (different mesh or symmetry); mode-resolved comparison not possible"
+      }
+    },
+    "max_abs_srd": 0.010552481341161489,
+    "log10_kappa_std": 0.002291463472384625
+  },
+  "AlBN2-956408ab87": {
+    "kappa": {
+      "dpa41_max_oam": 20.130941044829584,
+      "tece_oam_rra": 17.850124736377765
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 20.130941044829584,
+        "kappa_b": 17.850124736377765,
+        "srd": 0.12010280709818015,
+        "mode_comparable": true,
+        "srme": 0.13383727567925785,
+        "freq_mae_thz": 0.03566355864570134,
+        "freq_max_abs_thz": 0.220716150883967
+      }
+    },
+    "max_abs_srd": 0.12010280709818015,
+    "log10_kappa_std": 0.026111410837394988
+  },
+  "B3N2-7307dc80df": {
+    "kappa": {
+      "dpa41_max_oam": 64.01300353023886,
+      "tece_oam_rra": 56.24933650353196
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 64.01300353023886,
+        "kappa_b": 56.24933650353196,
+        "srd": 0.12911218964352086,
+        "mode_comparable": true,
+        "srme": 0.16336667061577498,
+        "freq_mae_thz": 0.14045954035703265,
+        "freq_max_abs_thz": 0.53014652173378
+      }
+    },
+    "max_abs_srd": 0.12911218964352086,
+    "log10_kappa_std": 0.028075400503667303
+  },
+  "B2PC-67ccc87a7d": {
+    "kappa": {
+      "dpa41_max_oam": 53.589050935812566,
+      "tece_oam_rra": 68.49288933870749
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 53.589050935812566,
+        "kappa_b": 68.49288933870749,
+        "srd": -0.24416123088118263,
+        "mode_comparable": true,
+        "srme": 0.276266976274641,
+        "freq_mae_thz": 0.24102115577864838,
+        "freq_max_abs_thz": 1.3329975297965468
+      }
+    },
+    "max_abs_srd": 0.24416123088118263,
+    "log10_kappa_std": 0.05328471067754181
+  },
+  "B4PC3-c3e9489237": {
+    "kappa": {
+      "dpa41_max_oam": 28.815647223583014,
+      "tece_oam_rra": 44.63596130727757
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 28.815647223583014,
+        "kappa_b": 44.63596130727757,
+        "srd": -0.43076834939694136,
+        "mode_comparable": true,
+        "srme": 0.4960351682598581,
+        "freq_mae_thz": 0.27964105882952245,
+        "freq_max_abs_thz": 1.858672982310548
+      }
+    },
+    "max_abs_srd": 0.43076834939694136,
+    "log10_kappa_std": 0.09502825689822225
+  },
+  "B4P3C-1faa9d2573": {
+    "kappa": {
+      "dpa41_max_oam": 10.190382614952405,
+      "tece_oam_rra": 9.988158283889177
+    },
+    "pairs": {
+      "dpa41_max_oam|tece_oam_rra": {
+        "censored_a": null,
+        "censored_b": null,
+        "kappa_a": 10.190382614952405,
+        "kappa_b": 9.988158283889177,
+        "srd": 0.02004350384668666,
+        "mode_comparable": true,
+        "srme": 0.12720613664282374,
+        "freq_mae_thz": 0.09476959648444903,
+        "freq_max_abs_thz": 0.49234539191001403
+      }
+    },
+    "max_abs_srd": 0.02004350384668666,
+    "log10_kappa_std": 0.004352537279650404
+  }
+}
