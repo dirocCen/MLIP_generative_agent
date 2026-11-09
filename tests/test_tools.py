@@ -96,6 +96,8 @@ def test_structure_pipeline(project):
     prim = structures.filter_structures("mix", "mix.prim2", max_primitive_sites=2, **A)
     assert prim["n_kept"] == 4  # conventional Si and rock-salt NaCl reduce to 2-atom primitive cells
     assert structures.filter_structures("mix", "mix.prim1", max_primitive_sites=1, **A)["n_kept"] == 1  # bcc
+    compounds = structures.filter_structures("mix", "mix.compounds", min_elements=2, **A)
+    assert compounds["n_kept"] == 1 and compounds["removed_by_criterion"] == {"min_elements": 3}  # only NaCl survives
 
     base = si_primitive()  # fixed small displacement: P-1 at symprec 1e-3, Fd-3m at 0.1
     rattled = type(base)(base.lattice, ["Si", "Si"], [[0.003, 0.0, -0.002], [0.25, 0.252, 0.249]])
@@ -122,7 +124,7 @@ def test_structure_pipeline(project):
         structures.assert_no_leakage(registry.set_sids("mix"))
 
     names = {s["name"] for s in structures.list_sets()["sets"]}
-    assert names == {"mix", "mix.small", "mix.prim2", "mix.prim1", "mix.merged", "rattled", "rattled.sym", "mix.unique", "mix.clean"}
+    assert names == {"mix", "mix.small", "mix.prim2", "mix.prim1", "mix.compounds", "mix.merged", "rattled", "rattled.sym", "mix.unique", "mix.clean"}
 
 
 def test_leakage_follows_descendants(project):

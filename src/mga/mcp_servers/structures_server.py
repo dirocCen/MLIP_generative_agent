@@ -28,7 +28,7 @@ add(server, t.symmetrize_structures,
     "between a pre-relax and the kappa_SRME relax of generated structures, which otherwise stay P1.",
     read_only=False, idempotent=True)
 add(server, t.filter_structures,
-    "Filter a set by atom count (max_primitive_sites counts the standardized primitive cell, symprec 0.1), elements, space group, minimum interatomic distance etc.; creates a new set and records "
+    "Filter a set by atom count (max_primitive_sites counts the standardized primitive cell, symprec 0.1), number of elements (min_elements=2 drops elemental solids), elements, space group, minimum interatomic distance etc.; creates a new set and records "
     "why each structure was removed.",
     read_only=False, idempotent=True)
 add(server, t.deduplicate,

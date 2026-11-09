@@ -160,3 +160,28 @@ def test_minimal_supercell_never_larger_than_diagonal_and_keeps_symmetry():
     assert lattice_width(m2 @ hexa) >= 14.0 and np.linalg.det(m2) < 0.6 * np.linalg.det(d)
     # cubic at 14 A: identical to the diagonal rule
     assert np.array_equal(np.abs(minimal_supercell(zb.cell, 14.0, rots)), diagonal_supercell(zb.cell, 14.0))
+
+
+def test_length_rule_q_mesh_respects_body_centred_symmetry():
+    """I-centred cells: per-axis length rule gives (n, n, m) on the primitive basis, which the
+    4-fold axis does not leave invariant; phono3py rejects it (S1-main b2, I-42d B2AsP)."""
+    from ase.build import bulk
+    from phono3py import Phono3py
+    from phonopy.structure.atoms import PhonopyAtoms
+    from phonopy.structure.grid_points import length2mesh
+
+    from mga.specs import MLIPPhononKappaParams
+    from mga.workflows.kappa_protocol import _primitive_cell, length_rule_settings, symmetric_q_mesh
+
+    kp = MLIPPhononKappaParams().model_dump()
+    bct = bulk("In", "bct", a=3.25, c=4.95)
+    unit, fixed = length_rule_settings(bct, kp)
+    naive = [int(x) for x in length2mesh(kp["q_mesh_length"], _primitive_cell(unit, kp["symprec"]).cell)]
+    assert len(set(naive)) > 1 and len(set(fixed["q_mesh"])) == 1 and max(fixed["q_mesh"]) == max(naive)
+    ph3 = Phono3py(PhonopyAtoms(unit.get_chemical_symbols(), cell=np.asarray(unit.cell), positions=unit.positions),
+                   supercell_matrix=np.eye(3, dtype=int), primitive_matrix="auto", symprec=kp["symprec"], log_level=0)
+    ph3.mesh_numbers = fixed["q_mesh"]  # raises "Grid symmetry is broken" for the naive mesh
+    # an already symmetric mesh is left alone (hexagonal)
+    hexa = bulk("Mg", "hcp", a=3.21, c=5.21)
+    assert symmetric_q_mesh(kp["q_mesh_length"], hexa, kp["symprec"]) == [
+        int(x) for x in length2mesh(kp["q_mesh_length"], _primitive_cell(hexa, kp["symprec"]).cell)]

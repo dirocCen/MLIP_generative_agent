@@ -295,6 +295,7 @@ def filter_structures(
     min_sites: int | None = None,
     max_sites: int | None = None,
     max_primitive_sites: int | None = None,
+    min_elements: int | None = None,
     max_elements: int | None = None,
     elements_allowed: list[str] | None = None,
     elements_required: list[str] | None = None,
@@ -323,6 +324,7 @@ def filter_structures(
             checks = {
                 "min_sites": min_sites is None or entry["nsites"] >= min_sites,
                 "max_sites": max_sites is None or entry["nsites"] <= max_sites,
+                "min_elements": min_elements is None or len(els) >= min_elements,
                 "max_elements": max_elements is None or len(els) <= max_elements,
                 "elements_allowed": not allowed or els <= allowed,
                 "elements_required": not elements_required or set(elements_required) <= els,

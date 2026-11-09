@@ -224,13 +224,51 @@ def point_group_rotations(atoms: Atoms, symprec: float) -> np.ndarray:
     return np.unique(np.asarray(ds.rotations), axis=0)
 
 
-def _primitive_lattice(unit: Atoms, symprec: float) -> np.ndarray:
-    """Lattice (rows) of the primitive cell that ``primitive_matrix="auto"`` gives."""
+def _primitive_cell(unit: Atoms, symprec: float):
+    """The primitive cell (PhonopyAtoms) that ``primitive_matrix="auto"`` gives."""
     from phonopy import Phonopy
     from phonopy.structure.atoms import PhonopyAtoms
 
     cell = PhonopyAtoms(unit.get_chemical_symbols(), cell=np.asarray(unit.cell), positions=unit.positions)
-    return np.asarray(Phonopy(cell, supercell_matrix=np.eye(3, dtype=int), primitive_matrix="auto", symprec=symprec).primitive.cell)
+    return Phonopy(cell, supercell_matrix=np.eye(3, dtype=int), primitive_matrix="auto", symprec=symprec).primitive
+
+
+def symmetric_q_mesh(length: float, unit: Atoms, symprec: float) -> list[int]:
+    """phonopy's length rule on the primitive cell, made invariant under the point group.
+
+    A diagonal mesh (m1, m2, m3) on the primitive reciprocal basis is invariant under an
+    integer rotation R only if m_i = m_j wherever R links axes i and j. phonopy's
+    ``length2mesh(rotations=...)`` only equalises axes that the group permutes, which misses
+    body-centred cells: the I-centred primitive vectors are mixed by the 4-fold/2-fold axes,
+    the per-axis lengths differ, and phono3py rejects the mesh ("Grid symmetry is broken";
+    S1-main b2: I-42d B2AsP, I-42m B4AsP3, Imm2 B3As2P). Linked axes get the larger number,
+    so the mesh is never coarser than the length rule; it is unchanged whenever the old one
+    was already symmetric.
+    """
+    import spglib
+    from phonopy.structure.grid_points import length2mesh
+
+    prim = _primitive_cell(unit, symprec)
+    mesh = [int(x) for x in length2mesh(length, np.asarray(prim.cell))]
+    rots = spglib.get_symmetry_dataset((prim.cell, prim.scaled_positions, prim.numbers), symprec=symprec).rotations
+    group = [0, 1, 2]
+
+    def root(i: int) -> int:
+        while group[i] != i:
+            i = group[i]
+        return i
+
+    for r in rots:
+        for i in range(3):
+            for j in range(3):
+                if i != j and r[i][j] != 0:
+                    group[root(i)] = root(j)
+    for g in {root(i) for i in range(3)}:
+        axes = [i for i in range(3) if root(i) == g]
+        top = max(mesh[i] for i in axes)
+        for i in axes:
+            mesh[i] = top
+    return mesh
 
 
 def length_rule_settings(atoms: Atoms, p: dict[str, Any]) -> tuple[Atoms, dict[str, Any]]:
@@ -248,8 +286,6 @@ def length_rule_settings(atoms: Atoms, p: dict[str, Any]) -> tuple[Atoms, dict[s
     = "symmetric" keeps the point group for FC2 as well (the VASP path: random FC2 displacements
     in a symmetry-broken cell gave imaginary modes); the MLIP params have no such key -> "any".
     """
-    from phonopy.structure.grid_points import length2mesh
-
     unit = conventional_cell(atoms, p["symprec"])
     rots = point_group_rotations(unit, p["symprec"])
     fc2_shape = p.get("fc2_supercell_shape", "any")
@@ -258,7 +294,7 @@ def length_rule_settings(atoms: Atoms, p: dict[str, Any]) -> tuple[Atoms, dict[s
         "fc3_supercell": minimal_supercell(unit.cell, p["fc3_min_width"], rots).tolist(),
         "fc2_supercell": minimal_supercell(unit.cell, p["fc2_min_width"], rots if fc2_shape == "symmetric" else None).tolist(),
         "fc2_supercell_shape": fc2_shape,
-        "q_mesh": [int(x) for x in length2mesh(p["q_mesh_length"], _primitive_lattice(unit, p["symprec"]))],
+        "q_mesh": symmetric_q_mesh(p["q_mesh_length"], unit, p["symprec"]),
         "fc3_min_width": p["fc3_min_width"],
         "fc2_min_width": p["fc2_min_width"],
         "q_mesh_length": p["q_mesh_length"],
