@@ -1,0 +1,1164 @@
+{
+  "name": "s1main.b2.unique",
+  "n": 570,
+  "sids": [
+    "CN-2c68d617cf",
+    "CN3-4797d5f790",
+    "CN6-3e5c5c004a",
+    "C3N-e39a359bfe",
+    "CN4-70d5922900",
+    "C5N3-a3a3b1e42d",
+    "CN-d2e8d68a3a",
+    "CN-b8584c7357",
+    "N2-7d92a1c5f8",
+    "CN-55d3a749d6",
+    "CN-8a9a85bea6",
+    "CN2-651cf770bd",
+    "CN-e6f4dee031",
+    "CN-d4a33a4b66",
+    "CN3-a16b459f3c",
+    "CN-1f0bd2c632",
+    "CN-64a3a214fe",
+    "C3N5-260a891ae8",
+    "CN-d0e8edb30c",
+    "CN-ca7e0165fc",
+    "N2-985b7c8950",
+    "CN-f2f8b62716",
+    "CN5-af08f35ef5",
+    "N2-61f10abf05",
+    "N2-a736d9e189",
+    "CN3-7a838eb1ce",
+    "C3N-90cc278c78",
+    "CN3-789ed16aa7",
+    "CN-27cf3a09a9",
+    "N2-144441a070",
+    "CN2-49edde1de8",
+    "CN3-7278cbd339",
+    "CN-dc01086afc",
+    "CN2-317c78567b",
+    "CN-ab5e7e06c5",
+    "CN3-1bfee36907",
+    "C2N-7d7ff3151d",
+    "N2-531eee36fc",
+    "CN3-9ff3187369",
+    "CN-ea0a01c399",
+    "CN-9693337baa",
+    "CN-fd12bd95a0",
+    "C5N3-30931e9670",
+    "CN-3bd7fccf5c",
+    "N2-5d6b22c50d",
+    "C2N3-4105cfe872",
+    "C3N5-dedc3208ed",
+    "CN-faa83dd015",
+    "CN-57bdeff7cd",
+    "C2N3-3722f03345",
+    "C3N5-9ab610bea1",
+    "CN-46b478d6f4",
+    "C3N5-1b629a5942",
+    "CN3-2f8d2a2bf7",
+    "N2-a33dadb5e9",
+    "CN-aac46ab8ad",
+    "CN2-3a321f79e8",
+    "CN-b0a0bbba89",
+    "CN2-236b527035",
+    "CN3-01fd131b8d",
+    "CN5-e30fbb1ab2",
+    "CN-7cba07636f",
+    "CN7-37c250dba4",
+    "CN2-299bbc34f0",
+    "CN4-064239dc33",
+    "CN-45b80f2e84",
+    "CN-e7aa7fcc17",
+    "CN2-43df1ec5ec",
+    "CN-b38f55bc75",
+    "C2N5-93ec29923f",
+    "C-6e938789a8",
+    "C2N-3b0836056d",
+    "C3N2-e712d6c543",
+    "C3N2-ae0e39ea60",
+    "C2N3-44c2896a9f",
+    "C-a97aa8e635",
+    "CN2-62daced5da",
+    "CN-a6b73fcfd1",
+    "CN3-9a0db130c7",
+    "C2N5-0ebd8e602c",
+    "C3N-04db89e572",
+    "C-e50ac23ec1",
+    "C3N5-105acf3131",
+    "CN3-3d363823ff",
+    "C5N3-e83ae347ea",
+    "CN-4f18b227ca",
+    "C3N5-ad2a5b04aa",
+    "N2-fe7b2ce449",
+    "CN2-4f791e8eff",
+    "C2N3-9786749033",
+    "BAs-829ebcd890",
+    "BAs-5e6d1c7d8b",
+    "B2As3-abb17d3828",
+    "B2As3-5b09014e1e",
+    "B2As3-c21a3cf794",
+    "B2As-f72ebe7c75",
+    "BAs-c5dc2cc1f7",
+    "BAs-f43feddda6",
+    "B2As-92768501f7",
+    "BAs-d886b19afb",
+    "BAs-e7e33f7806",
+    "B3As-c38ab087b0",
+    "BAs2-2288c51e93",
+    "BAs-2460ce80e7",
+    "B5As3-5cd458e734",
+    "BAs-47071234ab",
+    "B2As-a095c53fd9",
+    "B2As5-3524d6324d",
+    "B5As3-1e618ad043",
+    "BAs-980ff9b6b0",
+    "BAs-7c87fe0c26",
+    "BAs-ceeb0e99ef",
+    "BAs-394bc0d01a",
+    "BAs-660407af19",
+    "BAs2-b204579fd6",
+    "BAs2-843f853179",
+    "BAs2-f491921490",
+    "B3As2-b72c8ebee0",
+    "B3As4-f843052339",
+    "BAs-b4839f2e0b",
+    "BAs-c6a69c8dc0",
+    "B3As-fbb7f0bc27",
+    "B2As-3e5040e549",
+    "B2As3-626b6de981",
+    "BAs-6c0b08c558",
+    "B3As-bc114148e7",
+    "B2As-4f7b6963b3",
+    "BAs3-8607ed3312",
+    "BAs2-635e97dbd3",
+    "BAs2-63f48475d5",
+    "BAs-de6d4fe741",
+    "B3As2-084672ae13",
+    "B3As-5dc029c68c",
+    "B2As3-72533d726c",
+    "BAs-0b99e0a7be",
+    "BAs-b8b5f9fbc9",
+    "B2As3-4ecc88cd20",
+    "BAs-9902e18baa",
+    "B2As-7d0471e162",
+    "BAs-9b68d7e333",
+    "B3As2-23e0434b34",
+    "BAs-0fd36601cd",
+    "B3As-4a0594df72",
+    "BAs-d124f2a22d",
+    "BAs2-5384d97950",
+    "B3As4-ace89ac2c2",
+    "B3As-b816b203f9",
+    "B5As3-f15653eee1",
+    "As-bfb2935e9e",
+    "B3As-26d7fb37eb",
+    "BAs-7dca6439e3",
+    "B5As-ace57c85a6",
+    "B3As2-d8738d450a",
+    "B5As3-377d5dcbbe",
+    "B4As3-426054c5d0",
+    "BAs-4fd91fc5ab",
+    "B2As5-0cb1e2b4c6",
+    "BAs3-39949ddfab",
+    "BAs-82732571ad",
+    "B3As2-765f7d8c2b",
+    "B2As3-27755ea931",
+    "BAs-dabda5f52a",
+    "BAs-26872c9bb0",
+    "BAs3-6e55c98449",
+    "BAs-c2912a9b50",
+    "BAs-eed8cce2fa",
+    "B3As2-bff6e34d2d",
+    "B5As2-03b1760838",
+    "BAs2-03a6547fd7",
+    "BAs-dc0283a555",
+    "B4As3-3054719546",
+    "BAs-ca7d960d51",
+    "B5As3-ffa0bf9dd7",
+    "B3As4-d017a26623",
+    "BAs-f0c0b72b93",
+    "BAs2-2a96c535c0",
+    "B2As3-a6685901c9",
+    "B3As-d40746d7d1",
+    "B2As-a5b522e45f",
+    "BAs2-e3e62fe1cd",
+    "BAs3-f8f310c48e",
+    "As-82e6516752",
+    "BAs2-0eb2417735",
+    "BAs2-ba677dcc39",
+    "BAs2-a2f6720c3e",
+    "B3As2-0ce611d69e",
+    "BAs3-f4dff27189",
+    "BAs2-fe3197076b",
+    "BAs-33aa5c4f87",
+    "B3As2-a2b7899146",
+    "B3As2-48bd68dc6f",
+    "B3As2-20a0922ef1",
+    "BAs-a1427206bb",
+    "BAs-4795b7671b",
+    "BAs2-49d83c4239",
+    "BAs2-d03159ece3",
+    "B3As2-985d2a7d06",
+    "B3As4-38fbf7d0c6",
+    "BAs2-00c42495e7",
+    "BAs-b8f881bc52",
+    "BAs3-38bc671101",
+    "B3As5-55db3ad561",
+    "B2As-8712a8cdca",
+    "B2As-708d4c264e",
+    "B3As2-4106315f01",
+    "B3As-5856858d5c",
+    "BAs2-dc143fd6d3",
+    "BAs-c87de6b06f",
+    "B3As-0d7cab575b",
+    "BAs-6baa554765",
+    "BAs3-1289e35f5f",
+    "BAs2-7af19c6963",
+    "BAs-bc6fa0e68e",
+    "BAs2-d880c5b309",
+    "B4As3-ab444f4ca6",
+    "BAs-c3cc0e172b",
+    "B3As-f21fa53951",
+    "B3As5-0db52fc1ae",
+    "B2As-7ff9256ec6",
+    "BAs-c63914145c",
+    "B3As5-57a4d37e0f",
+    "BAs2-3f6688ff3b",
+    "BAs2-343a7f3075",
+    "B5As2-007cff1a3c",
+    "BAs-fcd564f01c",
+    "BAs2-bc0fd93db4",
+    "BAs4-cfe828f2f3",
+    "BAs3-62415b8221",
+    "B2As3-9d16c6ab14",
+    "BAs-6c9e2dcfd6",
+    "BAs-e2e44582d0",
+    "BAs2-c3a2a65216",
+    "B2As-0a97a484b9",
+    "B3As-5fa0217219",
+    "BAs-20a3d78214",
+    "BAs-84f59edd6c",
+    "B4As3-f266e65017",
+    "B3As-6093b86284",
+    "B3As-f57f52916b",
+    "B2As-01309dcc3f",
+    "BAs2-37e5153fd5",
+    "BP-54fe0e0f2c",
+    "BP-cf3849b7c4",
+    "BP3-8bfd5f2475",
+    "P-360b8c16eb",
+    "BP5-d841612c15",
+    "P-a0f272bd24",
+    "B2AsP-5b261a6db0",
+    "BP2-50974ed1a2",
+    "BP3-23de6e692a",
+    "B5P3-7a251943e5",
+    "BP2-f1e186b49c",
+    "BP3-7cbc9e79ad",
+    "BP3-1c3ef1b713",
+    "B2AsP2-632b45c765",
+    "BP2-397290ae41",
+    "B3As2P2-734773bce5",
+    "B3P5-b7f5013a7b",
+    "P-29f9b1d2e4",
+    "BP3-195f001bf3",
+    "B2AsP-bb3aa19b52",
+    "B3P5-b8ae3358e7",
+    "BP3-317e658326",
+    "B2AsP-9cbd8ddf26",
+    "B2AsP2-94f238f130",
+    "BP3-911b658449",
+    "BAsP-00d417fe86",
+    "P-8ae8a22b90",
+    "P-ce8527ce03",
+    "BAsP4-8b0c6bd41f",
+    "BAsP-5285d30f05",
+    "BP-c381e68cce",
+    "BP2-e20877ff98",
+    "B3AsP4-7df3c80d5e",
+    "BP-b6e5e34455",
+    "BAsP4-08e252e614",
+    "B3AsP4-1e377bf084",
+    "BP3-be1f4759c5",
+    "B3As2P3-2bdbf6d611",
+    "BAsP-0333b2fdaf",
+    "B2AsP5-befc5aa5aa",
+    "BAs2P3-1a5bcc4f1d",
+    "BAsP2-5d5cf3e0ff",
+    "BP3-4e14a93d8e",
+    "B2AsP3-e8fb02d65d",
+    "B2AsP5-eaf686ddc9",
+    "B2P3-0e88aa594d",
+    "BAsP-4df024a986",
+    "BP-34655ec1df",
+    "BP4-2efa6a2a2c",
+    "BP-ceafa3ea55",
+    "BAsP2-8ed7750d3d",
+    "P-37b28b57c9",
+    "B2AsP2-6af3c09644",
+    "BP3-33b3350786",
+    "BP2-6e6438fb8c",
+    "B2As2P3-c4f8b984c0",
+    "BP3-61cb75f264",
+    "BAsP3-8c527ade68",
+    "B3AsP4-45118d4c89",
+    "B2AsP-39de227774",
+    "B3As2P2-1eb5ef7b42",
+    "BAsP-b8bb2f8512",
+    "BP3-691fdcf0b3",
+    "BP3-f10b5f5edf",
+    "B2AsP5-f42368b2ea",
+    "BP3-4aa459dfaf",
+    "BAsP-4d140c92c5",
+    "BP-2167066364",
+    "BAsP-f74f8f0a72",
+    "B2AsP3-0c5bbdc48d",
+    "BP3-7e87b14148",
+    "BP2-0ae8db222b",
+    "BP2-096e2ca4cb",
+    "BAs2P3-824a9aa1fc",
+    "BP-501ab152df",
+    "BAsP-8524447790",
+    "B3As2P2-7e91ce92fb",
+    "P-8fbd3e0ca5",
+    "BAsP-6806ba6d5a",
+    "AsP5-452c4f6490",
+    "BP3-505bdc6659",
+    "B2P5-8578dd2bcf",
+    "BP3-ac94337443",
+    "B3P5-29e7d8666e",
+    "BP3-98b77c77bb",
+    "B2AsP3-0d7d20cfb6",
+    "BAsP2-113794cdba",
+    "BAsP-1b0d10fff3",
+    "BP-28443f6545",
+    "P-8193248886",
+    "BAsP-210096a86e",
+    "BP2-0e9159a52c",
+    "B3As2P3-e133dfb513",
+    "B3P5-76e2a7df45",
+    "BAsP-056dd7eaf6",
+    "B2P3-921692df13",
+    "B3P5-bd8f87f7d2",
+    "BP5-f8cb92e4f3",
+    "B2P3-524aac805c",
+    "BP5-e91939f1b6",
+    "BP3-6910a66d5b",
+    "BP-6a4048b772",
+    "BP3-9bcb32cab7",
+    "B2P3-a6dced9fe9",
+    "B2AsP-8e08574cbf",
+    "B3AsP3-4cb60a4f9e",
+    "BP-b93fa2e3f9",
+    "P-ef2b659e47",
+    "BP7-5149b78d7a",
+    "BAsP-fb8cc3988f",
+    "P-87f27b05e0",
+    "BAsP2-48fbde02af",
+    "B2P5-2b9064c873",
+    "BP6-ded351f08b",
+    "B4AsP3-92bfb06787",
+    "BP3-149c87e292",
+    "B4AsP3-ea6809ab70",
+    "B3As3P2-3313d4b1d1",
+    "B3As2P3-e5e4dfe08f",
+    "BAsP2-30e544932b",
+    "BAsP3-c1400bc2ed",
+    "B4AsP3-94a080978f",
+    "B3As2P-da9f552139",
+    "BP2-8ebe362507",
+    "BP3-766cc22923",
+    "BAsP2-cc4f35393a",
+    "B2AsP3-f2b9f51633",
+    "BP3-44094a0da9",
+    "B3P5-6d0bf9e134",
+    "B4AsP3-2acd64e57e",
+    "B2As2P3-4d57e0206e",
+    "B2P3-64f2201ca1",
+    "BAsP-cd711240e5",
+    "P-ff3715a782",
+    "B2P3-1a61663b16",
+    "BP-685d2309ae",
+    "BAsP2-c6fd9583cb",
+    "BP3-0b6ef58474",
+    "BP2-8d562aaf75",
+    "B3As2P2-ebd9d43e82",
+    "B2AsP3-f8c466e61b",
+    "BP2-e153ab335f",
+    "BAs2P-cfd91d4a51",
+    "B2P3-fd8b32a899",
+    "B2AsP-d5aadc5dbc",
+    "B2P3-01151c990f",
+    "B2AsP4-3deff6e3c7",
+    "BP2-bf7a0e9f5d",
+    "BP4-30c141f654",
+    "BP5-38d8e73088",
+    "BP4-3eaaeb1660",
+    "BP3-f8d64e5a40",
+    "BP3-611fafb96b",
+    "B2AsP-e674a4c4ce",
+    "B3AsP3-e47f66f756",
+    "B5P3-1f56a097f5",
+    "BP-481dc2f367",
+    "BP5-77a0a718b2",
+    "BP-29f1c59774",
+    "BAsP2-94d5e71204",
+    "BP3-243178a878",
+    "BAsP2-c54f058d3c",
+    "BP3-e403028524",
+    "BAsP5-d113c4eb69",
+    "BP2-253e002321",
+    "B4AsP3-fb2949dcba",
+    "B2P3-cb934ffd1e",
+    "BAsP-d51fe635ff",
+    "BP-2410d5151e",
+    "BP5-4ef9889e4e",
+    "BP2-0cd6b8e7ca",
+    "B4AsP3-0e49dcda66",
+    "B2P3-3e1aa96a09",
+    "BP2-ce7be8337a",
+    "BP2-b731211f18",
+    "P-1dd8adab7e",
+    "BP6-9fc730a95f",
+    "BP-ecc00f5b4d",
+    "BAsP-0624cdb49d",
+    "BAsP3-3c671d0914",
+    "BP2-ab3d41042e",
+    "BP3-6622b5bca3",
+    "BP-3918678fcc",
+    "BAsP3-f7e2f645b5",
+    "B3Sb-ff5bd129b5",
+    "B3Sb-ff8fbb33bf",
+    "BSb-5847162bce",
+    "B3Sb-b158b5672e",
+    "BSb-243c2cf3bb",
+    "B2Sb-261a8d9cce",
+    "BSb-bd0ba2ff27",
+    "B2Sb-7b68168bec",
+    "BSb-7febde37f4",
+    "BSb-7352fcb7ff",
+    "B3Sb2-9ec4b2ba8f",
+    "BSb-1103f391c1",
+    "BSb-efa7ae8826",
+    "B2Sb3-bbb4d641c9",
+    "B3Sb2-d46db759d8",
+    "B3Sb-b105bd6abf",
+    "B3Sb-e1692dde8f",
+    "BSb-2a8c552b5e",
+    "BSb2-9ff36f6f69",
+    "BSb-0eaf590c5f",
+    "BSb-42805fd0e0",
+    "BSb-34be4e59e1",
+    "B3Sb-c2f4e5e315",
+    "B4Sb-3f14478679",
+    "BSb-167f67e721",
+    "BSb-97b28e0e8c",
+    "BSb-9794c5ad23",
+    "BSb-bde944f44c",
+    "BSb-0f923cd997",
+    "BSb-80fb2e8e8d",
+    "BSb-76ac79fe82",
+    "B5Sb3-ef01ba0842",
+    "B2Sb3-309ce4a6db",
+    "BSb-57893d4592",
+    "BSb-1b655b8c25",
+    "B2Sb3-7d1fb9f70c",
+    "B3Sb2-9b9072d101",
+    "BSb-fd64b8ae57",
+    "B2Sb3-19bbdeacf8",
+    "B3Sb2-e8b7a1e254",
+    "BSb2-56eb017455",
+    "BSb-fe7d2fe884",
+    "BSb2-7521dcff6f",
+    "B3Sb-df4f07eca3",
+    "BSb2-ff26f5543e",
+    "B5Sb2-6e24ea4eb5",
+    "B5Sb2-ebeb75c2d4",
+    "B2Sb-ca26e36044",
+    "B3Sb4-7fa7097160",
+    "BSb2-6af4b04179",
+    "B5Sb3-5912e2961f",
+    "B3Sb5-a300766b70",
+    "BSb-f783ae6b94",
+    "B3Sb2-573bd8c333",
+    "B2Sb3-3dce306423",
+    "B3Sb-957dfb8725",
+    "BSb-0ce760281e",
+    "BSb-0ff5bf53aa",
+    "B3Sb2-c83e2c2c8d",
+    "B5Sb3-b4908d682b",
+    "B3Sb-c47762ba0a",
+    "B2Sb-edc53f3b3f",
+    "B4Sb-6c3aaf84db",
+    "B3Sb-56fa10a78a",
+    "B3Sb5-aa16669a70",
+    "B3Sb2-8c9aa5eedd",
+    "B2Sb-8572038426",
+    "B5Sb3-7f2b2666c6",
+    "B3Sb-5d827ef3ca",
+    "B4Sb-e2d2e8b7b5",
+    "BSb-eb68cdd5ed",
+    "BSb3-a8b18f4660",
+    "B5Sb2-9d17f07b71",
+    "B2Sb-cbd9c53ae3",
+    "B2Sb-a23e044409",
+    "BSb-5968f2a701",
+    "B3Sb4-4adb2d5b8a",
+    "BSb-144cf8c0ae",
+    "BSb3-1132ea9dcd",
+    "B5Sb3-c74b134aae",
+    "B2Sb-5ceca31dbb",
+    "BSb-468fa55c7c",
+    "BSb2-6ed0f50dd3",
+    "B3Sb2-05c62a39fa",
+    "BSb3-a36d148922",
+    "B3Sb-06ca0825d5",
+    "BSb-3596c98fb1",
+    "B2Sb-1e91eabc17",
+    "B2Sb-bd73bc0797",
+    "B3Sb-f7ac363a64",
+    "B2Sb3-84e83e9b0c",
+    "B4Sb-a5ba4d8a1c",
+    "B2Sb5-9677e05054",
+    "B3Sb2-ab73e44f44",
+    "B2Sb3-f0b76fd264",
+    "BSb-5e054339ab",
+    "B4Sb-3d7b970fb9",
+    "B3Sb2-f5c219abce",
+    "BSb2-d84d07411e",
+    "B5Sb2-63df9e2289",
+    "B3Sb2-625db50f76",
+    "B5Sb3-a6ad9199cb",
+    "B3Sb4-f9417d6d82",
+    "B2Sb-10c624afc6",
+    "BSb-01ac4e74b9",
+    "BSb-5c9dbbe82f",
+    "BSb-dec3e90c98",
+    "BSb-9c2d10253f",
+    "B2Sb-4beaba8663",
+    "BSb-36e05a1555",
+    "B3Sb-4a6e5c50e8",
+    "BSb3-d8ade5c187",
+    "B3Sb2-a55d625c63",
+    "BSb-b68a39c1d1",
+    "BSb2-e2018de523",
+    "BSb-f2788fb141",
+    "B3Sb-692b0513c3",
+    "B4Sb3-ff6711f119",
+    "BSb3-6009c0ac8e",
+    "B2Sb3-435618ed01",
+    "BSb2-72b4bc6c02",
+    "BSb2-a7a5321d73",
+    "B2Sb5-baf5b40554",
+    "B5Sb-54a99dd630",
+    "B2Sb-ef1dcc5d1c",
+    "B5Sb2-ff949cf94d",
+    "B2Sb-dbd93d3830",
+    "BSb3-971b79fa55",
+    "BSb2-7cf6a169eb",
+    "B2Sb-957f80a9a9",
+    "BSb2-94448c3bea",
+    "BSb3-60e8f4314e",
+    "B3Sb2-b21c6deb33",
+    "BSb-192e0c2cac",
+    "B4Sb-56b1276f55",
+    "BSb2-4f65e13314",
+    "B3Sb-fe6e2ca52e",
+    "BSb-7228befce2",
+    "B5Sb3-49c6838364",
+    "BSb-1f98acab41",
+    "BSb-9bf4f8bcb3",
+    "B2Sb-f65d1f8d10",
+    "BSb2-e4ecbd50be",
+    "BSb-aee72c2e37",
+    "BSb2-87f4cfd3f8"
+  ],
+  "operation": "deduplicate",
+  "parent_sets": [
+    "s1main.b2.small"
+  ],
+  "description": "",
+  "details": {
+    "matcher": {
+      "ltol": 0.2,
+      "stol": 0.3,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true,
+      "attempt_supercell": false
+    },
+    "duplicates_of_kept": {
+      "CN-2c68d617cf": [
+        "CN-45643063ac",
+        "CN-d793dcc24e",
+        "CN-77f1c76530",
+        "CN-53f190d4ce",
+        "CN-8aa4bccee6",
+        "CN-d1bba056e2",
+        "CN-080b828355",
+        "CN-3da60f82e4"
+      ],
+      "CN-b8584c7357": [
+        "CN-243c446166"
+      ],
+      "CN-55d3a749d6": [
+        "CN-4cdb295edc",
+        "CN-8ff6140fda",
+        "CN-58b29b379f"
+      ],
+      "CN-8a9a85bea6": [
+        "CN-4bfb01c57b",
+        "CN-e2272ed782",
+        "CN-0f0f5f9079"
+      ],
+      "CN-64a3a214fe": [
+        "CN-dffb2a86b5"
+      ],
+      "CN-ca7e0165fc": [
+        "CN-c0ff4a444e",
+        "CN-5f49e0bc67",
+        "CN-186b0631f5"
+      ],
+      "CN-ab5e7e06c5": [
+        "CN-31e98af823",
+        "CN-ee9cd08ff5"
+      ],
+      "CN-fd12bd95a0": [
+        "CN-3bc0fa69fa"
+      ],
+      "CN-57bdeff7cd": [
+        "CN-02a00ca20e"
+      ],
+      "CN-7cba07636f": [
+        "CN-3b7f033a64"
+      ],
+      "CN3-4797d5f790": [
+        "CN3-75a4f1ef6f",
+        "CN3-8f5b874276",
+        "CN3-ec65da1432",
+        "CN3-a3f1b29159",
+        "CN3-f88aa00940"
+      ],
+      "CN3-a16b459f3c": [
+        "CN3-5b52ff1d14"
+      ],
+      "CN3-7a838eb1ce": [
+        "CN3-3ed3da42de",
+        "CN3-da4a40902a"
+      ],
+      "CN3-789ed16aa7": [
+        "CN3-063c6a2f92"
+      ],
+      "CN4-70d5922900": [
+        "CN4-cbed745d1a"
+      ],
+      "N2-7d92a1c5f8": [
+        "N2-cecb165d78",
+        "N2-2ee980c347"
+      ],
+      "N2-144441a070": [
+        "N2-c5adbe6abe",
+        "N2-0dd5420f76"
+      ],
+      "CN2-3a321f79e8": [
+        "CN2-0ffd787184"
+      ],
+      "CN2-236b527035": [
+        "CN2-e7db220504",
+        "CN2-e5827bb0ff"
+      ],
+      "CN7-37c250dba4": [
+        "CN7-ea1806a415"
+      ],
+      "C-a97aa8e635": [
+        "C-6db49bcc8d"
+      ],
+      "BAs-829ebcd890": [
+        "BAs-b2f86f28c9",
+        "BAs-efe40a3e90",
+        "BAs-fbb90de53d"
+      ],
+      "BAs-5e6d1c7d8b": [
+        "BAs-a5b420497c"
+      ],
+      "BAs-c5dc2cc1f7": [
+        "BAs-652a7773f7",
+        "BAs-45d6e34575",
+        "BAs-fae269d593",
+        "BAs-cff7707e4c",
+        "BAs-7a757c51b8",
+        "BAs-fd51c90f1a",
+        "BAs-318cb4edce",
+        "BAs-b1da55b1f6",
+        "BAs-30203d0372",
+        "BAs-e52213be3a"
+      ],
+      "BAs-f43feddda6": [
+        "BAs-b408763548",
+        "BAs-770f351571",
+        "BAs-fbe146a3cf",
+        "BAs-208df337cc",
+        "BAs-def59bbd28",
+        "BAs-83969d062e",
+        "BAs-f435d82064",
+        "BAs-d64817c403",
+        "BAs-59988f049d",
+        "BAs-16b5a02420",
+        "BAs-ca12c5cdf9",
+        "BAs-9973ccfc4a",
+        "BAs-1e731d7315",
+        "BAs-c918de61d0",
+        "BAs-ca07bbc988",
+        "BAs-bd0f3dc7fe"
+      ],
+      "BAs-d886b19afb": [
+        "BAs-bd64e3490f"
+      ],
+      "BAs-e7e33f7806": [
+        "BAs-aaecd79c33",
+        "BAs-7799477aa4",
+        "BAs-e26dfc38a5",
+        "BAs-2e9efbb73b",
+        "BAs-92432fb13d",
+        "BAs-548c6c69e2",
+        "BAs-ec5be1bd2d",
+        "BAs-fb3e8a80ff",
+        "BAs-f5c392fe14",
+        "BAs-4c4aadb3ed",
+        "BAs-15ea53c6ab",
+        "BAs-94b14477cf",
+        "BAs-028ab42915",
+        "BAs-88667a882d",
+        "BAs-ad6e3a986e",
+        "BAs-3b506ed966",
+        "BAs-d7eae44dde",
+        "BAs-6c6b9b34d8",
+        "BAs-9f5c442d3b",
+        "BAs-b99f9317b8",
+        "BAs-003c669315",
+        "BAs-43f24295de",
+        "BAs-2b973a07ff",
+        "BAs-e20bfcb89f",
+        "BAs-ec7f2eed1d",
+        "BAs-7a65209366",
+        "BAs-4a4ed60db9"
+      ],
+      "BAs-47071234ab": [
+        "BAs-01be3c48be",
+        "BAs-d91543fb56"
+      ],
+      "BAs-7c87fe0c26": [
+        "BAs-0f46bf2f0a",
+        "BAs-8e2c192ed4",
+        "BAs-e28f5bf850",
+        "BAs-f18a8f5c8f",
+        "BAs-86dcbdf879",
+        "BAs-a76a17d1be"
+      ],
+      "BAs-ceeb0e99ef": [
+        "BAs-287813f21d"
+      ],
+      "BAs-c6a69c8dc0": [
+        "BAs-4811e4fc01",
+        "BAs-fdd5503358",
+        "BAs-24570c6fa4",
+        "BAs-ec41967490",
+        "BAs-8d1716d4bd",
+        "BAs-074ef735b1",
+        "BAs-3332a8d524"
+      ],
+      "BAs-0b99e0a7be": [
+        "BAs-252b2231d3"
+      ],
+      "BAs-9b68d7e333": [
+        "BAs-f9ed5a9cf3"
+      ],
+      "BAs-0fd36601cd": [
+        "BAs-725cf81577"
+      ],
+      "BAs-eed8cce2fa": [
+        "BAs-28581bfc4e"
+      ],
+      "B2As3-5b09014e1e": [
+        "B2As3-a63a08b7c8"
+      ],
+      "B2As-f72ebe7c75": [
+        "B2As-03ed178f0e",
+        "B2As-6b760e0096"
+      ],
+      "B2As-a095c53fd9": [
+        "B2As-10bbb191f0",
+        "B2As-4f16ce3a45"
+      ],
+      "B2As-4f7b6963b3": [
+        "B2As-2c09cca899",
+        "B2As-a9d934e9c8"
+      ],
+      "B3As-fbb7f0bc27": [
+        "B3As-b859174182"
+      ],
+      "BAs2-2288c51e93": [
+        "BAs2-5cd37c5f5a"
+      ],
+      "BAs2-b204579fd6": [
+        "BAs2-31646d78e5",
+        "BAs2-1fa9453bd3"
+      ],
+      "BAs2-5384d97950": [
+        "BAs2-ae64eea3c0"
+      ],
+      "BAs2-e3e62fe1cd": [
+        "BAs2-472c41c43c"
+      ],
+      "BAs2-d03159ece3": [
+        "BAs2-1ea45a0e64"
+      ],
+      "B3As2-b72c8ebee0": [
+        "B3As2-a36924c0d4"
+      ],
+      "B3As2-084672ae13": [
+        "B3As2-4c8c9158ee"
+      ],
+      "B3As2-765f7d8c2b": [
+        "B3As2-13af413e9b",
+        "B3As2-cbac7b4f62",
+        "B3As2-beb3cc0468"
+      ],
+      "B3As2-bff6e34d2d": [
+        "B3As2-06a85067a5",
+        "B3As2-67b00ee687"
+      ],
+      "B3As2-a2b7899146": [
+        "B3As2-b4b3a142ea"
+      ],
+      "BAs3-39949ddfab": [
+        "BAs3-f464c5a5da",
+        "BAs3-2bdb8e8acb"
+      ],
+      "BP-54fe0e0f2c": [
+        "BP-13812c8b36",
+        "BP-4e05eb2372",
+        "BP-d97a1644a9",
+        "BP-cba716b4fd",
+        "BP-9ca6629aa5",
+        "BP-921e1f807c",
+        "BP-2ccb3dd4b3",
+        "BP-b6b353a18f",
+        "BP-7bed5b7605",
+        "BP-3e349a1675",
+        "BP-9348279f91",
+        "BP-c6bfa2ac42",
+        "BP-76be4c34b3"
+      ],
+      "BP-cf3849b7c4": [
+        "BP-263b5bbdc4",
+        "BP-1a95c43b0b"
+      ],
+      "BP-b6e5e34455": [
+        "BP-7aa693553e",
+        "BP-461df56177"
+      ],
+      "BP-2167066364": [
+        "BP-79accefc64"
+      ],
+      "BP-b93fa2e3f9": [
+        "BP-a1c47a3ea0"
+      ],
+      "BP3-8bfd5f2475": [
+        "BP3-0433f24cff",
+        "BP3-6d4f0e6011"
+      ],
+      "BP3-23de6e692a": [
+        "BP3-9b71878675"
+      ],
+      "BP3-1c3ef1b713": [
+        "BP3-03ffce7c8c",
+        "BP3-24367a6697",
+        "BP3-7b3e48e236",
+        "BP3-17a4c93225"
+      ],
+      "BP3-195f001bf3": [
+        "BP3-8c635ca675",
+        "BP3-0f745f0c71",
+        "BP3-5df9e5f356",
+        "BP3-fc66aaec52",
+        "BP3-bfdb1fe283"
+      ],
+      "BP3-4e14a93d8e": [
+        "BP3-a622646c5e"
+      ],
+      "BP3-33b3350786": [
+        "BP3-e398015894",
+        "BP3-81b24fa9e6"
+      ],
+      "BP3-691fdcf0b3": [
+        "BP3-de293ea9ee",
+        "BP3-b38c4e9d7b"
+      ],
+      "BP3-505bdc6659": [
+        "BP3-bf5dfa3b30"
+      ],
+      "BP3-ac94337443": [
+        "BP3-39aaacebc5",
+        "BP3-5e04564b23"
+      ],
+      "BP3-6910a66d5b": [
+        "BP3-3422ed0926",
+        "BP3-80b3608e17"
+      ],
+      "BP3-9bcb32cab7": [
+        "BP3-1c54a7bfe8"
+      ],
+      "BP3-44094a0da9": [
+        "BP3-7a524ee9ba"
+      ],
+      "P-a0f272bd24": [
+        "P-8d0c5e25bd"
+      ],
+      "P-ce8527ce03": [
+        "P-904daa48f8"
+      ],
+      "P-37b28b57c9": [
+        "P-cf5da44bed",
+        "P-ec6f5c2b61",
+        "P-5bf2e75e86"
+      ],
+      "P-ef2b659e47": [
+        "P-c97c9acc02"
+      ],
+      "B2AsP-9cbd8ddf26": [
+        "B2AsP-b0c67f778a"
+      ],
+      "B2AsP-39de227774": [
+        "B2AsP-6dd06788cd",
+        "B2AsP-c72c024fdf",
+        "B2AsP-4dd6600323"
+      ],
+      "B2AsP-8e08574cbf": [
+        "B2AsP-892885dee3"
+      ],
+      "BP2-0ae8db222b": [
+        "BP2-1da4dc9e98"
+      ],
+      "BAsP-4df024a986": [
+        "BAsP-940bfd31dd"
+      ],
+      "B3AsP4-7df3c80d5e": [
+        "B3AsP4-b32ecc98f1",
+        "B3AsP4-3144531db2",
+        "B3AsP4-0c34b88319"
+      ],
+      "B3As2P3-e133dfb513": [
+        "B3As2P3-44db53acc5"
+      ],
+      "BAsP2-8ed7750d3d": [
+        "BAsP2-e1f1d078f4"
+      ],
+      "B4AsP3-92bfb06787": [
+        "B4AsP3-bfd4e7796d",
+        "B4AsP3-077574b2fe"
+      ],
+      "B3Sb-ff8fbb33bf": [
+        "B3Sb-25343e898a"
+      ],
+      "B3Sb-b158b5672e": [
+        "B3Sb-9cf8e26e5b",
+        "B3Sb-01ce5aad17",
+        "B3Sb-c03eb00fd5",
+        "B3Sb-58c8973dba",
+        "B3Sb-806566db55",
+        "B3Sb-1236b4e1d1",
+        "B3Sb-10279b052b",
+        "B3Sb-27ae9ebe6d",
+        "B3Sb-ddc47dbe05",
+        "B3Sb-60f860ce49",
+        "B3Sb-f9f20662ac",
+        "B3Sb-b01195b2f4",
+        "B3Sb-18accec21d",
+        "B3Sb-24754bf74a"
+      ],
+      "B3Sb-b105bd6abf": [
+        "B3Sb-9a2c189941",
+        "B3Sb-df76f8b861",
+        "B3Sb-75fe27a062",
+        "B3Sb-4b0d84d19c",
+        "B3Sb-93482a1724",
+        "B3Sb-96a1efe31f",
+        "B3Sb-a55087e93c",
+        "B3Sb-863de5a0b3",
+        "B3Sb-d9f41ec1be"
+      ],
+      "B3Sb-f7ac363a64": [
+        "B3Sb-493acce7b1",
+        "B3Sb-b2d4142733",
+        "B3Sb-99e26f99a9",
+        "B3Sb-047de12531"
+      ],
+      "BSb-bd0ba2ff27": [
+        "BSb-48d1a79e20",
+        "BSb-ef8819d546",
+        "BSb-31b638121f",
+        "BSb-9bf1fe421e",
+        "BSb-77468f9a51",
+        "BSb-6b448000b5",
+        "BSb-54075c2204"
+      ],
+      "BSb-1103f391c1": [
+        "BSb-871d2451a6"
+      ],
+      "BSb-efa7ae8826": [
+        "BSb-e84418c692"
+      ],
+      "BSb-2a8c552b5e": [
+        "BSb-49225c0b6b"
+      ],
+      "BSb-34be4e59e1": [
+        "BSb-591d921afa",
+        "BSb-6572f66857",
+        "BSb-808269b687",
+        "BSb-5bc0a3d93a",
+        "BSb-2fefd7ca39",
+        "BSb-0c7aeabef8",
+        "BSb-ee1ad268b8",
+        "BSb-ac14fa8707",
+        "BSb-0ed1d70545"
+      ],
+      "BSb-167f67e721": [
+        "BSb-aeabb0cdff"
+      ],
+      "BSb-bde944f44c": [
+        "BSb-31a89d9d47",
+        "BSb-b11b2537c3",
+        "BSb-e6d0187ece",
+        "BSb-7398695d8a",
+        "BSb-a1dedf4eaa",
+        "BSb-95fbb7f0d9",
+        "BSb-e0e387c7ed",
+        "BSb-90b3694805",
+        "BSb-a66460c681",
+        "BSb-0c0a60c4c8",
+        "BSb-f2a4191d3f",
+        "BSb-992223accf"
+      ],
+      "BSb-80fb2e8e8d": [
+        "BSb-6cbfe55e6e",
+        "BSb-3586caa0c4",
+        "BSb-3d6ab3c3db",
+        "BSb-9a14f2c6fb",
+        "BSb-be06116cf2",
+        "BSb-108706c77c",
+        "BSb-44e1863e86",
+        "BSb-efbec61745",
+        "BSb-2ed9a9a169",
+        "BSb-0d4fbc747b",
+        "BSb-fcce0ff4cf",
+        "BSb-0bb6b4db11",
+        "BSb-08400a411e"
+      ],
+      "BSb-76ac79fe82": [
+        "BSb-d8d2ff2c7e",
+        "BSb-f3dd1b2a23",
+        "BSb-bca943b7d0",
+        "BSb-374a7f4065",
+        "BSb-1caa0482f4",
+        "BSb-544f08f572",
+        "BSb-51adbe05e6"
+      ],
+      "BSb-1b655b8c25": [
+        "BSb-ec7b0abfc7",
+        "BSb-b109a562b8",
+        "BSb-493f306f33"
+      ],
+      "BSb-fd64b8ae57": [
+        "BSb-bbcacebf43",
+        "BSb-a1dda5b175",
+        "BSb-46d773c160"
+      ],
+      "BSb-144cf8c0ae": [
+        "BSb-08dbbdcee7"
+      ],
+      "B2Sb-261a8d9cce": [
+        "B2Sb-d8d40f75e2"
+      ],
+      "B2Sb-edc53f3b3f": [
+        "B2Sb-28588c59b1",
+        "B2Sb-f3dd03e934",
+        "B2Sb-bc9a60975e",
+        "B2Sb-2a491ef3c2"
+      ],
+      "B2Sb-8572038426": [
+        "B2Sb-3a7b6f5266",
+        "B2Sb-8eb50ec4af",
+        "B2Sb-75b39836b4",
+        "B2Sb-8441856d02"
+      ],
+      "B2Sb-cbd9c53ae3": [
+        "B2Sb-01283383df"
+      ],
+      "B2Sb-4beaba8663": [
+        "B2Sb-730fa4f119",
+        "B2Sb-4cdf6f0ff8"
+      ],
+      "B2Sb-ef1dcc5d1c": [
+        "B2Sb-3e7c1e247d"
+      ],
+      "B3Sb2-d46db759d8": [
+        "B3Sb2-8b3e1bb9a9",
+        "B3Sb2-ae12c20789",
+        "B3Sb2-46c8579456"
+      ],
+      "B3Sb2-9b9072d101": [
+        "B3Sb2-bdc61a096e"
+      ],
+      "B3Sb2-573bd8c333": [
+        "B3Sb2-9a2d8890ab",
+        "B3Sb2-0e2c4ac7a8"
+      ],
+      "B3Sb2-c83e2c2c8d": [
+        "B3Sb2-94da42028f"
+      ],
+      "B3Sb2-ab73e44f44": [
+        "B3Sb2-dfa601be75"
+      ],
+      "BSb2-56eb017455": [
+        "BSb2-ca2faa14ee"
+      ],
+      "BSb2-6af4b04179": [
+        "BSb2-fcdc262c2a"
+      ],
+      "B4Sb-e2d2e8b7b5": [
+        "B4Sb-f7e3e38766",
+        "B4Sb-665d8fa0d7",
+        "B4Sb-ca9b4b04fc",
+        "B4Sb-a6e68a65fc",
+        "B4Sb-c3e97708a2",
+        "B4Sb-4baaf7eebf",
+        "B4Sb-ead11f8c8e",
+        "B4Sb-31abed52a4"
+      ],
+      "B4Sb-a5ba4d8a1c": [
+        "B4Sb-74be476338"
+      ],
+      "B4Sb-3d7b970fb9": [
+        "B4Sb-7284728fa8"
+      ],
+      "B5Sb3-ef01ba0842": [
+        "B5Sb3-cb7e94260c"
+      ],
+      "B5Sb3-b4908d682b": [
+        "B5Sb3-5e0d41dcd9"
+      ],
+      "B5Sb3-7f2b2666c6": [
+        "B5Sb3-8a6cbe22bc"
+      ],
+      "BSb3-a8b18f4660": [
+        "BSb3-df028f4c46"
+      ],
+      "BSb3-6009c0ac8e": [
+        "BSb3-afae385e14"
+      ]
+    }
+  },
+  "created_by_step": "20261109T063104-deduplicate-c78eb7",
+  "created_at": "2026-11-09T06:32:41+00:00"
+}

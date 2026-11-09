@@ -1,0 +1,34 @@
+{
+  "per_structure": {
+    "BC2N-30792ba9eb": {
+      "mp_matches": [],
+      "mp_same_formula": 6
+    },
+    "BC2N-f2d2f2ecc1": {
+      "mp_matches": [],
+      "mp_same_formula": 6
+    },
+    "AlSiCN-189c682309": {
+      "mp_matches": [
+        "mp-1227998"
+      ],
+      "mp_same_formula": 1
+    },
+    "AlSiCN-e67f0bbde6": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    }
+  },
+  "mp": {
+    "B-C-N": {
+      "chemsys": "B-C-N",
+      "retrieved_at": "2026-11-09T05:04:42+00:00",
+      "db_version": "2026.09.28"
+    },
+    "Al-C-N-Si": {
+      "chemsys": "Al-C-N-Si",
+      "retrieved_at": "2026-11-09T05:04:51+00:00",
+      "db_version": "2026.09.28"
+    }
+  }
+}

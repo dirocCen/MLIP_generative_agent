@@ -1,0 +1,61 @@
+{
+  "step_id": "20261109T072105-symmetrize_structures-15ab23",
+  "run_id": "s1-main",
+  "tool": "symmetrize_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "S1-main funnel, same protocol as S1 trial (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T071958-fetch_results-d632bd"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b2.clean.relaxed.dpa41_max_oam.8af26d",
+    "new_set_name": "s1main.b2.sym.dpa41_max_oam",
+    "symprec": 0.1
+  },
+  "outputs": {
+    "new_set_name": "s1main.b2.sym.dpa41_max_oam",
+    "n": 506,
+    "n_failed": 0,
+    "spacegroups": {
+      "1": 113,
+      "8": 80,
+      "2": 70,
+      "12": 45,
+      "6": 35,
+      "156": 23,
+      "10": 18,
+      "160": 13,
+      "166": 10,
+      "164": 10,
+      "187": 9,
+      "11": 8,
+      "4": 7,
+      "5": 7,
+      "38": 4,
+      "(other)": 54
+    },
+    "n_p1": 113
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 43.246,
+  "host": "cenyj",
+  "created_at": "2026-11-09T07:21:05+00:00"
+}

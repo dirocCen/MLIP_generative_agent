@@ -1,0 +1,38 @@
+{
+  "name": "s1main.b1.novel",
+  "n": 3,
+  "sids": [
+    "BC2N-30792ba9eb",
+    "BC2N-f2d2f2ecc1",
+    "AlSiCN-e67f0bbde6"
+  ],
+  "operation": "novelty_vs_mp",
+  "parent_sets": [
+    "s1main.b1.ehull01"
+  ],
+  "description": "",
+  "details": {
+    "matcher": {
+      "ltol": 0.2,
+      "stol": 0.3,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true,
+      "attempt_supercell": false
+    },
+    "mp": {
+      "B-C-N": {
+        "chemsys": "B-C-N",
+        "retrieved_at": "2026-11-09T05:04:42+00:00",
+        "db_version": "2026.09.28"
+      },
+      "Al-C-N-Si": {
+        "chemsys": "Al-C-N-Si",
+        "retrieved_at": "2026-11-09T05:04:51+00:00",
+        "db_version": "2026.09.28"
+      }
+    }
+  },
+  "created_by_step": "20261109T065803-check_novelty-de986b",
+  "created_at": "2026-11-09T06:58:03+00:00"
+}

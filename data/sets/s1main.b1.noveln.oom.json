@@ -1,0 +1,15 @@
+{
+  "name": "s1main.b1.noveln.oom",
+  "n": 1,
+  "sids": [
+    "BCN-ccb32f3de0"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "s1main.b1.noveln"
+  ],
+  "description": "BCN whose L0 FC2 ran out of GPU memory on L40S (48 GB) in step 9e6827; rerun on an 80 GB A100",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-09T07:26:09+00:00"
+}

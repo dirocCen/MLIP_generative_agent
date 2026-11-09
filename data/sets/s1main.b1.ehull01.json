@@ -1,0 +1,23 @@
+{
+  "name": "s1main.b1.ehull01",
+  "n": 4,
+  "sids": [
+    "BC2N-30792ba9eb",
+    "BC2N-f2d2f2ecc1",
+    "AlSiCN-189c682309",
+    "AlSiCN-e67f0bbde6"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.b1.sym.dpa41_max_oam.relaxed.dpa41_max_oam.e49a1f.converged",
+    "s1main.b1.ehull01.sym"
+  ],
+  "description": "",
+  "details": {
+    "ehull_step_id": "20261109T065707-compute_ehull-0dbdaf",
+    "threshold_ev_atom": 0.1,
+    "note": "converged final-relax children whose symmetrized parent passed the E_hull gate"
+  },
+  "created_by_step": "20261109T065707-compute_ehull-0dbdaf",
+  "created_at": "2026-11-09T06:58:03+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "s1main.b1.ehull01.sym",
+  "n": 18,
+  "sids": [
+    "AlB2-aec230bc31",
+    "AlB2-b811a27f5b",
+    "AlSiCN-046689207e",
+    "Al2SiCN2-07f929f070",
+    "AlSiCN-c64cac7749",
+    "Al2SiCN2-cdc31751de",
+    "AlSiCN-7efafa9574",
+    "BC2N-df18b64ed6",
+    "BC2N-27a2b5dbf3",
+    "BC2N-f9f005a710",
+    "BCN-c9063efbc2",
+    "BC2N-5022fff325",
+    "BC2N-5fb401af11",
+    "BN2-f63fddd881",
+    "BN2-9bd375bfe2",
+    "B3N5-6a9d73a801",
+    "N2-ae8bff652e",
+    "N2-10f37467ed"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.b1.sym.dpa41_max_oam"
+  ],
+  "description": "E_hull <= 0.1 eV/atom (dpa41_max_oam relaxed, MP2020-corrected MP hull)",
+  "details": {
+    "relax_step_id": "20261109T061740-submit_mlip_relax-f8ce31",
+    "threshold_ev_atom": 0.1
+  },
+  "created_by_step": "20261109T065707-compute_ehull-0dbdaf",
+  "created_at": "2026-11-09T06:57:57+00:00"
+}

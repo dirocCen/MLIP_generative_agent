@@ -1,0 +1,50 @@
+{
+  "step_id": "20261109T062958-filter_structures-08f655",
+  "run_id": "s1-main",
+  "tool": "filter_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel batch 2 = rest of the S1-main cs arm (C-N + light-heavy As-B, As-B-P, B-Sb); same cuts as batch 1 (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T062931-merge_sets-5dfebd"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b2.all",
+    "new_set_name": "s1main.b2.small",
+    "criteria": {
+      "max_primitive_sites": 8,
+      "min_distance_angstrom": 1.0
+    }
+  },
+  "outputs": {
+    "new_set_name": "s1main.b2.small",
+    "n_in": 1792,
+    "n_kept": 903,
+    "removed_by_criterion": {
+      "max_primitive_sites": 886,
+      "min_distance_angstrom": 3
+    },
+    "details_file": "runs/s1-main/outputs/20261109T062958-filter_structures-08f655.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 70.33,
+  "host": "cenyj",
+  "created_at": "2026-11-09T06:29:58+00:00"
+}

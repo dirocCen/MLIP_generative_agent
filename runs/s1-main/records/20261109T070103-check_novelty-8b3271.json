@@ -1,0 +1,86 @@
+{
+  "step_id": "20261109T070103-check_novelty-8b3271",
+  "run_id": "s1-main",
+  "tool": "check_novelty",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "S1-main funnel, same protocol as S1 trial (Claude; funnel approved by the user 11-09): drop structures already in MP",
+  "parent_ids": [
+    "20261109T065707-compute_ehull-0dbdaf"
+  ],
+  "params": {
+    "ltol": {
+      "value": 0.2,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "stol": {
+      "value": 0.3,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "angle_tol": {
+      "value": 5.0,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "primitive_cell": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "scale": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default (volume-normalised, so MLIP- and DFT-relaxed cells still match)",
+      "reason": null
+    },
+    "attempt_supercell": {
+      "value": false,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b1.ehull01n",
+    "novel_set_name": "s1main.b1.noveln",
+    "refresh_mp": false
+  },
+  "outputs": {
+    "n_in": 14,
+    "n_novel_vs_mp": 11,
+    "n_known": 3,
+    "n_new_formula": 4,
+    "novel_set_name": "s1main.b1.noveln",
+    "mp_db_versions": [
+      "2026.09.28"
+    ],
+    "details_file": "runs/s1-main/outputs/20261109T070103-check_novelty-8b3271.json",
+    "note": "novelty is relative to MP only"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 11.787,
+  "host": "cenyj",
+  "created_at": "2026-11-09T07:01:03+00:00"
+}

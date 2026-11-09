@@ -1,0 +1,47 @@
+{
+  "step_id": "20261109T063241-check_benchmark_leakage-ae62cb",
+  "run_id": "s1-main",
+  "tool": "check_benchmark_leakage",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel batch 2 = rest of the S1-main cs arm (C-N + light-heavy As-B, As-B-P, B-Sb); same cuts as batch 1 (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T063104-deduplicate-c78eb7"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b2.unique",
+    "clean_set_name": "s1main.b2.clean"
+  },
+  "outputs": {
+    "clean_set_name": "s1main.b2.clean",
+    "n_in": 570,
+    "n_flagged": 64,
+    "n_clean": 506,
+    "n_benchmark_formulas": 70,
+    "flagged_formulas": {
+      "BAs": 47,
+      "BP": 17
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 34.224,
+  "host": "cenyj",
+  "created_at": "2026-11-09T06:32:42+00:00"
+}

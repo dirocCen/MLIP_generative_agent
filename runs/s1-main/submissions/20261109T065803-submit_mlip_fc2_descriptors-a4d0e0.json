@@ -1,0 +1,221 @@
+{
+  "step_id": "20261109T065803-submit_mlip_fc2_descriptors-a4d0e0",
+  "kind": "mlip_fc2_descriptors",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "c7704b907723",
+  "all_sids": [
+    "BC2N-30792ba9eb",
+    "BC2N-f2d2f2ecc1",
+    "AlSiCN-e67f0bbde6"
+  ],
+  "mode": "live",
+  "set_name": "s1main.b1.novel",
+  "rung": "fc2_descriptors",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 4
+  },
+  "rung_params": {
+    "temperature": 300.0,
+    "weighted_phase_space": true,
+    "gruneisen": true,
+    "volume_strain": 0.01
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "BC2N-30792ba9eb": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -4,
+          -4,
+          0
+        ],
+        [
+          -4,
+          0,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -4,
+          1,
+          1
+        ],
+        [
+          -1,
+          -5,
+          1
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        19,
+        19,
+        5
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 252
+    },
+    "BC2N-f2d2f2ecc1": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -4,
+          0
+        ],
+        [
+          -4,
+          0,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          -4,
+          1,
+          -1
+        ],
+        [
+          -5,
+          -4,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        19,
+        19,
+        5
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 252
+    },
+    "AlSiCN-e67f0bbde6": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          1,
+          -2,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -2,
+          3,
+          0
+        ],
+        [
+          -2,
+          -3,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        15,
+        15,
+        8
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 288
+    }
+  },
+  "sids": [
+    "BC2N-30792ba9eb",
+    "BC2N-f2d2f2ecc1",
+    "AlSiCN-e67f0bbde6"
+  ],
+  "db_ids": [
+    "143"
+  ],
+  "flow_uuid": "46c9feb0-a484-470f-be7f-93cc46954b49",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "c0fec5ff-40dc-4c04-b77e-fff120145fa1",
+      "name": "s1main.b1.novel-fc2_descriptors-dpa41_max_oam-000",
+      "sids": [
+        "BC2N-30792ba9eb",
+        "BC2N-f2d2f2ecc1",
+        "AlSiCN-e67f0bbde6"
+      ],
+      "kind": "mlip_fc2_descriptors"
+    }
+  ]
+}
