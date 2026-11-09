@@ -1,0 +1,86 @@
+{
+  "step_id": "20261109T102438-deduplicate-f76fc1",
+  "run_id": "s1-main",
+  "tool": "deduplicate",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel batch 3 = the S1-main cseh arm (MatterGen conditioned on chemical system + E_hull), same cuts as batches 1-2, for the cs vs cseh comparison (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T102259-filter_structures-a01162"
+  ],
+  "params": {
+    "ltol": {
+      "value": 0.2,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "stol": {
+      "value": 0.3,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "angle_tol": {
+      "value": 5.0,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "primitive_cell": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "scale": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default (volume-normalised, so MLIP- and DFT-relaxed cells still match)",
+      "reason": null
+    },
+    "attempt_supercell": {
+      "value": false,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b3.small",
+    "new_set_name": "s1main.b3.unique"
+  },
+  "outputs": {
+    "new_set_name": "s1main.b3.unique",
+    "n_in": 1613,
+    "n_unique": 1110,
+    "n_removed": 503,
+    "largest_groups": {
+      "BAs-f302d210a6": 20,
+      "B4Sb-d24a414531": 19,
+      "BN-bbb5e8828f": 17,
+      "BP3-e83cb1aa3f": 17,
+      "B3Sb-756dd7613f": 16
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 93.212,
+  "host": "cenyj",
+  "created_at": "2026-11-09T10:24:39+00:00"
+}

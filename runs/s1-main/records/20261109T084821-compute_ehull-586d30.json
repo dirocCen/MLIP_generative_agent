@@ -1,0 +1,141 @@
+{
+  "step_id": "20261109T084821-compute_ehull-586d30",
+  "run_id": "s1-main",
+  "tool": "compute_ehull",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "E_hull <= 0.1 eV/atom gate before L0, proposed by Claude after all 8 S1-trial L1 candidates came out 0.25-0.71 eV/atom above the MP hull; approved by the user in chat 11-09",
+  "parent_ids": [
+    "20261109T072147-submit_mlip_relax-11d372"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "relax_step_id": "20261109T072147-submit_mlip_relax-11d372",
+    "threshold_ev_atom": 0.1,
+    "out_set": "s1main.b2.ehull01.sym"
+  },
+  "outputs": {
+    "model": "dpa41_max_oam",
+    "n_structures": 506,
+    "n_with_ehull": 506,
+    "n_skipped": 0,
+    "n_ehull_failed": 0,
+    "histogram_ev_atom": {
+      "<0": 0,
+      "0-0.025": 8,
+      "0.025-0.05": 4,
+      "0.05-0.1": 10,
+      "0.1-0.2": 26,
+      ">0.2": 458
+    },
+    "n_below_threshold": 22,
+    "threshold_ev_atom": 0.1,
+    "out_set": "s1main.b2.ehull01.sym",
+    "most_stable": [
+      {
+        "sid": "C-b8e771f25d",
+        "e_above_hull": 0.005523
+      },
+      {
+        "sid": "C-392e74c301",
+        "e_above_hull": 0.006327
+      },
+      {
+        "sid": "As-6985c1837e",
+        "e_above_hull": 0.012644
+      },
+      {
+        "sid": "N2-e0c944514c",
+        "e_above_hull": 0.013027
+      },
+      {
+        "sid": "N2-4acc5b8021",
+        "e_above_hull": 0.014427
+      }
+    ],
+    "mp": {
+      "As": {
+        "chemsys": "As",
+        "retrieved_at": "2026-11-09T08:48:44+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-B": {
+        "chemsys": "As-B",
+        "retrieved_at": "2026-11-09T08:48:45+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-B-P": {
+        "chemsys": "As-B-P",
+        "retrieved_at": "2026-11-09T08:48:49+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-P": {
+        "chemsys": "As-P",
+        "retrieved_at": "2026-11-09T08:48:53+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-P": {
+        "chemsys": "B-P",
+        "retrieved_at": "2026-11-09T05:04:18+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-Sb": {
+        "chemsys": "B-Sb",
+        "retrieved_at": "2026-11-09T08:48:55+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C": {
+        "chemsys": "C",
+        "retrieved_at": "2026-11-09T08:48:59+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C-N": {
+        "chemsys": "C-N",
+        "retrieved_at": "2026-11-09T05:04:21+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "N": {
+        "chemsys": "N",
+        "retrieved_at": "2026-11-09T05:04:35+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "P": {
+        "chemsys": "P",
+        "retrieved_at": "2026-11-09T08:49:02+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      }
+    },
+    "note": "E_hull < 0 means the MLIP puts the structure below the MP hull: check for MLIP over-stabilisation before calling it a discovery. Input sids (not the relaxed children) are put in out_set.",
+    "details_file": "runs/s1-main/outputs/20261109T084821-compute_ehull-586d30.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 47.103,
+  "host": "cenyj",
+  "created_at": "2026-11-09T08:48:21+00:00"
+}

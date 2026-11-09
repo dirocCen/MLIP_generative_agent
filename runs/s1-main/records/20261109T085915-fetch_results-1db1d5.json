@@ -1,0 +1,137 @@
+{
+  "step_id": "20261109T085915-fetch_results-1db1d5",
+  "run_id": "s1-main",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261109T084931-submit_mlip_fc2_descriptors-6c494d"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261109T084931-submit_mlip_fc2_descriptors-6c494d",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 14,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 4,
+        "states": {
+          "COMPLETED": 4
+        },
+        "all_final": true,
+        "n_completed": 4,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 14,
+      "n_missing": 0,
+      "n_failed": 3,
+      "failed_examples": [
+        {
+          "sid": "B2AsP-975fd9165b",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "B4AsP3-deaed1e4ad",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "B3As2P-4222dec1e9",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        }
+      ],
+      "wall_time_s": {
+        "n": 14,
+        "min": 0.06,
+        "median": 3.04,
+        "max": 115.32
+      },
+      "n_imaginary": 9,
+      "stable_set": "s1main.b2.noveln.l0stable.dpa41_max_oam.c7704b",
+      "n_stable": 2,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 2,
+          "min": 246.78288322013861,
+          "median": 257.7934717776983,
+          "max": 268.80406033525804
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 2,
+          "min": 0.3397777055086255,
+          "median": 0.4261876828732429,
+          "max": 0.5125976602378602
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 2,
+          "min": 3.2631337100776405,
+          "median": 3.759365498280621,
+          "max": 4.255597286483602
+        },
+        "theta_acoustic_K": {
+          "n": 2,
+          "min": 339.236159303511,
+          "median": 359.5844962564662,
+          "max": 379.93283320942135
+        },
+        "ao_gap_ratio": {
+          "n": 2,
+          "min": -0.41671945495597357,
+          "median": -0.39709562112514324,
+          "max": -0.3774717872943129
+        },
+        "acoustic_branch_spread": {
+          "n": 2,
+          "min": 0.19699984188054154,
+          "median": 0.2103566386364497,
+          "max": 0.22371343539235788
+        },
+        "gamma_acoustic_rms": {
+          "n": 2,
+          "min": 0.4279016980810408,
+          "median": 0.44149954606879815,
+          "max": 0.4550973940565556
+        },
+        "wjdos_cv_mean": {
+          "n": 2,
+          "min": 13.482018922711168,
+          "median": 13.876022333480957,
+          "max": 14.270025744250745
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 2.241,
+  "host": "cenyj",
+  "created_at": "2026-11-09T08:59:15+00:00"
+}

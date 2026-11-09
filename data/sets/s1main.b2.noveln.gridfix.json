@@ -1,0 +1,17 @@
+{
+  "name": "s1main.b2.noveln.gridfix",
+  "n": 3,
+  "sids": [
+    "B2AsP-975fd9165b",
+    "B4AsP3-deaed1e4ad",
+    "B3As2P-4222dec1e9"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "s1main.b2.noveln"
+  ],
+  "description": "b2 L0 failures 'Grid symmetry is broken' (step 6c494d): body-centred cells whose length-rule q-mesh broke the point group; rerun with the symmetric q-mesh fix",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-09T09:12:26+00:00"
+}

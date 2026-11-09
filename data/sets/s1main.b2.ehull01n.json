@@ -1,0 +1,58 @@
+{
+  "name": "s1main.b2.ehull01n",
+  "n": 18,
+  "sids": [
+    "As-485931b1e2",
+    "As-075b67df92",
+    "B2AsP-975fd9165b",
+    "B2AsP-d60e92b4b2",
+    "B4AsP3-deaed1e4ad",
+    "B3As2P-4222dec1e9",
+    "B4AsP3-e11e200a84",
+    "BP3-9a61c4851c",
+    "BP3-67ccbf2ef6",
+    "C-990038ae1c",
+    "C-7c8eb73aca",
+    "N2-3ed1a38295",
+    "N2-60a643641f",
+    "P-7b99463bad",
+    "P-be3b45200f",
+    "P-07bd5b3455",
+    "P-217f312ef8",
+    "P-b28fce2b21"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.b2.ehull01.sym"
+  ],
+  "description": "",
+  "details": {
+    "ehull_step_id": "20261109T084821-compute_ehull-586d30",
+    "threshold_ev_atom": 0.1,
+    "near_converged": {
+      "max_force_ev_a": 0.005,
+      "max_stress_gpa": 0.5
+    },
+    "dropped_far_from_minimum": {
+      "B2AsP-7f561a2afb": {
+        "max_force": 0.007402193022114902,
+        "max_stress_gpa": 0.15367662406183222
+      },
+      "N2-6b7f11c584": {
+        "max_force": 0.029764981401967826,
+        "max_stress_gpa": 0.04741591667117034
+      },
+      "N2-2ffc72ba35": {
+        "max_force": 0.008156557463248892,
+        "max_stress_gpa": 0.044612058364093765
+      },
+      "P-05fee5b448": {
+        "max_force": 0.0908043103592843,
+        "max_stress_gpa": 1.8226993709057235
+      }
+    },
+    "note": "final-relax children of the E_hull-passing symmetrized structures; runs that hit max_steps kept if residual force/stress are below the near_converged limits"
+  },
+  "created_by_step": "20261109T084821-compute_ehull-586d30",
+  "created_at": "2026-11-09T08:49:05+00:00"
+}

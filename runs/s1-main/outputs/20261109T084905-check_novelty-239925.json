@@ -1,0 +1,120 @@
+{
+  "per_structure": {
+    "As-485931b1e2": {
+      "mp_matches": [],
+      "mp_same_formula": 6
+    },
+    "As-075b67df92": {
+      "mp_matches": [],
+      "mp_same_formula": 6
+    },
+    "B2AsP-975fd9165b": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "B2AsP-d60e92b4b2": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "B4AsP3-deaed1e4ad": {
+      "mp_matches": [],
+      "mp_same_formula": 0
+    },
+    "B3As2P-4222dec1e9": {
+      "mp_matches": [],
+      "mp_same_formula": 0
+    },
+    "B4AsP3-e11e200a84": {
+      "mp_matches": [],
+      "mp_same_formula": 0
+    },
+    "BP3-9a61c4851c": {
+      "mp_matches": [],
+      "mp_same_formula": 0
+    },
+    "BP3-67ccbf2ef6": {
+      "mp_matches": [],
+      "mp_same_formula": 0
+    },
+    "C-990038ae1c": {
+      "mp_matches": [
+        "mp-568806",
+        "mp-632329",
+        "mp-937760"
+      ],
+      "mp_same_formula": 64
+    },
+    "C-7c8eb73aca": {
+      "mp_matches": [
+        "mp-169",
+        "mp-568286",
+        "mp-3347313"
+      ],
+      "mp_same_formula": 64
+    },
+    "N2-3ed1a38295": {
+      "mp_matches": [
+        "mp-570747"
+      ],
+      "mp_same_formula": 17
+    },
+    "N2-60a643641f": {
+      "mp_matches": [],
+      "mp_same_formula": 17
+    },
+    "P-7b99463bad": {
+      "mp_matches": [
+        "mp-157"
+      ],
+      "mp_same_formula": 14
+    },
+    "P-be3b45200f": {
+      "mp_matches": [],
+      "mp_same_formula": 14
+    },
+    "P-07bd5b3455": {
+      "mp_matches": [],
+      "mp_same_formula": 14
+    },
+    "P-217f312ef8": {
+      "mp_matches": [],
+      "mp_same_formula": 14
+    },
+    "P-b28fce2b21": {
+      "mp_matches": [],
+      "mp_same_formula": 14
+    }
+  },
+  "mp": {
+    "As": {
+      "chemsys": "As",
+      "retrieved_at": "2026-11-09T08:49:05+00:00",
+      "db_version": "2026.09.28"
+    },
+    "As-B-P": {
+      "chemsys": "As-B-P",
+      "retrieved_at": "2026-11-09T08:49:08+00:00",
+      "db_version": "2026.09.28"
+    },
+    "B-P": {
+      "chemsys": "B-P",
+      "retrieved_at": "2026-11-09T05:05:07+00:00",
+      "db_version": "2026.09.28"
+    },
+    "C": {
+      "chemsys": "C",
+      "retrieved_at": "2026-11-09T08:49:10+00:00",
+      "db_version": "2026.09.28"
+    },
+    "N": {
+      "chemsys": "N",
+      "retrieved_at": "2026-11-09T07:01:11+00:00",
+      "db_version": "2026.09.28"
+    },
+    "P": {
+      "chemsys": "P",
+      "retrieved_at": "2026-11-09T08:49:29+00:00",
+      "db_version": "2026.09.28"
+    }
+  }
+}

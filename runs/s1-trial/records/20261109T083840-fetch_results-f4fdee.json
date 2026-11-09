@@ -1,0 +1,83 @@
+{
+  "step_id": "20261109T083840-fetch_results-f4fdee",
+  "run_id": "s1-trial",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261108T142832-submit_mlip_kappa_lbte-9d26cb"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261108T142832-submit_mlip_kappa_lbte-9d26cb",
+    "kind": "mlip_lbte",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_lbte",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 8,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 2,
+        "states": {
+          "COMPLETED": 2
+        },
+        "all_final": true,
+        "n_completed": 2,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 8,
+      "n_missing": 0,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 8,
+        "min": 124.88,
+        "median": 4710.24,
+        "max": 37947.65
+      },
+      "n_from_fc_cache": 8,
+      "n_mesh_reduced": 0,
+      "skipped": {},
+      "kappa_lbte_300K_W_mK": {
+        "n": 8,
+        "min": 10.257839190316114,
+        "median": 37.89653985845203,
+        "max": 65.10521022735621
+      },
+      "lbte_over_rta": {
+        "n": 8,
+        "min": 1.0066196312653364,
+        "median": 1.0393844237522498,
+        "max": 1.1350148186722309
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.941,
+  "host": "cenyj",
+  "created_at": "2026-11-09T08:38:40+00:00"
+}

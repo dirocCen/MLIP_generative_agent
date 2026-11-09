@@ -1,0 +1,5149 @@
+{
+  "removed": {
+    "Al6BN4-c992285c48": [
+      "max_primitive_sites"
+    ],
+    "Al4BN4-306ebb486d": [
+      "max_primitive_sites"
+    ],
+    "Al3BN5-b046084f93": [
+      "max_primitive_sites"
+    ],
+    "Al6B5N5-011353960a": [
+      "max_primitive_sites"
+    ],
+    "Al5BN6-e9bb63b920": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-7f2b292e24": [
+      "max_primitive_sites"
+    ],
+    "Al6BN5-4e025416cd": [
+      "max_primitive_sites"
+    ],
+    "Al9B3N8-4d79d204c0": [
+      "max_primitive_sites"
+    ],
+    "Al3BN4-ff6de65443": [
+      "max_primitive_sites"
+    ],
+    "Al9BN8-1d75ef0712": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-acaf341f0a": [
+      "max_primitive_sites"
+    ],
+    "Al3B3N4-03e852cc18": [
+      "max_primitive_sites"
+    ],
+    "Al2B5N2-d353bf2d0f": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N5-ef09ed48d7": [
+      "max_primitive_sites"
+    ],
+    "Al8B5N2-2fead8c74f": [
+      "max_primitive_sites"
+    ],
+    "Al6B5N9-7c5b4856da": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N3-9bdf9a653b": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-cbe81fd846": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N4-1f6fe110a7": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N5-eb577bee12": [
+      "max_primitive_sites"
+    ],
+    "Al3BN-b73a4b4b85": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N2-590dd9064e": [
+      "max_primitive_sites"
+    ],
+    "Al9B3N8-b0e30b83fd": [
+      "max_primitive_sites"
+    ],
+    "Al4BN5-4ff75d2fd3": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-c597ada9d8": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N5-5866bde91e": [
+      "max_primitive_sites"
+    ],
+    "Al7B2N9-cee28ba411": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-ff2865921b": [
+      "max_primitive_sites"
+    ],
+    "Al3BN5-8ab8782c0d": [
+      "max_primitive_sites"
+    ],
+    "Al8B3N9-990cce6391": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-ae9348c642": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-ed6347ced6": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N5-0517a80c01": [
+      "max_primitive_sites"
+    ],
+    "Al3B3N4-10fe338f6d": [
+      "max_primitive_sites"
+    ],
+    "Al5BN4-167d920ed7": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N4-bfb00c6a1c": [
+      "max_primitive_sites"
+    ],
+    "Al5B4N3-e37d38aac4": [
+      "max_primitive_sites"
+    ],
+    "Al2B2N-29df3f8f48": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N3-b5dbc36acf": [
+      "max_primitive_sites"
+    ],
+    "Al4BN5-76bf66bc3a": [
+      "max_primitive_sites"
+    ],
+    "Al6BN6-dede2b694f": [
+      "max_primitive_sites"
+    ],
+    "Al3BN4-e108c3c999": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N5-6fb7516672": [
+      "max_primitive_sites"
+    ],
+    "Al4BN5-6efc953866": [
+      "max_primitive_sites"
+    ],
+    "Al8B3N9-df130cc7d0": [
+      "max_primitive_sites"
+    ],
+    "Al5B4N3-b6782c2177": [
+      "max_primitive_sites"
+    ],
+    "Al5B3N4-d2149a2eed": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N5-963d8a6ea3": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N4-00dcfc63a3": [
+      "max_primitive_sites"
+    ],
+    "Al4B2N3-48d4a39962": [
+      "max_primitive_sites"
+    ],
+    "Al2B2N-02006f1c13": [
+      "max_primitive_sites"
+    ],
+    "Al5BN4-0e08036743": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N3-42f075bd94": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-b9fd48be25": [
+      "max_primitive_sites"
+    ],
+    "Al5B3N4-763c39d255": [
+      "max_primitive_sites"
+    ],
+    "Al8B5N7-1e2a22c17d": [
+      "max_primitive_sites"
+    ],
+    "Al5B4N6-06b29b0df6": [
+      "max_primitive_sites"
+    ],
+    "Al2BN2-9a2e6c85d8": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N5-e923612c2f": [
+      "max_primitive_sites"
+    ],
+    "Al5BN7-480eec7a17": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-11c453c654": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-21a16feb7f": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-0499d5730d": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-c8961feeec": [
+      "max_primitive_sites"
+    ],
+    "Al7B2N9-2ad7c2b040": [
+      "max_primitive_sites"
+    ],
+    "Al4B5N3-ff50f009d1": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N4-9db31988ab": [
+      "max_primitive_sites"
+    ],
+    "Al4B2N3-3fd7ba4a2e": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-ef60a0d9cf": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N2-ba8ce93296": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N3-ce477fdde1": [
+      "max_primitive_sites"
+    ],
+    "AlB3N2-471e6c1e6f": [
+      "max_primitive_sites"
+    ],
+    "Al4BN4-f6b4044279": [
+      "max_primitive_sites"
+    ],
+    "Al7B3N10-32ac871191": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-1e0e31c67a": [
+      "max_primitive_sites"
+    ],
+    "AlB5N6-dc5642b17c": [
+      "max_primitive_sites"
+    ],
+    "Al5BN5-cdc17e371b": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-06ed23687a": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-c415230e98": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-e67f9a664e": [
+      "max_primitive_sites"
+    ],
+    "Al3B4N13-e1ccec89b7": [
+      "max_primitive_sites"
+    ],
+    "Al2B7N3-855406c695": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N5-222aca0ea0": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N6-f939b8bb24": [
+      "max_primitive_sites"
+    ],
+    "Al2BN-7b589fecc4": [
+      "max_primitive_sites"
+    ],
+    "Al5BN6-ecb6273559": [
+      "max_primitive_sites"
+    ],
+    "Al5BN6-3f45ca9de2": [
+      "max_primitive_sites"
+    ],
+    "Al5B3N6-68c34a34f3": [
+      "max_primitive_sites"
+    ],
+    "Al5BN4-d32f199966": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-440c48b0ac": [
+      "max_primitive_sites"
+    ],
+    "Al10B3N5-46e45a9ebe": [
+      "max_primitive_sites"
+    ],
+    "Al6BN7-f3b286f5f2": [
+      "max_primitive_sites"
+    ],
+    "Al7B2N9-65f05b0f13": [
+      "max_primitive_sites"
+    ],
+    "Al5BN4-ae9ec5f5f6": [
+      "max_primitive_sites"
+    ],
+    "Al2BN3-67365ffd22": [
+      "max_primitive_sites"
+    ],
+    "Al5BN5-7c4d5656ad": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-949f569589": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N5-e8b757c90f": [
+      "max_primitive_sites"
+    ],
+    "Al1B4N4-3696ab071b": [
+      "max_primitive_sites"
+    ],
+    "Al5BN6-6944eafc57": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N-2527b99274": [
+      "max_primitive_sites"
+    ],
+    "Al2B11N3-1a0bc85a0a": [
+      "max_primitive_sites"
+    ],
+    "AlBN3-0f45ea7a9f": [
+      "max_primitive_sites"
+    ],
+    "Al4BN3-f09ae269b4": [
+      "max_primitive_sites"
+    ],
+    "Al4BN4-98f9ea2c14": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N3-8ebe71e153": [
+      "max_primitive_sites"
+    ],
+    "Al7B3N8-10939043b9": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N4-aba85b1c88": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N4-7af61e1526": [
+      "max_primitive_sites"
+    ],
+    "Al3B4N5-3fb6340b8f": [
+      "max_primitive_sites"
+    ],
+    "Al6BN5-b8a3faae45": [
+      "max_primitive_sites"
+    ],
+    "Al1B2N2-884e70b009": [
+      "max_primitive_sites"
+    ],
+    "Al11BN8-94e8819b5e": [
+      "max_primitive_sites"
+    ],
+    "Al5BN6-2e5a10801c": [
+      "max_primitive_sites"
+    ],
+    "Al2B5N9-7c92114e88": [
+      "max_primitive_sites"
+    ],
+    "Al5BN5-ac535e375a": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-3d1c216007": [
+      "max_primitive_sites"
+    ],
+    "Al3B2N5-33eff308a5": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-9bd6298ca5": [
+      "max_primitive_sites"
+    ],
+    "Al2B3N5-55d245ec7d": [
+      "max_primitive_sites"
+    ],
+    "Al4B3N5-d358b71185": [
+      "max_primitive_sites"
+    ],
+    "Al2B2N-1cec05f4db": [
+      "max_primitive_sites"
+    ],
+    "Al8BN5-13bb9cc096": [
+      "max_primitive_sites"
+    ],
+    "Al3BN2-a02efb25eb": [
+      "max_primitive_sites"
+    ],
+    "Al5BN5-6f446b6499": [
+      "max_primitive_sites"
+    ],
+    "AlBN2-654c9963ab": [
+      "max_primitive_sites"
+    ],
+    "Al6B7N3-21a61135db": [
+      "max_primitive_sites"
+    ],
+    "AlB2N3-84b60b948d": [
+      "max_primitive_sites"
+    ],
+    "Al8BN7-ba4a7b8e39": [
+      "max_primitive_sites"
+    ],
+    "Al7B4N5-6cb9145e48": [
+      "max_primitive_sites"
+    ],
+    "Al7B2N3-b0cfc8464f": [
+      "max_primitive_sites"
+    ],
+    "Al5B2N8-ff4860caea": [
+      "max_primitive_sites"
+    ],
+    "Al3B4N7-1658a8845f": [
+      "max_primitive_sites"
+    ],
+    "BC4N5-45931b29f1": [
+      "max_primitive_sites"
+    ],
+    "B1C2N6-da87c9ba35": [
+      "max_primitive_sites"
+    ],
+    "B2CN3-4db7cefaef": [
+      "max_primitive_sites"
+    ],
+    "B4C3N9-73f6653633": [
+      "max_primitive_sites"
+    ],
+    "B2C3N6-8f257e5767": [
+      "max_primitive_sites"
+    ],
+    "B2C2N5-8f5629dfb6": [
+      "max_primitive_sites"
+    ],
+    "B2CN-3d54e3dd28": [
+      "max_primitive_sites"
+    ],
+    "B2C7N2-faea39a027": [
+      "max_primitive_sites"
+    ],
+    "B5C9N4-b1e448e785": [
+      "max_primitive_sites"
+    ],
+    "B5C4N3-42f3bcdc14": [
+      "max_primitive_sites"
+    ],
+    "B2C7N9-8f1b7015a8": [
+      "max_primitive_sites"
+    ],
+    "B1C2N4-61a73e6c6a": [
+      "max_primitive_sites"
+    ],
+    "B2CN3-e56ff0d7bc": [
+      "max_primitive_sites"
+    ],
+    "B3C5N-3a6929eb8b": [
+      "max_primitive_sites"
+    ],
+    "B5C2N3-54258599e3": [
+      "max_primitive_sites"
+    ],
+    "BC4N5-ff11dd6230": [
+      "max_primitive_sites"
+    ],
+    "B5C3N8-80ab1b81be": [
+      "max_primitive_sites"
+    ],
+    "B4C3N8-5f8fd8b828": [
+      "max_primitive_sites"
+    ],
+    "B5C3N4-626b57bcb6": [
+      "max_primitive_sites"
+    ],
+    "B5C2N5-af55609a79": [
+      "max_primitive_sites"
+    ],
+    "B1C2N2-6480e10420": [
+      "max_primitive_sites"
+    ],
+    "B4CN7-0d720b03a7": [
+      "max_primitive_sites"
+    ],
+    "BC2N3-4f1cedb2ab": [
+      "max_primitive_sites"
+    ],
+    "B3C4N9-e2fa810146": [
+      "max_primitive_sites"
+    ],
+    "B3C7N10-c59136587e": [
+      "max_primitive_sites"
+    ],
+    "B7C3N6-aeb31ff547": [
+      "max_primitive_sites"
+    ],
+    "B4C5N2-403ab916e0": [
+      "max_primitive_sites"
+    ],
+    "B9C6N-99a1cfc542": [
+      "max_primitive_sites"
+    ],
+    "B3C4N7-4c6b868552": [
+      "max_primitive_sites"
+    ],
+    "BN3-8c1f7ad099": [
+      "max_primitive_sites"
+    ],
+    "B7C10N3-39e04b4229": [
+      "max_primitive_sites"
+    ],
+    "B3CN6-17159f7a46": [
+      "max_primitive_sites"
+    ],
+    "B5CN6-9a3c49de6e": [
+      "max_primitive_sites"
+    ],
+    "BC9N8-6fc70420a1": [
+      "max_primitive_sites"
+    ],
+    "BC4N9-d7c11029bb": [
+      "max_primitive_sites"
+    ],
+    "B2C3N4-1065667281": [
+      "max_primitive_sites"
+    ],
+    "B2C4N3-8efdac18e5": [
+      "max_primitive_sites"
+    ],
+    "BC5N9-a912819dc4": [
+      "max_primitive_sites"
+    ],
+    "B3C5N4-c5138e6a34": [
+      "max_primitive_sites"
+    ],
+    "BCN2-c80860b020": [
+      "max_primitive_sites"
+    ],
+    "B3N7-aaa7e0c9fa": [
+      "max_primitive_sites"
+    ],
+    "B2C2N-eea4be0425": [
+      "max_primitive_sites"
+    ],
+    "BC7N2-c5d2524409": [
+      "max_primitive_sites"
+    ],
+    "B3C5N6-3520ca5a8b": [
+      "max_primitive_sites"
+    ],
+    "B4C4N3-5b7c7651b9": [
+      "max_primitive_sites"
+    ],
+    "B7C5N6-6f1b19cc3c": [
+      "max_primitive_sites"
+    ],
+    "B2C5N5-99b7c56364": [
+      "max_primitive_sites"
+    ],
+    "B5C3N2-72ac0e8f4c": [
+      "max_primitive_sites"
+    ],
+    "B3CN-5d1f37a7e3": [
+      "max_primitive_sites"
+    ],
+    "C5N4-dd21ba5a68": [
+      "max_primitive_sites"
+    ],
+    "B5C5N8-6c4647afab": [
+      "max_primitive_sites"
+    ],
+    "B3C2N5-ccb09a700f": [
+      "max_primitive_sites"
+    ],
+    "BCN2-1de4b739f8": [
+      "max_primitive_sites"
+    ],
+    "B2C3N5-6675c86611": [
+      "max_primitive_sites"
+    ],
+    "B5C4N11-731bf41761": [
+      "max_primitive_sites"
+    ],
+    "B3C2N6-1b369ab1be": [
+      "max_primitive_sites"
+    ],
+    "BC7N8-9c1c1d4847": [
+      "max_primitive_sites"
+    ],
+    "B7C4N7-ba31bb6dfa": [
+      "max_primitive_sites"
+    ],
+    "B4C3N5-9b1f980d65": [
+      "max_primitive_sites"
+    ],
+    "B3C2N5-59be640623": [
+      "max_primitive_sites"
+    ],
+    "B5C3N6-a79e384b5f": [
+      "max_primitive_sites"
+    ],
+    "B4C3N5-652785a76b": [
+      "max_primitive_sites"
+    ],
+    "B2CN2-6fc6818af8": [
+      "max_primitive_sites"
+    ],
+    "B2CN-60b8cd9ad9": [
+      "max_primitive_sites"
+    ],
+    "B3C2N4-74f38a8fa2": [
+      "max_primitive_sites"
+    ],
+    "B5CN4-f2ecad703d": [
+      "max_primitive_sites"
+    ],
+    "BCN-afa1108b5d": [
+      "max_primitive_sites"
+    ],
+    "B4C4N7-23d94833d3": [
+      "max_primitive_sites"
+    ],
+    "B3C4N3-0d943bc75d": [
+      "max_primitive_sites"
+    ],
+    "BC8N11-ff81f6f255": [
+      "max_primitive_sites"
+    ],
+    "B6C3N8-47fbbb508a": [
+      "max_primitive_sites"
+    ],
+    "B7C3N2-4fe48b0faa": [
+      "max_primitive_sites"
+    ],
+    "B3C4N3-371774531b": [
+      "max_primitive_sites"
+    ],
+    "B1C6N3-2a7c906bd3": [
+      "max_primitive_sites"
+    ],
+    "B2C3N5-056dd1294f": [
+      "max_primitive_sites"
+    ],
+    "B5CN6-19036cbf91": [
+      "max_primitive_sites"
+    ],
+    "BC10N9-2991f40379": [
+      "max_primitive_sites"
+    ],
+    "B2C5N5-b0985913b0": [
+      "max_primitive_sites"
+    ],
+    "B3C4N3-db16650aa9": [
+      "max_primitive_sites"
+    ],
+    "B2C2N5-8cdabdaefc": [
+      "max_primitive_sites"
+    ],
+    "B2N3-581836e981": [
+      "max_primitive_sites"
+    ],
+    "B5C2N8-c997de9453": [
+      "max_primitive_sites"
+    ],
+    "B3C5N2-d651264baf": [
+      "max_primitive_sites"
+    ],
+    "B5C2N5-eaf9f29d29": [
+      "max_primitive_sites"
+    ],
+    "B2CN3-cb27854455": [
+      "max_primitive_sites"
+    ],
+    "BCN2-f374df93fc": [
+      "max_primitive_sites"
+    ],
+    "B7C5N8-10bb4ff373": [
+      "max_primitive_sites"
+    ],
+    "B4C4N7-37604b36d5": [
+      "max_primitive_sites"
+    ],
+    "B4C3N2-ab8fa33d28": [
+      "max_primitive_sites"
+    ],
+    "B5C3N6-4fd173e8bf": [
+      "max_primitive_sites"
+    ],
+    "B2C3N4-75417b9354": [
+      "max_primitive_sites"
+    ],
+    "B2C3N6-72b148e13f": [
+      "max_primitive_sites"
+    ],
+    "B2CN-058e1d97a8": [
+      "max_primitive_sites"
+    ],
+    "B4C4N-7b9fee6a19": [
+      "max_primitive_sites"
+    ],
+    "B3C2N5-98f3bfefc4": [
+      "max_primitive_sites"
+    ],
+    "B2CN3-52388a9415": [
+      "max_primitive_sites"
+    ],
+    "B2CN5-bf4cf52773": [
+      "min_distance_angstrom"
+    ],
+    "B2CN3-5c8e92f1f2": [
+      "max_primitive_sites"
+    ],
+    "C4N5-0dc32f39f9": [
+      "max_primitive_sites"
+    ],
+    "B4CN5-7b79e1482e": [
+      "max_primitive_sites"
+    ],
+    "B2C4N5-f950315682": [
+      "max_primitive_sites"
+    ],
+    "B4C5N9-31fddc3edd": [
+      "max_primitive_sites"
+    ],
+    "B2C2N5-dc49a44c34": [
+      "max_primitive_sites"
+    ],
+    "BC2N3-fd37bf1872": [
+      "max_primitive_sites"
+    ],
+    "B2C2N5-e75243b6a9": [
+      "max_primitive_sites"
+    ],
+    "B5C6N5-641a46668d": [
+      "max_primitive_sites"
+    ],
+    "BCN4-94e9d28821": [
+      "max_primitive_sites"
+    ],
+    "B5CN6-8f42f7b533": [
+      "max_primitive_sites"
+    ],
+    "B2CN3-9e0b6c14d8": [
+      "min_distance_angstrom"
+    ],
+    "BC4N5-ffdda1a3f2": [
+      "max_primitive_sites"
+    ],
+    "B3C2N5-b78ee46c28": [
+      "max_primitive_sites"
+    ],
+    "BCN2-395e9f3cf4": [
+      "max_primitive_sites"
+    ],
+    "B4C5N3-a3beba0662": [
+      "max_primitive_sites"
+    ],
+    "B4CN5-08a4e37d96": [
+      "max_primitive_sites"
+    ],
+    "B4C3N7-dd6a627c09": [
+      "max_primitive_sites"
+    ],
+    "B4CN5-dd51ad6e7b": [
+      "max_primitive_sites"
+    ],
+    "B5CN6-4f592e0bd3": [
+      "max_primitive_sites"
+    ],
+    "B1C4N4-53132f3fdc": [
+      "max_primitive_sites"
+    ],
+    "BC3N4-fb351a82db": [
+      "max_primitive_sites"
+    ],
+    "B2C3N5-c7f803e1c5": [
+      "max_primitive_sites"
+    ],
+    "B3C3N7-62137a4c7e": [
+      "max_primitive_sites"
+    ],
+    "B3C4N8-9f4d562392": [
+      "max_primitive_sites"
+    ],
+    "B2C7N3-39db4aab2d": [
+      "max_primitive_sites"
+    ],
+    "BC2N3-3ffa0576ec": [
+      "max_primitive_sites"
+    ],
+    "B2C4N3-dfb2441eec": [
+      "max_primitive_sites"
+    ],
+    "B2C4N5-2902a4f4f3": [
+      "max_primitive_sites"
+    ],
+    "B3C5N8-12b361368f": [
+      "max_primitive_sites"
+    ],
+    "B4C3N3-d280379326": [
+      "max_primitive_sites"
+    ],
+    "B5C3N4-de5e0dacf2": [
+      "max_primitive_sites"
+    ],
+    "BC5N4-164cef1416": [
+      "max_primitive_sites"
+    ],
+    "BC4N5-ae768e22d4": [
+      "max_primitive_sites"
+    ],
+    "B3C6N11-1290c694be": [
+      "max_primitive_sites"
+    ],
+    "B2C3N6-6e9c2ad068": [
+      "max_primitive_sites"
+    ],
+    "B3C2N5-594a7f71f9": [
+      "max_primitive_sites"
+    ],
+    "B2C5N3-75d8c71f10": [
+      "max_primitive_sites"
+    ],
+    "B6C7N3-1f8be35a54": [
+      "max_primitive_sites"
+    ],
+    "B4C3N3-b2d9af61bc": [
+      "max_primitive_sites"
+    ],
+    "B4CN5-36b9a0b562": [
+      "max_primitive_sites"
+    ],
+    "B5C6N9-d713c5f6e2": [
+      "max_primitive_sites"
+    ],
+    "Si3C5N4-b4943bd242": [
+      "max_primitive_sites"
+    ],
+    "Si3C4N8-aa38dc7b34": [
+      "max_primitive_sites"
+    ],
+    "SiCN-ff5e747aba": [
+      "max_primitive_sites"
+    ],
+    "Si3CN6-e140571624": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N3-4c1c1402b0": [
+      "max_primitive_sites"
+    ],
+    "Si4CN7-e3e38ed539": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N10-c5755a1bfe": [
+      "max_primitive_sites"
+    ],
+    "Si4C2N3-0d84052a9f": [
+      "max_primitive_sites"
+    ],
+    "Si5C4N7-9d02ca204d": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N7-eebdaf41bf": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N-42b709bdb6": [
+      "max_primitive_sites"
+    ],
+    "Si3C5N12-a029a8a68d": [
+      "max_primitive_sites"
+    ],
+    "Si3C4N8-89f1608129": [
+      "max_primitive_sites"
+    ],
+    "Si5C4N3-8cd754f4a9": [
+      "max_primitive_sites"
+    ],
+    "Si1C2N4-5085c8f632": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N4-ab69f2c3ce": [
+      "max_primitive_sites"
+    ],
+    "Si4C4N-7a089601d3": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N5-4a9631d075": [
+      "max_primitive_sites"
+    ],
+    "Si4C5N7-0071cc6079": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N4-fcc97d3f9f": [
+      "max_primitive_sites"
+    ],
+    "Si7C4N3-6a117f9848": [
+      "max_primitive_sites"
+    ],
+    "Si3C5N2-34510fa86b": [
+      "max_primitive_sites"
+    ],
+    "Si3CN2-6328a314f9": [
+      "max_primitive_sites"
+    ],
+    "Si1C3N6-7231b5c40c": [
+      "max_primitive_sites"
+    ],
+    "Si5N6-c7160571e6": [
+      "max_primitive_sites"
+    ],
+    "Si3C3N2-6d5a5142f2": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N7-dba82a4dbd": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N-caedfe3484": [
+      "max_primitive_sites"
+    ],
+    "Si3C6N10-22bc5dbe77": [
+      "max_primitive_sites"
+    ],
+    "Si1C3N6-1918aa13ef": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N5-9732fb744e": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N6-c50fdf63a5": [
+      "max_primitive_sites"
+    ],
+    "Si3C5N8-c411ccb5c2": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N3-7fe346e00f": [
+      "max_primitive_sites"
+    ],
+    "Si4C2N-bd4c828634": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N6-75abc9a451": [
+      "max_primitive_sites"
+    ],
+    "Si5N7-ba03735135": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N5-9420e8843d": [
+      "max_primitive_sites"
+    ],
+    "Si5C6N4-912f430cb0": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-6b7698a7da": [
+      "max_primitive_sites"
+    ],
+    "Si2CN3-cf4e3b968e": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N8-e173d74875": [
+      "max_primitive_sites"
+    ],
+    "Si6C3N2-69f67c0f38": [
+      "max_primitive_sites"
+    ],
+    "Si5N7-e7f85dfe99": [
+      "max_primitive_sites"
+    ],
+    "Si3C4N9-081637ab52": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N3-1f9a8ec028": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N2-5b1e27ae5d": [
+      "max_primitive_sites"
+    ],
+    "Si3C4N5-ee4f731eee": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-616f152421": [
+      "max_primitive_sites"
+    ],
+    "Si4CN4-1c283eb660": [
+      "max_primitive_sites"
+    ],
+    "Si1C2N4-d51e0f7efc": [
+      "max_primitive_sites"
+    ],
+    "C3N7-82239aebd1": [
+      "max_primitive_sites"
+    ],
+    "Si4C3N8-fd1887fe40": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N4-9bec8c4140": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-2c629e6295": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-fd2432eea8": [
+      "max_primitive_sites"
+    ],
+    "Si8CN9-732d26d74a": [
+      "max_primitive_sites"
+    ],
+    "Si4C5N3-0107563b09": [
+      "max_primitive_sites"
+    ],
+    "Si2CN7-d7fe503edf": [
+      "max_primitive_sites"
+    ],
+    "Si4C2N5-db6b7aed2f": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-6a4f560ce5": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-9dd645dcfb": [
+      "max_primitive_sites"
+    ],
+    "Si2CN3-05e029cd48": [
+      "max_primitive_sites"
+    ],
+    "SiC2N-dcb115237e": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-23f373e667": [
+      "max_primitive_sites"
+    ],
+    "Si1C6N4-47cae5a776": [
+      "max_primitive_sites"
+    ],
+    "Si1C2N6-c7f8bfa283": [
+      "max_primitive_sites"
+    ],
+    "Si5C2N7-238c5355de": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-86b13cf63f": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N5-8008627e7c": [
+      "max_primitive_sites"
+    ],
+    "Si2N3-d3b475f8a4": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-63fd2ba6dd": [
+      "max_primitive_sites"
+    ],
+    "Si2CN-1e45cc18b0": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-4e59dc659f": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N5-0ba1c88b8e": [
+      "max_primitive_sites"
+    ],
+    "Si5C5N2-371999029b": [
+      "max_primitive_sites"
+    ],
+    "Si3CN2-3c3a7d4c98": [
+      "max_primitive_sites"
+    ],
+    "Si2CN3-64ef19a503": [
+      "max_primitive_sites"
+    ],
+    "Si6C2N7-55967c87cd": [
+      "max_primitive_sites"
+    ],
+    "Si4C5N-656f13d900": [
+      "max_primitive_sites"
+    ],
+    "Si1C2N4-0665567465": [
+      "max_primitive_sites"
+    ],
+    "Si1C3N6-fdb9fbaf9a": [
+      "max_primitive_sites"
+    ],
+    "Si3C3N4-5d79ae6631": [
+      "max_primitive_sites"
+    ],
+    "SiC3N4-fe0c0858af": [
+      "max_primitive_sites"
+    ],
+    "Si8C3N6-a4db648c46": [
+      "max_primitive_sites"
+    ],
+    "Si2CN2-a2370d5e21": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N7-ee07d1e8ef": [
+      "max_primitive_sites"
+    ],
+    "SiCN2-7d7f677270": [
+      "max_primitive_sites"
+    ],
+    "Si2CN-f1f523521e": [
+      "max_primitive_sites"
+    ],
+    "Si5C2N5-f51530fd76": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-ac1045698a": [
+      "max_primitive_sites"
+    ],
+    "SiN14-e62c5645cc": [
+      "max_primitive_sites"
+    ],
+    "Si5C4N-581c0abac4": [
+      "max_primitive_sites"
+    ],
+    "Si3CN5-b48a5e3e43": [
+      "max_primitive_sites"
+    ],
+    "Si7C2N6-96750075ab": [
+      "max_primitive_sites"
+    ],
+    "Si4C4N11-0c21be1e94": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-0f76a8ae87": [
+      "max_primitive_sites"
+    ],
+    "Si7C4N7-7ad67cf9a4": [
+      "max_primitive_sites"
+    ],
+    "SiC4N5-60558c0d84": [
+      "max_primitive_sites"
+    ],
+    "Si2CN-822c49a1d8": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N5-805a18f3a0": [
+      "max_primitive_sites"
+    ],
+    "Si2C3N7-352c1983de": [
+      "max_primitive_sites"
+    ],
+    "Si7C8N5-2f903f9154": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N-ff1ac0db4a": [
+      "max_primitive_sites"
+    ],
+    "Si5C4N3-0d526dd748": [
+      "max_primitive_sites"
+    ],
+    "Si7C11N2-1371b0fa23": [
+      "max_primitive_sites"
+    ],
+    "Si4C5N6-d8dcec3e4b": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N3-1771ed72c3": [
+      "max_primitive_sites"
+    ],
+    "Si9C5N6-728e8edee0": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-5c1472090e": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N-556ee6a6cb": [
+      "max_primitive_sites"
+    ],
+    "SiC3N5-07d59de1f2": [
+      "max_primitive_sites"
+    ],
+    "Si2C7N11-3e11f6542b": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N5-c1df915d4f": [
+      "max_primitive_sites"
+    ],
+    "Si3C4N5-5a2af3b642": [
+      "max_primitive_sites"
+    ],
+    "Si2CN-8c91c649b3": [
+      "max_primitive_sites"
+    ],
+    "Si3C6N10-7590a1c838": [
+      "max_primitive_sites"
+    ],
+    "Si6C4N5-f37542ff61": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N5-d9709e896d": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N-4de3180731": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-dab147a4cb": [
+      "max_primitive_sites"
+    ],
+    "Si6C3N7-76e44159a9": [
+      "max_primitive_sites"
+    ],
+    "Si9C4N5-ddbb58befe": [
+      "max_primitive_sites"
+    ],
+    "SiCN4-343ca63d91": [
+      "max_primitive_sites"
+    ],
+    "Si3C5N12-33a772df05": [
+      "max_primitive_sites"
+    ],
+    "Si7C3N6-9cc873673a": [
+      "max_primitive_sites"
+    ],
+    "Si5C5N2-76d677ed66": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-8c2500ce4c": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N7-a5b7ffdf20": [
+      "max_primitive_sites"
+    ],
+    "Si5C4N-a230818f30": [
+      "max_primitive_sites"
+    ],
+    "Si8C5N3-0a5ea745b3": [
+      "max_primitive_sites"
+    ],
+    "Si5C3N2-ac8c1e1c43": [
+      "max_primitive_sites"
+    ],
+    "Si2C2N7-7a47d02978": [
+      "max_primitive_sites"
+    ],
+    "Si1C3N6-b4c801b7c6": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-78ff7a7b6b": [
+      "max_primitive_sites"
+    ],
+    "Si3C2N5-525efc72db": [
+      "max_primitive_sites"
+    ],
+    "SiCN3-9b51f91e18": [
+      "max_primitive_sites"
+    ],
+    "Si3CN5-5719dd2d44": [
+      "max_primitive_sites"
+    ],
+    "Al3SiC6-a9211827cf": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C2N-8b1d56377d": [
+      "max_primitive_sites"
+    ],
+    "AlSi2C4N9-a3ba921458": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-fc08c01229": [
+      "max_primitive_sites"
+    ],
+    "Al7SiC5N2-4a987ce5b4": [
+      "max_primitive_sites"
+    ],
+    "Al5Si4C5N4-c91f867d99": [
+      "max_primitive_sites"
+    ],
+    "Al8SiC2N5-615eba5e9b": [
+      "max_primitive_sites"
+    ],
+    "Al5SiC3N-54dae212a5": [
+      "max_primitive_sites"
+    ],
+    "Al7Si2C4N3-d282a3230e": [
+      "max_primitive_sites"
+    ],
+    "Al9Si2C3N6-92a9951ccf": [
+      "max_primitive_sites"
+    ],
+    "AlSi3C3N2-7e50f64827": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C2N3-c889b4908b": [
+      "max_primitive_sites"
+    ],
+    "Al5Si3C5N3-14856f3242": [
+      "max_primitive_sites"
+    ],
+    "Al3Si3C4N2-62be769585": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC3N2-dc1049dbb0": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C4N-4565b92a66": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C4N-161db7330f": [
+      "max_primitive_sites"
+    ],
+    "Al3Si3C5N-122edcac8e": [
+      "max_primitive_sites"
+    ],
+    "Al3Si1C2N4-ef50f3eeee": [
+      "max_primitive_sites"
+    ],
+    "Al2Si4C3N3-62ab9bc266": [
+      "max_primitive_sites"
+    ],
+    "AlSiCN-3bc2f0e0b2": [
+      "max_primitive_sites"
+    ],
+    "Al6Si3C3N4-321c144b5c": [
+      "max_primitive_sites"
+    ],
+    "Al4Si1C2N4-a75e440664": [
+      "max_primitive_sites"
+    ],
+    "AlSi4C4N-f64ad36f9b": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-28d6032013": [
+      "max_primitive_sites"
+    ],
+    "Al3SiC2N3-b47eb76572": [
+      "max_primitive_sites"
+    ],
+    "Al6SiCN6-56ce753dd3": [
+      "max_primitive_sites"
+    ],
+    "Al7Si1C3N3-8b18dae064": [
+      "max_primitive_sites"
+    ],
+    "Al5Si2C4N-deebecafb5": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-52aca8c76f": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC2N3-2bc5db42d3": [
+      "max_primitive_sites"
+    ],
+    "Al5C3N-6238588acd": [
+      "max_primitive_sites"
+    ],
+    "Al9Si1C4N2-1634c4801d": [
+      "max_primitive_sites"
+    ],
+    "Al2SiCN2-02d3a7d4d1": [
+      "max_primitive_sites"
+    ],
+    "Al5Si2CN2-aad166718a": [
+      "max_primitive_sites"
+    ],
+    "Al5SiC4N-07e6c2fdde": [
+      "max_primitive_sites"
+    ],
+    "Al5Si1C2N4-4329bf1b86": [
+      "max_primitive_sites"
+    ],
+    "Al6Si2CN-80544647a2": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-2e9def1d4d": [
+      "max_primitive_sites"
+    ],
+    "Al6SiC4N-9f5ab9aa71": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C5N-0626123c97": [
+      "max_primitive_sites"
+    ],
+    "Al5Si3C7N5-cca81690b3": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C3N3-94dd368846": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C5N2-9313c38f90": [
+      "max_primitive_sites"
+    ],
+    "Al6Si3C4N7-8406fea12b": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C2N3-9897de8a49": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C2N3-f91e73bab5": [
+      "max_primitive_sites"
+    ],
+    "Al7Si1C4N2-a170b4699c": [
+      "max_primitive_sites"
+    ],
+    "Al9Si2C5N4-64fcefa774": [
+      "max_primitive_sites"
+    ],
+    "Al2SiC2N7-d55121f285": [
+      "max_primitive_sites"
+    ],
+    "Al6Si2C7N-fa3169c3f8": [
+      "max_primitive_sites"
+    ],
+    "Al5Si2C2N-6ba6440383": [
+      "max_primitive_sites"
+    ],
+    "AlSi2CN2-51de5bff6a": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2CN3-cb0ac33364": [
+      "max_primitive_sites"
+    ],
+    "Al5Si3C5N3-9b0d04fd79": [
+      "max_primitive_sites"
+    ],
+    "Al2Si4C3N3-cf12321efa": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C2N3-34d48512e5": [
+      "max_primitive_sites"
+    ],
+    "AlSi3CN5-dcc8469a32": [
+      "max_primitive_sites"
+    ],
+    "Al9Si2C7N2-39458814da": [
+      "max_primitive_sites"
+    ],
+    "Al3Si1C4N2-a2fba2804f": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C3N4-7d7b485f49": [
+      "max_primitive_sites"
+    ],
+    "Al5Si1C2N4-6fa71f7126": [
+      "max_primitive_sites"
+    ],
+    "Al3SiC4N-353466aef5": [
+      "max_primitive_sites"
+    ],
+    "Al2SiC2N-4f1df84374": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C4N-c2ffc136c6": [
+      "max_primitive_sites"
+    ],
+    "Al8Si1C4N2-330e2fa083": [
+      "max_primitive_sites"
+    ],
+    "Al6Si3C4N4-3e2838fda8": [
+      "max_primitive_sites"
+    ],
+    "Al8SiC4N3-c65c7c249c": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C3N3-6898afc606": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C2N3-ddad9e6d6a": [
+      "max_primitive_sites"
+    ],
+    "Al6Si4C7N-52241dccb3": [
+      "max_primitive_sites"
+    ],
+    "Al8Si2C5N5-adbcf9c313": [
+      "max_primitive_sites"
+    ],
+    "Al3SiC3N2-a064dc03a2": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C3N-f367500c3c": [
+      "max_primitive_sites"
+    ],
+    "Al6SiC2N3-d426f4578b": [
+      "max_primitive_sites"
+    ],
+    "Al3Si3C4N2-f7954b3954": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C5N-418cf65e4e": [
+      "max_primitive_sites"
+    ],
+    "Al7SiC3N-e563ab4400": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C3N2-b62828ba4d": [
+      "max_primitive_sites"
+    ],
+    "Al3Si3C4N2-953590fc7d": [
+      "max_primitive_sites"
+    ],
+    "Al5Si1C2N2-eeeb32782d": [
+      "max_primitive_sites"
+    ],
+    "Al6Si3C4N7-1eb3cf1279": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C4N3-4360593ee8": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C2N4-04bb5c80a2": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC2N3-7a3ecde32f": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2CN7-c2adb69f0c": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C3N2-b47ca8db4c": [
+      "max_primitive_sites"
+    ],
+    "Al2SiC2N-7e8924fd50": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C3N-bab4e28b70": [
+      "max_primitive_sites"
+    ],
+    "Al2SiCN-979b276599": [
+      "max_primitive_sites"
+    ],
+    "Al2SiC2N-906e14b4d5": [
+      "max_primitive_sites"
+    ],
+    "Al4Si1C2N2-d685d11281": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C5N2-8c18f7cd95": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC5N2-a8db08bcf0": [
+      "max_primitive_sites"
+    ],
+    "Al5Si3C5N3-856fb4176e": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C4N-5174edb516": [
+      "max_primitive_sites"
+    ],
+    "Al5Si2C6N-c81e231670": [
+      "max_primitive_sites"
+    ],
+    "Al4Si1C4N2-9b50a8fc93": [
+      "max_primitive_sites"
+    ],
+    "Al6SiC4N-bd99b5b0bd": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2CN6-91ee2ee01c": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-14505cb956": [
+      "max_primitive_sites"
+    ],
+    "Al4Si4C5N-d7f12354db": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C2N3-c56b9bcf9f": [
+      "max_primitive_sites"
+    ],
+    "Al4Si6C7N3-4308c88ea3": [
+      "max_primitive_sites"
+    ],
+    "Al8Si2C5N3-dc6e80bfda": [
+      "max_primitive_sites"
+    ],
+    "AlSi4C4N-189a2ef9b0": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C2N3-58a59ca12a": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C3N2-707506380d": [
+      "max_primitive_sites"
+    ],
+    "Al7Si2C7N3-fda0007508": [
+      "max_primitive_sites"
+    ],
+    "AlSiC2N-e2c54aea06": [
+      "max_primitive_sites"
+    ],
+    "AlSi5C5N-302b212b65": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N-2525a76a91": [
+      "max_primitive_sites"
+    ],
+    "Al8Si2C6N3-152af6eea8": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-2190e285e2": [
+      "max_primitive_sites"
+    ],
+    "Al6C3N-5daf3f065b": [
+      "max_primitive_sites"
+    ],
+    "Al7Si2C4N3-95e14111a1": [
+      "max_primitive_sites"
+    ],
+    "Al4Si2C3N2-44c11def5e": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C3N2-db9edfa35e": [
+      "max_primitive_sites"
+    ],
+    "Al3Si1C2N2-fe07aa6a20": [
+      "max_primitive_sites"
+    ],
+    "Al6Si3C5N5-f3d4d86231": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC2N3-26fffc3d20": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C4N-87b84b18a5": [
+      "max_primitive_sites"
+    ],
+    "AlSi2CN5-3d404b87a6": [
+      "max_primitive_sites"
+    ],
+    "Al7Si2C5N4-76da083fec": [
+      "max_primitive_sites"
+    ],
+    "Al5Si3C6N4-21a45c09fb": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC5N2-144ca5eed5": [
+      "max_primitive_sites"
+    ],
+    "AlSi4C3N2-ca4f09d96f": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC4N-b6374916fa": [
+      "max_primitive_sites"
+    ],
+    "Al2C3N5-2af9841e9d": [
+      "max_primitive_sites"
+    ],
+    "Al3Si3C5N-c455f27b12": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C4N-d2caffc603": [
+      "max_primitive_sites"
+    ],
+    "Al3SiCN-8aa36168ea": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C2N3-574e2780c7": [
+      "max_primitive_sites"
+    ],
+    "AlSi3C3N2-aa7467fa85": [
+      "max_primitive_sites"
+    ],
+    "Al2SiCN2-46168ab5ec": [
+      "max_primitive_sites"
+    ],
+    "Al7Si3C6N2-b4805b6155": [
+      "max_primitive_sites"
+    ],
+    "Al5Si1C3N3-18d94076b5": [
+      "max_primitive_sites"
+    ],
+    "Al4SiC4N3-63e95b5ec2": [
+      "max_primitive_sites"
+    ],
+    "Al3Si4C4N-2d7af62215": [
+      "max_primitive_sites"
+    ],
+    "Al2Si3C2N4-e8821fc253": [
+      "max_primitive_sites"
+    ],
+    "Al7Si3C4N5-0f667c4294": [
+      "max_primitive_sites"
+    ],
+    "Al7Si3C3N2-e19e34e08c": [
+      "max_primitive_sites"
+    ],
+    "Al3Si5C5N7-4d50ac3170": [
+      "max_primitive_sites"
+    ],
+    "Al2Si2C3N2-45b005366e": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C5N-113d3e63cb": [
+      "max_primitive_sites"
+    ],
+    "Al3Si2C4N2-80803f4f87": [
+      "max_primitive_sites"
+    ],
+    "Al7Si2C4N7-f3e6e0538e": [
+      "max_primitive_sites"
+    ],
+    "Al4Si3C3N2-3d04b174b4": [
+      "max_primitive_sites"
+    ],
+    "Al6Si2C5N3-d60e0f1156": [
+      "max_primitive_sites"
+    ],
+    "B5N6-185f547484": [
+      "max_primitive_sites"
+    ],
+    "B3N7-be792b04fa": [
+      "max_primitive_sites"
+    ],
+    "BN-2cc894fd7f": [
+      "max_primitive_sites"
+    ],
+    "B3N2-6cfdb8ce26": [
+      "max_primitive_sites"
+    ],
+    "B4N-7e1b1b4cfb": [
+      "max_primitive_sites"
+    ],
+    "B3N7-a59cbe9ad5": [
+      "max_primitive_sites"
+    ],
+    "B7N5-ba2c9f37f0": [
+      "max_primitive_sites"
+    ],
+    "B6N5-8ff183c088": [
+      "max_primitive_sites"
+    ],
+    "BN-a99bc72ceb": [
+      "max_primitive_sites"
+    ],
+    "B2N3-325a1c9821": [
+      "max_primitive_sites"
+    ],
+    "B2N3-924dcc154b": [
+      "max_primitive_sites"
+    ],
+    "B3N2-14e89b88ad": [
+      "max_primitive_sites"
+    ],
+    "BN-ab5bedf42b": [
+      "max_primitive_sites"
+    ],
+    "B3N2-19d33294b6": [
+      "max_primitive_sites"
+    ],
+    "B5N6-aea697d33d": [
+      "max_primitive_sites"
+    ],
+    "BN-e2c88fc963": [
+      "max_primitive_sites"
+    ],
+    "BN-e5422c75e9": [
+      "max_primitive_sites"
+    ],
+    "BN-642471ab2e": [
+      "max_primitive_sites"
+    ],
+    "B2N3-5c97b42e5e": [
+      "max_primitive_sites"
+    ],
+    "BN-17cec8e079": [
+      "max_primitive_sites"
+    ],
+    "B2N7-904adb82cb": [
+      "max_primitive_sites"
+    ],
+    "BN-cbe9608b1d": [
+      "max_primitive_sites"
+    ],
+    "B5N4-483f8abce3": [
+      "max_primitive_sites"
+    ],
+    "B4N3-df00ab081b": [
+      "max_primitive_sites"
+    ],
+    "B5N7-4f1026e467": [
+      "max_primitive_sites"
+    ],
+    "B9N7-63bd347a63": [
+      "max_primitive_sites"
+    ],
+    "B7N5-51896dd350": [
+      "max_primitive_sites"
+    ],
+    "B5N4-65b02426c9": [
+      "max_primitive_sites"
+    ],
+    "B3N8-4a5bd7caea": [
+      "max_primitive_sites"
+    ],
+    "BN-23fb6ed712": [
+      "max_primitive_sites"
+    ],
+    "B2N3-4f891c10c7": [
+      "max_primitive_sites"
+    ],
+    "B2N-fd3950780c": [
+      "max_primitive_sites"
+    ],
+    "B9N7-dc4c133265": [
+      "max_primitive_sites"
+    ],
+    "BN-6cd71cde04": [
+      "max_primitive_sites"
+    ],
+    "BN-a021c6a601": [
+      "max_primitive_sites"
+    ],
+    "BN-2bab1098cb": [
+      "max_primitive_sites"
+    ],
+    "B7N8-c28a7e0733": [
+      "max_primitive_sites"
+    ],
+    "BN8-4271dc82da": [
+      "max_primitive_sites"
+    ],
+    "BN-a305caa2ab": [
+      "max_primitive_sites"
+    ],
+    "BN4-664ad9edc9": [
+      "max_primitive_sites"
+    ],
+    "B7N8-855afed805": [
+      "max_primitive_sites"
+    ],
+    "B5N6-eeb349c189": [
+      "max_primitive_sites"
+    ],
+    "B11N9-8221cb956a": [
+      "max_primitive_sites"
+    ],
+    "B4N3-aa002b7967": [
+      "max_primitive_sites"
+    ],
+    "B5N4-9c40b134e4": [
+      "max_primitive_sites"
+    ],
+    "B5N4-bbbf06e01d": [
+      "max_primitive_sites"
+    ],
+    "BN-e68b4134a6": [
+      "max_primitive_sites"
+    ],
+    "B7N8-12a014e5ca": [
+      "max_primitive_sites"
+    ],
+    "BN-4a78871bd1": [
+      "max_primitive_sites"
+    ],
+    "B3N2-d4646736bc": [
+      "max_primitive_sites"
+    ],
+    "BN-7d403ac34d": [
+      "max_primitive_sites"
+    ],
+    "BN-7a04f2a7de": [
+      "max_primitive_sites"
+    ],
+    "BN-116767f58f": [
+      "max_primitive_sites"
+    ],
+    "B6N7-d7da714af3": [
+      "max_primitive_sites"
+    ],
+    "B7N4-3c153a13fb": [
+      "max_primitive_sites"
+    ],
+    "B5N7-db02045748": [
+      "max_primitive_sites"
+    ],
+    "B3N8-9f7687a196": [
+      "max_primitive_sites"
+    ],
+    "BN11-f5833db8ec": [
+      "max_primitive_sites"
+    ],
+    "BN-4949e21611": [
+      "max_primitive_sites"
+    ],
+    "BN-5891d141fa": [
+      "max_primitive_sites"
+    ],
+    "B9N7-a1d8227260": [
+      "max_primitive_sites"
+    ],
+    "B9N8-c5b838c7b2": [
+      "max_primitive_sites"
+    ],
+    "BN-6a43f6d382": [
+      "max_primitive_sites"
+    ],
+    "B5N6-72d841676b": [
+      "max_primitive_sites"
+    ],
+    "B2N3-21968c8437": [
+      "max_primitive_sites"
+    ],
+    "BN-43b9841581": [
+      "max_primitive_sites"
+    ],
+    "B2N3-a2184b5bf2": [
+      "max_primitive_sites"
+    ],
+    "B8N7-dde8bfd862": [
+      "max_primitive_sites"
+    ],
+    "B7N2-278e248b9b": [
+      "max_primitive_sites"
+    ],
+    "B5N4-264b488893": [
+      "max_primitive_sites"
+    ],
+    "B5N4-435b573502": [
+      "max_primitive_sites"
+    ],
+    "B5N4-cf79001f03": [
+      "max_primitive_sites"
+    ],
+    "BN-74e606e8a9": [
+      "max_primitive_sites"
+    ],
+    "BN-1a257e5bda": [
+      "max_primitive_sites"
+    ],
+    "B10N9-26d80a9452": [
+      "max_primitive_sites"
+    ],
+    "B7N-900a8e8852": [
+      "max_primitive_sites"
+    ],
+    "BN-226d2c104d": [
+      "max_primitive_sites"
+    ],
+    "B7N5-4d182c7cd6": [
+      "max_primitive_sites"
+    ],
+    "B5N6-5efd65f287": [
+      "max_primitive_sites"
+    ],
+    "BN-8d9fbb3c57": [
+      "max_primitive_sites"
+    ],
+    "B5N6-8805930312": [
+      "max_primitive_sites"
+    ],
+    "B7N2-ba27685cb9": [
+      "max_primitive_sites"
+    ],
+    "BN-f8e69309b7": [
+      "max_primitive_sites"
+    ],
+    "B3N2-431c08a325": [
+      "max_primitive_sites"
+    ],
+    "B5N4-8602147f4a": [
+      "max_primitive_sites"
+    ],
+    "B10N9-c922544486": [
+      "max_primitive_sites"
+    ],
+    "B8N7-a4ce1329da": [
+      "max_primitive_sites"
+    ],
+    "BN-00f3998342": [
+      "max_primitive_sites"
+    ],
+    "BN-184e3502a9": [
+      "max_primitive_sites"
+    ],
+    "B4N7-ef75e78e4f": [
+      "max_primitive_sites"
+    ],
+    "B3N7-b587251280": [
+      "max_primitive_sites"
+    ],
+    "B5N4-924778e559": [
+      "max_primitive_sites"
+    ],
+    "B8N7-6b5d4367ab": [
+      "max_primitive_sites"
+    ],
+    "B5N4-4d4d85fe53": [
+      "max_primitive_sites"
+    ],
+    "B4N7-beb399ea44": [
+      "max_primitive_sites"
+    ],
+    "B4N5-35bbe064a4": [
+      "max_primitive_sites"
+    ],
+    "B11N-dab5239035": [
+      "max_primitive_sites"
+    ],
+    "B11N9-b0a574d4ad": [
+      "max_primitive_sites"
+    ],
+    "BN-6c1a5fd3d5": [
+      "max_primitive_sites"
+    ],
+    "B7N6-2c917ff671": [
+      "max_primitive_sites"
+    ],
+    "BN-5a6d633b8a": [
+      "max_primitive_sites"
+    ],
+    "B4N-c7be1f6a53": [
+      "max_primitive_sites"
+    ],
+    "B3N2-a0cebdaa17": [
+      "max_primitive_sites"
+    ],
+    "B2N3-92fd3901b9": [
+      "max_primitive_sites"
+    ],
+    "BN-157804243a": [
+      "max_primitive_sites"
+    ],
+    "B11N9-14c64838f8": [
+      "max_primitive_sites"
+    ],
+    "BN-2c5ff1737d": [
+      "max_primitive_sites"
+    ],
+    "BN-2dcc12713b": [
+      "max_primitive_sites"
+    ],
+    "B5N4-a5a31ab7c2": [
+      "max_primitive_sites"
+    ],
+    "B2N3-f56f85e84d": [
+      "max_primitive_sites"
+    ],
+    "BN-9adc2d1a4f": [
+      "max_primitive_sites"
+    ],
+    "BN-c6ae1b9447": [
+      "max_primitive_sites"
+    ],
+    "B5N6-759b7cd6ad": [
+      "max_primitive_sites"
+    ],
+    "BN-2ce2d8a40e": [
+      "max_primitive_sites"
+    ],
+    "B7N5-0d1e6404fe": [
+      "max_primitive_sites"
+    ],
+    "B4N3-e5a3795581": [
+      "max_primitive_sites"
+    ],
+    "B7N5-de4827a7c3": [
+      "max_primitive_sites"
+    ],
+    "B7N6-b7ac97432d": [
+      "max_primitive_sites"
+    ],
+    "B3N8-4f1f1a6c3a": [
+      "max_primitive_sites"
+    ],
+    "BN-924a96b325": [
+      "max_primitive_sites"
+    ],
+    "B5N4-e507d19305": [
+      "max_primitive_sites"
+    ],
+    "B9N11-f29cd68e8d": [
+      "max_primitive_sites"
+    ],
+    "B7N5-63fd0d3fca": [
+      "max_primitive_sites"
+    ],
+    "BN-308ee6c1e5": [
+      "max_primitive_sites"
+    ],
+    "BN-d2c0bf3730": [
+      "max_primitive_sites"
+    ],
+    "BN-d8ccf88c2a": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-85a99179b6": [
+      "max_primitive_sites"
+    ],
+    "B2PC2-5c9533f874": [
+      "max_primitive_sites"
+    ],
+    "B3PC-b4e5ffeec4": [
+      "max_primitive_sites"
+    ],
+    "B3P4C3-8cead93851": [
+      "max_primitive_sites"
+    ],
+    "B3P2C-72955550ec": [
+      "max_primitive_sites"
+    ],
+    "B5P8C3-26c7d2144b": [
+      "max_primitive_sites"
+    ],
+    "B8P2C5-de1c8f776b": [
+      "max_primitive_sites"
+    ],
+    "B7P4C-86139c60f2": [
+      "max_primitive_sites"
+    ],
+    "B5P3C4-4564ffe7c3": [
+      "max_primitive_sites"
+    ],
+    "B4P2C5-7fcda14267": [
+      "max_primitive_sites"
+    ],
+    "B5PC6-4760bedd13": [
+      "max_primitive_sites"
+    ],
+    "B3P4C5-59380923ac": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-9f2bc508c3": [
+      "max_primitive_sites"
+    ],
+    "B4P3C3-dcf5ffa874": [
+      "max_primitive_sites"
+    ],
+    "B9P3C4-ae3e3b9c87": [
+      "max_primitive_sites"
+    ],
+    "B8P2C-2ad0ef4f9b": [
+      "max_primitive_sites"
+    ],
+    "B5P5C2-78b6c20e9b": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-b4c7a030b1": [
+      "max_primitive_sites"
+    ],
+    "BP3C2-993b97d913": [
+      "max_primitive_sites"
+    ],
+    "B3PC-5b5ed23f7a": [
+      "max_primitive_sites"
+    ],
+    "B6P3C-029e2342df": [
+      "max_primitive_sites"
+    ],
+    "B4PC-81e10f55e8": [
+      "max_primitive_sites"
+    ],
+    "B7P2C2-f745ec4590": [
+      "max_primitive_sites"
+    ],
+    "B10PC-8e5154b742": [
+      "max_primitive_sites"
+    ],
+    "B3P2C4-7ca4ecebc6": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-b78c4ce9bd": [
+      "max_primitive_sites"
+    ],
+    "B8P3C3-2a64dc6067": [
+      "max_primitive_sites"
+    ],
+    "B4PC4-f853c365c0": [
+      "max_primitive_sites"
+    ],
+    "B5PC2-9ee666118e": [
+      "max_primitive_sites"
+    ],
+    "B5P4C3-4ae38a0fed": [
+      "max_primitive_sites"
+    ],
+    "B5P4C3-30e2d8090d": [
+      "max_primitive_sites"
+    ],
+    "B8P3C2-8b6989b781": [
+      "max_primitive_sites"
+    ],
+    "B4P2C3-adb2b32c4d": [
+      "max_primitive_sites"
+    ],
+    "B15P2C3-a61e93e304": [
+      "max_primitive_sites"
+    ],
+    "B5P4C3-7a043b92c3": [
+      "max_primitive_sites"
+    ],
+    "B3PC-9b87fdac58": [
+      "max_primitive_sites"
+    ],
+    "B8P5C3-0b9f44eebf": [
+      "max_primitive_sites"
+    ],
+    "B4PC-187d165fc9": [
+      "max_primitive_sites"
+    ],
+    "B5P5C2-39a5da4f7c": [
+      "max_primitive_sites"
+    ],
+    "B4P3C3-ae2e8dd2db": [
+      "max_primitive_sites"
+    ],
+    "B3PC-12ec0652af": [
+      "max_primitive_sites"
+    ],
+    "B4P3C4-72a9f9d59f": [
+      "max_primitive_sites"
+    ],
+    "B9P2C-1568a85cfc": [
+      "max_primitive_sites"
+    ],
+    "B7P2C3-5332d407a5": [
+      "max_primitive_sites"
+    ],
+    "B4P3C2-26427580b5": [
+      "max_primitive_sites"
+    ],
+    "B9P3C4-16d61eb777": [
+      "max_primitive_sites"
+    ],
+    "B5P3C3-dde0eca303": [
+      "max_primitive_sites"
+    ],
+    "B7P2C3-bbf0fb2e0f": [
+      "max_primitive_sites"
+    ],
+    "B6P5C-cc605584b2": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-a77ad03e40": [
+      "max_primitive_sites"
+    ],
+    "B10P3C3-576d040cfe": [
+      "max_primitive_sites"
+    ],
+    "B7P3C7-6d3b4d51a3": [
+      "max_primitive_sites"
+    ],
+    "B8P3C3-64c08d31df": [
+      "max_primitive_sites"
+    ],
+    "B11P5C4-ccb99e8d53": [
+      "max_primitive_sites"
+    ],
+    "B3P2C-ffdee7ee82": [
+      "max_primitive_sites"
+    ],
+    "B9P4C3-b0a9c1708d": [
+      "max_primitive_sites"
+    ],
+    "B3P2C-ade5b96777": [
+      "max_primitive_sites"
+    ],
+    "B7P3C2-0b226c189a": [
+      "max_primitive_sites"
+    ],
+    "B3P7C2-5db5e0b818": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-66b0132906": [
+      "max_primitive_sites"
+    ],
+    "B2PC2-1ed5136939": [
+      "max_primitive_sites"
+    ],
+    "B3P6C-a0437f01eb": [
+      "max_primitive_sites"
+    ],
+    "B9P2C4-3015f3851d": [
+      "max_primitive_sites"
+    ],
+    "B5P4C-34cf3ffb3e": [
+      "max_primitive_sites"
+    ],
+    "B5P2C2-801f1be59e": [
+      "max_primitive_sites"
+    ],
+    "B4P5C-93679f4f1a": [
+      "max_primitive_sites"
+    ],
+    "B5PC5-b4af3857e7": [
+      "max_primitive_sites"
+    ],
+    "B4P3C3-98309b94b4": [
+      "max_primitive_sites"
+    ],
+    "B2PC2-8e0581198a": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-55cf28b6c7": [
+      "max_primitive_sites"
+    ],
+    "B7P8C5-87cb1ae5c5": [
+      "max_primitive_sites"
+    ],
+    "B3PC-828d22e0de": [
+      "max_primitive_sites"
+    ],
+    "B2PC-98d53c907c": [
+      "max_primitive_sites"
+    ],
+    "B13P5C2-9c4ec457a8": [
+      "max_primitive_sites"
+    ],
+    "B9P7C4-32f0f3fee6": [
+      "max_primitive_sites"
+    ],
+    "B15P2C-97737de87f": [
+      "max_primitive_sites"
+    ],
+    "BPC-65623b1d13": [
+      "max_primitive_sites"
+    ],
+    "B2PC2-b7e106d2bf": [
+      "max_primitive_sites"
+    ],
+    "B4P5C9-481475a0a2": [
+      "max_primitive_sites"
+    ],
+    "B2P2C-b1e0548e10": [
+      "max_primitive_sites"
+    ],
+    "B4PC2-e57fe5a9f1": [
+      "max_primitive_sites"
+    ],
+    "B3P4C3-45c5c29a6b": [
+      "max_primitive_sites"
+    ],
+    "B9P5C3-a4b5a423aa": [
+      "max_primitive_sites"
+    ],
+    "B3PC-50b63081c0": [
+      "max_primitive_sites"
+    ],
+    "B9P4C2-1c58e83e32": [
+      "max_primitive_sites"
+    ],
+    "B7P7C2-ef27da10df": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-a99f83bda0": [
+      "max_primitive_sites"
+    ],
+    "B5PC4-5ba969688f": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-9ff1eaf887": [
+      "max_primitive_sites"
+    ],
+    "B6P3C-81eb5e0bcc": [
+      "max_primitive_sites"
+    ],
+    "B9P8C3-20f536967b": [
+      "max_primitive_sites"
+    ],
+    "B3PC2-c8ed80acaa": [
+      "max_primitive_sites"
+    ],
+    "B9P6C5-ab2ace8908": [
+      "max_primitive_sites"
+    ],
+    "B4P5C3-5c2abcea9b": [
+      "max_primitive_sites"
+    ],
+    "B5P4C3-54543f374f": [
+      "max_primitive_sites"
+    ],
+    "B6P5C-c67afd53cb": [
+      "max_primitive_sites"
+    ],
+    "B5P-ac97c95867": [
+      "max_primitive_sites"
+    ],
+    "BC-af91123428": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-883b86a42b": [
+      "max_primitive_sites"
+    ],
+    "B6P3C5-3d84b7f6b9": [
+      "max_primitive_sites"
+    ],
+    "B3P2C-584e821fae": [
+      "max_primitive_sites"
+    ],
+    "B3P4C3-9adf3f3063": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-c705be043e": [
+      "max_primitive_sites"
+    ],
+    "B2P3C5-c0350c2a2e": [
+      "max_primitive_sites"
+    ],
+    "B2PC5-a9373bb701": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-9038823a70": [
+      "max_primitive_sites"
+    ],
+    "B7P3C2-7e17263747": [
+      "max_primitive_sites"
+    ],
+    "B2PC2-1829326090": [
+      "max_primitive_sites"
+    ],
+    "B3PC-ee5ab1dadb": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-bebd15748f": [
+      "max_primitive_sites"
+    ],
+    "B7P2C3-b099313e0e": [
+      "max_primitive_sites"
+    ],
+    "B3P2C-32c6cbc7cc": [
+      "max_primitive_sites"
+    ],
+    "B6P3C2-4137ff841f": [
+      "max_primitive_sites"
+    ],
+    "B5P6C-b447891124": [
+      "max_primitive_sites"
+    ],
+    "B4PC-6f579aef3d": [
+      "max_primitive_sites"
+    ],
+    "B10P7C3-b3baa88769": [
+      "max_primitive_sites"
+    ],
+    "B2P5C4-ca5fef39e0": [
+      "max_primitive_sites"
+    ],
+    "B7P4C3-f8e4bd05d6": [
+      "max_primitive_sites"
+    ],
+    "BPC-59e1c60a7e": [
+      "max_primitive_sites"
+    ],
+    "B5PC4-275962b2d2": [
+      "max_primitive_sites"
+    ],
+    "B11P5C4-e80b1f5da7": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-7ea055b1a8": [
+      "max_primitive_sites"
+    ],
+    "B11P3C4-3acb0c359d": [
+      "max_primitive_sites"
+    ],
+    "B3PC-1d612b4ded": [
+      "max_primitive_sites"
+    ],
+    "B7P6C3-7c5c00038d": [
+      "max_primitive_sites"
+    ],
+    "B4PC-95ee5745f1": [
+      "max_primitive_sites"
+    ],
+    "B12P3C5-5fb29e63ee": [
+      "max_primitive_sites"
+    ],
+    "B11P3C4-a581444e84": [
+      "max_primitive_sites"
+    ],
+    "B2P3C-3ffb7c1715": [
+      "max_primitive_sites"
+    ],
+    "B7P8C-a2c2134a55": [
+      "max_primitive_sites"
+    ],
+    "B3PC5-41573ccd6f": [
+      "max_primitive_sites"
+    ],
+    "B11P6C3-ac4a6f6833": [
+      "max_primitive_sites"
+    ],
+    "B5P2C3-88f98a3d10": [
+      "max_primitive_sites"
+    ],
+    "B5P3C2-5d6556aeb5": [
+      "max_primitive_sites"
+    ],
+    "BSb2-f38f4b2c4a": [
+      "max_primitive_sites"
+    ],
+    "B8Sb3-a5d369c325": [
+      "max_primitive_sites"
+    ],
+    "B5Sb3-67e31cf91e": [
+      "max_primitive_sites"
+    ],
+    "B3Sb7-076b036859": [
+      "max_primitive_sites"
+    ],
+    "B8Sb3-26d0972757": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-00121d628e": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-2979d0b71d": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-b7612873ee": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-b49230302d": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-1d5a46b6ad": [
+      "max_primitive_sites"
+    ],
+    "B7Sb11-d11c2487c9": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-50b3982b8a": [
+      "max_primitive_sites"
+    ],
+    "B2Sb3-893661d3bf": [
+      "max_primitive_sites"
+    ],
+    "B5Sb-bf6d848327": [
+      "max_primitive_sites"
+    ],
+    "BSb-c79342d39e": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-afde80ed69": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-92c2cca49c": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-aa563c631c": [
+      "max_primitive_sites"
+    ],
+    "BSb-6f2732d0cc": [
+      "max_primitive_sites"
+    ],
+    "B4Sb5-d0f2d38067": [
+      "max_primitive_sites"
+    ],
+    "B4Sb3-ec82bda68d": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-de212315ae": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-060ff091e3": [
+      "max_primitive_sites"
+    ],
+    "B9Sb11-4ac7dbe6ee": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-3d8d009227": [
+      "max_primitive_sites"
+    ],
+    "B4Sb5-db594d81fe": [
+      "max_primitive_sites"
+    ],
+    "BSb-1034cdcc3d": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-2eef3ee3b3": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-13832e5079": [
+      "max_primitive_sites"
+    ],
+    "B9Sb8-c6cdd2423e": [
+      "max_primitive_sites"
+    ],
+    "B5Sb2-cf08d445af": [
+      "max_primitive_sites"
+    ],
+    "B11Sb5-52d1a33670": [
+      "max_primitive_sites"
+    ],
+    "B11Sb3-a0067f9ecd": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-92399cf324": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-5ae5ed9a31": [
+      "max_primitive_sites"
+    ],
+    "B11Sb3-09b8f65cf7": [
+      "max_primitive_sites"
+    ],
+    "B5Sb7-ffe181b837": [
+      "max_primitive_sites"
+    ],
+    "BSb-00d27f1715": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-9c5c5ec60c": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-0a68d65f07": [
+      "max_primitive_sites"
+    ],
+    "B4Sb7-40d757f9e4": [
+      "max_primitive_sites"
+    ],
+    "BSb2-6faf3235e7": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-a19796387f": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-6d627be882": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-f3e7f5d4b2": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-5fa6fbf980": [
+      "max_primitive_sites"
+    ],
+    "BSb-3fe1e62a25": [
+      "max_primitive_sites"
+    ],
+    "B4Sb7-47b556e9df": [
+      "max_primitive_sites"
+    ],
+    "BSb2-a2e77597ac": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-e524715448": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-e47f133048": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-a43d4a4b40": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-8c8f4cde4f": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-df21ab507e": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-bfb203e71d": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-3283fec823": [
+      "max_primitive_sites"
+    ],
+    "BSb-ea28b40438": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-949d0ca41a": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-ad594ffcc2": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-80f54dc752": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-325737da27": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-599add429d": [
+      "max_primitive_sites"
+    ],
+    "BSb2-16d80b852f": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-0a0940594d": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-5833171ab1": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-39414571ee": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-c57956f1a6": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-b299459488": [
+      "max_primitive_sites"
+    ],
+    "B5Sb4-7a3a021dff": [
+      "max_primitive_sites"
+    ],
+    "B5Sb7-a4629f371f": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-519f4d903f": [
+      "max_primitive_sites"
+    ],
+    "B5Sb7-d32866d596": [
+      "max_primitive_sites"
+    ],
+    "B2Sb7-0bd3d75b65": [
+      "max_primitive_sites"
+    ],
+    "BSb-bb1068047f": [
+      "max_primitive_sites"
+    ],
+    "B4Sb5-0f72744537": [
+      "max_primitive_sites"
+    ],
+    "B17Sb3-bd77c7c061": [
+      "max_primitive_sites"
+    ],
+    "BSb-831803067b": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-1f8c4e57a7": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-5e0011ffbc": [
+      "max_primitive_sites"
+    ],
+    "B3Sb5-684d367cac": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-3ec2238b8d": [
+      "max_primitive_sites"
+    ],
+    "B3Sb13-7c7f601c46": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-e72c3ae822": [
+      "max_primitive_sites"
+    ],
+    "B5Sb6-2beaf28c2d": [
+      "max_primitive_sites"
+    ],
+    "B5Sb6-5aa9835dae": [
+      "max_primitive_sites"
+    ],
+    "BSb-2ea008edd6": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-cf4e102a54": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-f5bef11fef": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-97603c1431": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-3f15fb316e": [
+      "max_primitive_sites"
+    ],
+    "B5Sb4-e9e064d38f": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-191efcb23f": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-0d0b37da7a": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-9d843b2553": [
+      "max_primitive_sites"
+    ],
+    "BSb-9a5b277343": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-528bb9031d": [
+      "max_primitive_sites"
+    ],
+    "B5Sb13-d6b24818db": [
+      "max_primitive_sites"
+    ],
+    "B2Sb3-19a8d1e1c7": [
+      "max_primitive_sites"
+    ],
+    "B5Sb4-8cba90cd30": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-a57d3e391a": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-970cb6b3a2": [
+      "max_primitive_sites"
+    ],
+    "B7Sb4-14d48a3abf": [
+      "max_primitive_sites"
+    ],
+    "BSb-c71e223de9": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-e768ba3c41": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-cd982762a0": [
+      "max_primitive_sites"
+    ],
+    "BSb2-86b2ef59cd": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-8f751eaf81": [
+      "max_primitive_sites"
+    ],
+    "B4Sb5-e47258bf97": [
+      "max_primitive_sites"
+    ],
+    "B3Sb7-60992299f7": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-9af46e3412": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-2b52f3bf8b": [
+      "max_primitive_sites"
+    ],
+    "BSb-a9abe97c0b": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-71ef0152bb": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-863e69055e": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-685b7efa67": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-5150822921": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-21370d15e2": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-44bd992787": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-86046dc674": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-7fe6827d2e": [
+      "max_primitive_sites"
+    ],
+    "B5Sb4-66f0c23bf8": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-90965d3db1": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-c8f8b5262b": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-9f643c80cd": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-8bc8127bd4": [
+      "max_primitive_sites"
+    ],
+    "B3Sb7-a86367ed87": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-d1a5fdebdc": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-779ba50326": [
+      "max_primitive_sites"
+    ],
+    "B10Sb3-142d6e781a": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-f07c30dcb7": [
+      "max_primitive_sites"
+    ],
+    "B13Sb6-5b979f2fb8": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-edc06fe4db": [
+      "max_primitive_sites"
+    ],
+    "B6Sb-fb82cccf3f": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-89d3cdad8e": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-2cd4b40615": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-9051520615": [
+      "max_primitive_sites"
+    ],
+    "B7Sb4-937ace2b3a": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-6d24ccae8b": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-af4d432b2a": [
+      "max_primitive_sites"
+    ],
+    "B7Sb4-611b0e0b5f": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-0361303015": [
+      "max_primitive_sites"
+    ],
+    "B4Sb15-67b25390af": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-56e465aa32": [
+      "max_primitive_sites"
+    ],
+    "BSb-61c15ec7ff": [
+      "max_primitive_sites"
+    ],
+    "B8Sb3-9b1046d7b7": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-78d3988682": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-6346a72249": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-b36f6af370": [
+      "max_primitive_sites"
+    ],
+    "BSb-9d1d685700": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-c5a5d6b431": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-56bcf8d136": [
+      "max_primitive_sites"
+    ],
+    "BSb2-1a43149029": [
+      "max_primitive_sites"
+    ],
+    "B6Sb-1947de7d6f": [
+      "max_primitive_sites"
+    ],
+    "B11Sb5-75fbec79de": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-38e8254fff": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-75a5f756bd": [
+      "max_primitive_sites"
+    ],
+    "BSb-add1c811ba": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-7bec7a8a82": [
+      "max_primitive_sites"
+    ],
+    "B7Sb11-2edf60d7ac": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-ddd78b9bfa": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-b57f401889": [
+      "max_primitive_sites"
+    ],
+    "B11Sb3-f2f239b559": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-f24d6ead32": [
+      "max_primitive_sites"
+    ],
+    "B11Sb5-0b96b74da0": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-04bb40ce15": [
+      "max_primitive_sites"
+    ],
+    "BSb-1b8b501cca": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-96e0753980": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-023819625b": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-1f7b9709ea": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-d24711a633": [
+      "max_primitive_sites"
+    ],
+    "BSb2-4ab3a99861": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-5f07813771": [
+      "max_primitive_sites"
+    ],
+    "B11Sb3-7280e4d557": [
+      "max_primitive_sites"
+    ],
+    "B5Sb9-17a8e43f0f": [
+      "max_primitive_sites"
+    ],
+    "BSb-e0725fd491": [
+      "max_primitive_sites"
+    ],
+    "B7Sb4-1fe573e914": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-4d51afd60f": [
+      "max_primitive_sites"
+    ],
+    "B15Sb4-715d745efd": [
+      "max_primitive_sites"
+    ],
+    "B11Sb4-abffd35462": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-8e98bed68a": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-23654f5b91": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-55c0cdd06e": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-1e55d81011": [
+      "max_primitive_sites"
+    ],
+    "B6Sb-921944e63a": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-dbde1b624f": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-e9648b0c3b": [
+      "max_primitive_sites"
+    ],
+    "B5Sb7-37f13baeea": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-3e3fd60841": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-678814b2b1": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-0ac569a431": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-115fde8107": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-f28c63c0a8": [
+      "max_primitive_sites"
+    ],
+    "B5Sb4-d55cf1a550": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-d2d7ce7357": [
+      "max_primitive_sites"
+    ],
+    "B4Sb5-5bd85bf7ac": [
+      "max_primitive_sites"
+    ],
+    "BSb-96b8f6cdb0": [
+      "max_primitive_sites"
+    ],
+    "B5Sb11-e4cf2215bc": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-3e4a78569b": [
+      "max_primitive_sites"
+    ],
+    "B4Sb7-ae5ec216ab": [
+      "max_primitive_sites"
+    ],
+    "B4Sb3-f7ce2a9b00": [
+      "max_primitive_sites"
+    ],
+    "B3Sb4-aea6bdf181": [
+      "max_primitive_sites"
+    ],
+    "BSb2-5e8292baa9": [
+      "max_primitive_sites"
+    ],
+    "B5Sb3-bd996dfb9b": [
+      "max_primitive_sites"
+    ],
+    "BSb-b2328db491": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-3a8673ee89": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-a66d1b6897": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-84d73df4e2": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-ebcdeb8658": [
+      "max_primitive_sites"
+    ],
+    "B7Sb2-55875a8a5c": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-4a872c5725": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-abff6b2cbd": [
+      "max_primitive_sites"
+    ],
+    "B7Sb13-d6f6104ff4": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-fe52b8811b": [
+      "max_primitive_sites"
+    ],
+    "B3Sb-f6e6d8bc52": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-79ebd2a375": [
+      "max_primitive_sites"
+    ],
+    "B7Sb3-f5fa53e81b": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-e88436d7d5": [
+      "max_primitive_sites"
+    ],
+    "B7Sb5-6c40b3e49d": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-e40e640d48": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-efa33e5b7a": [
+      "max_primitive_sites"
+    ],
+    "B2Sb-b3c073b8dd": [
+      "max_primitive_sites"
+    ],
+    "B3Sb2-7579786e40": [
+      "max_primitive_sites"
+    ],
+    "BSb-55d4a68e4e": [
+      "max_primitive_sites"
+    ],
+    "B9Sb2-270c6a12fd": [
+      "max_primitive_sites"
+    ],
+    "B5Sb-1b5df89b24": [
+      "max_primitive_sites"
+    ],
+    "B2Sb7-66094b5943": [
+      "max_primitive_sites"
+    ],
+    "B4Sb-c5f693cb0b": [
+      "max_primitive_sites"
+    ],
+    "BSb-31bfaf255b": [
+      "max_primitive_sites"
+    ],
+    "CN2-478b96b124": [
+      "max_primitive_sites"
+    ],
+    "CN3-8a70f6663b": [
+      "max_primitive_sites"
+    ],
+    "C9N11-f406176a1c": [
+      "max_primitive_sites"
+    ],
+    "C5N9-4690c88cc5": [
+      "max_primitive_sites"
+    ],
+    "C5N9-06a4804b91": [
+      "max_primitive_sites"
+    ],
+    "C7N9-69f34a73b4": [
+      "max_primitive_sites"
+    ],
+    "C5N7-027de11801": [
+      "max_primitive_sites"
+    ],
+    "CN3-a2c4a49949": [
+      "max_primitive_sites"
+    ],
+    "C9N11-6faf6c6602": [
+      "max_primitive_sites"
+    ],
+    "C9N7-20b5e61a00": [
+      "max_primitive_sites"
+    ],
+    "CN3-9f365f5730": [
+      "max_primitive_sites"
+    ],
+    "C3N7-2acebaba2a": [
+      "max_primitive_sites"
+    ],
+    "CN4-5f40e6f50b": [
+      "max_primitive_sites"
+    ],
+    "CN4-c82a82b709": [
+      "max_primitive_sites"
+    ],
+    "C3N7-d031ef9b5c": [
+      "max_primitive_sites"
+    ],
+    "C3N-d2e3ba1e94": [
+      "max_primitive_sites"
+    ],
+    "C3N7-efb820d05f": [
+      "max_primitive_sites"
+    ],
+    "CN2-e66e02a6e1": [
+      "max_primitive_sites"
+    ],
+    "C2N3-bd78246b2f": [
+      "max_primitive_sites"
+    ],
+    "C9N7-463d0b1188": [
+      "max_primitive_sites"
+    ],
+    "C4N5-915fc17a38": [
+      "max_primitive_sites"
+    ],
+    "C5N9-41cc3e6479": [
+      "max_primitive_sites"
+    ],
+    "C7N4-c2d7ad0c1e": [
+      "max_primitive_sites"
+    ],
+    "C3N2-e62f98f0af": [
+      "max_primitive_sites"
+    ],
+    "C3N4-75c66637eb": [
+      "max_primitive_sites"
+    ],
+    "C3N8-2716df388b": [
+      "max_primitive_sites"
+    ],
+    "CN-86ec3a73a1": [
+      "max_primitive_sites"
+    ],
+    "C2N-543fa57f59": [
+      "max_primitive_sites"
+    ],
+    "CN2-90d3f7e611": [
+      "max_primitive_sites"
+    ],
+    "C5N4-4d74c1d52b": [
+      "max_primitive_sites"
+    ],
+    "C9N11-478512756b": [
+      "max_primitive_sites"
+    ],
+    "C7N11-c69e7d48dc": [
+      "max_primitive_sites"
+    ],
+    "C4N7-d11ce23513": [
+      "max_primitive_sites"
+    ],
+    "C5N4-969f32c362": [
+      "max_primitive_sites"
+    ],
+    "C3N5-a95bc505f9": [
+      "min_distance_angstrom"
+    ],
+    "C4N-378d4e1150": [
+      "max_primitive_sites"
+    ],
+    "CN10-ebb9897a0d": [
+      "max_primitive_sites"
+    ],
+    "C7N11-022e399c30": [
+      "max_primitive_sites"
+    ],
+    "C3N8-0fff85a932": [
+      "max_primitive_sites"
+    ],
+    "CN3-04ff185b74": [
+      "max_primitive_sites"
+    ],
+    "C3N7-21303e7f10": [
+      "max_primitive_sites"
+    ],
+    "C7N11-4c8bfcaf6f": [
+      "max_primitive_sites"
+    ],
+    "CN6-92fbcde5e3": [
+      "min_distance_angstrom"
+    ],
+    "CN2-537140ba55": [
+      "max_primitive_sites"
+    ],
+    "C4N5-759c38997b": [
+      "max_primitive_sites"
+    ],
+    "C2N3-38768b687b": [
+      "max_primitive_sites"
+    ],
+    "C2N-6e70b4f217": [
+      "min_distance_angstrom"
+    ],
+    "CN3-a5b35d2a55": [
+      "max_primitive_sites"
+    ],
+    "CN3-a7d6453206": [
+      "max_primitive_sites"
+    ],
+    "C4N5-11da426c1a": [
+      "max_primitive_sites"
+    ],
+    "C2N3-0b0de0ae91": [
+      "max_primitive_sites"
+    ],
+    "CN-2e5e0bd043": [
+      "min_distance_angstrom"
+    ],
+    "C3N4-4493b1689a": [
+      "max_primitive_sites"
+    ],
+    "C3N5-03dc715943": [
+      "max_primitive_sites"
+    ],
+    "C7N2-0fb065234f": [
+      "max_primitive_sites"
+    ],
+    "C5N6-d31d7c210e": [
+      "max_primitive_sites"
+    ],
+    "C2N-9cf183f651": [
+      "max_primitive_sites"
+    ],
+    "CN-32e9d01f90": [
+      "max_primitive_sites"
+    ],
+    "C5N9-c715f8eafe": [
+      "max_primitive_sites"
+    ],
+    "C11N9-7821fe9971": [
+      "max_primitive_sites"
+    ],
+    "CN2-f92932106a": [
+      "max_primitive_sites"
+    ],
+    "CN-884854112a": [
+      "max_primitive_sites"
+    ],
+    "C3N2-853756810e": [
+      "max_primitive_sites"
+    ],
+    "C2N7-276ba66636": [
+      "max_primitive_sites"
+    ],
+    "C7N9-06f78f1fc1": [
+      "max_primitive_sites"
+    ],
+    "C4N-5de1f77312": [
+      "max_primitive_sites"
+    ],
+    "CN7-9bf3ebd643": [
+      "max_primitive_sites"
+    ],
+    "C5N9-a6ed3d4b24": [
+      "max_primitive_sites"
+    ],
+    "C3N11-32c911a051": [
+      "max_primitive_sites"
+    ],
+    "C3N7-9df06c8e68": [
+      "max_primitive_sites"
+    ],
+    "C2N-a473377ba6": [
+      "max_primitive_sites"
+    ],
+    "C3N11-f0b7852a06": [
+      "max_primitive_sites"
+    ],
+    "CN4-752877fbbb": [
+      "max_primitive_sites"
+    ],
+    "C5N4-98ecd476c7": [
+      "max_primitive_sites"
+    ],
+    "C2N3-df254d779f": [
+      "max_primitive_sites"
+    ],
+    "C3N8-741325ffce": [
+      "max_primitive_sites"
+    ],
+    "C7N9-1c75487a6a": [
+      "max_primitive_sites"
+    ],
+    "CN3-1ab2b5325e": [
+      "max_primitive_sites"
+    ],
+    "CN-3819cb8f26": [
+      "max_primitive_sites"
+    ],
+    "C8N3-b9f144ab3b": [
+      "max_primitive_sites"
+    ],
+    "CN4-0e48a22c47": [
+      "max_primitive_sites"
+    ],
+    "CN4-a543223437": [
+      "max_primitive_sites"
+    ],
+    "C3N7-0f5f6e4e4f": [
+      "max_primitive_sites"
+    ],
+    "CN7-68deae7916": [
+      "max_primitive_sites"
+    ],
+    "CN4-e1ed7ddb77": [
+      "max_primitive_sites"
+    ],
+    "C6N5-c2c90cb1ef": [
+      "max_primitive_sites"
+    ],
+    "C3N7-cede6d9d54": [
+      "max_primitive_sites"
+    ],
+    "C7N2-bd141b50c2": [
+      "max_primitive_sites"
+    ],
+    "C2N7-27411589c6": [
+      "max_primitive_sites"
+    ],
+    "C2N7-e7e52cc2f9": [
+      "max_primitive_sites"
+    ],
+    "C2N3-3ac2557e6b": [
+      "max_primitive_sites"
+    ],
+    "CN-d2ef6be59c": [
+      "max_primitive_sites"
+    ],
+    "C2N-021c1fc654": [
+      "max_primitive_sites"
+    ],
+    "CN9-43379f58fb": [
+      "max_primitive_sites"
+    ],
+    "C7N2-97d7eb2619": [
+      "max_primitive_sites"
+    ],
+    "CN3-c13cb8f65f": [
+      "max_primitive_sites"
+    ],
+    "C5N7-ebc5c65caf": [
+      "max_primitive_sites"
+    ],
+    "C8N11-b6a8607c65": [
+      "max_primitive_sites"
+    ],
+    "CN2-b22d01317c": [
+      "max_primitive_sites"
+    ],
+    "CN4-8c17aef458": [
+      "max_primitive_sites"
+    ],
+    "C3N7-688ced9d66": [
+      "max_primitive_sites"
+    ],
+    "C5N7-dc2f394bb6": [
+      "max_primitive_sites"
+    ],
+    "C2N3-07786a4121": [
+      "max_primitive_sites"
+    ],
+    "CN9-dbb5fa0279": [
+      "max_primitive_sites"
+    ],
+    "C5N13-9919648cd5": [
+      "max_primitive_sites"
+    ],
+    "C5N6-89157ffc30": [
+      "max_primitive_sites"
+    ],
+    "C3N8-d3cc0c6cec": [
+      "max_primitive_sites"
+    ],
+    "C3N4-cebf3ff3e5": [
+      "max_primitive_sites"
+    ],
+    "C5N7-94d68e028d": [
+      "max_primitive_sites"
+    ],
+    "CN2-7cbb189d4b": [
+      "max_primitive_sites"
+    ],
+    "C11N7-c0f4c35529": [
+      "max_primitive_sites"
+    ],
+    "C4N11-e1cc39e2fd": [
+      "max_primitive_sites"
+    ],
+    "C5N11-0f8b9f8d3b": [
+      "max_primitive_sites"
+    ],
+    "CN5-12aab468f0": [
+      "max_primitive_sites"
+    ],
+    "C3N5-c78faa8a06": [
+      "max_primitive_sites"
+    ],
+    "C5N9-8b1aff07dd": [
+      "max_primitive_sites"
+    ],
+    "C7N8-b8832cd9cb": [
+      "max_primitive_sites"
+    ],
+    "CN3-f3f5ce2a1f": [
+      "max_primitive_sites"
+    ],
+    "CN8-db3e51c01b": [
+      "max_primitive_sites"
+    ],
+    "C5N7-a41f4b6596": [
+      "max_primitive_sites"
+    ],
+    "N2-bab87798e8": [
+      "max_primitive_sites"
+    ],
+    "C2N3-5d5559582c": [
+      "max_primitive_sites"
+    ],
+    "C3N2-56b3c703bf": [
+      "max_primitive_sites"
+    ],
+    "CN3-cb1f72d286": [
+      "max_primitive_sites"
+    ],
+    "C7N2-dcef9d0348": [
+      "max_primitive_sites"
+    ],
+    "BP5-58184ddd0a": [
+      "max_primitive_sites"
+    ],
+    "B5As2P5-73cb435cb7": [
+      "max_primitive_sites"
+    ],
+    "BAs3P14-a0128db6c9": [
+      "max_primitive_sites"
+    ],
+    "B5As2P13-e0fcba4441": [
+      "max_primitive_sites"
+    ],
+    "BP5-4a0703edab": [
+      "max_primitive_sites"
+    ],
+    "B2AsP7-8627b10f8e": [
+      "max_primitive_sites"
+    ],
+    "B2AsP6-f7d7f86594": [
+      "max_primitive_sites"
+    ],
+    "B3P8-eb50ec7310": [
+      "max_primitive_sites"
+    ],
+    "BAsP7-003f829efb": [
+      "max_primitive_sites"
+    ],
+    "BP9-d72fa75c88": [
+      "max_primitive_sites"
+    ],
+    "BP5-330199daf1": [
+      "max_primitive_sites"
+    ],
+    "BP2-c875e92730": [
+      "max_primitive_sites"
+    ],
+    "BP5-6f84464604": [
+      "max_primitive_sites"
+    ],
+    "BP6-5f27f04c54": [
+      "max_primitive_sites"
+    ],
+    "B2AsP6-b042a16fb7": [
+      "max_primitive_sites"
+    ],
+    "B8P7-2aa2164add": [
+      "max_primitive_sites"
+    ],
+    "B3As2P14-539318f7c9": [
+      "max_primitive_sites"
+    ],
+    "BP5-3c65f7286a": [
+      "max_primitive_sites"
+    ],
+    "B5As3P8-b9f2e1a0bf": [
+      "max_primitive_sites"
+    ],
+    "BP4-58d5401ff7": [
+      "max_primitive_sites"
+    ],
+    "B2AsP3-9a3a2069ec": [
+      "max_primitive_sites"
+    ],
+    "B2AsP7-fda3ea481c": [
+      "max_primitive_sites"
+    ],
+    "BP10-fea45f8b3f": [
+      "max_primitive_sites"
+    ],
+    "BP4-b544c53bd7": [
+      "max_primitive_sites"
+    ],
+    "B3As4P8-34c98a975a": [
+      "max_primitive_sites"
+    ],
+    "B5As2P9-db06785673": [
+      "max_primitive_sites"
+    ],
+    "B3AsP9-1d8c1c75fd": [
+      "max_primitive_sites"
+    ],
+    "BP5-3f02214fde": [
+      "max_primitive_sites"
+    ],
+    "B2AsP7-61240d7cf3": [
+      "max_primitive_sites"
+    ],
+    "BP4-81e88715f5": [
+      "max_primitive_sites"
+    ],
+    "B6As2P9-170af9b461": [
+      "max_primitive_sites"
+    ],
+    "B4As3P13-98ce381b5b": [
+      "max_primitive_sites"
+    ],
+    "B3P7-c60b0a241b": [
+      "max_primitive_sites"
+    ],
+    "B2AsP4-e3849f2faa": [
+      "max_primitive_sites"
+    ],
+    "B5As2P3-e1a0dbf1e3": [
+      "max_primitive_sites"
+    ],
+    "B7As3P9-bfb7d2169b": [
+      "max_primitive_sites"
+    ],
+    "B2AsP9-e11dadfeea": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-5eb3c6648e": [
+      "max_primitive_sites"
+    ],
+    "BP9-4429a8736c": [
+      "max_primitive_sites"
+    ],
+    "B3P7-a22e36f8ea": [
+      "max_primitive_sites"
+    ],
+    "B3P10-6f0358ee10": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-73292bbd64": [
+      "max_primitive_sites"
+    ],
+    "BP9-eefbd6e016": [
+      "max_primitive_sites"
+    ],
+    "B3As2P11-626c33cfe7": [
+      "max_primitive_sites"
+    ],
+    "BP3-e0eebb1438": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-77ef33dcb8": [
+      "max_primitive_sites"
+    ],
+    "B2As3P7-612764e9eb": [
+      "max_primitive_sites"
+    ],
+    "BAsP7-a117e1416a": [
+      "max_primitive_sites"
+    ],
+    "B2P9-9d3cba3596": [
+      "max_primitive_sites"
+    ],
+    "B2AsP5-4196df481e": [
+      "max_primitive_sites"
+    ],
+    "BP4-5cfd009a0e": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-41778cc386": [
+      "max_primitive_sites"
+    ],
+    "B4AsP11-113d05bbfc": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-aae077ccb2": [
+      "max_primitive_sites"
+    ],
+    "B2P9-9251261962": [
+      "max_primitive_sites"
+    ],
+    "B2AsP5-721f372512": [
+      "max_primitive_sites"
+    ],
+    "B2P9-1c144133cd": [
+      "max_primitive_sites"
+    ],
+    "BP5-258b7c2e53": [
+      "max_primitive_sites"
+    ],
+    "B3AsP5-846ae58283": [
+      "max_primitive_sites"
+    ],
+    "B2AsP11-581faa7375": [
+      "max_primitive_sites"
+    ],
+    "BP5-9da0b7d597": [
+      "max_primitive_sites"
+    ],
+    "B3As2P5-299e06b843": [
+      "max_primitive_sites"
+    ],
+    "B4As4P11-5600e1e334": [
+      "max_primitive_sites"
+    ],
+    "BP5-bc624fe548": [
+      "max_primitive_sites"
+    ],
+    "B3AsP7-e07c44c395": [
+      "max_primitive_sites"
+    ],
+    "B4As3P11-40d21c38cb": [
+      "max_primitive_sites"
+    ],
+    "B4P11-b317a691ff": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-a6ef4360f8": [
+      "max_primitive_sites"
+    ],
+    "B3As2P14-6cf805b7d4": [
+      "max_primitive_sites"
+    ],
+    "B3P13-4a6833f322": [
+      "max_primitive_sites"
+    ],
+    "BP3-9ca8f299cf": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-ebdcef06f6": [
+      "max_primitive_sites"
+    ],
+    "BP3-af9376657f": [
+      "max_primitive_sites"
+    ],
+    "B5P11-0e2eb4a7ec": [
+      "max_primitive_sites"
+    ],
+    "BP3-79f3afbaf8": [
+      "max_primitive_sites"
+    ],
+    "B4P11-d222a4ca63": [
+      "max_primitive_sites"
+    ],
+    "BP5-37ffd67cfb": [
+      "max_primitive_sites"
+    ],
+    "B3P7-8565424389": [
+      "max_primitive_sites"
+    ],
+    "B6AsP8-c51acd9ef8": [
+      "max_primitive_sites"
+    ],
+    "BP3-06772f6e2d": [
+      "max_primitive_sites"
+    ],
+    "B2P7-a682af0574": [
+      "max_primitive_sites"
+    ],
+    "BAsP7-14bfa3ebf1": [
+      "max_primitive_sites"
+    ],
+    "B5As2P13-5aac2be6d9": [
+      "max_primitive_sites"
+    ],
+    "B2P9-f5f21dc188": [
+      "max_primitive_sites"
+    ],
+    "BP8-daa7e98a23": [
+      "max_primitive_sites"
+    ],
+    "B2P7-4048cfc135": [
+      "max_primitive_sites"
+    ],
+    "B3AsP15-c4c585de22": [
+      "max_primitive_sites"
+    ],
+    "B3As2P15-912d88165f": [
+      "max_primitive_sites"
+    ],
+    "B5P13-ce3ea3e326": [
+      "max_primitive_sites"
+    ],
+    "BAsP2-8363bdf4e0": [
+      "max_primitive_sites"
+    ],
+    "B3P7-6727f604ea": [
+      "max_primitive_sites"
+    ],
+    "B9As2P9-82fc6f1580": [
+      "max_primitive_sites"
+    ],
+    "B2AsP7-bc1ccd0fef": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-ce6ff33880": [
+      "max_primitive_sites"
+    ],
+    "B2P9-189032c792": [
+      "max_primitive_sites"
+    ],
+    "B2As4P13-8296aa70db": [
+      "max_primitive_sites"
+    ],
+    "B5As2P9-71ece2508e": [
+      "max_primitive_sites"
+    ],
+    "B5As4P8-2034801327": [
+      "max_primitive_sites"
+    ],
+    "B2AsP2-cb774bd841": [
+      "max_primitive_sites"
+    ],
+    "B4AsP11-418cb71601": [
+      "max_primitive_sites"
+    ],
+    "BP2-4211e98cde": [
+      "max_primitive_sites"
+    ],
+    "BAsP5-0346915f58": [
+      "max_primitive_sites"
+    ],
+    "B2AsP8-7fca5e2b6a": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-9e768261e7": [
+      "max_primitive_sites"
+    ],
+    "B3P7-82479b632c": [
+      "max_primitive_sites"
+    ],
+    "B2P9-28b62d1627": [
+      "max_primitive_sites"
+    ],
+    "BP3-35c04c0adc": [
+      "max_primitive_sites"
+    ],
+    "B4AsP14-f832180314": [
+      "max_primitive_sites"
+    ],
+    "B2AsP3-6832ccc28d": [
+      "max_primitive_sites"
+    ],
+    "B3P8-e0e907e95a": [
+      "max_primitive_sites"
+    ],
+    "BP2-622b317986": [
+      "max_primitive_sites"
+    ],
+    "B2P9-49694f5127": [
+      "max_primitive_sites"
+    ],
+    "B5As3P4-6b781a818d": [
+      "max_primitive_sites"
+    ],
+    "BP4-2a7e755265": [
+      "max_primitive_sites"
+    ],
+    "BP3-8f0f3db3dc": [
+      "max_primitive_sites"
+    ],
+    "B2As2P5-2982a559d9": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-88dd9681de": [
+      "max_primitive_sites"
+    ],
+    "B3As4P7-ae93ca7c54": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-4654e20f66": [
+      "max_primitive_sites"
+    ],
+    "B5P7-2612f37593": [
+      "max_primitive_sites"
+    ],
+    "BP3-2b76505d3c": [
+      "max_primitive_sites"
+    ],
+    "B2AsP6-0b825dfa7f": [
+      "max_primitive_sites"
+    ],
+    "BP4-a22e517813": [
+      "max_primitive_sites"
+    ],
+    "BP8-784c47a6f9": [
+      "max_primitive_sites"
+    ],
+    "BP2-a2773a7bb8": [
+      "max_primitive_sites"
+    ],
+    "B2AsP6-bdddd5a835": [
+      "max_primitive_sites"
+    ],
+    "BP4-aa325c91c3": [
+      "max_primitive_sites"
+    ],
+    "BP2-821a01e0dc": [
+      "max_primitive_sites"
+    ],
+    "B3As2P5-90cb6b296e": [
+      "max_primitive_sites"
+    ],
+    "BP4-2910044002": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-cc304addbe": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-1739bc4561": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-9aada2ae8d": [
+      "max_primitive_sites"
+    ],
+    "B3As2P4-a7cd7d2829": [
+      "max_primitive_sites"
+    ],
+    "B7P8-76f0f46b99": [
+      "max_primitive_sites"
+    ],
+    "BP11-8323c8c8a3": [
+      "max_primitive_sites"
+    ],
+    "B2P9-1bba45e6d2": [
+      "max_primitive_sites"
+    ],
+    "BP9-71649d7004": [
+      "max_primitive_sites"
+    ],
+    "BP11-3af4e3f6dc": [
+      "max_primitive_sites"
+    ],
+    "B7P8-39d9598a48": [
+      "max_primitive_sites"
+    ],
+    "BP2-72fe40d1aa": [
+      "max_primitive_sites"
+    ],
+    "B2As3P15-66a52daf75": [
+      "max_primitive_sites"
+    ],
+    "B2AsP5-ad0e1729a2": [
+      "max_primitive_sites"
+    ],
+    "BP8-8c7626c480": [
+      "max_primitive_sites"
+    ],
+    "BP11-0150ffc0ea": [
+      "max_primitive_sites"
+    ],
+    "B3P7-8068a78e1f": [
+      "max_primitive_sites"
+    ],
+    "BP4-a701cba058": [
+      "max_primitive_sites"
+    ],
+    "B7As4P5-160a394049": [
+      "max_primitive_sites"
+    ],
+    "B2AsP9-9bc0954c38": [
+      "max_primitive_sites"
+    ],
+    "B3AsP2-0f794beb17": [
+      "max_primitive_sites"
+    ],
+    "BP5-e324b4ee93": [
+      "max_primitive_sites"
+    ],
+    "B2AsP9-aceb0186ca": [
+      "max_primitive_sites"
+    ],
+    "B3AsP2-17a90d3064": [
+      "max_primitive_sites"
+    ],
+    "B7P8-d3ec9562e4": [
+      "max_primitive_sites"
+    ],
+    "BP5-f4e286b55e": [
+      "max_primitive_sites"
+    ],
+    "B9As2P5-9faf9211d9": [
+      "max_primitive_sites"
+    ],
+    "BP3-d42a2710b9": [
+      "max_primitive_sites"
+    ],
+    "BP4-359870deb0": [
+      "max_primitive_sites"
+    ],
+    "B2P9-e56f355d67": [
+      "max_primitive_sites"
+    ],
+    "B5As2P7-31ec5c04eb": [
+      "max_primitive_sites"
+    ],
+    "BP8-81343005cf": [
+      "max_primitive_sites"
+    ],
+    "BAsP2-7a64fe9b2f": [
+      "max_primitive_sites"
+    ],
+    "B3P7-441fb7da20": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-73410a9c40": [
+      "max_primitive_sites"
+    ],
+    "BP5-b3dfb6f383": [
+      "max_primitive_sites"
+    ],
+    "BP2-ccfe7d7c40": [
+      "max_primitive_sites"
+    ],
+    "B2AsP2-06a2feeb92": [
+      "max_primitive_sites"
+    ],
+    "BAsP10-4b4b5409dc": [
+      "max_primitive_sites"
+    ],
+    "BP4-8a21ba07d7": [
+      "max_primitive_sites"
+    ],
+    "B2AsP3-b2e612a172": [
+      "max_primitive_sites"
+    ],
+    "BP8-c374e31ff1": [
+      "max_primitive_sites"
+    ],
+    "B5As2P2-c0c221d3e5": [
+      "max_primitive_sites"
+    ],
+    "B3AsP15-971984f0af": [
+      "max_primitive_sites"
+    ],
+    "B3As3P2-5b337a6051": [
+      "max_primitive_sites"
+    ],
+    "B5As2P9-f35cb14a16": [
+      "max_primitive_sites"
+    ],
+    "B2As3P7-7053050079": [
+      "max_primitive_sites"
+    ],
+    "B2P9-949d357d00": [
+      "max_primitive_sites"
+    ],
+    "BP10-0bedcce2c5": [
+      "max_primitive_sites"
+    ],
+    "B10As3P7-892f8f74b8": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-77a6d981c5": [
+      "max_primitive_sites"
+    ],
+    "BP4-1214cdbd4a": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-e06a308812": [
+      "max_primitive_sites"
+    ],
+    "B2P9-08bf6b2036": [
+      "max_primitive_sites"
+    ],
+    "BP4-052931e8f1": [
+      "max_primitive_sites"
+    ],
+    "B3As2P5-cd7f754a46": [
+      "max_primitive_sites"
+    ],
+    "B2P9-559857f801": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-2368ef1a61": [
+      "max_primitive_sites"
+    ],
+    "BP4-5242a0df3f": [
+      "max_primitive_sites"
+    ],
+    "B5As4P10-40450c95cf": [
+      "max_primitive_sites"
+    ],
+    "B2P9-684392fdb0": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-4c4fbff5b9": [
+      "max_primitive_sites"
+    ],
+    "BP8-7a38f8e575": [
+      "max_primitive_sites"
+    ],
+    "BP5-702a2b25e2": [
+      "max_primitive_sites"
+    ],
+    "B3P8-d2da65c446": [
+      "max_primitive_sites"
+    ],
+    "BP18-c74071bc31": [
+      "max_primitive_sites"
+    ],
+    "B2As3P5-1976088aa2": [
+      "max_primitive_sites"
+    ],
+    "B2P7-0f36c4b3a1": [
+      "max_primitive_sites"
+    ],
+    "B3P7-d8d3861266": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-80c38f20d7": [
+      "max_primitive_sites"
+    ],
+    "BAsP5-ab56bd1fd9": [
+      "max_primitive_sites"
+    ],
+    "B2P9-ad6bf0ee16": [
+      "max_primitive_sites"
+    ],
+    "BP5-583d787f24": [
+      "max_primitive_sites"
+    ],
+    "B2P7-3b3a63ac01": [
+      "max_primitive_sites"
+    ],
+    "B2P9-65fe25dd90": [
+      "max_primitive_sites"
+    ],
+    "BP4-267aeda73f": [
+      "max_primitive_sites"
+    ],
+    "B3P8-14a79c8f25": [
+      "max_primitive_sites"
+    ],
+    "BAsP4-9309b5bda0": [
+      "max_primitive_sites"
+    ],
+    "BP4-19015db4fb": [
+      "max_primitive_sites"
+    ],
+    "BP4-62ffe84126": [
+      "max_primitive_sites"
+    ],
+    "BP9-6b56f27ba6": [
+      "max_primitive_sites"
+    ],
+    "BP4-328e4fc91e": [
+      "max_primitive_sites"
+    ],
+    "B2P9-eb1428a0eb": [
+      "max_primitive_sites"
+    ],
+    "B5As3P8-1b20d0af50": [
+      "max_primitive_sites"
+    ],
+    "BP2-28fbbee905": [
+      "max_primitive_sites"
+    ],
+    "B3P17-95b9b09465": [
+      "max_primitive_sites"
+    ],
+    "BP9-4bac35044e": [
+      "max_primitive_sites"
+    ],
+    "B2P7-25b05d89a7": [
+      "max_primitive_sites"
+    ],
+    "B7As3P10-c2612c97db": [
+      "max_primitive_sites"
+    ],
+    "B2AsP9-7aa1721a57": [
+      "max_primitive_sites"
+    ],
+    "B3P7-ae572ce569": [
+      "max_primitive_sites"
+    ],
+    "BP3-83a25218f1": [
+      "max_primitive_sites"
+    ],
+    "BP4-330ae95212": [
+      "max_primitive_sites"
+    ],
+    "B3AsP5-3e0b5520cf": [
+      "max_primitive_sites"
+    ],
+    "BAsP8-b71ebe481e": [
+      "max_primitive_sites"
+    ],
+    "B3P10-437c758e6f": [
+      "max_primitive_sites"
+    ],
+    "BP4-b2b8facf73": [
+      "max_primitive_sites"
+    ],
+    "BP4-262ed78cd2": [
+      "max_primitive_sites"
+    ],
+    "B6As5P9-da86744ac8": [
+      "max_primitive_sites"
+    ],
+    "BP11-0bf4df23b6": [
+      "max_primitive_sites"
+    ],
+    "BP4-b576f90b10": [
+      "max_primitive_sites"
+    ],
+    "B2AsP6-04142e29b7": [
+      "max_primitive_sites"
+    ],
+    "BP3-ab675562b2": [
+      "max_primitive_sites"
+    ],
+    "BP8-e951975084": [
+      "max_primitive_sites"
+    ],
+    "B2AsP3-b8f46108db": [
+      "max_primitive_sites"
+    ],
+    "B2As3P13-78ea497213": [
+      "max_primitive_sites"
+    ],
+    "B3AsP-ad0391c0e1": [
+      "max_primitive_sites"
+    ],
+    "B3P7-94be36ebeb": [
+      "max_primitive_sites"
+    ],
+    "BP5-1c50ed1eee": [
+      "max_primitive_sites"
+    ],
+    "BP8-4e1c35162e": [
+      "max_primitive_sites"
+    ],
+    "B2P3-e665683972": [
+      "max_primitive_sites"
+    ],
+    "B2As2P7-dca8f9932e": [
+      "max_primitive_sites"
+    ],
+    "B8As3P3-f7edc01e67": [
+      "max_primitive_sites"
+    ],
+    "B2As2P5-b7b618f53c": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-11b6bdd2db": [
+      "max_primitive_sites"
+    ],
+    "BP4-7dabd74605": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-fd44786ca5": [
+      "max_primitive_sites"
+    ],
+    "BAsP7-44b8d82159": [
+      "max_primitive_sites"
+    ],
+    "BP5-155c7f6ccc": [
+      "max_primitive_sites"
+    ],
+    "B3As4P11-021fc139b8": [
+      "max_primitive_sites"
+    ],
+    "B9As3P8-34f89f171f": [
+      "max_primitive_sites"
+    ],
+    "BP9-f1b1fd7636": [
+      "max_primitive_sites"
+    ],
+    "B2AsP2-0bc231cfa0": [
+      "max_primitive_sites"
+    ],
+    "B3As2P13-831702bf60": [
+      "max_primitive_sites"
+    ],
+    "BP8-840f8a07d4": [
+      "max_primitive_sites"
+    ],
+    "BP6-29db91c28a": [
+      "max_primitive_sites"
+    ],
+    "BP2-46e444169c": [
+      "max_primitive_sites"
+    ],
+    "B2AsP9-3d2c4aa0f1": [
+      "max_primitive_sites"
+    ],
+    "BAs2P3-3a853deade": [
+      "max_primitive_sites"
+    ],
+    "B4P11-77b67ac391": [
+      "max_primitive_sites"
+    ],
+    "B6As3P7-ed4da17efc": [
+      "max_primitive_sites"
+    ],
+    "B3AsP8-90b403d4f8": [
+      "max_primitive_sites"
+    ],
+    "BP5-b3c6a37db0": [
+      "max_primitive_sites"
+    ],
+    "B3As2P7-c9e018e2bd": [
+      "max_primitive_sites"
+    ],
+    "BP5-f9679afb84": [
+      "max_primitive_sites"
+    ],
+    "B6AsP13-11202aaf25": [
+      "max_primitive_sites"
+    ],
+    "BAsP3-b9444faea2": [
+      "max_primitive_sites"
+    ],
+    "BP17-37891a47f3": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-90afb49c59": [
+      "max_primitive_sites"
+    ],
+    "B9As2P9-27e46af72f": [
+      "max_primitive_sites"
+    ],
+    "B3AsP4-4cad0c0f93": [
+      "max_primitive_sites"
+    ],
+    "BP11-0632cdf747": [
+      "max_primitive_sites"
+    ],
+    "B2P9-98fc6bbe73": [
+      "max_primitive_sites"
+    ],
+    "B2P9-224ec93a65": [
+      "max_primitive_sites"
+    ],
+    "BP4-9b72003e14": [
+      "max_primitive_sites"
+    ],
+    "B2As2P5-b07268f528": [
+      "max_primitive_sites"
+    ],
+    "B3P17-6bb2494aa3": [
+      "max_primitive_sites"
+    ],
+    "BAsP6-cfe43ce978": [
+      "max_primitive_sites"
+    ],
+    "BAsP7-5ea9179f7b": [
+      "max_primitive_sites"
+    ],
+    "B2P3-9ffa1ca813": [
+      "max_primitive_sites"
+    ],
+    "B4As3P9-8feb60693d": [
+      "max_primitive_sites"
+    ],
+    "BP5-b396021286": [
+      "max_primitive_sites"
+    ],
+    "B4As-db0e74bb21": [
+      "max_primitive_sites"
+    ],
+    "B4As7-a2a98840a9": [
+      "max_primitive_sites"
+    ],
+    "B3As2-e6473f8e84": [
+      "max_primitive_sites"
+    ],
+    "B2As-85efe1455c": [
+      "max_primitive_sites"
+    ],
+    "BAs2-577a4613d0": [
+      "max_primitive_sites"
+    ],
+    "B2As-9407c2d68a": [
+      "max_primitive_sites"
+    ],
+    "B15As-704250e43c": [
+      "max_primitive_sites"
+    ],
+    "B7As2-2c323c6b00": [
+      "max_primitive_sites"
+    ],
+    "BAs10-60ac20dead": [
+      "max_primitive_sites"
+    ],
+    "B2As3-a4318b845f": [
+      "max_primitive_sites"
+    ],
+    "BAs2-ecf3bb879c": [
+      "max_primitive_sites"
+    ],
+    "B2As-b0525be69a": [
+      "max_primitive_sites"
+    ],
+    "BAs2-bea8d24275": [
+      "max_primitive_sites"
+    ],
+    "B9As7-55f5acd719": [
+      "max_primitive_sites"
+    ],
+    "B8As-98a733b322": [
+      "max_primitive_sites"
+    ],
+    "B3As-0867c5433c": [
+      "max_primitive_sites"
+    ],
+    "B3As2-2ca804d7ab": [
+      "max_primitive_sites"
+    ],
+    "B5As13-55a2e791a0": [
+      "max_primitive_sites"
+    ],
+    "B7As5-0610512e83": [
+      "max_primitive_sites"
+    ],
+    "B2As-fef56e121c": [
+      "max_primitive_sites"
+    ],
+    "B9As11-20b4a7a63b": [
+      "max_primitive_sites"
+    ],
+    "B3As2-bebad9e48f": [
+      "max_primitive_sites"
+    ],
+    "BAs-5eba8aab68": [
+      "max_primitive_sites"
+    ],
+    "B10As3-67bf9ce06f": [
+      "max_primitive_sites"
+    ],
+    "BAs-ca8ef9538e": [
+      "max_primitive_sites"
+    ],
+    "B7As2-390ffb4f98": [
+      "max_primitive_sites"
+    ],
+    "B3As-a392819e3f": [
+      "max_primitive_sites"
+    ],
+    "B4As-c4f0a474dd": [
+      "max_primitive_sites"
+    ],
+    "B4As-710dc09bcc": [
+      "max_primitive_sites"
+    ],
+    "B4As-f39e54de21": [
+      "max_primitive_sites"
+    ],
+    "B5As6-cfa817a6eb": [
+      "max_primitive_sites"
+    ],
+    "B3As7-05bb404b60": [
+      "max_primitive_sites"
+    ],
+    "B13As3-3401eb5d5e": [
+      "max_primitive_sites"
+    ],
+    "B5As-3f56189c83": [
+      "max_primitive_sites"
+    ],
+    "B4As7-89e9b3e76e": [
+      "max_primitive_sites"
+    ],
+    "BAs2-4a3ba08dad": [
+      "max_primitive_sites"
+    ],
+    "B4As-6e39ddbf7b": [
+      "max_primitive_sites"
+    ],
+    "B7As5-163244a32b": [
+      "max_primitive_sites"
+    ],
+    "B3As2-ff1bc21cda": [
+      "max_primitive_sites"
+    ],
+    "B13As2-c256a6368d": [
+      "max_primitive_sites"
+    ],
+    "B2As3-343795f07c": [
+      "max_primitive_sites"
+    ],
+    "B5As4-06d0e960d2": [
+      "max_primitive_sites"
+    ],
+    "B7As5-ad2e362deb": [
+      "max_primitive_sites"
+    ],
+    "B4As-c1814522ed": [
+      "max_primitive_sites"
+    ],
+    "B5As13-a53ed74f16": [
+      "max_primitive_sites"
+    ],
+    "B3As2-849f974ae8": [
+      "max_primitive_sites"
+    ],
+    "B3As2-58a02b164c": [
+      "max_primitive_sites"
+    ],
+    "BAs-1955bd692d": [
+      "max_primitive_sites"
+    ],
+    "B2As3-85b23d9ce2": [
+      "max_primitive_sites"
+    ],
+    "B7As4-adba4d702a": [
+      "max_primitive_sites"
+    ],
+    "B2As3-6481d57f57": [
+      "max_primitive_sites"
+    ],
+    "B4As5-7687e24b89": [
+      "max_primitive_sites"
+    ],
+    "B2As3-753f1d5bb4": [
+      "max_primitive_sites"
+    ],
+    "B2As3-25585d710d": [
+      "max_primitive_sites"
+    ],
+    "B3As-bbac4158a7": [
+      "max_primitive_sites"
+    ],
+    "B11As7-6b3f535340": [
+      "max_primitive_sites"
+    ],
+    "B7As3-7d96a7eada": [
+      "max_primitive_sites"
+    ],
+    "BAs-06b762d523": [
+      "max_primitive_sites"
+    ],
+    "B3As2-a01a713869": [
+      "max_primitive_sites"
+    ],
+    "B4As3-83b02915f8": [
+      "max_primitive_sites"
+    ],
+    "BAs2-db5341bb09": [
+      "max_primitive_sites"
+    ],
+    "B2As-82dccc1f68": [
+      "max_primitive_sites"
+    ],
+    "B3As-a1eebd2222": [
+      "max_primitive_sites"
+    ],
+    "BAs-b3303f8574": [
+      "max_primitive_sites"
+    ],
+    "BAs2-ad24483e6a": [
+      "max_primitive_sites"
+    ],
+    "B13As5-f1e7e2339b": [
+      "max_primitive_sites"
+    ],
+    "B7As6-d163c2591f": [
+      "max_primitive_sites"
+    ],
+    "B5As-72113185dd": [
+      "max_primitive_sites"
+    ],
+    "B11As3-fe1e507654": [
+      "max_primitive_sites"
+    ],
+    "BAs2-7776d6b95c": [
+      "max_primitive_sites"
+    ],
+    "B3As2-d2d32dbb29": [
+      "max_primitive_sites"
+    ],
+    "B5As6-682eb45aea": [
+      "max_primitive_sites"
+    ],
+    "B2As3-cc7a068024": [
+      "max_primitive_sites"
+    ],
+    "B11As8-e4bfa95c29": [
+      "max_primitive_sites"
+    ],
+    "BAs4-fb64b5a389": [
+      "max_primitive_sites"
+    ],
+    "B5As4-331e0a086c": [
+      "max_primitive_sites"
+    ],
+    "B6As5-f40170b8e1": [
+      "max_primitive_sites"
+    ],
+    "B3As7-751c66fe00": [
+      "max_primitive_sites"
+    ],
+    "B6As5-3a85cca736": [
+      "max_primitive_sites"
+    ],
+    "B3As2-ccb05c75f9": [
+      "max_primitive_sites"
+    ],
+    "B5As4-31bcfdb2cf": [
+      "max_primitive_sites"
+    ],
+    "BAs2-1b33fcc3fe": [
+      "max_primitive_sites"
+    ],
+    "B3As7-60d42eb43d": [
+      "max_primitive_sites"
+    ],
+    "B6As-70a2ab0e3b": [
+      "max_primitive_sites"
+    ],
+    "B5As4-2b0ec68b0b": [
+      "max_primitive_sites"
+    ],
+    "B5As-57ef2d8d76": [
+      "max_primitive_sites"
+    ],
+    "B5As-dddb0cd028": [
+      "max_primitive_sites"
+    ],
+    "BAs3-b9c9d70161": [
+      "max_primitive_sites"
+    ],
+    "B4As3-e48c2784d8": [
+      "max_primitive_sites"
+    ],
+    "B5As11-47a5fd02e0": [
+      "max_primitive_sites"
+    ],
+    "B11As4-86b9d41561": [
+      "max_primitive_sites"
+    ],
+    "B13As7-768c775e51": [
+      "max_primitive_sites"
+    ],
+    "B4As-1ac8af903a": [
+      "max_primitive_sites"
+    ],
+    "B5As-5aef7337dd": [
+      "max_primitive_sites"
+    ],
+    "B5As4-fa828dc680": [
+      "max_primitive_sites"
+    ],
+    "B3As2-aeb0bc0386": [
+      "max_primitive_sites"
+    ],
+    "B6As5-54a4309fa2": [
+      "max_primitive_sites"
+    ],
+    "B5As4-a2879e2e9e": [
+      "max_primitive_sites"
+    ],
+    "B7As11-9438be4b8d": [
+      "max_primitive_sites"
+    ],
+    "B5As7-68803ce37a": [
+      "max_primitive_sites"
+    ],
+    "B3As4-c0fddac1eb": [
+      "max_primitive_sites"
+    ],
+    "B2As3-696e8606a6": [
+      "max_primitive_sites"
+    ],
+    "BAs5-b71efa7872": [
+      "max_primitive_sites"
+    ],
+    "B7As2-04f8e4d579": [
+      "max_primitive_sites"
+    ],
+    "B7As2-4a8dd93f3f": [
+      "max_primitive_sites"
+    ],
+    "B13As7-374e26292f": [
+      "max_primitive_sites"
+    ],
+    "B5As2-4a737033e9": [
+      "max_primitive_sites"
+    ],
+    "B3As4-4e75a53b8e": [
+      "max_primitive_sites"
+    ],
+    "B2As-db3e3297f1": [
+      "max_primitive_sites"
+    ],
+    "B9As11-a0bb6a4a23": [
+      "max_primitive_sites"
+    ],
+    "B3As-9458c79968": [
+      "max_primitive_sites"
+    ],
+    "BAs-01fba3c5f5": [
+      "max_primitive_sites"
+    ],
+    "B3As7-3bd0879386": [
+      "max_primitive_sites"
+    ],
+    "B7As3-01cba542bf": [
+      "max_primitive_sites"
+    ],
+    "B4As-8dd888aad7": [
+      "max_primitive_sites"
+    ],
+    "BAs-053e533f56": [
+      "max_primitive_sites"
+    ],
+    "B6As5-061c862c0c": [
+      "max_primitive_sites"
+    ],
+    "B11As-bb77630643": [
+      "max_primitive_sites"
+    ],
+    "B3As-7ca253b599": [
+      "max_primitive_sites"
+    ],
+    "BAs2-ac7cd4258e": [
+      "max_primitive_sites"
+    ],
+    "BAs-8e4d498141": [
+      "max_primitive_sites"
+    ],
+    "B2As3-c0fd7a5956": [
+      "max_primitive_sites"
+    ],
+    "B5As2-c3c43356d9": [
+      "max_primitive_sites"
+    ],
+    "BAs2-3dd9abbd90": [
+      "max_primitive_sites"
+    ],
+    "B7As-400a13227e": [
+      "max_primitive_sites"
+    ],
+    "B7As3-2bdcd91880": [
+      "max_primitive_sites"
+    ],
+    "BAs-37b753703e": [
+      "max_primitive_sites"
+    ],
+    "B5As7-c5a6fe35d7": [
+      "max_primitive_sites"
+    ],
+    "B5As4-b695d93286": [
+      "max_primitive_sites"
+    ],
+    "B11As3-b4a9741e64": [
+      "max_primitive_sites"
+    ],
+    "BAs2-4ad26e025b": [
+      "max_primitive_sites"
+    ],
+    "B3As-156079dba5": [
+      "max_primitive_sites"
+    ],
+    "B6As-289d422462": [
+      "max_primitive_sites"
+    ],
+    "B7As3-9b3ddb2ec7": [
+      "max_primitive_sites"
+    ],
+    "B5As4-864f25feb8": [
+      "max_primitive_sites"
+    ],
+    "B2As-77bfda14af": [
+      "max_primitive_sites"
+    ],
+    "B3As-66459f1cea": [
+      "max_primitive_sites"
+    ],
+    "B11As3-e6d285a795": [
+      "max_primitive_sites"
+    ],
+    "B3As2-e19036d80f": [
+      "max_primitive_sites"
+    ],
+    "BAs4-1ad034be8f": [
+      "max_primitive_sites"
+    ],
+    "BAs4-aa5f122264": [
+      "max_primitive_sites"
+    ],
+    "B3As7-f583adb325": [
+      "max_primitive_sites"
+    ],
+    "B2As-839f6dd3e8": [
+      "max_primitive_sites"
+    ],
+    "B3As2-70441a5880": [
+      "max_primitive_sites"
+    ],
+    "B3As2-b4d8c1bec9": [
+      "max_primitive_sites"
+    ],
+    "B5As7-0b97ba3d52": [
+      "max_primitive_sites"
+    ],
+    "B3As2-923a081e89": [
+      "max_primitive_sites"
+    ],
+    "B2As-1e94a40fe1": [
+      "max_primitive_sites"
+    ],
+    "B7As8-505a509041": [
+      "max_primitive_sites"
+    ],
+    "B3As2-6b975c59a1": [
+      "max_primitive_sites"
+    ],
+    "B6As-878d9067b4": [
+      "max_primitive_sites"
+    ],
+    "B14As3-63fb09f1fe": [
+      "max_primitive_sites"
+    ],
+    "B2As3-7b29212654": [
+      "max_primitive_sites"
+    ],
+    "BAs3-bdb8f4f40d": [
+      "max_primitive_sites"
+    ],
+    "B7As3-3395c18fb0": [
+      "max_primitive_sites"
+    ],
+    "BAs2-6fa136ee54": [
+      "max_primitive_sites"
+    ],
+    "B2As-27d5abb45d": [
+      "max_primitive_sites"
+    ],
+    "B4As-c485ef597b": [
+      "max_primitive_sites"
+    ],
+    "BAs2-52fdf4d7f7": [
+      "max_primitive_sites"
+    ],
+    "BAs-2bed0ec270": [
+      "max_primitive_sites"
+    ],
+    "B2As-d093a6f5d3": [
+      "max_primitive_sites"
+    ],
+    "B3As2-47ec270f4d": [
+      "max_primitive_sites"
+    ],
+    "B2As-8477b0e6f0": [
+      "max_primitive_sites"
+    ],
+    "B5As2-6533cf5f12": [
+      "max_primitive_sites"
+    ],
+    "B7As3-0c5a89d434": [
+      "max_primitive_sites"
+    ],
+    "B5As4-403c7a08d9": [
+      "max_primitive_sites"
+    ],
+    "B3As-689a063aac": [
+      "max_primitive_sites"
+    ],
+    "B2As7-f828296dbb": [
+      "max_primitive_sites"
+    ],
+    "B2As-35e3324c15": [
+      "max_primitive_sites"
+    ],
+    "B5As-f829792125": [
+      "max_primitive_sites"
+    ],
+    "B2As3-04c600763f": [
+      "max_primitive_sites"
+    ],
+    "B11As5-6cd57455dd": [
+      "max_primitive_sites"
+    ],
+    "B13As3-39daf7be04": [
+      "max_primitive_sites"
+    ],
+    "B7As-699e96b2c8": [
+      "max_primitive_sites"
+    ],
+    "B8As3-ecdf73f6b7": [
+      "max_primitive_sites"
+    ],
+    "B2As-b1fd8ddd0e": [
+      "max_primitive_sites"
+    ],
+    "B2As-705c126c61": [
+      "max_primitive_sites"
+    ],
+    "B11As7-f230361ee4": [
+      "max_primitive_sites"
+    ],
+    "B5As4-f0868c4443": [
+      "max_primitive_sites"
+    ],
+    "B3As-a19b32eb89": [
+      "max_primitive_sites"
+    ],
+    "B2As-66f8e92356": [
+      "max_primitive_sites"
+    ],
+    "B4As5-06f75918ab": [
+      "max_primitive_sites"
+    ],
+    "BAs-9a765029bc": [
+      "max_primitive_sites"
+    ],
+    "B7As-8b2a4dce1f": [
+      "max_primitive_sites"
+    ],
+    "BAs-35cd56b46c": [
+      "max_primitive_sites"
+    ],
+    "B11As3-0137f9be92": [
+      "max_primitive_sites"
+    ],
+    "B6As5-03ba3ef0de": [
+      "max_primitive_sites"
+    ],
+    "B7As3-ba8ce34a5b": [
+      "max_primitive_sites"
+    ],
+    "B7As3-9cd368939e": [
+      "max_primitive_sites"
+    ],
+    "B3As2-c9b4aa745e": [
+      "max_primitive_sites"
+    ],
+    "B2As3-3453861304": [
+      "max_primitive_sites"
+    ],
+    "B5As6-44a1615e06": [
+      "max_primitive_sites"
+    ],
+    "B2As-c028a6e988": [
+      "max_primitive_sites"
+    ],
+    "B3As7-534374d5c0": [
+      "max_primitive_sites"
+    ],
+    "B11As4-e617becbbe": [
+      "max_primitive_sites"
+    ],
+    "B4As5-f5d6c56ccb": [
+      "max_primitive_sites"
+    ],
+    "B7As5-10d40f4e62": [
+      "max_primitive_sites"
+    ],
+    "B7As-68bc41d5f6": [
+      "max_primitive_sites"
+    ],
+    "B7As3-a2ba549236": [
+      "max_primitive_sites"
+    ],
+    "B5As4-eaebc1ddbf": [
+      "max_primitive_sites"
+    ],
+    "B7As4-c0f3208e6f": [
+      "max_primitive_sites"
+    ],
+    "B7As12-a6d5defa6b": [
+      "max_primitive_sites"
+    ],
+    "B2As3-6a6859a2a3": [
+      "max_primitive_sites"
+    ],
+    "B3As-8c68ba8d1c": [
+      "max_primitive_sites"
+    ],
+    "B7As3-3166864f74": [
+      "max_primitive_sites"
+    ],
+    "B9As2-703df15734": [
+      "max_primitive_sites"
+    ],
+    "B3As-46ed56ef5c": [
+      "max_primitive_sites"
+    ],
+    "B8As3-0e37e508a9": [
+      "max_primitive_sites"
+    ],
+    "B4As3-a6d326738e": [
+      "max_primitive_sites"
+    ],
+    "B7As3-27bda485f5": [
+      "max_primitive_sites"
+    ],
+    "B5As-81e8b65d81": [
+      "max_primitive_sites"
+    ],
+    "BAs-85b5b2eb60": [
+      "max_primitive_sites"
+    ],
+    "BAs-0556064523": [
+      "max_primitive_sites"
+    ],
+    "B3As-07171cfcb0": [
+      "max_primitive_sites"
+    ],
+    "B13As2-f3b3a39b8c": [
+      "max_primitive_sites"
+    ],
+    "B5As-ee511a39e4": [
+      "max_primitive_sites"
+    ],
+    "B7As3-5addf11ba8": [
+      "max_primitive_sites"
+    ],
+    "BAs4-d3e01390a2": [
+      "max_primitive_sites"
+    ],
+    "B3As-ba3a7b93e1": [
+      "max_primitive_sites"
+    ],
+    "B7As2-5a2640aab3": [
+      "max_primitive_sites"
+    ],
+    "B5As7-dc2d2a4782": [
+      "max_primitive_sites"
+    ],
+    "B2As3-7c16ae5ea6": [
+      "max_primitive_sites"
+    ],
+    "B2As3-9705db40bd": [
+      "max_primitive_sites"
+    ],
+    "B5As7-f76f3e4cd0": [
+      "max_primitive_sites"
+    ],
+    "BAs-42c994b57f": [
+      "max_primitive_sites"
+    ],
+    "B3As11-3e3aaa4ea1": [
+      "max_primitive_sites"
+    ],
+    "B2As-38c410f051": [
+      "max_primitive_sites"
+    ],
+    "B2As-acc13ebac1": [
+      "max_primitive_sites"
+    ],
+    "B5As3-0c6746af61": [
+      "max_primitive_sites"
+    ],
+    "B3As2-a6f1c446b6": [
+      "max_primitive_sites"
+    ],
+    "B5As3-bae9fecf06": [
+      "max_primitive_sites"
+    ],
+    "B4As-c69a7168a4": [
+      "max_primitive_sites"
+    ],
+    "B11As-8e962c4440": [
+      "max_primitive_sites"
+    ],
+    "B7As5-de3c4b3bb3": [
+      "max_primitive_sites"
+    ],
+    "B13As6-f7626f86c2": [
+      "max_primitive_sites"
+    ],
+    "B5As7-746866707c": [
+      "max_primitive_sites"
+    ],
+    "B5As7-e41dd7ca76": [
+      "max_primitive_sites"
+    ],
+    "B3As2-df0afe45e0": [
+      "max_primitive_sites"
+    ],
+    "BAs2-061837dfea": [
+      "max_primitive_sites"
+    ],
+    "B5As7-3098fc7a42": [
+      "max_primitive_sites"
+    ],
+    "B9As11-487ef3177a": [
+      "max_primitive_sites"
+    ],
+    "B2As3-0acc5f4e75": [
+      "max_primitive_sites"
+    ],
+    "BAs-c967331f7a": [
+      "max_primitive_sites"
+    ],
+    "B2As-02a47e5544": [
+      "max_primitive_sites"
+    ],
+    "B5As4-06d6819461": [
+      "max_primitive_sites"
+    ],
+    "BAs3-bab11b6628": [
+      "max_primitive_sites"
+    ],
+    "B4As-6ad1db00ca": [
+      "max_primitive_sites"
+    ],
+    "B6As-de8f4cffea": [
+      "max_primitive_sites"
+    ],
+    "B3As-dc91394fe0": [
+      "max_primitive_sites"
+    ],
+    "B4As-493c068a2e": [
+      "max_primitive_sites"
+    ],
+    "B7As3-1f2e7403f4": [
+      "max_primitive_sites"
+    ],
+    "B2As3-4b5c279c8f": [
+      "max_primitive_sites"
+    ],
+    "B2As3-81301816c5": [
+      "max_primitive_sites"
+    ],
+    "B2As-5d0956295f": [
+      "max_primitive_sites"
+    ],
+    "B2As-38a9ab117b": [
+      "max_primitive_sites"
+    ],
+    "B7As5-00114ede13": [
+      "max_primitive_sites"
+    ],
+    "B4As-f1cbc94845": [
+      "max_primitive_sites"
+    ],
+    "B7As2-1ee65a36c9": [
+      "max_primitive_sites"
+    ],
+    "B3As-f6ee29cb51": [
+      "max_primitive_sites"
+    ],
+    "B5As6-8b71ca64c0": [
+      "max_primitive_sites"
+    ],
+    "B3As-6cf747d5ce": [
+      "max_primitive_sites"
+    ],
+    "B13As2-4d6404cbed": [
+      "max_primitive_sites"
+    ]
+  }
+}

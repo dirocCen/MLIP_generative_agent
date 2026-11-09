@@ -1,0 +1,81 @@
+{
+  "step_id": "20261109T083811-fetch_results-95a4e1",
+  "run_id": "s1-main",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261109T072610-submit_mlip_fc2_descriptors-feaaa8"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261109T072610-submit_mlip_fc2_descriptors-feaaa8",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 1,
+        "states": {
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 1,
+      "n_missing": 0,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 1,
+        "min": 64.6,
+        "median": 64.6,
+        "max": 64.6
+      },
+      "n_imaginary": 1,
+      "stable_set": "s1main.b1.noveln.oom.l0stable.dpa41_max_oam.c7704b",
+      "n_stable": 0,
+      "descriptors": {
+        "kappa_slack_W_mK": null,
+        "kappa_proxy_cv2_over_wjdos": null,
+        "kappa_ctau_1ps_W_mK": null,
+        "theta_acoustic_K": null,
+        "ao_gap_ratio": null,
+        "acoustic_branch_spread": null,
+        "gamma_acoustic_rms": null,
+        "wjdos_cv_mean": null
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.315,
+  "host": "cenyj",
+  "created_at": "2026-11-09T08:38:11+00:00"
+}
