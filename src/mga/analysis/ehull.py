@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from typing import Any
 
@@ -56,12 +57,31 @@ def _cached(kind: str, chemsys: str, refresh: bool, fetch) -> dict[str, Any]:
     return doc
 
 
+def _json_safe_data(data: dict[str, Any]) -> dict[str, Any]:
+    """Entry metadata without the fields JSON cannot hold (recent mp-api puts dicts keyed
+    by Element in ``data``). The hull only needs the energy, its adjustments and the
+    composition, which live outside ``data``."""
+    from monty.json import MontyEncoder
+
+    safe = {}
+    for k, v in data.items():
+        try:
+            json.dumps(v, cls=MontyEncoder)
+        except TypeError:
+            continue
+        safe[k] = v
+    return safe
+
+
 def mp_entries(chemsys: str, *, refresh: bool = False) -> tuple[list[ComputedStructureEntry], dict[str, Any]]:
     """All MP2020-corrected GGA/GGA+U entries of ``chemsys`` and its subsystems."""
 
     def fetch(mpr):
         entries = mpr.get_entries_in_chemsys(chemsys, additional_criteria={"thermo_types": [THERMO_TYPE]})
-        return {"thermo_type": THERMO_TYPE, "entries": [e.as_dict() for e in entries]}
+        for e in entries:
+            e.data = _json_safe_data(e.data)
+        # entry_id comes back as an mp-api EntryID object; store it as its string
+        return {"thermo_type": THERMO_TYPE, "entries": [json.loads(json.dumps(e.as_dict(), default=str)) for e in entries]}
 
     doc = _cached("entries", chemsys, refresh, fetch)
     meta = {k: doc[k] for k in ("chemsys", "retrieved_at", "db_version", "thermo_type")}

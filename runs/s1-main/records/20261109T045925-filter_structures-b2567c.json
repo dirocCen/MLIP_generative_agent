@@ -1,0 +1,50 @@
+{
+  "step_id": "20261109T045925-filter_structures-b2567c",
+  "run_id": "s1-main",
+  "tool": "filter_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel on the first 6 finished S1-main MatterGen steps (cs arm, light systems) while the rest generate; same cuts as S1 trial (Claude; scale-up and funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T045904-merge_sets-3a0a68"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b1.all",
+    "new_set_name": "s1main.b1.small",
+    "criteria": {
+      "max_primitive_sites": 8,
+      "min_distance_angstrom": 1.0
+    }
+  },
+  "outputs": {
+    "new_set_name": "s1main.b1.small",
+    "n_in": 1536,
+    "n_kept": 720,
+    "removed_by_criterion": {
+      "max_primitive_sites": 813,
+      "min_distance_angstrom": 3
+    },
+    "details_file": "runs/s1-main/outputs/20261109T045925-filter_structures-b2567c.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 49.835,
+  "host": "cenyj",
+  "created_at": "2026-11-09T04:59:25+00:00"
+}

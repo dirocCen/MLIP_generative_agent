@@ -1,0 +1,49 @@
+{
+  "step_id": "20261109T050054-check_benchmark_leakage-8357c7",
+  "run_id": "s1-main",
+  "tool": "check_benchmark_leakage",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel on the first 6 finished S1-main MatterGen steps (cs arm, light systems) while the rest generate; same cuts as S1 trial (Claude; scale-up and funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T050013-deduplicate-4089b4"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b1.unique",
+    "clean_set_name": "s1main.b1.clean"
+  },
+  "outputs": {
+    "clean_set_name": "s1main.b1.clean",
+    "n_in": 543,
+    "n_flagged": 49,
+    "n_clean": 494,
+    "n_benchmark_formulas": 70,
+    "flagged_formulas": {
+      "BN": 37,
+      "BP": 7,
+      "SiC": 3,
+      "AlN": 2
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 30.082,
+  "host": "cenyj",
+  "created_at": "2026-11-09T05:00:54+00:00"
+}

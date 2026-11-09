@@ -1,0 +1,86 @@
+{
+  "step_id": "20261109T050013-deduplicate-4089b4",
+  "run_id": "s1-main",
+  "tool": "deduplicate",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel on the first 6 finished S1-main MatterGen steps (cs arm, light systems) while the rest generate; same cuts as S1 trial (Claude; scale-up and funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T045925-filter_structures-b2567c"
+  ],
+  "params": {
+    "ltol": {
+      "value": 0.2,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "stol": {
+      "value": 0.3,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "angle_tol": {
+      "value": 5.0,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "primitive_cell": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "scale": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default (volume-normalised, so MLIP- and DFT-relaxed cells still match)",
+      "reason": null
+    },
+    "attempt_supercell": {
+      "value": false,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b1.small",
+    "new_set_name": "s1main.b1.unique"
+  },
+  "outputs": {
+    "new_set_name": "s1main.b1.unique",
+    "n_in": 720,
+    "n_unique": 543,
+    "n_removed": 177,
+    "largest_groups": {
+      "BN-82b6cb384b": 19,
+      "BN-ddd2b77057": 16,
+      "BN-7c512f34a7": 12,
+      "AlBN2-4ecd3b4942": 11,
+      "BN-aabb32650f": 6
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 42.132,
+  "host": "cenyj",
+  "created_at": "2026-11-09T05:00:13+00:00"
+}

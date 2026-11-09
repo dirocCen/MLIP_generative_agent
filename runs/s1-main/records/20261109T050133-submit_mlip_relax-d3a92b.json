@@ -1,0 +1,167 @@
+{
+  "step_id": "20261109T050133-submit_mlip_relax-d3a92b",
+  "run_id": "s1-main",
+  "tool": "submit_mlip_relax",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "S1-main batch 1 DPA pre-relax (kappa_SRME relax defaults), first funnel stage before symmetrize + final relax + E_hull; started while the other MatterGen steps run (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T050054-check_benchmark_leakage-8357c7"
+  ],
+  "params": {
+    "optimizer": {
+      "value": "FIRE",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "cell_filter": {
+      "value": "FrechetCellFilter",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "fmax": {
+      "value": 0.0001,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "max_steps": {
+      "value": 300,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "relaxation_mode": {
+      "value": "single-stage",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755); two-stage = constrained then unconstrained, keep stage 1 if the space group changes",
+      "reason": null
+    },
+    "enforce_symmetry": {
+      "value": true,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (FixSymmetry, no-tilt cell mask)",
+      "reason": null
+    },
+    "relax_symprec": {
+      "value": 0.01,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (FixSymmetry symprec)",
+      "reason": null
+    },
+    "symprec": {
+      "value": 1e-05,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (space-group detection; spglib here)",
+      "reason": null
+    },
+    "dtype": {
+      "value": "model_default",
+      "source": "default",
+      "ref": "configs/models.yaml per model, resolved at submission (decided 11-04): float64 by default (k_SRME runs MACE in float64); PET-OAM-XL float32 (42-rotation symmetrizer 45 s -> 4.7 s per 64-atom force call on L40S, max force change 1.1e-5 eV/A; checked on c-BN in S0)",
+      "reason": null
+    },
+    "chunk_size": {
+      "value": 64,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.partition": {
+      "value": "GPU-l40s",
+      "source": "default",
+      "ref": "datalab default partition, DESIGN \u00a72.1",
+      "reason": null
+    },
+    "resources.gpus": {
+      "value": 1,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.cpus_per_task": {
+      "value": 8,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.time": {
+      "value": "1-00:00:00",
+      "source": "default",
+      "ref": "datalab limit is 7 days, DESIGN \u00a72.1",
+      "reason": null
+    },
+    "resources.nodelist": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); one node, e.g. 'a-a100-o-1' (A100-SXM4-80GB): the GPU partitions mix 40 and 80 GB cards and 512-atom supercells do not fit 48 GB (configs/models.yaml)",
+      "reason": null
+    },
+    "resources.exclude_nodes": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); comma-separated node names",
+      "reason": null
+    },
+    "resources.mem": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); host memory per job, Slurm --mem (e.g. '200G'); unset = the partition default per CPU. L3 needs >= 2x the FC4 estimate (MLIPFc4Params.max_fc4_gb)",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.b1.clean",
+    "model": "dpa41_max_oam",
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_relax",
+    "model": "dpa41_max_oam",
+    "param_hash": "8af26d282d6b",
+    "n_structures": 494,
+    "n_cached": 0,
+    "n_to_compute": 494,
+    "set_name": "s1main.b1.clean",
+    "submission_extra": {
+      "set_name": "s1main.b1.clean",
+      "relax_params": {
+        "optimizer": "FIRE",
+        "cell_filter": "FrechetCellFilter",
+        "fmax": 0.0001,
+        "max_steps": 300,
+        "relaxation_mode": "single-stage",
+        "enforce_symmetry": true,
+        "relax_symprec": 0.01,
+        "symprec": 1e-05,
+        "dtype": "float64",
+        "chunk_size": 64
+      }
+    },
+    "n_jobs": 8,
+    "flow_uuid": "1d2f85ac-d69b-452b-8d51-5a56e1cd7273",
+    "worker": "datalab_dpa"
+  },
+  "status": "submitted",
+  "error": null,
+  "wall_time_s": 20.058,
+  "host": "cenyj",
+  "created_at": "2026-11-09T05:01:33+00:00"
+}

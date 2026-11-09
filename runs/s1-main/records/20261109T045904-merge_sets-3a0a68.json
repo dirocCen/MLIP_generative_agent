@@ -1,0 +1,60 @@
+{
+  "step_id": "20261109T045904-merge_sets-3a0a68",
+  "run_id": "s1-main",
+  "tool": "merge_sets",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Funnel on the first 6 finished S1-main MatterGen steps (cs arm, light systems) while the rest generate; same cuts as S1 trial (Claude; scale-up and funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T045725-fetch_results-0bfc72",
+    "20261109T045739-fetch_results-d664dd",
+    "20261109T045751-fetch_results-9f2161",
+    "20261109T045802-fetch_results-a38d76",
+    "20261109T045814-fetch_results-9f7d07",
+    "20261109T045825-fetch_results-2c6d84"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_names": [
+      "mattergen.B-C-N__n256__s1main-cs",
+      "mattergen.Al-B-N__n256__s1main-cs",
+      "mattergen.Al-C-N-Si__n256__s1main-cs",
+      "mattergen.B-N__n256__s1main-cs",
+      "mattergen.C-N-Si__n256__s1main-cs",
+      "mattergen.B-C-P__n256__s1main-cs"
+    ],
+    "new_set_name": "s1main.b1.all"
+  },
+  "outputs": {
+    "new_set_name": "s1main.b1.all",
+    "n_in": {
+      "mattergen.B-C-N__n256__s1main-cs": 256,
+      "mattergen.Al-B-N__n256__s1main-cs": 256,
+      "mattergen.Al-C-N-Si__n256__s1main-cs": 256,
+      "mattergen.B-N__n256__s1main-cs": 256,
+      "mattergen.C-N-Si__n256__s1main-cs": 256,
+      "mattergen.B-C-P__n256__s1main-cs": 256
+    },
+    "n_merged": 1536
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 22.279,
+  "host": "cenyj",
+  "created_at": "2026-11-09T04:59:04+00:00"
+}

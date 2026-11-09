@@ -1,0 +1,40 @@
+{
+  "step_id": "20261109T050205-compute_ehull-19672d",
+  "run_id": "s1-trial",
+  "tool": "compute_ehull",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261107T103250-submit_mlip_relax-f5213b"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "relax_step_id": "20261107T103250-submit_mlip_relax-f5213b",
+    "threshold_ev_atom": 0.1,
+    "out_set": null
+  },
+  "outputs": {
+    "traceback": "Traceback (most recent call last):\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/records.py\", line 122, in recorded_step\n    yield rec\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/analysis.py\", line 466, in compute_ehull\n    per, mp_meta = e_above_hull(items, refresh_mp=refresh_mp)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/analysis/ehull.py\", line 129, in e_above_hull\n    ref_entries, mp_meta[chemsys] = mp_entries(chemsys, refresh=refresh_mp)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/analysis/ehull.py\", line 66, in mp_entries\n    doc = _cached(\"entries\", chemsys, refresh, fetch)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/analysis/ehull.py\", line 54, in _cached\n    doc = {\"chemsys\": chemsys, \"retrieved_at\": utc_now(), \"db_version\": mpr.get_database_version(), **fetch(mpr)}\n                                                                                                      ^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/analysis/ehull.py\", line 64, in fetch\n    return {\"thermo_type\": THERMO_TYPE, \"entries\": [e.as_dict() for e in entries]}\n                                                    ^^^^^^^^^^^\n  File \"/home/yjcen/.venvs/mga/lib/python3.12/site-packages/pymatgen/core/entries.py\", line 750, in as_dict\n    dct = super().as_dict()\n          ^^^^^^^^^^^^^^^^^\n  File \"/home/yjcen/.venvs/mga/lib/python3.12/site-packages/pymatgen/core/entries.py\", line 657, in as_dict\n    \"data\": json.loads(json.dumps(self.data, cls=MontyEncoder)),\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: keys must be str, int, float, bool or None, not Element\n"
+  },
+  "status": "error",
+  "error": "TypeError: keys must be str, int, float, bool or None, not Element",
+  "wall_time_s": 13.924,
+  "host": "cenyj",
+  "created_at": "2026-11-09T05:02:05+00:00"
+}
