@@ -208,6 +208,21 @@ def test_mlip_relax_and_kappa_end_to_end(project, cluster, monkeypatch):
     with pytest.raises(ToolInputError, match="energy_reference"):
         analysis.compute_ehull(relax["step_id"], **A)
 
+    # E_hull lower bound: a structure far below the MP hull is an MLIP failure, kept out of out_set
+    import mga.analysis.ehull as ehull_mod
+
+    mp_model = analysis.get_model("emt_test").model_copy(update={"energy_reference": "mp_pbe"})
+    sid = registry.set_sids("al")[0]
+    with monkeypatch.context() as mp:
+        mp.setattr(analysis, "get_model", lambda name: mp_model)
+        for e, n_pass in ((-5.0, 0), (-0.05, 1)):
+            mp.setattr(ehull_mod, "e_above_hull", lambda items, refresh_mp=False, e=e: ({s: {"e_above_hull": e} for s, *_ in items}, {}))
+            eh = analysis.compute_ehull(relax["step_id"], out_set=f"al.ehull{n_pass}", **A)
+            assert eh["n_below_threshold"] == n_pass and eh["n_implausible"] == 1 - n_pass
+            assert registry.set_sids(f"al.ehull{n_pass}") == [sid] * n_pass
+        with pytest.raises(ToolInputError, match="min_ehull_ev_atom"):
+            analysis.compute_ehull(relax["step_id"], min_ehull_ev_atom=0.1, **A)
+
     kappa = mlip.submit_mlip_phonon_kappa("al", "emt_test", kappa_override=SMALL_KAPPA, override_reason="small test", **A)
     k = analysis.fetch_results(kappa["step_id"])["derived"]
     assert k["n_with_kappa"] == 1 and 1.0 < k["kappa_300K_W_mK"]["median"] < 100.0

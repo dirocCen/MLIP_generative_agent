@@ -433,8 +433,14 @@ def compute_ehull(
     decided_by: Literal["agent", "human"] | None = None,
     rationale: str | None = None,
     refresh_mp: bool = False,
+    min_ehull_ev_atom: float = -0.1,
 ) -> dict[str, Any]:
     """E_hull of MLIP-relaxed structures vs the MP GGA/GGA+U hull with MP2020 corrections.
+
+    E_hull below min_ehull_ev_atom is treated as an MLIP failure (e.g. a collapsed cell), not a
+    discovery: such structures are listed under "implausible" and kept out of out_set. MLIP
+    energy errors are a few tens of meV/atom, so a real new phase far below the MP hull of these
+    well-explored systems is much less likely than an over-stabilised artefact.
 
     VASP results are not accepted here: they use PBE_54 POTCARs, MP's hull uses the
     legacy PBE set, so a consistent DFT hull would need our own competing phases.
@@ -447,11 +453,14 @@ def compute_ehull(
         raise ToolInputError(f"{model.name} has energy_reference={model.energy_reference}; E_hull vs MP is not meaningful")
     if not 0 <= threshold_ev_atom <= 1:
         raise ToolInputError("threshold_ev_atom must be within 0-1 eV/atom")
+    if not -1 <= min_ehull_ev_atom < 0:
+        raise ToolInputError("min_ehull_ev_atom must be within -1 to 0 eV/atom")
     if out_set:
         require_decision(decided_by or "", rationale or "")
     phash = sub["param_hash"]
     with recorded_step("compute_ehull", inputs={"relax_step_id": relax_step_id, "threshold_ev_atom": threshold_ev_atom,
-                                                "out_set": out_set}, parent_ids=[relax_step_id],
+                                                "out_set": out_set, "min_ehull_ev_atom": min_ehull_ev_atom},
+                       parent_ids=[relax_step_id],
                        decided_by=decided_by, rationale=rationale) as rec:
         items, skipped = [], {}
         for sid in sub["all_sids"]:
@@ -467,21 +476,34 @@ def compute_ehull(
         values = np.array([v["e_above_hull"] for v in per.values() if v.get("e_above_hull") is not None])
         hist = np.histogram(values, bins=EHULL_BINS)[0] if len(values) else np.zeros(len(EHULL_BINS) - 1, int)
         labels = ["<0", "0-0.025", "0.025-0.05", "0.05-0.1", "0.1-0.2", ">0.2"]
-        passing = [s for s, v in per.items() if v.get("e_above_hull") is not None and v["e_above_hull"] <= threshold_ev_atom]
+        implausible = sorted(({"sid": s, "e_above_hull": v["e_above_hull"]} for s, v in per.items()
+                              if v.get("e_above_hull") is not None and v["e_above_hull"] < min_ehull_ev_atom),
+                             key=lambda r: r["e_above_hull"])
+        bad = {r["sid"] for r in implausible}
+        for s in bad:
+            per[s]["implausible"] = True
+        passing = [s for s, v in per.items() if v.get("e_above_hull") is not None and s not in bad
+                   and v["e_above_hull"] <= threshold_ev_atom]
         if out_set:
             registry.create_set(out_set, passing, operation="ehull_filter", parent_sets=[sub["set_name"]] if sub.get("set_name") else [],
-                                description=f"E_hull <= {threshold_ev_atom} eV/atom ({model.name} relaxed, MP2020-corrected MP hull)",
-                                details={"relax_step_id": relax_step_id, "threshold_ev_atom": threshold_ev_atom}, step_id=rec.step_id)
+                                description=f"{min_ehull_ev_atom} <= E_hull <= {threshold_ev_atom} eV/atom ({model.name} relaxed, "
+                                            "MP2020-corrected MP hull)",
+                                details={"relax_step_id": relax_step_id, "threshold_ev_atom": threshold_ev_atom,
+                                         "min_ehull_ev_atom": min_ehull_ev_atom, "n_implausible": len(implausible)},
+                                step_id=rec.step_id)
         rec.outputs = {
             "model": model.name, "n_structures": len(sub["all_sids"]), "n_with_ehull": int(len(values)),
             "n_skipped": len(skipped), "n_ehull_failed": sum(v.get("e_above_hull") is None for v in per.values()),
             "histogram_ev_atom": dict(zip(labels, hist.tolist())),
             "n_below_threshold": len(passing), "threshold_ev_atom": threshold_ev_atom, "out_set": out_set,
-            "most_stable": sorted(({"sid": s, "e_above_hull": v["e_above_hull"]} for s, v in per.items() if v.get("e_above_hull") is not None),
+            "min_ehull_ev_atom": min_ehull_ev_atom, "n_implausible": len(implausible), "implausible": implausible[:N_EXAMPLES],
+            "most_stable": sorted(({"sid": s, "e_above_hull": v["e_above_hull"]} for s, v in per.items()
+                                   if v.get("e_above_hull") is not None and s not in bad),
                                   key=lambda r: r["e_above_hull"])[:N_EXAMPLES],
             "mp": mp_meta,
             "note": "E_hull < 0 means the MLIP puts the structure below the MP hull: check for MLIP over-stabilisation before "
-                    "calling it a discovery. Input sids (not the relaxed children) are put in out_set.",
+                    "calling it a discovery. E_hull < min_ehull_ev_atom is counted as an MLIP failure (implausible) and "
+                    "excluded from out_set. Input sids (not the relaxed children) are put in out_set.",
         }
         rec.outputs["details_file"] = write_details(rec.step_id, {"per_structure": per, "skipped": skipped})
     return {"step_id": rec.step_id, **rec.outputs}

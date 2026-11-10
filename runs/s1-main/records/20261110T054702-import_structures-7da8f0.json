@@ -1,0 +1,51 @@
+{
+  "step_id": "20261110T054702-import_structures-7da8f0",
+  "run_id": "s1-main",
+  "tool": "import_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Plan A (AIRSS + DPA): random P1 cells for fixed charge-balanced stoichiometries in the S1-main chemical systems, because MatterGen chemical_system conditioning gave 3.6-4.3% E_hull<=0.1 and ~50% elemental/subsystem output (Claude; plan A approved by the user 11-10)",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/airss/s1main_airss_pilot.extxyz",
+    "sha256": "028de8e3d7bc473b2ed75374a01a4d8c319442770359618dbd82e1d1d9f137c0",
+    "set_name": "s1main.airss.pilot.all",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "s1main.airss.pilot.all",
+    "n_read": 390,
+    "n_in_set": 390,
+    "n_newly_registered": 390,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "AlBN2-8a6f210d80",
+      "AlBN2-30a8d5c11c",
+      "AlBN2-dff7586226",
+      "AlBN2-403830a9d0",
+      "AlBN2-f862c69b2c"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 24.957,
+  "host": "cenyj",
+  "created_at": "2026-11-10T05:47:02+00:00"
+}

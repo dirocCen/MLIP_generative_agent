@@ -1,0 +1,51 @@
+{
+  "step_id": "20261110T105235-import_structures-806200",
+  "run_id": "s1-main",
+  "tool": "import_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Plan B (CrystalFormer CSP + DPA): space-group-aware samples conditioned on the same 52 charge-balanced S1-main formulas as Plan A, kept only if the reduced formula matches and the primitive cell has <= 8 sites; same funnel as the AIRSS pilot so the two generators can be compared (Claude; plan B approved by the user 11-10, submission of 2126 structures approved 11-10)",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/crystalformer/s1main_cf_csp.json",
+    "sha256": "a4c67813c07894420cffcb5accf66c075752b824e4230a4636216d35d8ae7f63",
+    "set_name": "s1main.cf.all",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "s1main.cf.all",
+    "n_read": 2126,
+    "n_in_set": 2126,
+    "n_newly_registered": 2126,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "Al2BN3-0b10dd4693",
+      "Al2BN3-c83126d92f",
+      "Al2BN3-2031062889",
+      "Al2BN3-f7e08af4b1",
+      "Al2BN3-11a9bebd8f"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 139.591,
+  "host": "cenyj",
+  "created_at": "2026-11-10T10:52:35+00:00"
+}

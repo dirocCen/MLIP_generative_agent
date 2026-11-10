@@ -1,0 +1,101 @@
+{
+  "per_structure": {
+    "AlSiCN-ac01db5772": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "AlSiCN-dbf6124d2c": {
+      "mp_matches": [
+        "mp-1227998"
+      ],
+      "mp_same_formula": 1
+    },
+    "BAs-b4a97dada0": {
+      "mp_matches": [
+        "mp-10044"
+      ],
+      "mp_same_formula": 2
+    },
+    "B2AsP-4e8cf8118c": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "B2AsP-880ed9ca8f": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "BC2N-b8a4105fb4": {
+      "mp_matches": [],
+      "mp_same_formula": 6
+    },
+    "BN-9d54ef2a86": {
+      "mp_matches": [
+        "mp-13150"
+      ],
+      "mp_same_formula": 27
+    },
+    "BN-87fd457b7c": {
+      "mp_matches": [
+        "mp-13150",
+        "mp-685145",
+        "mp-714851"
+      ],
+      "mp_same_formula": 27
+    },
+    "BN-77b3ace839": {
+      "mp_matches": [
+        "mp-685145",
+        "mp-714851"
+      ],
+      "mp_same_formula": 27
+    },
+    "BN-cd95dca98a": {
+      "mp_matches": [
+        "mp-984",
+        "mp-7991",
+        "mp-629015"
+      ],
+      "mp_same_formula": 27
+    },
+    "BSb-7f685e4105": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    },
+    "BSb-19aa50dd9a": {
+      "mp_matches": [],
+      "mp_same_formula": 1
+    }
+  },
+  "mp": {
+    "Al-C-N-Si": {
+      "chemsys": "Al-C-N-Si",
+      "retrieved_at": "2026-11-09T05:04:51+00:00",
+      "db_version": "2026.09.28"
+    },
+    "As-B": {
+      "chemsys": "As-B",
+      "retrieved_at": "2026-11-10T06:39:50+00:00",
+      "db_version": "2026.09.28"
+    },
+    "As-B-P": {
+      "chemsys": "As-B-P",
+      "retrieved_at": "2026-11-09T08:49:08+00:00",
+      "db_version": "2026.09.28"
+    },
+    "B-C-N": {
+      "chemsys": "B-C-N",
+      "retrieved_at": "2026-11-09T05:04:42+00:00",
+      "db_version": "2026.09.28"
+    },
+    "B-N": {
+      "chemsys": "B-N",
+      "retrieved_at": "2026-11-09T05:04:45+00:00",
+      "db_version": "2026.09.28"
+    },
+    "B-Sb": {
+      "chemsys": "B-Sb",
+      "retrieved_at": "2026-11-10T06:40:00+00:00",
+      "db_version": "2026.09.28"
+    }
+  }
+}

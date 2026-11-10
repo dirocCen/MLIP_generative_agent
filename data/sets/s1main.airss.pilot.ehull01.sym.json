@@ -1,0 +1,29 @@
+{
+  "name": "s1main.airss.pilot.ehull01.sym",
+  "n": 12,
+  "sids": [
+    "AlSiCN-6b2e317c27",
+    "AlSiCN-1bd5287ca9",
+    "BAs-62a2fef8e1",
+    "B2AsP-5706a0bc62",
+    "B2AsP-69167f3543",
+    "BC2N-8714058a87",
+    "BN-5e97ef8840",
+    "BN-a58e6d075f",
+    "BN-2e951fcd1b",
+    "BN-92246928c2",
+    "BSb-7b786a32e7",
+    "BSb-d7c0120a15"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.airss.pilot.sym.dpa41_max_oam"
+  ],
+  "description": "E_hull <= 0.1 eV/atom (dpa41_max_oam relaxed, MP2020-corrected MP hull)",
+  "details": {
+    "relax_step_id": "20261110T060932-submit_mlip_relax-93540f",
+    "threshold_ev_atom": 0.1
+  },
+  "created_by_step": "20261110T063927-compute_ehull-1fe97d",
+  "created_at": "2026-11-10T06:39:45+00:00"
+}

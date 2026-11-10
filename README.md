@@ -70,13 +70,30 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 - 两个 E_hull < 0 的富氮结构（B₃N₅ −0.085、BN₂ −0.037 eV/atom）在 L0 都有虚频，更可能是 MLIP 在 N–N 成键构型上的能量误差，而不是新的稳定相。
 - 体心晶胞的 q 网格原来按长度规则逐轴取，会破坏点群对称性（phono3py 报 "Grid symmetry is broken"）；现在被对称操作联系起来的轴取同一个网格数（`symmetric_q_mesh`）。
 - **不同批次收敛到同一批结构。** 三批的 18 个 L0 稳定结构去掉单质、跨批次去重后只剩 **12 个**：b1 和 b3 的 5 个 AlSiCN 是同一个结构。其中 sg 160 和 sg 8 两个版本原子位置只差 0.007 Å（RMS），DPA 的 Slack κ 却是 618 和 510–529 W/mK，说明 Slack 估计对微小的对称性破缺很敏感。
-- **委员会 L0**：TECE 认为 12 个里 11 个稳定（AlSi₂C₂N 的一个结构有 −0.35 THz 虚频，DPA 认为稳定），其余结构两个模型的 Slack κ 相差 0–25 %。PET 的 L0 还在算。
+- **委员会 L0**：TECE 和 PET 都认为 AlSi₂C₂N 的一个结构有虚频（−0.35、−0.08 THz），DPA 认为稳定；其余结构三个模型的 Slack κ 排序一致（DPA–PET Kendall τ = 1.00，DPA–TECE 0.85），数值相差最多 26–37 %。
 
-12 个 L1 候选，按 DPA 的 Slack κ（W/mK）：Al–Si–C–N 的四个有序堆垛（AlSiCN、AlSi₂C₂N、Al₂SiCN₂ ×2）510–605，B–As–P 五个 145–269，另有 AlSi₂C₂N 61、Al₂C 23、AlB 5。**L1（DPA、TECE 的 3ph Wigner-RTA）正在算**，预计约 25 GPU·h。
+**L1（3ph Wigner-RTA，300 K，W/mK）**：12 个候选，DPA 和 TECE 都已算完。
 
-**下一步：换生成方式。** 文献对比显示，在已有三元、四元体系里，离子替换、原型枚举加 MLIP 预筛不比扩散模型差（[Szymanski & Bartel, Mater. Horiz. 2025](https://pubs.rsc.org/en/content/articlelanding/2025/mh/d5mh00010f)）。接下来同时试两条路，都先固定化学计量：
-1. **AIRSS + DPA**：按四面体配位 / 8 电子规则列出化学计量，做随机结构搜索；先用已知的 AlN、SiC、BP 多型检验 DPA 的能量排序。
-2. **CrystalFormer 的 CSP 模式**：给定化学计量和空间群生成（[CrystalFormer](https://github.com/deepmodeling/CrystalFormer)）。
+| 结构 | Slack（DPA） | L1 DPA | L1 TECE |
+|---|---|---|---|
+| B₂AsP（d60e） | 247 | **235** | **240** |
+| AlSi₂C₂N（d489） | 605 | 221 | 222 |
+| B₄AsP₃（e11e / deae） | 269 / 145 | 217 / 214 | 216 / 199 |
+| B₃As₂P | 200 | 212 | 236 |
+| B₂AsP（975f） | 148 | 202 | 203 |
+| AlSiCN、Al₂SiCN₂ ×2 | 510–596 | 195–198 | 194–199 |
+| AlSi₂C₂N（40f6） | 61 | 146 | 虚频 |
+| Al₂C、AlB | 23、5 | 28、11 | 30、10 |
+
+- **L1 层面两个模型差别很小**：11 个共同结构 Kendall τ = 0.85，最大相差 12 %。
+- **Slack 和 L1 排序关系很弱**（τ = 0.36）：Slack 把 Al–Si–C–N 堆垛高估了约 3 倍。Slack 只适合当粗筛门槛，不能用来排序。
+- 前 9 个都在 195–240 W/mK，差距和模型误差相当；最高的 B₂AsP 也远低于 BAs，所以**暂不做 L2**。
+
+**换生成方式。** 文献对比显示，在已有三元、四元体系里，离子替换、原型枚举加 MLIP 预筛不比扩散模型差（[Szymanski & Bartel, Mater. Horiz. 2025](https://pubs.rsc.org/en/content/articlelanding/2025/mh/d5mh00010f)）。现在同时试两条路，都先按四面体配位 / 8 电子规则固定化学计量（10 个体系共 52 个约化化学式）：
+1. **AIRSS + DPA**：`buildcell` 生成随机 P1 晶胞 → DPA 粗弛豫（fmax 0.02，不加对称约束）→ 对称化 → 去重 → 按 κ_SRME 协议精弛豫 → 同样的 E_hull、新颖性和 L0 漏斗。≤ 4 原子的试点：390 个 → 去重 237 → E_hull ≤ 0.1 共 12 个（重新找到 BN、闪锌矿 BAs）→ MP 里没有的 6 个 → L0 稳定 3 个：AlSiCN（和 MatterGen 找到的是同一个结构）、两个 B₂AsP（sg 156、160，Slack 约 290）。
+2. **CrystalFormer 的 CSP 模式**（[CrystalFormer](https://github.com/deepmodeling/CrystalFormer)，alex20s/csp 权重）：每个化学式 400 个样本。条件约束是软的，82 % 的样本化学式不对，过滤后留下 2126 个（去重前），正在跑同一个漏斗。
+
+- **DPA 在 B–Sb 上失效**：试点里两个 BSb 结构弛豫后坍缩到 E_hull −210 和 −23 eV/atom，其余 BSb 全在 +0.25 以上，B–Sb 的结果都不采用。`compute_ehull` 现在把 E_hull < −0.1 eV/atom（`min_ehull_ev_atom`）的结构记为 implausible，不放进输出集。
 
 ## 设计原则
 

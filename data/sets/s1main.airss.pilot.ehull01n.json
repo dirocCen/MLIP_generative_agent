@@ -1,0 +1,35 @@
+{
+  "name": "s1main.airss.pilot.ehull01n",
+  "n": 12,
+  "sids": [
+    "AlSiCN-ac01db5772",
+    "AlSiCN-dbf6124d2c",
+    "BAs-b4a97dada0",
+    "B2AsP-4e8cf8118c",
+    "B2AsP-880ed9ca8f",
+    "BC2N-b8a4105fb4",
+    "BN-9d54ef2a86",
+    "BN-87fd457b7c",
+    "BN-77b3ace839",
+    "BN-cd95dca98a",
+    "BSb-7f685e4105",
+    "BSb-19aa50dd9a"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.airss.pilot.ehull01.sym"
+  ],
+  "description": "",
+  "details": {
+    "ehull_step_id": "20261110T063927-compute_ehull-1fe97d",
+    "threshold_ev_atom": 0.1,
+    "near_converged": {
+      "max_force_ev_a": 0.005,
+      "max_stress_gpa": 0.5
+    },
+    "dropped_far_from_minimum": {},
+    "note": "final-relax children of the E_hull-passing symmetrized structures; runs that hit max_steps kept if residual force/stress are below the near_converged limits"
+  },
+  "created_by_step": "20261110T063927-compute_ehull-1fe97d",
+  "created_at": "2026-11-10T06:39:46+00:00"
+}

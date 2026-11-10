@@ -1,0 +1,61 @@
+{
+  "step_id": "20261110T060825-symmetrize_structures-9f76aa",
+  "run_id": "s1-main",
+  "tool": "symmetrize_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Plan A (AIRSS + DPA): random P1 cells for fixed charge-balanced stoichiometries in the S1-main chemical systems, because MatterGen chemical_system conditioning gave 3.6-4.3% E_hull<=0.1 and ~50% elemental/subsystem output (Claude; plan A approved by the user 11-10)",
+  "parent_ids": [
+    "20261110T060717-fetch_results-e43189"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.airss.pilot.all.relaxed.dpa41_max_oam.b94dac",
+    "new_set_name": "s1main.airss.pilot.symall.dpa41_max_oam",
+    "symprec": 0.1
+  },
+  "outputs": {
+    "new_set_name": "s1main.airss.pilot.symall.dpa41_max_oam",
+    "n": 390,
+    "n_failed": 0,
+    "spacegroups": {
+      "8": 97,
+      "1": 82,
+      "216": 33,
+      "44": 30,
+      "6": 19,
+      "5": 17,
+      "12": 17,
+      "160": 16,
+      "187": 13,
+      "2": 12,
+      "156": 8,
+      "166": 8,
+      "38": 6,
+      "25": 6,
+      "65": 5,
+      "(other)": 21
+    },
+    "n_p1": 82
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 42.926,
+  "host": "cenyj",
+  "created_at": "2026-11-10T06:08:25+00:00"
+}
