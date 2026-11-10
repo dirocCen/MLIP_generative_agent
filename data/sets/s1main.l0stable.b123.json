@@ -1,0 +1,35 @@
+{
+  "name": "s1main.l0stable.b123",
+  "n": 18,
+  "sids": [
+    "Al2SiCN2-08549fcb72",
+    "AlSiCN-e67f0bbde6",
+    "Al2SiCN2-620daa68f8",
+    "AlSiCN-e82a09fd69",
+    "B2AsP-d60e92b4b2",
+    "B4AsP3-e11e200a84",
+    "B2AsP-975fd9165b",
+    "B4AsP3-deaed1e4ad",
+    "B3As2P-4222dec1e9",
+    "AlB-b8f098fdc1",
+    "Al2C-2771f7a19d",
+    "AlSi2C2N-d489406101",
+    "AlSiCN-df551b057a",
+    "AlSi2C2N-40f6c7addb",
+    "AlSiCN-4daeaee08d",
+    "AlSiCN-c2fa8bbdbf",
+    "B2AsP-c9f204673d",
+    "P-80c3f735f6"
+  ],
+  "operation": "merge",
+  "parent_sets": [
+    "s1main.b1.noveln.l0stable.dpa41_max_oam.c7704b",
+    "s1main.b2.noveln.l0stable.dpa41_max_oam.c7704b",
+    "s1main.b2.noveln.gridfix.l0stable.dpa41_max_oam.c7704b",
+    "s1main.b3.noveln.l0stable.dpa41_max_oam.c7704b"
+  ],
+  "description": "",
+  "details": {},
+  "created_by_step": "20261109T160534-merge_sets-c8da5c",
+  "created_at": "2026-11-09T16:05:35+00:00"
+}

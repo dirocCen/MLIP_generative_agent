@@ -1,0 +1,127 @@
+{
+  "step_id": "20261109T160254-fetch_results-0d8867",
+  "run_id": "s1-main",
+  "tool": "fetch_results",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261109T154842-submit_mlip_fc2_descriptors-3a8fca"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261109T154842-submit_mlip_fc2_descriptors-3a8fca",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 29,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 8,
+        "states": {
+          "COMPLETED": 8
+        },
+        "all_final": true,
+        "n_completed": 8,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 29,
+      "n_missing": 0,
+      "n_failed": 1,
+      "failed_examples": [
+        {
+          "sid": "BN2-13d91b352b",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        }
+      ],
+      "wall_time_s": {
+        "n": 29,
+        "min": 0.67,
+        "median": 16.26,
+        "max": 176.97
+      },
+      "n_imaginary": 19,
+      "stable_set": "s1main.b3.noveln.l0stable.dpa41_max_oam.c7704b",
+      "n_stable": 9,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 9,
+          "min": 4.872041475685333,
+          "median": 148.2210773705893,
+          "max": 617.8224239033104
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 9,
+          "min": 0.16986820182572376,
+          "median": 2.399298549982205,
+          "max": 5.814120050718718
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 9,
+          "min": 1.5837238080237335,
+          "median": 9.967013371305926,
+          "max": 11.393406182546888
+        },
+        "theta_acoustic_K": {
+          "n": 9,
+          "min": 257.3402417179407,
+          "median": 518.7474705198944,
+          "max": 575.4438720531197
+        },
+        "ao_gap_ratio": {
+          "n": 9,
+          "min": -0.6099236933651635,
+          "median": -0.4889592070259178,
+          "max": -0.07511474036244956
+        },
+        "acoustic_branch_spread": {
+          "n": 9,
+          "min": 0.2097933577588558,
+          "median": 0.27199506118363054,
+          "max": 0.38587941151305616
+        },
+        "gamma_acoustic_rms": {
+          "n": 9,
+          "min": 0.26966361098479974,
+          "median": 0.4675208847807856,
+          "max": 2.06528763386372
+        },
+        "wjdos_cv_mean": {
+          "n": 9,
+          "min": 3.3252865039874244,
+          "median": 7.069229146069437,
+          "max": 15.692350560079346
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 5.028,
+  "host": "cenyj",
+  "created_at": "2026-11-09T16:02:54+00:00"
+}

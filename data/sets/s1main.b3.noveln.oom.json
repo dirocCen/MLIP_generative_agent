@@ -1,0 +1,15 @@
+{
+  "name": "s1main.b3.noveln.oom",
+  "n": 1,
+  "sids": [
+    "BN2-13d91b352b"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "s1main.b3.noveln"
+  ],
+  "description": "BN2 whose L0 FC2 ran out of GPU memory on L40S (48 GB) in step 3a8fca; rerun on an 80 GB A100",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-09T16:04:38+00:00"
+}

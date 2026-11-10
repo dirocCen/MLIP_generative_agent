@@ -1,0 +1,48 @@
+{
+  "step_id": "20261109T160535-filter_structures-9a2f9d",
+  "run_id": "s1-main",
+  "tool": "filter_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "User 11-09: exclude elemental structures from L1 ranking (target is new compounds)",
+  "parent_ids": [
+    "20261109T160534-merge_sets-c8da5c"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "s1main.l0stable.b123",
+    "new_set_name": "s1main.l0stable.b123.compounds",
+    "criteria": {
+      "min_elements": 2
+    }
+  },
+  "outputs": {
+    "new_set_name": "s1main.l0stable.b123.compounds",
+    "n_in": 18,
+    "n_kept": 17,
+    "removed_by_criterion": {
+      "min_elements": 1
+    },
+    "details_file": "runs/s1-main/outputs/20261109T160535-filter_structures-9a2f9d.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.107,
+  "host": "cenyj",
+  "created_at": "2026-11-09T16:05:35+00:00"
+}

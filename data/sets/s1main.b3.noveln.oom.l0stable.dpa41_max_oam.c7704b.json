@@ -1,0 +1,20 @@
+{
+  "name": "s1main.b3.noveln.oom.l0stable.dpa41_max_oam.c7704b",
+  "n": 0,
+  "sids": [],
+  "operation": "filter",
+  "parent_sets": [
+    "s1main.b3.noveln.oom"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "BN2-13d91b352b"
+    ]
+  },
+  "created_by_step": "20261110T032238-fetch_results-473a27",
+  "created_at": "2026-11-10T03:22:39+00:00"
+}

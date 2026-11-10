@@ -1,0 +1,54 @@
+{
+  "step_id": "20261109T160534-merge_sets-c8da5c",
+  "run_id": "s1-main",
+  "tool": "merge_sets",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "S1-main L1 candidate pool: all DPA L0-stable structures of batches 1-3 (Claude; funnel approved by the user 11-09)",
+  "parent_ids": [
+    "20261109T072350-fetch_results-0df99f",
+    "20261109T085915-fetch_results-1db1d5",
+    "20261109T094145-fetch_results-79326e",
+    "20261109T160254-fetch_results-0d8867"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_names": [
+      "s1main.b1.noveln.l0stable.dpa41_max_oam.c7704b",
+      "s1main.b2.noveln.l0stable.dpa41_max_oam.c7704b",
+      "s1main.b2.noveln.gridfix.l0stable.dpa41_max_oam.c7704b",
+      "s1main.b3.noveln.l0stable.dpa41_max_oam.c7704b"
+    ],
+    "new_set_name": "s1main.l0stable.b123"
+  },
+  "outputs": {
+    "new_set_name": "s1main.l0stable.b123",
+    "n_in": {
+      "s1main.b1.noveln.l0stable.dpa41_max_oam.c7704b": 4,
+      "s1main.b2.noveln.l0stable.dpa41_max_oam.c7704b": 2,
+      "s1main.b2.noveln.gridfix.l0stable.dpa41_max_oam.c7704b": 3,
+      "s1main.b3.noveln.l0stable.dpa41_max_oam.c7704b": 9
+    },
+    "n_merged": 18
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.483,
+  "host": "cenyj",
+  "created_at": "2026-11-09T16:05:34+00:00"
+}

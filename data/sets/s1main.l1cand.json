@@ -1,0 +1,46 @@
+{
+  "name": "s1main.l1cand",
+  "n": 12,
+  "sids": [
+    "Al2SiCN2-08549fcb72",
+    "AlSiCN-e67f0bbde6",
+    "Al2SiCN2-620daa68f8",
+    "B2AsP-d60e92b4b2",
+    "B4AsP3-e11e200a84",
+    "B2AsP-975fd9165b",
+    "B4AsP3-deaed1e4ad",
+    "B3As2P-4222dec1e9",
+    "AlB-b8f098fdc1",
+    "Al2C-2771f7a19d",
+    "AlSi2C2N-d489406101",
+    "AlSi2C2N-40f6c7addb"
+  ],
+  "operation": "deduplicate",
+  "parent_sets": [
+    "s1main.l0stable.b123.compounds"
+  ],
+  "description": "",
+  "details": {
+    "matcher": {
+      "ltol": 0.2,
+      "stol": 0.3,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true,
+      "attempt_supercell": false
+    },
+    "duplicates_of_kept": {
+      "AlSiCN-e67f0bbde6": [
+        "AlSiCN-e82a09fd69",
+        "AlSiCN-df551b057a",
+        "AlSiCN-4daeaee08d",
+        "AlSiCN-c2fa8bbdbf"
+      ],
+      "B2AsP-975fd9165b": [
+        "B2AsP-c9f204673d"
+      ]
+    }
+  },
+  "created_by_step": "20261109T160536-deduplicate-df4727",
+  "created_at": "2026-11-09T16:05:38+00:00"
+}

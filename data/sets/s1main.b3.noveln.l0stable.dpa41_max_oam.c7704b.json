@@ -1,0 +1,49 @@
+{
+  "name": "s1main.b3.noveln.l0stable.dpa41_max_oam.c7704b",
+  "n": 9,
+  "sids": [
+    "AlB-b8f098fdc1",
+    "Al2C-2771f7a19d",
+    "AlSi2C2N-d489406101",
+    "AlSiCN-df551b057a",
+    "AlSi2C2N-40f6c7addb",
+    "AlSiCN-4daeaee08d",
+    "AlSiCN-c2fa8bbdbf",
+    "B2AsP-c9f204673d",
+    "P-80c3f735f6"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s1main.b3.noveln"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "As-edc4696af9",
+      "As-3753341307",
+      "BC2N-26e940078f",
+      "BC2N-272dfada0d",
+      "BC2N-9fe3ca8b47",
+      "BN2-3e3ba2f4b4",
+      "BN2-13d91b352b",
+      "B3N5-6be56830af",
+      "Si2CN4-97109cebd7",
+      "N2-5c482f3f97",
+      "N2-070c83ad3c",
+      "N2-aebc17b742",
+      "N2-81e8b63fb3",
+      "N2-4dec62f909",
+      "P-3f394449e2",
+      "P-970ab96788",
+      "P-e796fd6d4c",
+      "P-918f20dbc9",
+      "P-40cbab49ce",
+      "P-c46e760559"
+    ]
+  },
+  "created_by_step": "20261109T160254-fetch_results-0d8867",
+  "created_at": "2026-11-09T16:02:59+00:00"
+}
