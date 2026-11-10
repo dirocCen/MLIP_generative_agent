@@ -33,7 +33,7 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 - **benchmark**：在 Li/Xia 公开的 773 个化合物四阶力常数上，检验 uMLIP 的 FC4 / 4ph 散射率。
 - **附带实验**：用 L4b 的位移超胞力微调 MACE-MPA-0，报告 κ_SRME 前后变化，开始前要人确认。
 
-## 当前进展（2026-11-08）
+## 当前进展（2026-11-10）
 
 **S0 校准**：三个委员会模型都已跑完 c-BN、BAs 的 L1–L3 和 κ_SRME 子集。
 
@@ -49,18 +49,34 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 
 图由 `scripts/readme_figures.py` 从 `runs/s0-calibration/` 的记录和本地结果库生成。
 
-**S1 试跑**（7 个化学体系 × 16 个，只保留小原胞，大体系先跳过）：
+**S1 试跑**（7 个化学体系 × 16 个，只保留小原胞）：112 个生成结构 → 原胞 ≤ 8 原子、去重、剔除 κ_SRME 测试化合物后 46 → 对称化 + 弛豫收敛 36 → L0 动力学稳定 8（DPA、TECE 结论完全一致）。
+- 生成结构直接按 κ_SRME 协议弛豫，大多数到 300 步上限也没收敛；先理想化对称性（symprec 0.1）再弛豫，收敛的多了很多。
+- 8 个稳定结构的 L1（DPA）κ 在 10–64 W/mK。DPA 和 TECE 的 L2 κ 排序基本一致（Kendall τ = 0.82，中位比值 1.02），最大分歧是 SiCN₂（0.37 倍）和 AlSi₃C₂N₂（1.51 倍）。
+- PET-OAM-XL 的 L1 在 4 个结构上跑满 24 h 仍未完成，**PET 退出 L1，只留在 L0 委员会**。
 
-| 步骤 | 剩下 |
-|---|---|
-| MatterGen 生成 | 112 |
-| 原胞 ≤ 8 原子 → 去重 → 剔除 κ_SRME 测试化合物 | 57 → 50 → 46 |
-| 对称化（symprec 0.1）+ 弛豫收敛 | 36 |
-| L0 动力学稳定（DPA、TECE 结论完全一致） | 8 |
+**S1 正式运行**（10 个化学体系：Al–B–N、Al–C–N–Si、As–B–P、As–B、B–C–N、B–C–P、B–N、B–Sb、C–N–Si、C–N）。b1、b2 用只按化学体系条件的 MatterGen（cs），b3 用同时以 E_hull = 0.05 eV/atom 为条件的版本（cseh），guidance 都是 2.0：
 
-- 生成结构直接按 κ_SRME 协议弛豫，大多数到 300 步上限也没收敛；先理想化对称性再弛豫，收敛的多了很多。
-- 36 个里 24 个有虚频，多数在 −1 到 −17 THz，是真的不稳定，不是 Γ 点附近的数值伪影。
-- L1（3ph Wigner-RTA）正在算；新颖性和 E_hull 检查还没接上（需要 Materials Project API key）。
+| 步骤 | b1（cs） | b2（cs） | b3（cseh） |
+|---|---|---|---|
+| MatterGen 生成 | 1536 | 1792 | 3328 |
+| 原胞 ≤ 8 原子、最短原子距离 ≥ 1 Å | 720 | 903 | 1613 |
+| 去重 → 剔除 κ_SRME 测试化合物 | 543 → 494 | 570 → 506 | 1110 → 1017 |
+| DPA 弛豫后 E_hull ≤ 0.1 eV/atom（对照 MP 凸包） | 18（3.6 %） | 22（4.3 %） | 38（3.7 %） |
+| 弛豫接近收敛 → MP 里没有的结构 | 14 → 11 | 18 → 14 | 34 → 29 |
+| L0 动力学稳定（DPA） | 4 | 5 | 9 |
+
+- **E_hull 条件没有提高命中率。** b3 通过 E_hull 的 38 个里有 19 个是单质（P、N₂、As、C）；只看化合物，命中率约 2 %，和 cs 差不多。cseh 的输出明显偏向三方晶系，像是已知多型的变体。
+- **单质和子体系是 MatterGen 的预期行为**：`chemical_system` 条件只保证不出现体系外的元素，不保证每种元素都出现（开发者在 [issue #117](https://github.com/microsoft/mattergen/issues/117) 里的说明）。单质不进 L1 排序（`filter_structures(min_elements=2)`）。
+- 两个 E_hull < 0 的富氮结构（B₃N₅ −0.085、BN₂ −0.037 eV/atom）在 L0 都有虚频，更可能是 MLIP 在 N–N 成键构型上的能量误差，而不是新的稳定相。
+- 体心晶胞的 q 网格原来按长度规则逐轴取，会破坏点群对称性（phono3py 报 "Grid symmetry is broken"）；现在被对称操作联系起来的轴取同一个网格数（`symmetric_q_mesh`）。
+- **不同批次收敛到同一批结构。** 三批的 18 个 L0 稳定结构去掉单质、跨批次去重后只剩 **12 个**：b1 和 b3 的 5 个 AlSiCN 是同一个结构。其中 sg 160 和 sg 8 两个版本原子位置只差 0.007 Å（RMS），DPA 的 Slack κ 却是 618 和 510–529 W/mK，说明 Slack 估计对微小的对称性破缺很敏感。
+- **委员会 L0**：TECE 认为 12 个里 11 个稳定（AlSi₂C₂N 的一个结构有 −0.35 THz 虚频，DPA 认为稳定），其余结构两个模型的 Slack κ 相差 0–25 %。PET 的 L0 还在算。
+
+12 个 L1 候选，按 DPA 的 Slack κ（W/mK）：Al–Si–C–N 的四个有序堆垛（AlSiCN、AlSi₂C₂N、Al₂SiCN₂ ×2）510–605，B–As–P 五个 145–269，另有 AlSi₂C₂N 61、Al₂C 23、AlB 5。**L1（DPA、TECE 的 3ph Wigner-RTA）正在算**，预计约 25 GPU·h。
+
+**下一步：换生成方式。** 文献对比显示，在已有三元、四元体系里，离子替换、原型枚举加 MLIP 预筛不比扩散模型差（[Szymanski & Bartel, Mater. Horiz. 2025](https://pubs.rsc.org/en/content/articlelanding/2025/mh/d5mh00010f)）。接下来同时试两条路，都先固定化学计量：
+1. **AIRSS + DPA**：按四面体配位 / 8 电子规则列出化学计量，做随机结构搜索；先用已知的 AlN、SiC、BP 多型检验 DPA 的能量排序。
+2. **CrystalFormer 的 CSP 模式**：给定化学计量和空间群生成（[CrystalFormer](https://github.com/deepmodeling/CrystalFormer)）。
 
 ## 设计原则
 

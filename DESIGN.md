@@ -428,6 +428,8 @@ S3 之后的候选进入阶梯。**每升一级，成本涨一个数量级左右
 
 16. **E_hull 闸门在 L0 之前**：MLIP 弛豫后 E_hull ≤ 0.1 eV/atom 的结构才进 L0
 17. **单质不进 L1 排序**：选 L1 候选集前用 `filter_structures(min_elements=2)` 去掉只含一种元素的结构（decided_by=human）。目标是新化合物；b2 里 7 个单质（As、P、N₂）在 L0 全有虚频
+18. **PET 退出 L1**（11-10）：s1-trial 里 PET-OAM-XL 的 L1 在 4 个结构上跑满 24 h 仍未完成，不补救；PET 只留在 L0 委员会。S1-main 的 L1 由 DPA 和 TECE 计算，去重后的 12 个化合物全部上 L1
+19. **生成方式**（11-10）：MatterGen 只按化学体系生成时命中率低（化合物约 2 %），加 E_hull 条件也没有改善。接下来同时试两条路，都先固定化学计量：AIRSS + DPA 随机结构搜索，以及 CrystalFormer 的 CSP 模式
 
 ### 还没定
 
