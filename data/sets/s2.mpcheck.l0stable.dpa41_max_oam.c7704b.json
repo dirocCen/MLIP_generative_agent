@@ -1,0 +1,35 @@
+{
+  "name": "s2.mpcheck.l0stable.dpa41_max_oam.c7704b",
+  "n": 9,
+  "sids": [
+    "BeAl3-8d6b750748",
+    "Be4B-9a5ec855da",
+    "Be2B-b269eec635",
+    "Be2C-f64d589c98",
+    "BeSiN2-16ddeedd10",
+    "BeO-55e3326d93",
+    "BeO-1c9222b93d",
+    "GaN-dfd57e0f3e",
+    "GaN-16a39e1183"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s2.mpcheck"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "BeB2-bebce372d7",
+      "BeCN2-3f9358497b",
+      "Be3N2-16878045b6",
+      "Be3N2-b3df632cf0",
+      "BeSiN2-b928fd6928",
+      "BeO-338fd8b543"
+    ]
+  },
+  "created_by_step": "20261111T061548-fetch_results-2c4420",
+  "created_at": "2026-11-11T06:15:51+00:00"
+}

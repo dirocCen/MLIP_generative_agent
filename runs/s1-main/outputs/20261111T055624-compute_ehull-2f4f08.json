@@ -1,0 +1,173 @@
+{
+  "per_structure": {
+    "BeAl3-8d6b750748": {
+      "e_above_hull": 0.163179,
+      "decomposition": {
+        "Al": 0.75,
+        "Be": 0.25
+      },
+      "correction_per_atom": 0.0,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -3.580856,
+      "chemsys": "Al-Be",
+      "min_dist": 2.742
+    },
+    "Be4B-9a5ec855da": {
+      "e_above_hull": 0.003765,
+      "decomposition": {
+        "Be4B": 1.0
+      },
+      "correction_per_atom": 0.0,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -4.340361,
+      "chemsys": "B-Be",
+      "min_dist": 1.925
+    },
+    "Be2B-b269eec635": {
+      "e_above_hull": 0.052863,
+      "decomposition": {
+        "Be4B": 0.8333,
+        "B": 0.1667
+      },
+      "correction_per_atom": 0.0,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -4.680474,
+      "chemsys": "B-Be",
+      "min_dist": 1.977
+    },
+    "BeB2-bebce372d7": {
+      "e_above_hull": 0.125524,
+      "decomposition": {
+        "Be4B": 0.4167,
+        "B": 0.5833
+      },
+      "correction_per_atom": 0.0,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -5.58084,
+      "chemsys": "B-Be",
+      "min_dist": 1.692
+    },
+    "Be2C-f64d589c98": {
+      "e_above_hull": 0.006148,
+      "decomposition": {
+        "Be2C": 1.0
+      },
+      "correction_per_atom": 0.0,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -5.794319,
+      "chemsys": "Be-C",
+      "min_dist": 1.875
+    },
+    "BeCN2-3f9358497b": {
+      "e_above_hull": 0.005226,
+      "decomposition": {
+        "BeCN2": 1.0
+      },
+      "correction_per_atom": -0.1805,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.790881,
+      "chemsys": "Be-C-N",
+      "min_dist": 1.497
+    },
+    "Be3N2-16878045b6": {
+      "e_above_hull": 0.029972,
+      "decomposition": {
+        "Be3N2": 1.0
+      },
+      "correction_per_atom": -0.1444,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -6.62194,
+      "chemsys": "Be-N",
+      "min_dist": 1.644
+    },
+    "Be3N2-b3df632cf0": {
+      "e_above_hull": 0.049551,
+      "decomposition": {
+        "Be3N2": 1.0
+      },
+      "correction_per_atom": -0.1444,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -6.602361,
+      "chemsys": "Be-N",
+      "min_dist": 1.653
+    },
+    "BeSiN2-16ddeedd10": {
+      "e_above_hull": 0.003182,
+      "decomposition": {
+        "BeSiN2": 1.0
+      },
+      "correction_per_atom": -0.1805,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.677056,
+      "chemsys": "Be-N-Si",
+      "min_dist": 1.754
+    },
+    "BeSiN2-b928fd6928": {
+      "e_above_hull": 0.166521,
+      "decomposition": {
+        "BeSiN2": 1.0
+      },
+      "correction_per_atom": -0.1805,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.513716,
+      "chemsys": "Be-N-Si",
+      "min_dist": 1.686
+    },
+    "BeO-55e3326d93": {
+      "e_above_hull": 0.001035,
+      "decomposition": {
+        "BeO": 1.0
+      },
+      "correction_per_atom": -0.3435,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.102008,
+      "chemsys": "Be-O",
+      "min_dist": 1.655
+    },
+    "BeO-1c9222b93d": {
+      "e_above_hull": 0.007508,
+      "decomposition": {
+        "BeO": 1.0
+      },
+      "correction_per_atom": -0.3435,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.095535,
+      "chemsys": "Be-O",
+      "min_dist": 1.656
+    },
+    "BeO-338fd8b543": {
+      "e_above_hull": 0.01201,
+      "decomposition": {
+        "BeO": 1.0
+      },
+      "correction_per_atom": -0.3435,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -7.091033,
+      "chemsys": "Be-O",
+      "min_dist": 1.626
+    },
+    "GaN-dfd57e0f3e": {
+      "e_above_hull": 0.004405,
+      "decomposition": {
+        "GaN": 1.0
+      },
+      "correction_per_atom": -0.1805,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -6.154207,
+      "chemsys": "Ga-N",
+      "min_dist": 1.966
+    },
+    "GaN-16a39e1183": {
+      "e_above_hull": 0.010365,
+      "decomposition": {
+        "GaN": 1.0
+      },
+      "correction_per_atom": -0.1805,
+      "run_type": "GGA",
+      "energy_per_atom_uncorrected": -6.148247,
+      "chemsys": "Ga-N",
+      "min_dist": 1.968
+    }
+  },
+  "skipped": {}
+}

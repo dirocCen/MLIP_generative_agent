@@ -33,7 +33,9 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 - **benchmark**：在 Li/Xia 公开的 773 个化合物四阶力常数上，检验 uMLIP 的 FC4 / 4ph 散射率。
 - **附带实验**：用 L4b 的位移超胞力微调 MACE-MPA-0，报告 κ_SRME 前后变化，开始前要人确认。
 
-## 当前进展（2026-11-10）
+## 当前进展（2026-11-11）
+
+每一步的详细记录（数字、step id、放弃的原因）见 [docs/search_log.md](docs/search_log.md)。
 
 **S0 校准**：三个委员会模型都已跑完 c-BN、BAs 的 L1–L3 和 κ_SRME 子集。
 
@@ -95,7 +97,9 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 
 **三种生成器反复找到同一批结构**：AlSiCN sg 160 被 MatterGen、AIRSS、CSP 各找到一次，B₂AsP sg 156 被 AIRSS 和 CSP 各找到一次。这 10 个体系里 ≤ 8 原子的低能结构看来已基本找全，L1 给出的 κ 上限约 240 W/mK。所以 AIRSS 全量不再跑，下一步换化学体系。
 
-- **DPA 会让结构坍缩**：试点里两个 BSb 结构弛豫后 E_hull 到了 −210 和 −23 eV/atom，其余 BSb 全在 +0.25 以上，B–Sb 的结果都不采用。CSP 批次里 10 个体系都出现了坍缩，共 104 个（7 %，AIRSS 为 0.5 %），这些结构的最短原子距离只有 0.01–0.9 Å，说明原子靠得很近时 DPA 的排斥力不够。`compute_ehull` 现在把 E_hull < −0.1 eV/atom（`min_ehull_ev_atom`）的结构记为 implausible，不放进输出集。
+- **DPA 会让结构坍缩**：试点里两个 BSb 结构弛豫后 E_hull 到了 −210 和 −23 eV/atom，其余 BSb 全在 +0.25 以上，B–Sb 的结果都不采用。CSP 批次里 10 个体系都出现了坍缩，共 104 个（7 %，AIRSS 为 0.5 %），这些结构的最短原子距离只有 0.01–0.9 Å，说明原子靠得很近时 DPA 的排斥力不够。`compute_ehull` 现在把 E_hull < −0.1 eV/atom（`min_ehull_ev_atom`）或弛豫后最短原子间距 < 0.8 Å（`min_dist_angstrom`）的结构记为 implausible，不放进输出集。
+
+**S2：换化学体系（进行中）。** 新体系是 Be–O、Be–C、Be–C–N、Be–Si–N、B–Be–N、Al–Be–N 和 Ga–N。在 15 个已知 MP 结构上，DPA 的 E_hull 和 MP 平均相差约 4 meV/atom，凸包附近的结构 L0 都没有虚频。轻元素的 FC2 超胞有 430–530 个原子，在 48 GB 的 L40S 上会 OOM，改用 80 GB A100。生成改用 PyXtal：对称约束的随机结构，sg ≥ 75，原胞 ≤ 12 原子，共 4045 个，还没提交弛豫。
 
 ## 设计原则
 
@@ -186,7 +190,7 @@ src/mga/
   analysis/     κ_SRME、E_hull
   specs.py      各计算的参数 schema：默认值、范围、出处
   approvals.py  审批单；cli.py 是人用的 `mga` 命令
-tests/          73 个测试
+tests/          76 个测试
 configs/        集群信息、模型列表、jobflow-remote 模板
 data/reference/kappa_srme/   κ_SRME 的 103 个参考结构和 κ（只用于测试）
 docs/           MCP 规划、文献调研；figures/ 是 README 的图
@@ -202,6 +206,7 @@ DESIGN.md       总体设计与时间线
 - [DESIGN.md](DESIGN.md)：问题、流程、参数来源、时间线
 - [docs/mcp_servers_plan.md](docs/mcp_servers_plan.md)：工具清单、默认参数及出处、已查证的事实、测试覆盖
 - [docs/lit_review.md](docs/lit_review.md)：高 κ 判据、已有工作、MatterGen 化学体系与配额
+- [docs/search_log.md](docs/search_log.md)：S0 到 S2 每次尝试的详细记录
 
 ## 来源
 

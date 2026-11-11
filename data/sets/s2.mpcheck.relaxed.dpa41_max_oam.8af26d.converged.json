@@ -1,0 +1,33 @@
+{
+  "name": "s2.mpcheck.relaxed.dpa41_max_oam.8af26d.converged",
+  "n": 13,
+  "sids": [
+    "BeAl3-15cc02d85a",
+    "Be4B-b0643be46c",
+    "Be2B-03955c8114",
+    "BeB2-5c72ca78a2",
+    "Be2C-0ed4bc30f0",
+    "Be3N2-e9da4fe9d1",
+    "Be3N2-5591db1de5",
+    "BeSiN2-bcd25b38e1",
+    "BeO-aa7205b013",
+    "BeO-488924505b",
+    "BeO-7782903691",
+    "GaN-f7bfdc85e6",
+    "GaN-c5bb82f1e2"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s2.mpcheck.relaxed.dpa41_max_oam.8af26d"
+  ],
+  "description": "relaxations that converged (did not reach max_steps)",
+  "details": {
+    "criterion": "relax.reached_max_steps is false",
+    "unconverged": [
+      "BeCN2-4bb4d09e45",
+      "BeSiN2-659c43d67b"
+    ]
+  },
+  "created_by_step": "20261111T055619-fetch_results-3e2911",
+  "created_at": "2026-11-11T05:56:22+00:00"
+}

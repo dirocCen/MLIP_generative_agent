@@ -1,0 +1,31 @@
+{
+  "name": "s2.mpcheck",
+  "n": 15,
+  "sids": [
+    "BeAl3-8d6b750748",
+    "Be4B-9a5ec855da",
+    "Be2B-b269eec635",
+    "BeB2-bebce372d7",
+    "Be2C-f64d589c98",
+    "BeCN2-3f9358497b",
+    "Be3N2-16878045b6",
+    "Be3N2-b3df632cf0",
+    "BeSiN2-16ddeedd10",
+    "BeSiN2-b928fd6928",
+    "BeO-55e3326d93",
+    "BeO-1c9222b93d",
+    "BeO-338fd8b543",
+    "GaN-dfd57e0f3e",
+    "GaN-16a39e1183"
+  ],
+  "operation": "import",
+  "parent_sets": [],
+  "description": "MP summary, E_hull<=0.2, primitive<=12 sites, Be/Ga/O subsystems",
+  "details": {
+    "file": "data/structures/mp_check/s2_dpa_check.json",
+    "sha256": "718078e4025cc4a72b68ca5ba0a468a232ca72c83a06a91d5c0ec60f501dfa89",
+    "origin_kind": "file"
+  },
+  "created_by_step": "20261111T054726-import_structures-2c6d32",
+  "created_at": "2026-11-11T05:47:27+00:00"
+}

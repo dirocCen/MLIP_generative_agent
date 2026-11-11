@@ -1,0 +1,51 @@
+{
+  "step_id": "20261111T054726-import_structures-2c6d32",
+  "run_id": "s1-main",
+  "tool": "import_structures",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "S2 DPA reliability check before generating in the new systems Be-O, Be-C, Be-C-N, Be-Si-N, B-Be-N, Al-Be-N, Ga-N: known MP structures must come out near their MP E_hull and without imaginary modes (Claude; systems and check approved by the user 11-11)",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/mp_check/s2_dpa_check.json",
+    "sha256": "718078e4025cc4a72b68ca5ba0a468a232ca72c83a06a91d5c0ec60f501dfa89",
+    "set_name": "s2.mpcheck",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "s2.mpcheck",
+    "n_read": 15,
+    "n_in_set": 15,
+    "n_newly_registered": 15,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "BeAl3-8d6b750748",
+      "Be4B-9a5ec855da",
+      "Be2B-b269eec635",
+      "BeB2-bebce372d7",
+      "Be2C-f64d589c98"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.503,
+  "host": "cenyj",
+  "created_at": "2026-11-11T05:47:26+00:00"
+}

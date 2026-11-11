@@ -1,0 +1,135 @@
+{
+  "step_id": "20261111T055624-compute_ehull-2f4f08",
+  "run_id": "s1-main",
+  "tool": "compute_ehull",
+  "actor": "agent",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261111T054728-submit_mlip_relax-cdc082"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "relax_step_id": "20261111T054728-submit_mlip_relax-cdc082",
+    "threshold_ev_atom": 0.1,
+    "out_set": null,
+    "min_ehull_ev_atom": -0.1,
+    "min_dist_angstrom": 0.8
+  },
+  "outputs": {
+    "model": "dpa41_max_oam",
+    "n_structures": 15,
+    "n_with_ehull": 15,
+    "n_skipped": 0,
+    "n_ehull_failed": 0,
+    "histogram_ev_atom": {
+      "<0": 0,
+      "0-0.025": 9,
+      "0.025-0.05": 2,
+      "0.05-0.1": 1,
+      "0.1-0.2": 3,
+      ">0.2": 0
+    },
+    "n_below_threshold": 12,
+    "threshold_ev_atom": 0.1,
+    "out_set": null,
+    "min_ehull_ev_atom": -0.1,
+    "min_dist_angstrom": 0.8,
+    "n_implausible": 0,
+    "implausible": [],
+    "most_stable": [
+      {
+        "sid": "BeO-55e3326d93",
+        "e_above_hull": 0.001035
+      },
+      {
+        "sid": "BeSiN2-16ddeedd10",
+        "e_above_hull": 0.003182
+      },
+      {
+        "sid": "Be4B-9a5ec855da",
+        "e_above_hull": 0.003765
+      },
+      {
+        "sid": "GaN-dfd57e0f3e",
+        "e_above_hull": 0.004405
+      },
+      {
+        "sid": "BeCN2-3f9358497b",
+        "e_above_hull": 0.005226
+      }
+    ],
+    "mp": {
+      "Al-Be": {
+        "chemsys": "Al-Be",
+        "retrieved_at": "2026-11-11T05:56:29+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-Be": {
+        "chemsys": "B-Be",
+        "retrieved_at": "2026-11-11T05:56:33+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-C": {
+        "chemsys": "Be-C",
+        "retrieved_at": "2026-11-11T05:56:35+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-C-N": {
+        "chemsys": "Be-C-N",
+        "retrieved_at": "2026-11-11T05:56:40+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-N": {
+        "chemsys": "Be-N",
+        "retrieved_at": "2026-11-11T05:56:46+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-N-Si": {
+        "chemsys": "Be-N-Si",
+        "retrieved_at": "2026-11-11T05:56:46+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-O": {
+        "chemsys": "Be-O",
+        "retrieved_at": "2026-11-11T05:56:51+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Ga-N": {
+        "chemsys": "Ga-N",
+        "retrieved_at": "2026-11-11T05:56:55+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      }
+    },
+    "note": "E_hull < 0 means the MLIP puts the structure below the MP hull: check for MLIP over-stabilisation before calling it a discovery. E_hull < min_ehull_ev_atom or d_min < min_dist_angstrom is counted as an MLIP failure (implausible) and excluded from out_set. Input sids (not the relaxed children) are put in out_set.",
+    "details_file": "runs/s1-main/outputs/20261111T055624-compute_ehull-2f4f08.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 37.615,
+  "host": "cenyj",
+  "created_at": "2026-11-11T05:56:24+00:00"
+}

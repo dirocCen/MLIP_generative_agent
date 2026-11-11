@@ -1,0 +1,84 @@
+{
+  "step_id": "20261111T054728-submit_mlip_relax-cdc082",
+  "kind": "mlip_relax",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "8af26d282d6b",
+  "all_sids": [
+    "BeAl3-8d6b750748",
+    "Be4B-9a5ec855da",
+    "Be2B-b269eec635",
+    "BeB2-bebce372d7",
+    "Be2C-f64d589c98",
+    "BeCN2-3f9358497b",
+    "Be3N2-16878045b6",
+    "Be3N2-b3df632cf0",
+    "BeSiN2-16ddeedd10",
+    "BeSiN2-b928fd6928",
+    "BeO-55e3326d93",
+    "BeO-1c9222b93d",
+    "BeO-338fd8b543",
+    "GaN-dfd57e0f3e",
+    "GaN-16a39e1183"
+  ],
+  "mode": "live",
+  "set_name": "s2.mpcheck",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "sids": [
+    "BeAl3-8d6b750748",
+    "Be4B-9a5ec855da",
+    "Be2B-b269eec635",
+    "BeB2-bebce372d7",
+    "Be2C-f64d589c98",
+    "BeCN2-3f9358497b",
+    "Be3N2-16878045b6",
+    "Be3N2-b3df632cf0",
+    "BeSiN2-16ddeedd10",
+    "BeSiN2-b928fd6928",
+    "BeO-55e3326d93",
+    "BeO-1c9222b93d",
+    "BeO-338fd8b543",
+    "GaN-dfd57e0f3e",
+    "GaN-16a39e1183"
+  ],
+  "db_ids": [
+    "289"
+  ],
+  "flow_uuid": "9aec1001-b873-4198-940f-34337246e486",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "6e1e2483-5ec4-4887-b4c1-bc223e392955",
+      "name": "s2.mpcheck-relax-dpa41_max_oam-000",
+      "sids": [
+        "BeAl3-8d6b750748",
+        "Be4B-9a5ec855da",
+        "Be2B-b269eec635",
+        "BeB2-bebce372d7",
+        "Be2C-f64d589c98",
+        "BeCN2-3f9358497b",
+        "Be3N2-16878045b6",
+        "Be3N2-b3df632cf0",
+        "BeSiN2-16ddeedd10",
+        "BeSiN2-b928fd6928",
+        "BeO-55e3326d93",
+        "BeO-1c9222b93d",
+        "BeO-338fd8b543",
+        "GaN-dfd57e0f3e",
+        "GaN-16a39e1183"
+      ],
+      "kind": "mlip_relax"
+    }
+  ]
+}
