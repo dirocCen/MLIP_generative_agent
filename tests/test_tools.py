@@ -222,6 +222,13 @@ def test_mlip_relax_and_kappa_end_to_end(project, cluster, monkeypatch):
             assert registry.set_sids(f"al.ehull{n_pass}") == [sid] * n_pass
         with pytest.raises(ToolInputError, match="min_ehull_ev_atom"):
             analysis.compute_ehull(relax["step_id"], min_ehull_ev_atom=0.1, **A)
+        # fused atoms (d_min below the bound) are implausible even with a plausible E_hull
+        assert eh["implausible"] == []  # real fcc Al (d_min 2.86 A) passed above
+        mp.setattr(analysis, "_min_distance", lambda st: 0.3)
+        eh = analysis.compute_ehull(relax["step_id"], out_set="al.fused", **A)
+        assert eh["n_below_threshold"] == 0 and eh["implausible"] == [{"sid": sid, "e_above_hull": -0.05, "min_dist": 0.3}]
+        with pytest.raises(ToolInputError, match="min_dist_angstrom"):
+            analysis.compute_ehull(relax["step_id"], min_dist_angstrom=0, **A)
 
     kappa = mlip.submit_mlip_phonon_kappa("al", "emt_test", kappa_override=SMALL_KAPPA, override_reason="small test", **A)
     k = analysis.fetch_results(kappa["step_id"])["derived"]
