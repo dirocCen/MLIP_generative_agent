@@ -1,0 +1,51 @@
+{
+  "step_id": "20261111T075639-import_structures-53d203",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "agent",
+  "mode": "dry_run",
+  "decided_by": "human",
+  "rationale": "Closed-loop candidate pool (user approved 11-11): ordered decorations of zincblende/wurtzite/rocksalt supercells (charge-balanced, <= 8 atoms), B/C/N diamond-like decorations, and same-group substitution in L0-stable and MP prototypes, restricted to the S1-main (without B-Sb) and S2 chemical systems; built by scripts/build_pool.py. Replaces the PyXtal random batch. kappa_SRME formulas are kept as hidden rediscovery targets, never as training data.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/pool/loop_pool_v1.extxyz",
+    "sha256": "89f5b80bc975d57fcf6a1826522fc105ee0a9758c9e745115b21ce04d969026d",
+    "set_name": "loop.pool.v1",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "loop.pool.v1",
+    "n_read": 1209,
+    "n_in_set": 1209,
+    "n_newly_registered": 1206,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "Al2B-393bbc61f9",
+      "Al2BN-8e4b94e79e",
+      "Al2BN3-dced30fa3b",
+      "Al2CN-0d9fc46666",
+      "Al2CN-4b4e865270"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 45.982,
+  "host": "cenyj",
+  "created_at": "2026-11-11T07:56:39+00:00"
+}

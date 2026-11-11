@@ -1,0 +1,49 @@
+{
+  "step_id": "20261111T080532-trim_pool-c22070",
+  "run_id": "loop-v1",
+  "tool": "trim_pool",
+  "actor": "human",
+  "mode": "dry_run",
+  "decided_by": "human",
+  "rationale": "User (11-11): cap the B-C-N ternaries (605 of 1209) at about 200 so that one chemical system does not dominate the replay comparison; keep the highest-symmetry structures of every formula (round-robin over formulas) and always keep the R3m-BNC2 positive control.",
+  "parent_ids": [
+    "20261111T075639-import_structures-53d203"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1",
+    "new_set_name": "loop.pool.v1.bcn200",
+    "cap": 200,
+    "trimmed_system": "B-C-N"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200",
+    "n_in": 1209,
+    "n_bcn_in": 605,
+    "n_bcn_kept": 200,
+    "n_bcn_formulas": 8,
+    "n_out": 804,
+    "positive_control": [
+      "BC2N-048972a5f0"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 5.516,
+  "host": "cenyj",
+  "created_at": "2026-11-11T08:05:32+00:00"
+}
