@@ -1,0 +1,43 @@
+{
+  "step_id": "20261111T113633-select_structures-5ce9a1",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "dry_run",
+  "decided_by": "agent",
+  "rationale": "Relax of loop.pool.v1.bcn200: 79 failed (all Pm sg 6, orthogonal 8-atom cells, torch size error) and 258 hit max_steps (245 R3m/R-3m primitive cells: the no-tilt cell mask of the FixSymmetry relax blocks the shear that c/a needs when the 3-fold axis is not along z). Retry these in the standard conventional cell with the unchanged protocol.",
+  "parent_ids": [
+    "20261111T081854-submit_mlip_relax-87c177"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "from_relax_step": "20261111T081854-submit_mlip_relax-87c177",
+    "criterion": "failed or reached_max_steps"
+  },
+  "outputs": {
+    "n": 337,
+    "reasons": {
+      "max_steps": 258,
+      "failed": 79
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.968,
+  "host": "cenyj",
+  "created_at": "2026-11-11T11:36:33+00:00"
+}

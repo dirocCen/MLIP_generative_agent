@@ -1,0 +1,55 @@
+{
+  "step_id": "20261111T112837-fetch_results-5ed193",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "dry_run",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261111T081854-submit_mlip_relax-87c177"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261111T081854-submit_mlip_relax-87c177",
+    "kind": "mlip_relax",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_relax",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "note": "dry_run: nothing fetched from the cluster; derived sets come from the cache only"
+    },
+    "derived": {
+      "relaxed_set": null,
+      "converged_set": null,
+      "n_unconverged": 0,
+      "n_relaxed": 0,
+      "n_failed": 0,
+      "n_missing": 804,
+      "failure_reasons": {},
+      "note": "some results are missing; the relaxed set is created once all jobs have finished (or pass allow_partial=true)"
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 5.479,
+  "host": "cenyj",
+  "created_at": "2026-11-11T11:28:37+00:00"
+}

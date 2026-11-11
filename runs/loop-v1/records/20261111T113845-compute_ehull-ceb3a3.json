@@ -1,0 +1,273 @@
+{
+  "step_id": "20261111T113845-compute_ehull-ceb3a3",
+  "run_id": "loop-v1",
+  "tool": "compute_ehull",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261111T081854-submit_mlip_relax-87c177"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "relax_step_id": "20261111T081854-submit_mlip_relax-87c177",
+    "threshold_ev_atom": 1.0,
+    "out_set": null,
+    "min_ehull_ev_atom": -0.1,
+    "min_dist_angstrom": 0.8
+  },
+  "outputs": {
+    "model": "dpa41_max_oam",
+    "n_structures": 804,
+    "n_with_ehull": 725,
+    "n_skipped": 79,
+    "n_ehull_failed": 0,
+    "histogram_ev_atom": {
+      "<0": 1,
+      "0-0.025": 36,
+      "0.025-0.05": 16,
+      "0.05-0.1": 39,
+      "0.1-0.2": 41,
+      ">0.2": 592
+    },
+    "n_below_threshold": 553,
+    "threshold_ev_atom": 1.0,
+    "out_set": null,
+    "min_ehull_ev_atom": -0.1,
+    "min_dist_angstrom": 0.8,
+    "n_implausible": 0,
+    "implausible": [],
+    "most_stable": [
+      {
+        "sid": "Al4C3-9bd7909919",
+        "e_above_hull": -0.002745
+      },
+      {
+        "sid": "BN-7808233b77",
+        "e_above_hull": 0.001005
+      },
+      {
+        "sid": "BeO-81945c2d4f",
+        "e_above_hull": 0.001035
+      },
+      {
+        "sid": "BP-60c84f30a8",
+        "e_above_hull": 0.001056
+      },
+      {
+        "sid": "BP-eba3cedf0a",
+        "e_above_hull": 0.001056
+      }
+    ],
+    "mp": {
+      "Al-B": {
+        "chemsys": "Al-B",
+        "retrieved_at": "2026-11-09T06:57:31+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-B-N": {
+        "chemsys": "Al-B-N",
+        "retrieved_at": "2026-11-09T05:03:25+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-Be": {
+        "chemsys": "Al-Be",
+        "retrieved_at": "2026-11-11T05:56:29+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-C": {
+        "chemsys": "Al-C",
+        "retrieved_at": "2026-11-09T15:48:04+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-C-N": {
+        "chemsys": "Al-C-N",
+        "retrieved_at": "2026-11-09T05:03:30+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-C-N-Si": {
+        "chemsys": "Al-C-N-Si",
+        "retrieved_at": "2026-11-09T05:03:36+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-N": {
+        "chemsys": "Al-N",
+        "retrieved_at": "2026-11-09T06:57:43+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-N-Si": {
+        "chemsys": "Al-N-Si",
+        "retrieved_at": "2026-11-09T05:03:47+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Al-Si": {
+        "chemsys": "Al-Si",
+        "retrieved_at": "2026-11-11T08:19:59+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-B": {
+        "chemsys": "As-B",
+        "retrieved_at": "2026-11-09T08:48:45+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-B-P": {
+        "chemsys": "As-B-P",
+        "retrieved_at": "2026-11-09T08:48:49+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "As-P": {
+        "chemsys": "As-P",
+        "retrieved_at": "2026-11-09T08:48:53+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-Be": {
+        "chemsys": "B-Be",
+        "retrieved_at": "2026-11-11T05:56:33+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-C": {
+        "chemsys": "B-C",
+        "retrieved_at": "2026-11-09T05:03:54+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-C-N": {
+        "chemsys": "B-C-N",
+        "retrieved_at": "2026-11-09T05:04:00+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-C-P": {
+        "chemsys": "B-C-P",
+        "retrieved_at": "2026-11-09T05:04:07+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-N": {
+        "chemsys": "B-N",
+        "retrieved_at": "2026-11-09T05:04:14+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "B-P": {
+        "chemsys": "B-P",
+        "retrieved_at": "2026-11-09T05:04:18+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-C": {
+        "chemsys": "Be-C",
+        "retrieved_at": "2026-11-11T05:56:35+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-C-N": {
+        "chemsys": "Be-C-N",
+        "retrieved_at": "2026-11-11T05:56:40+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-N": {
+        "chemsys": "Be-N",
+        "retrieved_at": "2026-11-11T05:56:46+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-N-Si": {
+        "chemsys": "Be-N-Si",
+        "retrieved_at": "2026-11-11T05:56:46+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-O": {
+        "chemsys": "Be-O",
+        "retrieved_at": "2026-11-11T05:56:51+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Be-Si": {
+        "chemsys": "Be-Si",
+        "retrieved_at": "2026-11-11T08:20:01+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C": {
+        "chemsys": "C",
+        "retrieved_at": "2026-11-09T08:48:59+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C-N": {
+        "chemsys": "C-N",
+        "retrieved_at": "2026-11-09T05:04:21+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C-N-Si": {
+        "chemsys": "C-N-Si",
+        "retrieved_at": "2026-11-09T05:04:27+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C-P": {
+        "chemsys": "C-P",
+        "retrieved_at": "2026-11-09T15:48:17+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "C-Si": {
+        "chemsys": "C-Si",
+        "retrieved_at": "2026-11-09T06:57:50+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "Ga-N": {
+        "chemsys": "Ga-N",
+        "retrieved_at": "2026-11-11T05:56:55+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      },
+      "N-Si": {
+        "chemsys": "N-Si",
+        "retrieved_at": "2026-11-09T05:04:36+00:00",
+        "db_version": "2026.09.28",
+        "thermo_type": "GGA_GGA+U"
+      }
+    },
+    "note": "E_hull < 0 means the MLIP puts the structure below the MP hull: check for MLIP over-stabilisation before calling it a discovery. E_hull < min_ehull_ev_atom or d_min < min_dist_angstrom is counted as an MLIP failure (implausible) and excluded from out_set. Input sids (not the relaxed children) are put in out_set.",
+    "details_file": "runs/loop-v1/outputs/20261111T113845-compute_ehull-ceb3a3.json"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 35.368,
+  "host": "cenyj",
+  "created_at": "2026-11-11T11:38:45+00:00"
+}

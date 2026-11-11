@@ -1,0 +1,86 @@
+{
+  "step_id": "20261111T113933-deduplicate-fe7e13",
+  "run_id": "loop-v1",
+  "tool": "deduplicate",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Distinct relaxed structures only before L0: several substitution decorations relax to the same structure. First batch = the 467 that converged in the first relax; the conventional-cell retry is deduplicated against these later.",
+  "parent_ids": [
+    "20261111T112853-fetch_results-fca32b"
+  ],
+  "params": {
+    "ltol": {
+      "value": 0.2,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "stol": {
+      "value": 0.3,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "angle_tol": {
+      "value": 5.0,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "primitive_cell": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    },
+    "scale": {
+      "value": true,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default (volume-normalised, so MLIP- and DFT-relaxed cells still match)",
+      "reason": null
+    },
+    "attempt_supercell": {
+      "value": false,
+      "source": "default",
+      "ref": "pymatgen StructureMatcher default",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1.bcn200.relaxed.dpa41_max_oam.e49a1f.converged",
+    "new_set_name": "loop.pool.v1.bcn200.l0in.a"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0in.a",
+    "n_in": 467,
+    "n_unique": 435,
+    "n_removed": 32,
+    "largest_groups": {
+      "AlN-4abe07c7cc": 3,
+      "AlN-1eb76476bf": 3,
+      "AlN-ad901845bb": 3,
+      "B2AsP-1f59cdc547": 3,
+      "BAs-b4a97dada0": 3
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 22.607,
+  "host": "cenyj",
+  "created_at": "2026-11-11T11:39:33+00:00"
+}

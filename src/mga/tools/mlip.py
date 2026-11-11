@@ -180,23 +180,52 @@ def fc_dir(storage: dict[str, str | None], model: str, sid: str, khash: str) -> 
     return f"{root.rstrip('/')}/{model}/{sid}/{khash}" if root else None
 
 
-def kappa_items(sids: list[str], kappa_p: MLIPPhononKappaParams) -> list[dict[str, Any]]:
-    """Fix supercells and q-mesh per structure before submission (same for every model)."""
+def _length_rule(struct_dict: dict[str, Any], p: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Process-pool worker: (conventional unit cell, settings) of one structure."""
+    from pymatgen.core import Structure
     from pymatgen.io.ase import AseAtomsAdaptor
 
     from mga.workflows.kappa_protocol import length_rule_settings
 
+    unit, settings = length_rule_settings(AseAtomsAdaptor.get_atoms(Structure.from_dict(struct_dict)), p)
+    return AseAtomsAdaptor.get_structure(unit).as_dict(), settings
+
+
+def kappa_items(sids: list[str], kappa_p: MLIPPhononKappaParams) -> list[dict[str, Any]]:
+    """Fix supercells and q-mesh per structure before submission (same for every model).
+
+    The minimal-supercell search takes ~1-30 s per structure, so the length rule runs in a
+    process pool (deterministic per structure; the result does not depend on the pool)."""
+    import multiprocessing
+    import os
+    from concurrent.futures import ProcessPoolExecutor
+
+    from pymatgen.core import Structure
+
     p = kappa_p.model_dump()
+    structs = {sid: registry.load_structure(sid) for sid in sids}
+    refs = {sid: registry.load_entry(sid)["info"].get("kappa_settings") for sid in sids}
+    todo = [sid for sid in sids if not (refs[sid] and kappa_p.use_reference_settings)]
+    computed: dict[str, tuple[dict[str, Any], dict[str, Any]]] = {}
+    if todo:
+        # capped by memory, not cores: each spawned worker re-imports pymatgen/ase (~0.5-1 GB);
+        # cpu_count//2 = 16 workers exhausted the 15 GB WSL host on 2026-11-11.
+        cap = int(os.environ.get("MGA_SUPERCELL_WORKERS", "4"))
+        workers = max(1, min(len(todo), cap, (os.cpu_count() or 2) // 2))
+        # spawn, not fork: the parent may already run BLAS / torch threads (fork can deadlock)
+        with ProcessPoolExecutor(max_workers=workers, mp_context=multiprocessing.get_context("spawn")) as pool:
+            futs = {sid: pool.submit(_length_rule, structs[sid].as_dict(), p) for sid in todo}
+            computed = {sid: f.result() for sid, f in futs.items()}
     items = []
     for sid in sids:
-        struct = registry.load_structure(sid)
-        ref = registry.load_entry(sid)["info"].get("kappa_settings")
-        if ref and kappa_p.use_reference_settings:
+        struct = structs[sid]
+        ref = refs[sid]
+        if sid not in computed:
             settings = {k: ref[k] for k in ("source", "fc2_supercell", "fc3_supercell", "q_mesh")}
         else:
-            unit, settings = length_rule_settings(AseAtomsAdaptor.get_atoms(struct), p)
+            unit_dict, settings = computed[sid]
             settings["source"] = f"{settings['source']}_on_input"
-            struct = AseAtomsAdaptor.get_structure(unit)
+            struct = Structure.from_dict(unit_dict)
         n_unit = len(struct)
         settings["n_atoms_fc3_supercell"] = int(round(n_unit * abs(np.linalg.det(settings["fc3_supercell"]))))
         settings["n_atoms_fc2_supercell"] = int(round(n_unit * abs(np.linalg.det(settings["fc2_supercell"]))))

@@ -1,0 +1,57 @@
+{
+  "step_id": "20261111T113636-symmetrize_structures-130b9f",
+  "run_id": "loop-v1",
+  "tool": "symmetrize_structures",
+  "actor": "unspecified",
+  "mode": "dry_run",
+  "decided_by": "agent",
+  "rationale": "Relax of loop.pool.v1.bcn200: 79 failed (all Pm sg 6, orthogonal 8-atom cells, torch size error) and 258 hit max_steps (245 R3m/R-3m primitive cells: the no-tilt cell mask of the FixSymmetry relax blocks the shear that c/a needs when the 3-fold axis is not along z). Retry these in the standard conventional cell with the unchanged protocol.",
+  "parent_ids": [
+    "20261111T113633-select_structures-5ce9a1"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1.bcn200.retry",
+    "new_set_name": "loop.pool.v1.bcn200.retry.conv",
+    "symprec": 0.001,
+    "cell": "conventional"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.retry.conv",
+    "n": 337,
+    "n_failed": 0,
+    "spacegroups": {
+      "160": 220,
+      "6": 79,
+      "166": 25,
+      "12": 4,
+      "156": 3,
+      "31": 1,
+      "186": 1,
+      "187": 1,
+      "40": 1,
+      "51": 1,
+      "36": 1
+    },
+    "n_p1": 0
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 19.221,
+  "host": "cenyj",
+  "created_at": "2026-11-11T11:36:36+00:00"
+}

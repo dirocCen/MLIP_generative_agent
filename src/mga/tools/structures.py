@@ -240,21 +240,30 @@ def symmetrize_structures(
     decided_by: Literal["agent", "human"],
     rationale: str,
     symprec: float = PRIMITIVE_SYMPREC,
+    cell: Literal["primitive", "conventional"] = "primitive",
 ) -> dict[str, Any]:
     """Idealized standard primitive cell at a loose tolerance (S3, between pre-relax and kappa_SRME relax).
 
     Generated and pre-relaxed cells are nearly symmetric; at the kappa_SRME tolerances they stay P1,
     FixSymmetry then keeps them P1 and FC3 needs ~|G|^2 more displacements. Each output is registered
     with its input as parent.
+
+    ``cell="conventional"`` gives the standard conventional cell instead (rhombohedral -> hexagonal
+    setting with c along z). The FixSymmetry relax uses a no-tilt cell mask, which in a rhombohedral
+    or monoclinic primitive cell blocks the shear strain that c/a needs (loop pool 11-11: 245 of 258
+    unconverged relaxations were R3m / R-3m primitive cells). Phonons are unaffected: phonopy goes
+    back to the primitive cell (``primitive_matrix="auto"``).
     """
     from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 
     require_decision(decided_by, rationale)
     if not 1e-4 <= symprec <= 0.3:
         raise ToolInputError("symprec must be within 1e-4-0.3 Angstrom")
+    if cell not in ("primitive", "conventional"):
+        raise ToolInputError("cell must be 'primitive' or 'conventional'")
     with recorded_step(
         "symmetrize_structures",
-        inputs={"set_name": set_name, "new_set_name": new_set_name, "symprec": symprec},
+        inputs={"set_name": set_name, "new_set_name": new_set_name, "symprec": symprec, "cell": cell},
         parent_ids=parent_steps(set_name),
         decided_by=decided_by,
         rationale=rationale,
@@ -264,19 +273,21 @@ def symmetrize_structures(
             struct = registry.load_structure(sid)
             try:
                 sga = SpacegroupAnalyzer(struct, symprec=symprec)
-                sym = sga.get_primitive_standard_structure()
+                sym = (sga.get_conventional_standard_structure() if cell == "conventional"
+                       else sga.get_primitive_standard_structure())
             except Exception as exc:  # noqa: BLE001 - spglib can fail on odd cells
                 failed[sid] = str(exc)
                 out.append(sid)
                 continue
             child, _ = registry.register_structure(
-                sym, origin={"kind": "symmetrize", "source_sid": sid, "symprec": symprec},
+                sym, origin={"kind": "symmetrize", "source_sid": sid, "symprec": symprec, "cell": cell},
                 parents=[] if registry.structure_id(sym) == sid else [sid], step_id=rec.step_id,
             )
             out.append(child)
             changes[sid] = {"sid": child, "spacegroup": sga.get_space_group_number(), "nsites": [len(struct), len(sym)]}
         registry.create_set(new_set_name, out, operation="symmetrize", parent_sets=[set_name],
-                            details={"symprec": symprec, "changes": changes, "failed": failed}, step_id=rec.step_id)
+                            details={"symprec": symprec, "cell": cell, "changes": changes, "failed": failed},
+                            step_id=rec.step_id)
         rec.outputs = {
             "new_set_name": new_set_name,
             "n": len(out),
@@ -372,20 +383,28 @@ def deduplicate(
     rationale: str,
     matcher_override: dict[str, Any] | None = None,
     override_reason: str | None = None,
+    exclude_sets: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Group by reduced formula, then StructureMatcher within each group; keep the first of each group."""
+    """Group by reduced formula, then StructureMatcher within each group; keep the first of each group.
+
+    exclude_sets: drop every structure that is in, or matches a structure in, these sets (e.g. a
+    batch already submitted). They are matched as if listed first, so they always win a group.
+    """
     require_decision(decided_by, rationale)
     p, prov = resolve_params(StructureMatcherParams, matcher_override, override_reason)
+    exclude_sets = list(exclude_sets or [])
     with recorded_step(
         "deduplicate",
-        inputs={"set_name": set_name, "new_set_name": new_set_name},
+        inputs={"set_name": set_name, "new_set_name": new_set_name, "exclude_sets": exclude_sets},
         params=prov,
         parent_ids=parent_steps(set_name),
         decided_by=decided_by,
         rationale=rationale,
     ) as rec:
         sm = _matcher(p)
-        sids = registry.set_sids(set_name)
+        n_in = len(registry.set_sids(set_name))
+        excluded = list(dict.fromkeys(s for name in exclude_sets for s in registry.set_sids(name)))
+        sids = list(dict.fromkeys(excluded + registry.set_sids(set_name)))
         by_formula: dict[str, list[str]] = {}
         for entry in registry.iter_entries(sids):
             by_formula.setdefault(entry["reduced_formula"], []).append(entry["sid"])
@@ -402,15 +421,19 @@ def deduplicate(
                 if len(ids) > 1:
                     duplicates[ids[0]] = ids[1:]
         keep.sort(key=sids.index)
+        excluded_set = set(excluded)
+        keep = [s for s in keep if s not in excluded_set]
         registry.create_set(
-            new_set_name, keep, operation="deduplicate", parent_sets=[set_name],
-            details={"matcher": p.model_dump(), "duplicates_of_kept": duplicates}, step_id=rec.step_id,
+            new_set_name, keep, operation="deduplicate", parent_sets=[set_name, *exclude_sets],
+            details={"matcher": p.model_dump(), "duplicates_of_kept": duplicates, "exclude_sets": exclude_sets},
+            step_id=rec.step_id,
         )
         rec.outputs = {
             "new_set_name": new_set_name,
-            "n_in": len(sids),
+            "n_in": n_in,
+            "n_excluded_reference": len(excluded),
             "n_unique": len(keep),
-            "n_removed": len(sids) - len(keep),
+            "n_removed": n_in - len(keep),
             "largest_groups": dict(sorted(((k, len(v) + 1) for k, v in duplicates.items()), key=lambda kv: -kv[1])[:5]),
         }
     return {"step_id": rec.step_id, **rec.outputs}

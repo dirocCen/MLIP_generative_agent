@@ -1,0 +1,68 @@
+{
+  "step_id": "20261111T134733-fetch_results-28ad9a",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261111T113814-submit_mlip_relax-56243f"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261111T113814-submit_mlip_relax-56243f",
+    "kind": "mlip_relax",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_relax",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 336,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 3,
+        "states": {
+          "COMPLETED": 3
+        },
+        "all_final": true,
+        "n_completed": 3,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "relaxed_set": "loop.pool.v1.bcn200.retry.conv.relaxed.dpa41_max_oam.e49a1f",
+      "converged_set": "loop.pool.v1.bcn200.retry.conv.relaxed.dpa41_max_oam.e49a1f.converged",
+      "n_unconverged": 60,
+      "n_relaxed": 258,
+      "n_failed": 79,
+      "n_missing": 0,
+      "failure_reasons": {
+        "RuntimeError": 79
+      },
+      "note": null
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 34.201,
+  "host": "cenyj",
+  "created_at": "2026-11-11T13:47:33+00:00"
+}
