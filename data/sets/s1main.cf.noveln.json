@@ -1,0 +1,67 @@
+{
+  "name": "s1main.cf.noveln",
+  "n": 17,
+  "sids": [
+    "Al2SiCN2-a391f14ecb",
+    "AlSi2C2N-a9bb5a97b6",
+    "AlSi2C2N-41bee7043e",
+    "AlSi3C3N-95744c0050",
+    "AlSiCN-c2a6a0f32f",
+    "B2AsP-96b7857b83",
+    "B2AsP-975fd9165b",
+    "BC2N-76c4839b98",
+    "BCN-77e2559220",
+    "BCN-7566337437",
+    "BN-1de646b765",
+    "BN-8e5eeae832",
+    "BN-1636bd95c2",
+    "BN-2a1536bf58",
+    "BN-8cfd4fbf82",
+    "BN-4b24f4f150",
+    "BN-6f940183d6"
+  ],
+  "operation": "novelty_vs_mp",
+  "parent_sets": [
+    "s1main.cf.ehull01n"
+  ],
+  "description": "",
+  "details": {
+    "matcher": {
+      "ltol": 0.2,
+      "stol": 0.3,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true,
+      "attempt_supercell": false
+    },
+    "mp": {
+      "Al-C-N-Si": {
+        "chemsys": "Al-C-N-Si",
+        "retrieved_at": "2026-11-09T05:04:51+00:00",
+        "db_version": "2026.09.28"
+      },
+      "As-B": {
+        "chemsys": "As-B",
+        "retrieved_at": "2026-11-10T06:39:50+00:00",
+        "db_version": "2026.09.28"
+      },
+      "As-B-P": {
+        "chemsys": "As-B-P",
+        "retrieved_at": "2026-11-09T08:49:08+00:00",
+        "db_version": "2026.09.28"
+      },
+      "B-C-N": {
+        "chemsys": "B-C-N",
+        "retrieved_at": "2026-11-09T05:04:42+00:00",
+        "db_version": "2026.09.28"
+      },
+      "B-N": {
+        "chemsys": "B-N",
+        "retrieved_at": "2026-11-09T05:04:45+00:00",
+        "db_version": "2026.09.28"
+      }
+    }
+  },
+  "created_by_step": "20261111T040925-check_novelty-af3c89",
+  "created_at": "2026-11-11T04:09:34+00:00"
+}

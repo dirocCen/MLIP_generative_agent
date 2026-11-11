@@ -91,9 +91,11 @@ S3 之后进入**多保真度阶梯**，每升一级成本大约涨一个数量�
 
 **换生成方式。** 文献对比显示，在已有三元、四元体系里，离子替换、原型枚举加 MLIP 预筛不比扩散模型差（[Szymanski & Bartel, Mater. Horiz. 2025](https://pubs.rsc.org/en/content/articlelanding/2025/mh/d5mh00010f)）。现在同时试两条路，都先按四面体配位 / 8 电子规则固定化学计量（10 个体系共 52 个约化化学式）：
 1. **AIRSS + DPA**：`buildcell` 生成随机 P1 晶胞 → DPA 粗弛豫（fmax 0.02，不加对称约束）→ 对称化 → 去重 → 按 κ_SRME 协议精弛豫 → 同样的 E_hull、新颖性和 L0 漏斗。≤ 4 原子的试点：390 个 → 去重 237 → E_hull ≤ 0.1 共 12 个（重新找到 BN、闪锌矿 BAs）→ MP 里没有的 6 个 → L0 稳定 3 个：AlSiCN（和 MatterGen 找到的是同一个结构）、两个 B₂AsP（sg 156、160，Slack 约 290）。
-2. **CrystalFormer 的 CSP 模式**（[CrystalFormer](https://github.com/deepmodeling/CrystalFormer)，alex20s/csp 权重）：每个化学式 400 个样本。条件约束是软的，82 % 的样本化学式不对，过滤后留下 2126 个（去重前），正在跑同一个漏斗。
+2. **CrystalFormer 的 CSP 模式**（[CrystalFormer](https://github.com/deepmodeling/CrystalFormer)，alex20s/csp 权重）：每个化学式 400 个样本。条件约束是软的，82 % 的样本化学式不对，过滤后留下 2126 个，走同一个漏斗：去重 1497 → 0 ≤ E_hull ≤ 0.1 共 25 个 → MP 里没有的 17 个 → L0 稳定 6 个。其中只有 2 个是新的（Al₂SiCN₂ sg 160，Slack 533；AlSi₃C₃N sg 8，Slack 448），另外 AlSiCN sg 160 和 B₂AsP sg 156 与之前 MatterGen、AIRSS 找到的结构相同。共用 14.3 GPU·h，是预估的两倍。
 
-- **DPA 在 B–Sb 上失效**：试点里两个 BSb 结构弛豫后坍缩到 E_hull −210 和 −23 eV/atom，其余 BSb 全在 +0.25 以上，B–Sb 的结果都不采用。`compute_ehull` 现在把 E_hull < −0.1 eV/atom（`min_ehull_ev_atom`）的结构记为 implausible，不放进输出集。
+**三种生成器反复找到同一批结构**：AlSiCN sg 160 被 MatterGen、AIRSS、CSP 各找到一次，B₂AsP sg 156 被 AIRSS 和 CSP 各找到一次。这 10 个体系里 ≤ 8 原子的低能结构看来已基本找全，L1 给出的 κ 上限约 240 W/mK。所以 AIRSS 全量不再跑，下一步换化学体系。
+
+- **DPA 会让结构坍缩**：试点里两个 BSb 结构弛豫后 E_hull 到了 −210 和 −23 eV/atom，其余 BSb 全在 +0.25 以上，B–Sb 的结果都不采用。CSP 批次里 10 个体系都出现了坍缩，共 104 个（7 %，AIRSS 为 0.5 %），这些结构的最短原子距离只有 0.01–0.9 Å，说明原子靠得很近时 DPA 的排斥力不够。`compute_ehull` 现在把 E_hull < −0.1 eV/atom（`min_ehull_ev_atom`）的结构记为 implausible，不放进输出集。
 
 ## 设计原则
 

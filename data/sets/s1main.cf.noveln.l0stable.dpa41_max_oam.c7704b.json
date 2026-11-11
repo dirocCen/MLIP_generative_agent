@@ -1,0 +1,37 @@
+{
+  "name": "s1main.cf.noveln.l0stable.dpa41_max_oam.c7704b",
+  "n": 6,
+  "sids": [
+    "Al2SiCN2-a391f14ecb",
+    "AlSi3C3N-95744c0050",
+    "AlSiCN-c2a6a0f32f",
+    "B2AsP-96b7857b83",
+    "B2AsP-975fd9165b",
+    "BCN-77e2559220"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "s1main.cf.noveln"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "c7704b907723",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "AlSi2C2N-a9bb5a97b6",
+      "AlSi2C2N-41bee7043e",
+      "BC2N-76c4839b98",
+      "BCN-7566337437",
+      "BN-1de646b765",
+      "BN-8e5eeae832",
+      "BN-1636bd95c2",
+      "BN-2a1536bf58",
+      "BN-8cfd4fbf82",
+      "BN-4b24f4f150",
+      "BN-6f940183d6"
+    ]
+  },
+  "created_by_step": "20261111T044204-fetch_results-7cebf0",
+  "created_at": "2026-11-11T04:42:08+00:00"
+}

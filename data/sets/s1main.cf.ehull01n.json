@@ -1,0 +1,52 @@
+{
+  "name": "s1main.cf.ehull01n",
+  "n": 24,
+  "sids": [
+    "Al2SiCN2-a391f14ecb",
+    "AlSi2C2N-a9bb5a97b6",
+    "AlSi2C2N-41bee7043e",
+    "AlSi3C3N-95744c0050",
+    "AlSiCN-76dd82cf3a",
+    "AlSiCN-c2a6a0f32f",
+    "BAs-c5b8982d18",
+    "BAs-ef7630c082",
+    "B2AsP-96b7857b83",
+    "B2AsP-975fd9165b",
+    "BC2N-76c4839b98",
+    "BCN-77e2559220",
+    "BCN-7566337437",
+    "BN-e484784fec",
+    "BN-3f068ff7fc",
+    "BN-1de646b765",
+    "BN-8e5eeae832",
+    "BN-1636bd95c2",
+    "BN-2a1536bf58",
+    "BN-dcfe86f1b2",
+    "BN-3b375c1ec1",
+    "BN-8cfd4fbf82",
+    "BN-4b24f4f150",
+    "BN-6f940183d6"
+  ],
+  "operation": "ehull_filter",
+  "parent_sets": [
+    "s1main.cf.ehull01.sym"
+  ],
+  "description": "",
+  "details": {
+    "ehull_step_id": "20261110T165418-compute_ehull-9ef02e",
+    "threshold_ev_atom": 0.1,
+    "near_converged": {
+      "max_force_ev_a": 0.005,
+      "max_stress_gpa": 0.5
+    },
+    "dropped_far_from_minimum": {
+      "BCN-dae520132d": {
+        "max_force": 17.240465643576798,
+        "max_stress_gpa": 256.79486674214286
+      }
+    },
+    "note": "final-relax children of the E_hull-passing symmetrized structures; runs that hit max_steps kept if residual force/stress are below the near_converged limits"
+  },
+  "created_by_step": "20261110T165418-compute_ehull-9ef02e",
+  "created_at": "2026-11-11T04:09:25+00:00"
+}
