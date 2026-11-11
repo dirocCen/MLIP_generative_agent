@@ -48,7 +48,8 @@ def target_sids(sids, control: list[str]) -> dict[str, list[str]]:
     for e in registry.iter_entries(list(sids)):
         for name, (formula, sgs) in TARGETS.items():
             if e["reduced_formula"] == formula and e["spacegroup_number"] in sgs:
-                if name == "R3m-BNC2" and control and e["sid"] not in control:
+                # relaxation registers new sids: trace the control back to its pool sid
+                if name == "R3m-BNC2" and control and not (registry.ancestors(e["sid"]) | {e["sid"]}) & set(control):
                     continue
                 out.setdefault(name, []).append(e["sid"])
     return out
@@ -110,7 +111,8 @@ def plot(df, n_targets: int, thr: float, n_universe: int, out: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--set", default="loop.pool.v1.bcn200")
+    ap.add_argument("--set", required=True, help="relaxed / L0 set (L0 results are keyed by relaxed sids)")
+    ap.add_argument("--pool-set", default="loop.pool.v1.bcn200", help="holds the positive-control sid")
     ap.add_argument("--extra-set", action="append", default=[])
     ap.add_argument("--extra-sids", nargs="*", default=[])
     ap.add_argument("--seeds", type=int, default=20)
@@ -127,7 +129,7 @@ def main() -> None:
     for s in a.extra_set:
         sids += [x for x in registry.set_sids(s) if x not in sids]
     sids += [x for x in a.extra_sids if x not in sids]
-    control = (registry.load_set(a.set).get("details") or {}).get("positive_control", [])
+    control = (registry.load_set(a.pool_set).get("details") or {}).get("positive_control", [])
 
     universe = labelled(build_table(sids))
     targets = {k: [s for s in v if s in universe.index] for k, v in target_sids(sids, control).items()}

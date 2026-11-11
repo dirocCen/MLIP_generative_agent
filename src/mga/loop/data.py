@@ -103,6 +103,8 @@ def build_table(
         row["log_kappa_l1"] = math.log10(kappa) if kappa else math.nan
         row["l1_gpu_h"] = _gpu_h(l1) if l1 else math.nan
         rows.append(row)
+    if not rows:
+        raise ValueError("no L0 results for these sids: pass the relaxed / L0 set (relaxation registers new sids)")
     return pd.DataFrame(rows).set_index("sid", drop=False)
 
 
