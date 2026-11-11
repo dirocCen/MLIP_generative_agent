@@ -222,7 +222,16 @@ AlSiCN sg 160 被 MatterGen、AIRSS、CSP 各找到一次，B₂AsP sg 156 被 A
 - **B–C–N 三元砍到 200 个**（用户 11-11 决定，`scripts/trim_pool.py`）：按化学式轮流、每个化学式内空间群从高到低、原胞从小到大保留，阳性对照 R3m-BNC₂（`BC2N-048972a5f0`）强制保留。1209 → **804 个**，集合 `loop.pool.v1.bcn200`。保留下来的 B–C–N 里 126 个是 sg 160。
 - step id：import `20261111T075639-import_structures-53d203`，trim `20261111T080532-trim_pool-c22070`，run `loop-v1`。
 - 从这一步起的工作放在 git 的 `loop` 分支。
-- **还没提交弛豫**，等用户确认计算量。
+- **弛豫（11-11 16:18 CST 提交）**：用户同意池的弛豫 + L0。结构生成时已有对称性，和 S2 一样跳过粗弛豫，直接 FixSymmetry 精弛豫（`e49a1f169f59`，1000 步）。提交前查了一次 datalab：A100 / A100s / RTX6000 全满且有排队，L40S 空 6 卡、A40 空 17 卡。放 L40S，`chunk_size` 135 → 正好 6 个作业，全部立即开跑。没用 A40：换卡型要重新冻结 DPA（约 1 h）。step `20261111T081854-submit_mlip_relax-87c177`。
+- **本地 RTX 5070 不跑 DPA**：笔记本版只有 8 GB，DPA float64 在 64 原子时已用 8.5 GB；本地也没有 deepmd 和权重。本地只跑代理模型和回放（CPU，几分钟）。
+- **提前补了 MP 凸包缓存**：池里有 Al-Si（10 个）、Be-Si（1 个）两个体系之前没缓存。
+- **闭环代码**（`src/mga/loop/`，`scripts/loop_replay.py`、`sample_l1.py`、`loop_round.py`、`grow_pool.py`）：
+  - 代理模型：GP（Matern-5/2 ARD + 白噪声），输入 17 个 L0 描述符，目标 log10 κ_L1。
+  - 策略：random、Slack 排序（旧漏斗）、greedy、UCB。回放时同一个 seed 下所有策略共用同一批随机初始点。
+  - 真实轮次和回放用同一套代理模型和排序代码；每批同一化学式最多 2 个。
+  - 池扩充：对本轮领先结构做同族替换，和已有池去重后导入；新结构仍要经过弛豫 → L0 → 代理模型。
+  - 弛豫会注册新 sid，L0/L1 结果按弛豫后的 sid 存，所以脚本都以弛豫后的集合为输入。
+- **旧数据里的一个例子**：已有 L1 的 23 个结构中，BAs 的 Slack 只有 270 W/mK，L1 却是 1242（最高）。Slack 公式里没有声学–光学能隙，静态 Slack 排序天然会漏掉它，代理模型有机会从 `ao_gap_ratio` 等描述符学到。
 
 ## 8. 经验汇总
 
