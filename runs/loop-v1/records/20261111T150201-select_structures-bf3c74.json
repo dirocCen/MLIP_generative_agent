@@ -1,0 +1,40 @@
+{
+  "step_id": "20261111T150201-select_structures-bf3c74",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "153/194 of l0in.b ran out of GPU memory in FC2: they are conventional (hexagonal) cells, 3x the primitive, so the 14 A FC2 supercells reach 456-936 atoms (L40S limit ~450). In the primitive standard cell the same rule gives 152-312 atoms, which fit.",
+  "parent_ids": [
+    "20261111T144637-fetch_results-1cb6f3"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "from_fetch_step": "20261111T144637-fetch_results-1cb6f3",
+    "criterion": "L0 fc2 stage OutOfMemoryError on L40S"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0in.b.oom",
+    "n": 153
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.976,
+  "host": "cenyj",
+  "created_at": "2026-11-11T15:02:01+00:00"
+}

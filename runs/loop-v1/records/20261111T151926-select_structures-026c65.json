@@ -1,0 +1,41 @@
+{
+  "step_id": "20261111T151926-select_structures-026c65",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "User decision 11-11: rerun the L40S-OOM structures whose FC2 supercell fits an 80 GB A100 (<= 800 atoms, incl. the R3m-BNC2 control BC2N-48338b409c, 540 atoms) with the unchanged protocol; the 76 with 816-936 atoms stay without L0 (DPA-4.1 is already float32, so no precision saving exists).",
+  "parent_ids": [
+    "20261111T144637-fetch_results-1cb6f3"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1.bcn200.l0in.b.oom",
+    "criterion": "n_atoms_fc2_supercell <= 800"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0in.b.oom.a100",
+    "n": 77,
+    "n_dropped": 76
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.5,
+  "host": "cenyj",
+  "created_at": "2026-11-11T15:19:26+00:00"
+}

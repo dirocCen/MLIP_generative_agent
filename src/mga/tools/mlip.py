@@ -208,8 +208,8 @@ def kappa_items(sids: list[str], kappa_p: MLIPPhononKappaParams) -> list[dict[st
     todo = [sid for sid in sids if not (refs[sid] and kappa_p.use_reference_settings)]
     computed: dict[str, tuple[dict[str, Any], dict[str, Any]]] = {}
     if todo:
-        # capped by memory, not cores: each spawned worker re-imports pymatgen/ase (~0.5-1 GB);
-        # cpu_count//2 = 16 workers exhausted the 15 GB WSL host on 2026-11-11.
+        # capped, not cpu_count//2: workers are small (~150 MB RSS each) but the WSL host has
+        # only 15 GB and shares it with the session; a 16-worker run was reaped for low memory.
         cap = int(os.environ.get("MGA_SUPERCELL_WORKERS", "4"))
         workers = max(1, min(len(todo), cap, (os.cpu_count() or 2) // 2))
         # spawn, not fork: the parent may already run BLAS / torch threads (fork can deadlock)

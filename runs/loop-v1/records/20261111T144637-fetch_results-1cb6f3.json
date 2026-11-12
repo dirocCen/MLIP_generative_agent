@@ -1,0 +1,147 @@
+{
+  "step_id": "20261111T144637-fetch_results-1cb6f3",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261111T140312-submit_mlip_fc2_descriptors-1d859c"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261111T140312-submit_mlip_fc2_descriptors-1d859c",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": false,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 194,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 49,
+        "states": {
+          "COMPLETED": 49
+        },
+        "all_final": true,
+        "n_completed": 49,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 194,
+      "n_missing": 0,
+      "n_failed": 153,
+      "failed_examples": [
+        {
+          "sid": "Al3BN4-3397825065",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "Al3C2N3-d6f8a710af",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "Al3C2N3-9639419c92",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "Al3C2N3-4fd846c531",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "Al3C2N3-e881f64fe6",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        }
+      ],
+      "wall_time_s": {
+        "n": 194,
+        "min": 0.95,
+        "median": 1.17,
+        "max": 357.81
+      },
+      "n_imaginary": 11,
+      "stable_set": "loop.pool.v1.bcn200.l0in.b.l0stable.dpa41_max_oam.c7704b",
+      "n_stable": 30,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 30,
+          "min": 0.10187426488332184,
+          "median": 187.14620620921255,
+          "max": 618.274058729456
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 30,
+          "min": 0.22359411301406845,
+          "median": 1.3020117732728873,
+          "max": 27.553550566822974
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 30,
+          "min": 1.6921563415582048,
+          "median": 7.871981098632546,
+          "max": 29.913084744115597
+        },
+        "theta_acoustic_K": {
+          "n": 30,
+          "min": 234.8602413420953,
+          "median": 459.32090827546864,
+          "max": 1232.8751769506068
+        },
+        "ao_gap_ratio": {
+          "n": 30,
+          "min": -0.7011599928654844,
+          "median": -0.6326442815767159,
+          "max": 0.38804819893240605
+        },
+        "acoustic_branch_spread": {
+          "n": 30,
+          "min": 0.1876918049204968,
+          "median": 0.24077626114658912,
+          "max": 0.6972692147643667
+        },
+        "gamma_acoustic_rms": {
+          "n": 30,
+          "min": 0.23755994455564405,
+          "median": 0.7661612660565493,
+          "max": 13.859813605534226
+        },
+        "wjdos_cv_mean": {
+          "n": 30,
+          "min": 1.2704270161322244,
+          "median": 10.890966185568029,
+          "max": 27.868151862474463
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 23.548,
+  "host": "cenyj",
+  "created_at": "2026-11-11T14:46:37+00:00"
+}

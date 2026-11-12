@@ -1,0 +1,48 @@
+{
+  "step_id": "20261111T150202-symmetrize_structures-b7447c",
+  "run_id": "loop-v1",
+  "tool": "symmetrize_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Back to the primitive standard cell after the conventional-cell relax converged: the relaxed geometry needs no further shear, and the primitive cell keeps the FC2 supercell under the L40S memory limit.",
+  "parent_ids": [
+    "20261111T150201-select_structures-bf3c74"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1.bcn200.l0in.b.oom",
+    "new_set_name": "loop.pool.v1.bcn200.l0in.b.oom.prim",
+    "symprec": 0.1,
+    "cell": "primitive"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0in.b.oom.prim",
+    "n": 153,
+    "n_failed": 0,
+    "spacegroups": {
+      "160": 137,
+      "166": 16
+    },
+    "n_p1": 0
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 9.007,
+  "host": "cenyj",
+  "created_at": "2026-11-11T15:02:02+00:00"
+}
