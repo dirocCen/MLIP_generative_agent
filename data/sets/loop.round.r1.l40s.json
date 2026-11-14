@@ -1,0 +1,21 @@
+{
+  "name": "loop.round.r1.l40s",
+  "n": 7,
+  "sids": [
+    "BC6N-a761982fd2",
+    "BN-5cf800a4d2",
+    "BP-c5508f73c9",
+    "BC2N-1a47443331",
+    "BN-044833abbf",
+    "B2AsP-ef16d49115",
+    "BCN-f80f72db01"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.round.r1"
+  ],
+  "description": "Round r1, FC2 12 A supercell <= 360 atoms: L40S 44 GB",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-14T12:34:21+00:00"
+}

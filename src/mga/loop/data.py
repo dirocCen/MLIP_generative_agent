@@ -7,7 +7,7 @@ earlier campaign (same model, same protocol hash) is reused without recomputatio
 from __future__ import annotations
 
 import math
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 
 import pandas as pd
 
@@ -20,6 +20,11 @@ DEFAULT_MODEL = "dpa41_max_oam"
 # OOMs on 44 GB GPUs for dense B-C-N; on 31 structures stable under both, Slack Spearman 0.975.
 DEFAULT_L0_HASH = "504f29978e8c"
 DEFAULT_L1_HASH = "cc4191d4d8d0"
+# L1 protocols whose kappa counts as the label, in priority order (first finite value wins).
+# FC2 12 A (4187d607eb10, 11-14): kappa within 4 % of 14 A on diamond / c-BN / BAs / BC2N, and
+# the dense B-C-N cells that OOMed at 14 A (>= 768 atoms) shrink to 720, which still OOMs on
+# A100 80 GB; those run at FC2 10 A (5b38ae92e6ac, 480 atoms, kappa within 6 % of 14 A).
+L1_HASHES = (DEFAULT_L1_HASH, "4187d607eb10", "5b38ae92e6ac")
 
 # Descriptors used as surrogate features. Positive, heavy-tailed ones enter as log10.
 LOG_FEATURES = (
@@ -70,13 +75,15 @@ def build_table(
     sids: Iterable[str],
     model: str = DEFAULT_MODEL,
     l0_hash: str = DEFAULT_L0_HASH,
-    l1_hash: str = DEFAULT_L1_HASH,
+    l1_hash: str | Sequence[str] = L1_HASHES,
 ) -> pd.DataFrame:
     """Rows for every sid with an L0 result; ``kappa_l1`` is NaN where L1 is missing or failed.
 
     Columns: sid, formula, chemsys, l0_ok (no imaginary modes, descriptors present), the
-    feature columns of ``FEATURES``, kappa_slack, kappa_l1, log_kappa_l1, l0_gpu_h, l1_gpu_h.
+    feature columns of ``FEATURES``, kappa_slack, kappa_l1, log_kappa_l1, l1_hash (protocol the
+    label came from), l0_gpu_h, l1_gpu_h. ``l1_hash``: one hash or several in priority order.
     """
+    l1_hashes = (l1_hash,) if isinstance(l1_hash, str) else tuple(l1_hash)
     rows = []
     for e in registry.iter_entries(list(sids)):
         sid = e["sid"]
@@ -99,10 +106,18 @@ def build_table(
             row[f"log_{k}"] = math.log10(v) if v and v > 0 else math.nan
         for k in LIN_FEATURES:
             row[k] = desc.get(k, math.nan)
-        l1 = _load(L1_KIND, model, sid, l1_hash)
-        kappa = _l1_kappa(l1) if l1 else None
+        kappa, l1, used = None, None, None
+        for h in l1_hashes:
+            doc = _load(L1_KIND, model, sid, h)
+            if doc is None:
+                continue
+            l1 = l1 or doc  # cost of a failed attempt still counts if no hash gives a label
+            if (kappa := _l1_kappa(doc)) is not None:
+                l1, used = doc, h
+                break
         row["kappa_l1"] = kappa if kappa is not None else math.nan
         row["log_kappa_l1"] = math.log10(kappa) if kappa else math.nan
+        row["l1_hash"] = used
         row["l1_gpu_h"] = _gpu_h(l1) if l1 else math.nan
         rows.append(row)
     if not rows:

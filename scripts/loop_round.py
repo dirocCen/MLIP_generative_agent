@@ -10,7 +10,8 @@ was picked, for every L0-stable structure, so the real rounds can be scored late
 the replay. Dry run by default; ``--commit`` writes a ``loop_round`` record and the set
 ``loop.round.<round>``. Submitting L1 for that set is a separate step that needs the user's approval.
 
-Usage: MGA_RUN_ID=loop-v1 python scripts/loop_round.py --set <L0 set> [--set ...] --round r1 [--commit]
+Usage: MGA_RUN_ID=loop-v1 python scripts/loop_round.py --set <L0 set> [--set ...] --round r1 \
+    --exclude-set <every set already sent to L1> [--commit]
 """
 
 from __future__ import annotations
@@ -21,6 +22,7 @@ import os
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 from mga import registry
 from mga.loop.data import FEATURES, build_table
@@ -29,17 +31,54 @@ from mga.records import recorded_step
 from mga.tools._common import parent_steps
 
 ROOT = Path(__file__).resolve().parents[1]
+# L1 cost (GPU h) ~ H_PER_DISP_ATOM * n_fc3_displacements * n_atoms_fc3: median over the 84
+# loop.l1.v1 labels (L40S + A100, 11-14), per-structure ratio 0.67-1.82 (10-90 %). The old rule
+# (0.69 h per 8 primitive atoms) predicted 66 GPU h for a sample that took ~150.
+H_PER_DISP_ATOM = 1.03e-6
+# FC2 supercell atoms that fit (11-14): <= 360 on L40S 44 GB (>= 399 OOM), <= 672 on A100 80 GB
+# (>= 720 OOM); "untested" = larger: run those at a smaller --fc2-min-width (10 A).
+FC2_FIT = ((360, "l40s"), (672, "a100"))
+
+
+def l1_cost(sids: list[str], fc2_min_width: float) -> pd.DataFrame:
+    """Supercell sizes, FC3 displacement count, estimated GPU h and target GPU per structure,
+    with the same settings the L1 submission will fix (a few s per structure)."""
+    from ase import Atoms
+    from pymatgen.core import Structure
+
+    from mga.loop.data import DEFAULT_MODEL
+    from mga.specs import MLIPPhononKappaParams
+    from mga.tools.mlip import _model, _resolve_mlip, kappa_items
+    from mga.workflows.kappa_protocol import init_phono3py
+
+    kp, _ = _resolve_mlip(_model(DEFAULT_MODEL), MLIPPhononKappaParams, {"fc2_min_width": fc2_min_width},
+                          "loop round L1 protocol")
+    rows = []
+    for it in kappa_items(sids, kp):
+        st, s = dict(it["settings"]), Structure.from_dict(it["structure"])
+        init_phono3py(Atoms([str(x.specie) for x in s], cell=s.lattice.matrix, positions=s.cart_coords, pbc=True),
+                      st, kp.model_dump())
+        gpu = next((g for n, g in FC2_FIT if st["n_atoms_fc2"] <= n), "untested")
+        rows.append({"sid": it["sid"], "n_atoms_fc2": st["n_atoms_fc2"], "n_atoms_fc3": st["n_atoms_fc3"],
+                     "n_fc3_disp": st["n_fc3_displacements"], "gpu": gpu,
+                     "est_gpu_h": H_PER_DISP_ATOM * st["n_fc3_displacements"] * st["n_atoms_fc3"]})
+    return pd.DataFrame(rows).set_index("sid")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--set", action="append", required=True, help="relaxed / L0 sets (union)")
     ap.add_argument("--round", required=True)
+    ap.add_argument("--exclude-set", action="append", default=[],
+                    help="sets whose sids are never candidates: L1 already attempted or in flight "
+                         "(failed L1 has no label, so without this it would be proposed again)")
     ap.add_argument("--strategy", default="ucb", choices=STRATEGIES)
     ap.add_argument("--batch", type=int, default=10)
     ap.add_argument("--beta", type=float, default=1.0)
     ap.add_argument("--max-per-formula", type=int, default=2)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--fc2-min-width", type=float, default=12.0,
+                    help="L1 FC2 width the batch will be run with (cost estimate and GPU placement only)")
     ap.add_argument("--decided-by", default="agent", choices=["agent", "human"])
     ap.add_argument("--commit", action="store_true")
     a = ap.parse_args()
@@ -50,7 +89,8 @@ def main() -> None:
     t = build_table(sids)
     t = t[t["l0_ok"]].dropna(subset=list(FEATURES))
     train = t[t["kappa_l1"].notna()]
-    cand = t[t["kappa_l1"].isna()]
+    excluded = {x for s in a.exclude_set for x in registry.set_sids(s)}
+    cand = t[t["kappa_l1"].isna() & ~t.index.isin(excluded)]
     if len(train) < 5:
         raise SystemExit(f"only {len(train)} labelled structures: run the stratified L1 sample first")
 
@@ -79,15 +119,19 @@ def main() -> None:
             "sd_log_kappa", "ucb", "picked", "n_atoms_primitive"]
     t[cols].sort_values("ucb", ascending=False).to_csv(out, index=False)
 
-    batch = t.loc[picked]
-    est = float((0.69 * batch["n_atoms_primitive"].fillna(8) / 8.0).sum())
+    batch = t.loc[picked].join(l1_cost(picked, a.fc2_min_width))
+    est = float(batch["est_gpu_h"].sum())
     summary = {
         "round": a.round, "strategy": a.strategy, "n_train": len(train), "n_candidates": len(cand),
-        "batch": len(picked), "est_l1_gpu_h": round(est, 1), "predictions": str(out.relative_to(ROOT)),
+        "n_excluded_unlabelled": int((t["kappa_l1"].isna() & t.index.isin(excluded)).sum()),
+        "batch": len(picked), "fc2_min_width": a.fc2_min_width, "est_l1_gpu_h": round(est, 1),
+        "est_l1_gpu_h_range": [round(0.67 * est, 1), round(1.82 * est, 1)],
+        "gpu_counts": batch["gpu"].value_counts().to_dict(), "predictions": str(out.relative_to(ROOT)),
         "train_best": train.nlargest(3, "kappa_l1")[["formula", "kappa_l1"]].round(0).values.tolist(),
     }
     print(json.dumps(summary, indent=1, default=str))
-    print(batch[["formula", "chemsys", "kappa_slack", "mu_kappa", "sd_log_kappa"]].round(2).to_string())
+    print(batch[["formula", "kappa_slack", "mu_kappa", "sd_log_kappa", "n_atoms_fc2", "n_fc3_disp", "gpu",
+                 "est_gpu_h"]].round(2).to_string())
     if not a.commit:
         print("dry run: nothing written except the predictions csv (add --commit)")
         return
@@ -95,7 +139,7 @@ def main() -> None:
     new_set = f"loop.round.{a.round}"
     with recorded_step(
         "loop_round",
-        inputs={"sets": a.set, "round": a.round, "strategy": a.strategy, "batch": a.batch,
+        inputs={"sets": a.set, "exclude_sets": a.exclude_set, "round": a.round, "strategy": a.strategy, "batch": a.batch,
                 "beta": a.beta, "max_per_formula": a.max_per_formula, "seed": a.seed},
         parent_ids=[p for s in a.set for p in parent_steps(s)],
         decided_by=a.decided_by,

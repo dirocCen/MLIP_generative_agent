@@ -1,0 +1,17 @@
+{
+  "name": "loop.round.r1.a100",
+  "n": 3,
+  "sids": [
+    "BC6N-dd97b91d20",
+    "BC2N-c3fe44ad23",
+    "B3C2N3-89b4bd27e4"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.round.r1"
+  ],
+  "description": "Round r1, FC2 12 A supercell 720 atoms: A100 80 GB (untested size; OOM -> rerun at 10 A)",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-14T12:34:21+00:00"
+}

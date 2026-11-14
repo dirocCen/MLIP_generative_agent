@@ -1,0 +1,154 @@
+{
+  "step_id": "20261114T110030-kappa_convergence-f8f1f1",
+  "run_id": "loop-v1",
+  "tool": "kappa_convergence",
+  "actor": "unspecified",
+  "mode": "dry_run",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261113T081122-submit_mlip_convergence-ab919e"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "conv_step_id": "20261113T081122-submit_mlip_convergence-ab919e",
+    "tol": 0.05
+  },
+  "outputs": {
+    "model": "dpa41_max_oam",
+    "target": "fc2_min_width",
+    "values": [
+      10.0,
+      12.0,
+      14.0
+    ],
+    "tol": 0.05,
+    "table": [
+      {
+        "sid": "C-e31620d409",
+        "formula": "C",
+        "values": [
+          {
+            "value": 10.0,
+            "kappa": 1615.5951027076517,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 12.0,
+            "kappa": 1611.3299043155,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 14.0,
+            "kappa": 1601.9629856606214,
+            "status": "ok",
+            "fc3_atoms": null
+          }
+        ],
+        "rel_change_last": 0.0058,
+        "converged": true
+      },
+      {
+        "sid": "BN-e3774a672e",
+        "formula": "BN",
+        "values": [
+          {
+            "value": 10.0,
+            "kappa": 634.6490634615247,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 12.0,
+            "kappa": 651.3858879069268,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 14.0,
+            "kappa": 627.9437092181275,
+            "status": "ok",
+            "fc3_atoms": null
+          }
+        ],
+        "rel_change_last": 0.0373,
+        "converged": true
+      },
+      {
+        "sid": "BAs-b4a97dada0",
+        "formula": "BAs",
+        "values": [
+          {
+            "value": 10.0,
+            "kappa": 1175.5360463147688,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 12.0,
+            "kappa": 1209.3322345096683,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 14.0,
+            "kappa": 1253.4399311174948,
+            "status": "ok",
+            "fc3_atoms": null
+          }
+        ],
+        "rel_change_last": 0.0352,
+        "converged": true
+      },
+      {
+        "sid": "BC2N-4035695a9f",
+        "formula": "BC2N",
+        "values": [
+          {
+            "value": 10.0,
+            "kappa": 530.1768485563081,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 12.0,
+            "kappa": 536.3186456715903,
+            "status": "ok",
+            "fc3_atoms": null
+          },
+          {
+            "value": 14.0,
+            "kappa": 539.6192426779465,
+            "status": "ok",
+            "fc3_atoms": null
+          }
+        ],
+        "rel_change_last": 0.0061,
+        "converged": true
+      }
+    ],
+    "n_converged": 4,
+    "note": "converged = relative change of kappa between the two largest settings < tol (heuristic 5%). One model only; repeat with a second model before changing a default."
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.299,
+  "host": "cenyj",
+  "created_at": "2026-11-14T11:00:30+00:00"
+}

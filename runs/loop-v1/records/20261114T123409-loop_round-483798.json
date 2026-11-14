@@ -1,0 +1,92 @@
+{
+  "step_id": "20261114T123409-loop_round-483798",
+  "run_id": "loop-v1",
+  "tool": "loop_round",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Loop round r1: slack_ucb on a GP surrogate fitted to 84 L1 labels.",
+  "parent_ids": [
+    "20261113T072036-merge_sets-304990"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "sets": [
+      "loop.pool.v1.bcn200.l0stable.w10"
+    ],
+    "exclude_sets": [
+      "loop.l1.v1"
+    ],
+    "round": "r1",
+    "strategy": "slack_ucb",
+    "batch": 10,
+    "beta": 1.0,
+    "max_per_formula": 2,
+    "seed": 0
+  },
+  "outputs": {
+    "round": "r1",
+    "strategy": "slack_ucb",
+    "n_train": 84,
+    "n_candidates": 196,
+    "n_excluded_unlabelled": 34,
+    "batch": 10,
+    "fc2_min_width": 12.0,
+    "est_l1_gpu_h": 32.0,
+    "est_l1_gpu_h_range": [
+      21.5,
+      58.3
+    ],
+    "gpu_counts": {
+      "l40s": 7,
+      "untested": 3
+    },
+    "predictions": "runs/loop-v1/rounds/r1.csv",
+    "train_best": [
+      [
+        "BAs",
+        1255.0
+      ],
+      [
+        "BAs",
+        1088.0
+      ],
+      [
+        "BC4N",
+        794.0
+      ]
+    ],
+    "new_set_name": "loop.round.r1",
+    "sids": [
+      "BC6N-a761982fd2",
+      "BN-5cf800a4d2",
+      "BC6N-dd97b91d20",
+      "BC2N-c3fe44ad23",
+      "B3C2N3-89b4bd27e4",
+      "BP-c5508f73c9",
+      "BC2N-1a47443331",
+      "BN-044833abbf",
+      "B2AsP-ef16d49115",
+      "BCN-f80f72db01"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.057,
+  "host": "cenyj",
+  "created_at": "2026-11-14T12:34:09+00:00"
+}
