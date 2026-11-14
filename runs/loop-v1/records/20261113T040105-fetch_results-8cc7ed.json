@@ -1,0 +1,155 @@
+{
+  "step_id": "20261113T040105-fetch_results-8cc7ed",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261112T022923-submit_mlip_fc2_descriptors-721fe4"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261112T022923-submit_mlip_fc2_descriptors-721fe4",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 4,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 109,
+        "states": {
+          "REMOTE_ERROR": 89,
+          "UPLOADED": 15,
+          "FAILED": 4,
+          "COMPLETED": 1
+        },
+        "all_final": false,
+        "n_completed": 1,
+        "n_failed": 93,
+        "failed_examples": [
+          {
+            "name": "loop.pool.v1.bcn200.l0in.a.x-fc2_descriptors-dpa41_max_oam-000",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/fd/af/83/fdaf83fb-77a0-421b-96f6-af11ca5a85cf_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.a.x-fc2_descriptors-dpa41_max_oam-001",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/9e/a3/4f/9ea34f25-4990-4b03-bf30-293b35ed6488_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.a.x-fc2_descriptors-dpa41_max_oam-002",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/fa/5c/7f/fa5c7f99-6142-403c-9b07-42bff1d4401c_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.a.x-fc2_descriptors-dpa41_max_oam-003",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/73/71/51/737151d4-fd40-4b7b-8953-7b20faef41c7_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.a.x-fc2_descriptors-dpa41_max_oam-004",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/0a/df/87/0adf8701-be4b-4d57-a9ef-57b9fd8c3d8d_1"
+          }
+        ]
+      }
+    },
+    "derived": {
+      "n_results": 4,
+      "n_missing": 430,
+      "n_failed": 0,
+      "failed_examples": [],
+      "wall_time_s": {
+        "n": 4,
+        "min": 39.0,
+        "median": 138.315,
+        "max": 140.36
+      },
+      "n_imaginary": 1,
+      "stable_set": "loop.pool.v1.bcn200.l0in.a.x.l0stable.dpa41_max_oam.504f29.partial3",
+      "n_stable": 3,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 3,
+          "min": 273.37367747341483,
+          "median": 528.1086437350175,
+          "max": 1177.1338295720084
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 3,
+          "min": 12.937548774693406,
+          "median": 15.556711352612586,
+          "max": 20.739350491557047
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 3,
+          "min": 18.105390420847495,
+          "median": 20.963683223884793,
+          "max": 25.11860071368798
+        },
+        "theta_acoustic_K": {
+          "n": 3,
+          "min": 923.7668299034186,
+          "median": 961.0316229398798,
+          "max": 1026.1589091411254
+        },
+        "ao_gap_ratio": {
+          "n": 3,
+          "min": -0.43065335011960765,
+          "median": -0.39814756045345184,
+          "max": -0.36796124125128565
+        },
+        "acoustic_branch_spread": {
+          "n": 3,
+          "min": 0.19625616208532992,
+          "median": 0.20187426167270944,
+          "max": 0.2165962429313115
+        },
+        "gamma_acoustic_rms": {
+          "n": 3,
+          "min": 0.6594621863181548,
+          "median": 0.9157250711295032,
+          "max": 1.1847426208115988
+        },
+        "wjdos_cv_mean": {
+          "n": 3,
+          "min": 2.243053049684781,
+          "median": 2.596524956669508,
+          "max": 2.779006924838914
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 4.211,
+  "host": "cenyj",
+  "created_at": "2026-11-13T04:01:05+00:00"
+}

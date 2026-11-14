@@ -1,0 +1,48 @@
+{
+  "step_id": "20261112T035722-select_structures-d4b39c",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "FC2 supercells at 10 A with >= 399 atoms OOM on the 44 GB L40S/A40 cards for dense B-C-N (all 116 failures of the 10 A L0 batch b; <= 360 atoms run fine). User (11-12) asked to move them to GPU-a100 (80 GB) at the same 10 A protocol.",
+  "parent_ids": [
+    "20261112T022723-submit_mlip_fc2_descriptors-1f454c",
+    "20261112T022923-submit_mlip_fc2_descriptors-721fe4"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "from_submissions": [
+      "20261112T022723-submit_mlip_fc2_descriptors-1f454c",
+      "20261112T022923-submit_mlip_fc2_descriptors-721fe4"
+    ],
+    "criterion": "n_atoms_fc2_supercell >= 399"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0in.w10.big",
+    "n": 119,
+    "per_parent": {
+      "loop.pool.v1.bcn200.l0in.b": 117,
+      "loop.pool.v1.bcn200.l0in.a.x": 2
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.708,
+  "host": "cenyj",
+  "created_at": "2026-11-12T03:57:22+00:00"
+}

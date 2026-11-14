@@ -1,0 +1,18 @@
+{
+  "name": "loop.l1.v1.fc2scan",
+  "n": 4,
+  "sids": [
+    "C-e31620d409",
+    "BN-e3774a672e",
+    "BAs-b4a97dada0",
+    "BC2N-4035695a9f"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.l1.v1"
+  ],
+  "description": "FC2 width convergence scan",
+  "details": {},
+  "created_by_step": "20261113T081122-select_structures-4c5ed3",
+  "created_at": "2026-11-13T08:11:22+00:00"
+}

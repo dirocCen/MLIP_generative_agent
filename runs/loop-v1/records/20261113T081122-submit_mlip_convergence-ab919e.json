@@ -1,0 +1,259 @@
+{
+  "step_id": "20261113T081122-submit_mlip_convergence-ab919e",
+  "run_id": "loop-v1",
+  "tool": "submit_mlip_convergence",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "fc2_min_width 14 A is a phononDB heuristic never converged here, and it alone pushes 58 of 118 L1 structures past 399 atoms (FC3 max 384). Scan 10/12/14 A on diamond, c-BN, BAs and a 504-atom BC2N to decide whether later rounds can use a smaller FC2 cell. User chose this 11-13.",
+  "parent_ids": [
+    "20261113T081122-select_structures-4c5ed3"
+  ],
+  "params": {
+    "relax.optimizer": {
+      "value": "FIRE",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "relax.cell_filter": {
+      "value": "FrechetCellFilter",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "relax.fmax": {
+      "value": 0.0001,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "relax.max_steps": {
+      "value": 300,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "relax.relaxation_mode": {
+      "value": "single-stage",
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755); two-stage = constrained then unconstrained, keep stage 1 if the space group changes",
+      "reason": null
+    },
+    "relax.enforce_symmetry": {
+      "value": true,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (FixSymmetry, no-tilt cell mask)",
+      "reason": null
+    },
+    "relax.relax_symprec": {
+      "value": 0.01,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (FixSymmetry symprec)",
+      "reason": null
+    },
+    "relax.symprec": {
+      "value": 1e-05,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755) (space-group detection; spglib here)",
+      "reason": null
+    },
+    "relax.dtype": {
+      "value": "model_default",
+      "source": "default",
+      "ref": "configs/models.yaml per model, resolved at submission (decided 11-04): float64 by default (k_SRME runs MACE in float64); PET-OAM-XL float32 (42-rotation symmetrizer 45 s -> 4.7 s per 64-atom force call on L40S, max force change 1.1e-5 eV/A; checked on c-BN in S0)",
+      "reason": null
+    },
+    "relax.chunk_size": {
+      "value": 64,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.partition": {
+      "value": "GPU-a100",
+      "source": "override",
+      "ref": "datalab default partition, DESIGN \u00a72.1",
+      "reason": "FC2 (14 A) supercells >= 399 atoms OOM on 44 GB L40S; GPU-a100 has 80 GB; avm-a100-d-10 is PCIe (no frozen DPA model for that GPU name)"
+    },
+    "resources.gpus": {
+      "value": 1,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.cpus_per_task": {
+      "value": 8,
+      "source": "default",
+      "ref": "execution only (does not change results)",
+      "reason": null
+    },
+    "resources.time": {
+      "value": "1-00:00:00",
+      "source": "default",
+      "ref": "datalab limit is 7 days, DESIGN \u00a72.1",
+      "reason": null
+    },
+    "resources.nodelist": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); one node, e.g. 'a-a100-o-1' (A100-SXM4-80GB): the GPU partitions mix 40 and 80 GB cards and 512-atom supercells do not fit 48 GB (configs/models.yaml)",
+      "reason": null
+    },
+    "resources.exclude_nodes": {
+      "value": "avm-a100-d-10",
+      "source": "override",
+      "ref": "execution only (does not change results); comma-separated node names",
+      "reason": "FC2 (14 A) supercells >= 399 atoms OOM on 44 GB L40S; GPU-a100 has 80 GB; avm-a100-d-10 is PCIe (no frozen DPA model for that GPU name)"
+    },
+    "resources.mem": {
+      "value": null,
+      "source": "default",
+      "ref": "execution only (does not change results); host memory per job, Slurm --mem (e.g. '200G'); unset = the partition default per CPU. L3 needs >= 2x the FC4 estimate (MLIPFc4Params.max_fc4_gb)",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.l1.v1.fc2scan",
+    "model": "dpa41_max_oam",
+    "target": "fc2_min_width",
+    "values": [
+      10.0,
+      12.0,
+      14.0
+    ]
+  },
+  "outputs": {
+    "kind": "mlip_kappa",
+    "model": "dpa41_max_oam",
+    "param_hash": "per-variant",
+    "n_structures": 12,
+    "n_cached": 0,
+    "n_to_compute": 12,
+    "set_name": "loop.l1.v1.fc2scan",
+    "target": "fc2_min_width",
+    "variants": [
+      {
+        "value": 10.0,
+        "param_hash": "743da8f9f68a"
+      },
+      {
+        "value": 12.0,
+        "param_hash": "f2e544edb05c"
+      },
+      {
+        "value": 14.0,
+        "param_hash": "d6bfd81d58bf"
+      }
+    ],
+    "submission_extra": {
+      "set_name": "loop.l1.v1.fc2scan",
+      "target": "fc2_min_width",
+      "relax_params": {
+        "optimizer": "FIRE",
+        "cell_filter": "FrechetCellFilter",
+        "fmax": 0.0001,
+        "max_steps": 300,
+        "relaxation_mode": "single-stage",
+        "enforce_symmetry": true,
+        "relax_symprec": 0.01,
+        "symprec": 1e-05,
+        "dtype": "float64",
+        "chunk_size": 64
+      },
+      "variants": [
+        {
+          "value": 10.0,
+          "param_hash": "743da8f9f68a",
+          "kappa_params": {
+            "displacement": 0.03,
+            "is_plusminus": "auto",
+            "symprec": 1e-05,
+            "temperatures": [
+              300.0
+            ],
+            "use_reference_settings": false,
+            "fc3_min_width": 8.0,
+            "fc2_min_width": 10.0,
+            "q_mesh_length": 40.0,
+            "is_isotope": true,
+            "boundary_mfp_um": 1000000.0,
+            "transport": "MS-SMM19",
+            "imaginary_threshold_thz": -0.01,
+            "kappa_if_symmetry_broken": false,
+            "dtype": "float64",
+            "chunk_size": 4
+          }
+        },
+        {
+          "value": 12.0,
+          "param_hash": "f2e544edb05c",
+          "kappa_params": {
+            "displacement": 0.03,
+            "is_plusminus": "auto",
+            "symprec": 1e-05,
+            "temperatures": [
+              300.0
+            ],
+            "use_reference_settings": false,
+            "fc3_min_width": 8.0,
+            "fc2_min_width": 12.0,
+            "q_mesh_length": 40.0,
+            "is_isotope": true,
+            "boundary_mfp_um": 1000000.0,
+            "transport": "MS-SMM19",
+            "imaginary_threshold_thz": -0.01,
+            "kappa_if_symmetry_broken": false,
+            "dtype": "float64",
+            "chunk_size": 4
+          }
+        },
+        {
+          "value": 14.0,
+          "param_hash": "d6bfd81d58bf",
+          "kappa_params": {
+            "displacement": 0.03,
+            "is_plusminus": "auto",
+            "symprec": 1e-05,
+            "temperatures": [
+              300.0
+            ],
+            "use_reference_settings": false,
+            "fc3_min_width": 8.0,
+            "fc2_min_width": 14.0,
+            "q_mesh_length": 40.0,
+            "is_isotope": true,
+            "boundary_mfp_um": 1000000.0,
+            "transport": "MS-SMM19",
+            "imaginary_threshold_thz": -0.01,
+            "kappa_if_symmetry_broken": false,
+            "dtype": "float64",
+            "chunk_size": 4
+          }
+        }
+      ]
+    },
+    "n_jobs": 3,
+    "flow_uuid": "d5e766ee-7175-4c79-80f5-af9985fbdd26",
+    "worker": "datalab_dpa"
+  },
+  "status": "submitted",
+  "error": null,
+  "wall_time_s": 46.785,
+  "host": "cenyj",
+  "created_at": "2026-11-13T08:11:22+00:00"
+}

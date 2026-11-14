@@ -1,8 +1,9 @@
 """One real round of the loop: fit the surrogate on every L1 label so far, propose the next L1 batch.
 
 Same ``Surrogate`` and ``rank`` as the replay, so the strategy that wins the replay is the one used
-here. A batch takes at most ``--max-per-formula`` structures of one reduced formula (polymorphs of
-one formula have near-identical descriptors; without the cap UCB spends a batch on one spot).
+here (``slack_ucb`` differs from ``ucb`` only at the replay's cold start, so here it ranks as
+``ucb``). A batch takes at most ``--max-per-formula`` structures of one reduced formula (polymorphs
+of one formula have near-identical descriptors; without the cap UCB spends a batch on one spot).
 
 Writes runs/<run_id>/rounds/<round>.csv: mu, sd, acquisition score, label (if any) and whether it
 was picked, for every L0-stable structure, so the real rounds can be scored later exactly like

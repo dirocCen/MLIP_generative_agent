@@ -1,0 +1,40 @@
+{
+  "step_id": "20261113T075948-select_structures-642a77",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Route L1 by memory: FC2 (14 A) or FC3 (8 A) supercells with >= 399 atoms OOM on the 44 GB L40S/A40 cards (seen in L0 for dense B-C-N; <= 360 atoms fine), so they go straight to GPU-a100 (80 GB). User chose this pre-routing on 11-13 to avoid an OOM-and-retry round.",
+  "parent_ids": [
+    "20261113T073546-sample_l1-dde579"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.l1.v1",
+    "criterion": "max(n_fc2, n_fc3) >= 399"
+  },
+  "outputs": {
+    "a100": 58,
+    "l40s": 60
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.742,
+  "host": "cenyj",
+  "created_at": "2026-11-13T07:59:48+00:00"
+}

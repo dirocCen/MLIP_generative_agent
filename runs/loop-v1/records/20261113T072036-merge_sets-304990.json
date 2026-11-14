@@ -1,0 +1,51 @@
+{
+  "step_id": "20261113T072036-merge_sets-304990",
+  "run_id": "loop-v1",
+  "tool": "merge_sets",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Union of the three 10 A L0 submissions (b on L40S, a.x on L40S, >=399-atom FC2 supercells on A100): the full L0-stable pool (no imaginary modes) for the L1 sample.",
+  "parent_ids": [
+    "20261113T040036-fetch_results-5cbd7a",
+    "20261113T071529-fetch_results-499b2c",
+    "20261113T071655-fetch_results-a8ddb3"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_names": [
+      "loop.pool.v1.bcn200.l0in.b.l0stable.dpa41_max_oam.504f29",
+      "loop.pool.v1.bcn200.l0in.a.x.l0stable.dpa41_max_oam.504f29",
+      "loop.pool.v1.bcn200.l0in.w10.big.l0stable.dpa41_max_oam.504f29"
+    ],
+    "new_set_name": "loop.pool.v1.bcn200.l0stable.w10"
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.v1.bcn200.l0stable.w10",
+    "n_in": {
+      "loop.pool.v1.bcn200.l0in.b.l0stable.dpa41_max_oam.504f29": 47,
+      "loop.pool.v1.bcn200.l0in.a.x.l0stable.dpa41_max_oam.504f29": 239,
+      "loop.pool.v1.bcn200.l0in.w10.big.l0stable.dpa41_max_oam.504f29": 28
+    },
+    "n_merged": 314
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 2.015,
+  "host": "cenyj",
+  "created_at": "2026-11-13T07:20:36+00:00"
+}

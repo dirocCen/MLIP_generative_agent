@@ -1,8 +1,9 @@
 """Replay acquisition strategies on a fully labelled pool ("compute everything, then replay").
 
 Every structure of the universe already has an L1 label, so a strategy run is a pure
-simulation: pick a batch, reveal its labels, retrain, repeat. All strategies of one seed share
-the same random initial batch, so differences come from the strategy, not the start.
+simulation: pick a batch, reveal its labels, retrain, repeat. ``random``, ``greedy`` and ``ucb``
+of one seed share the same random initial batch, so differences come from the strategy, not the
+start; ``slack`` and ``slack_ucb`` start from the head of the Slack ranking instead.
 
 Per round the curves record: structures labelled, GPU-hours spent on L1 (the measured wall time
 of the structures picked), hits (kappa_L1 >= hit threshold), hidden targets found, best kappa so
@@ -19,7 +20,7 @@ import pandas as pd
 from scipy.stats import spearmanr
 
 from mga.loop.data import FEATURES
-from mga.loop.surrogate import LEARNING, Surrogate, rank
+from mga.loop.surrogate import LEARNING, SLACK_START, Surrogate, rank
 
 
 @dataclass
@@ -65,9 +66,11 @@ def run_one(universe: pd.DataFrame, strategy: str, seed: int, cfg: ReplayConfig)
             **fit_metrics,
         })
 
-    # Round 0: the shared random batch for the learning strategies; static strategies
-    # simply take the head of their ranking (same budget).
-    if strategy in LEARNING or strategy == "random":
+    # Round 0: the shared random batch for the learning strategies; static strategies and
+    # slack_ucb take the head of their (Slack) ranking (same budget).
+    if strategy in SLACK_START:
+        chosen.extend(rank("slack", X, slack, rng)[: cfg.n_init].tolist())
+    elif strategy in LEARNING or strategy == "random":
         chosen.extend(init.tolist())
     else:
         chosen.extend(rank(strategy, X, slack, rng)[: cfg.n_init].tolist())

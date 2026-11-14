@@ -6,6 +6,9 @@ Strategies rank candidates; the loop takes the top ``batch`` of the ranking.
 - ``slack``   descending Slack estimate from L0: the old open-loop funnel, which never learns.
 - ``greedy``  descending surrogate mean.
 - ``ucb``     descending mean + beta * std: explores where the surrogate is unsure.
+- ``slack_ucb`` cold start from the head of the Slack ranking instead of a random batch, then
+  ``ucb``. The physics prior picks the first batch, the surrogate corrects its blind spots. Once
+  labels exist (every real round) it ranks exactly like ``ucb``; only the replay's round 0 differs.
 """
 
 from __future__ import annotations
@@ -18,8 +21,9 @@ from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel, Matern, WhiteKernel
 from sklearn.preprocessing import StandardScaler
 
-STRATEGIES = ("random", "slack", "greedy", "ucb")
-LEARNING = frozenset({"greedy", "ucb"})
+STRATEGIES = ("random", "slack", "greedy", "ucb", "slack_ucb")
+LEARNING = frozenset({"greedy", "ucb", "slack_ucb"})
+SLACK_START = frozenset({"slack_ucb"})  # learning strategies whose first batch is the Slack head
 
 
 class Surrogate:
@@ -69,5 +73,5 @@ def rank(
         raise ValueError(f"unknown strategy {strategy!r}; one of {STRATEGIES}")
     assert surrogate is not None
     mu, sd = surrogate.predict(X_cand)
-    score = mu if strategy == "greedy" else mu + beta * sd
+    score = mu if strategy == "greedy" else mu + beta * sd  # ucb and slack_ucb
     return np.argsort(-score, kind="stable")

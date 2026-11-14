@@ -16,7 +16,9 @@ from mga.results import ResultMissing, load_result
 
 L0_KIND, L1_KIND = "mlip_fc2_descriptors", "mlip_kappa"
 DEFAULT_MODEL = "dpa41_max_oam"
-DEFAULT_L0_HASH = "c7704b907723"
+# L0 = FC2 descriptors with fc2_min_width 10 A (2026-11-12): the 14 A protocol (c7704b907723)
+# OOMs on 44 GB GPUs for dense B-C-N; on 31 structures stable under both, Slack Spearman 0.975.
+DEFAULT_L0_HASH = "504f29978e8c"
 DEFAULT_L1_HASH = "cc4191d4d8d0"
 
 # Descriptors used as surrogate features. Positive, heavy-tailed ones enter as log10.

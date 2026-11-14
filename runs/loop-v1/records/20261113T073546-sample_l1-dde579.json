@@ -1,0 +1,83 @@
+{
+  "step_id": "20261113T073546-sample_l1-dde579",
+  "run_id": "loop-v1",
+  "tool": "sample_l1",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Stratified L1 sample (chemical system x Slack tercile, sqrt quota) = the replay universe; budget approved by the user.",
+  "parent_ids": [
+    "20261113T072036-merge_sets-304990"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.v1.bcn200.l0stable.w10",
+    "new_set_name": "loop.l1.v1",
+    "budget": 130,
+    "seed": 0
+  },
+  "outputs": {
+    "l0_stable": 314,
+    "budget": 130,
+    "n_sample": 118,
+    "n_forced": 16,
+    "n_already_l1": 0,
+    "n_to_compute": 118,
+    "est_gpu_h": 65.6,
+    "per_chemsys": {
+      "B-C-N": 19,
+      "Al-C-N-Si": 11,
+      "B-C-P": 11,
+      "C-Si": 10,
+      "As-B-P": 7,
+      "B-N": 7,
+      "Al-C-N": 6,
+      "Be-C-N": 5,
+      "Al-B-N": 4,
+      "B-C": 4,
+      "As-B": 4,
+      "B-P": 4,
+      "Al-C": 3,
+      "Al-N": 3,
+      "Al-Si": 3,
+      "Be-N-Si": 3,
+      "Ga-N": 3,
+      "Al-B": 2,
+      "C": 2,
+      "As-P": 1,
+      "B-Be": 1,
+      "Be-C": 1,
+      "Be-N": 1,
+      "Al-Be": 1,
+      "Be-O": 1,
+      "N-Si": 1
+    },
+    "targets_in_sample": [
+      "BAs",
+      "BP",
+      "R3m-BNC2",
+      "SiC",
+      "c-BN",
+      "diamond"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.746,
+  "host": "cenyj",
+  "created_at": "2026-11-13T07:35:47+00:00"
+}

@@ -25,7 +25,7 @@ import numpy as np
 from mga import registry
 from mga.loop.data import build_table, labelled
 from mga.loop.replay import ReplayConfig, hit_threshold, run
-from mga.loop.surrogate import STRATEGIES
+from mga.loop.surrogate import LEARNING, STRATEGIES
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,8 +39,10 @@ TARGETS = {
     "R3m-BNC2": ("BC2N", {160}),
 }
 # validated categorical slots (dataviz reference palette, light mode); fixed per strategy
-COLOR = {"ucb": "#2a78d6", "slack": "#eb6834", "greedy": "#1baf7a", "random": "#eda100"}
-LABEL = {"ucb": "surrogate (UCB)", "greedy": "surrogate (greedy)", "slack": "Slack ranking", "random": "random"}
+COLOR = {"ucb": "#2a78d6", "slack": "#eb6834", "greedy": "#1baf7a", "random": "#eda100", "slack_ucb": "#e87ba4"}
+LABEL = {"ucb": "surrogate (UCB)", "greedy": "surrogate (greedy)", "slack": "Slack ranking", "random": "random",
+         "slack_ucb": "Slack start → UCB"}
+ORDER = ("slack_ucb", "ucb", "greedy", "slack", "random")
 
 
 def target_sids(sids, control: list[str]) -> dict[str, list[str]]:
@@ -86,11 +88,11 @@ def end_labels(ax, min_gap: float = 0.07) -> None:
 
 def plot(df, n_targets: int, thr: float, n_universe: int, out: Path) -> None:
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4), constrained_layout=True)
-    strategies = [s for s in ("ucb", "greedy", "slack", "random") if s in set(df.strategy)]
+    strategies = [s for s in ORDER if s in set(df.strategy)]
     for s in strategies:
         band(axes[0], df, "gpu_h", "hits", s)
         band(axes[1], df, "n_labelled", "targets_found", s)
-    for s in [s for s in strategies if s in ("ucb", "greedy")]:
+    for s in [s for s in strategies if s in LEARNING]:
         d = df[(df.strategy == s) & df.spearman_rest.notna()]
         band(axes[2], d, "n_labelled", "spearman_rest", s)
     axes[0].set(xlabel="L1 GPU·h spent", ylabel=f"hits (κ_L1 ≥ {thr:.0f} W/mK)", title="Hits per GPU·h")

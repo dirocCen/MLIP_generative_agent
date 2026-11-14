@@ -1,0 +1,24 @@
+{
+  "name": "loop.pool.v1.bcn200.l0in.a.x.l0stable.dpa41_max_oam.504f29.partial3",
+  "n": 3,
+  "sids": [
+    "BC6N-fca42d9b4b",
+    "BC6N-ed32eb6943",
+    "BC6N-d71b4ab0e5"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "loop.pool.v1.bcn200.l0in.a.x"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "504f29978e8c",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "BC6N-bda631e09b"
+    ]
+  },
+  "created_by_step": "20261113T040105-fetch_results-8cc7ed",
+  "created_at": "2026-11-13T04:01:10+00:00"
+}

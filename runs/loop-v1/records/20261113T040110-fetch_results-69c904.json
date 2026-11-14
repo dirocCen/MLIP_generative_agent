@@ -1,0 +1,141 @@
+{
+  "step_id": "20261113T040110-fetch_results-69c904",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261112T035752-submit_mlip_fc2_descriptors-dd37f2"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261112T035752-submit_mlip_fc2_descriptors-dd37f2",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 0,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 30,
+        "states": {
+          "UPLOADED": 14,
+          "REMOTE_ERROR": 8,
+          "RUN_FINISHED": 7,
+          "RUNNING": 1
+        },
+        "all_final": false,
+        "n_completed": 0,
+        "n_failed": 8,
+        "failed_examples": [
+          {
+            "name": "loop.pool.v1.bcn200.l0in.w10.big-fc2_descriptors-dpa41_max_oam-000",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/8a/64/44/8a6444c6-248c-4e4d-95bd-0717c39091a9_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.w10.big-fc2_descriptors-dpa41_max_oam-001",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/f2/b9/a7/f2b9a7ee-3b55-463e-bd7c-d6c085baa22e_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.w10.big-fc2_descriptors-dpa41_max_oam-002",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/44/b3/01/44b3012a-48a3-49b6-adb8-8d4949b26674_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.w10.big-fc2_descriptors-dpa41_max_oam-003",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/8e/ee/0d/8eee0dcf-7b5c-43fa-96dc-94f0c05a0abb_1"
+          },
+          {
+            "name": "loop.pool.v1.bcn200.l0in.w10.big-fc2_descriptors-dpa41_max_oam-004",
+            "state": "REMOTE_ERROR",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/41/8d/2a/418d2a40-3a6b-424f-88cc-25b8e3c10b7f_1"
+          }
+        ]
+      }
+    },
+    "derived": {
+      "n_results": 117,
+      "n_missing": 2,
+      "n_failed": 117,
+      "failed_examples": [
+        {
+          "sid": "AlB3N4-c58b948445",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "AlC6N-78e92b1f5d",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "AlC6N-c5c46efa52",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "AlC6N-4c50a49a8d",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "AlC7-2f344905ec",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        }
+      ],
+      "wall_time_s": {
+        "n": 117,
+        "min": 0.91,
+        "median": 1.16,
+        "max": 5.3
+      },
+      "n_imaginary": 0,
+      "stable_set": "loop.pool.v1.bcn200.l0in.w10.big.l0stable.dpa41_max_oam.504f29.partial0",
+      "n_stable": 0,
+      "descriptors": {
+        "kappa_slack_W_mK": null,
+        "kappa_proxy_cv2_over_wjdos": null,
+        "kappa_ctau_1ps_W_mK": null,
+        "theta_acoustic_K": null,
+        "ao_gap_ratio": null,
+        "acoustic_branch_spread": null,
+        "gamma_acoustic_rms": null,
+        "wjdos_cv_mean": null
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 3.042,
+  "host": "cenyj",
+  "created_at": "2026-11-13T04:01:10+00:00"
+}

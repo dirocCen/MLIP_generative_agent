@@ -1,0 +1,147 @@
+{
+  "step_id": "20261113T071529-fetch_results-499b2c",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261113T040205-submit_mlip_fc2_descriptors-781243"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261113T040205-submit_mlip_fc2_descriptors-781243",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 430,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 108,
+        "states": {
+          "COMPLETED": 108
+        },
+        "all_final": true,
+        "n_completed": 108,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 434,
+      "n_missing": 0,
+      "n_failed": 6,
+      "failed_examples": [
+        {
+          "sid": "BAs-857679afcd",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "BC2N-6536081d0e",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "BC7-38aa31e4ba",
+          "stage": "fc2",
+          "error": "OutOfMemoryError: The callable still throws an out-of-memory (OOM) error even when batch size is 1!"
+        },
+        {
+          "sid": "BN-5283b02931",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "BP-7b00c65287",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        }
+      ],
+      "wall_time_s": {
+        "n": 434,
+        "min": 0.46,
+        "median": 36.614999999999995,
+        "max": 637.31
+      },
+      "n_imaginary": 189,
+      "stable_set": "loop.pool.v1.bcn200.l0in.a.x.l0stable.dpa41_max_oam.504f29",
+      "n_stable": 239,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 239,
+          "min": 0.23973670381389123,
+          "median": 312.1286986836386,
+          "max": 2275.962436177391
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 239,
+          "min": 0.02445997576299948,
+          "median": 2.8512340818117323,
+          "max": 624.1205295793059
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 239,
+          "min": 1.8437921366531271,
+          "median": 9.6810120110465,
+          "max": 37.71549408137056
+        },
+        "theta_acoustic_K": {
+          "n": 239,
+          "min": 109.48779794492043,
+          "median": 577.6270616870364,
+          "max": 1549.2281257010975
+        },
+        "ao_gap_ratio": {
+          "n": 239,
+          "min": -0.9841550732803543,
+          "median": -0.443787670998874,
+          "max": 0.9034457474827555
+        },
+        "acoustic_branch_spread": {
+          "n": 239,
+          "min": 0.09425282472081921,
+          "median": 0.24616893095274953,
+          "max": 0.5081879394802737
+        },
+        "gamma_acoustic_rms": {
+          "n": 239,
+          "min": 0.2524051234379218,
+          "median": 0.64661659902313,
+          "max": 16.073604051953126
+        },
+        "wjdos_cv_mean": {
+          "n": 239,
+          "min": 0.10964415523391054,
+          "median": 6.820537779712123,
+          "max": 76.53028270156793
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 85.371,
+  "host": "cenyj",
+  "created_at": "2026-11-13T07:15:29+00:00"
+}

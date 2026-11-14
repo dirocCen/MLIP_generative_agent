@@ -1,0 +1,166 @@
+{
+  "step_id": "20261113T081122-submit_mlip_convergence-ab919e",
+  "kind": "mlip_kappa",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "per-variant",
+  "all_sids": [
+    "743da8f9f68a:C-e31620d409",
+    "743da8f9f68a:BN-e3774a672e",
+    "743da8f9f68a:BAs-b4a97dada0",
+    "743da8f9f68a:BC2N-4035695a9f",
+    "f2e544edb05c:C-e31620d409",
+    "f2e544edb05c:BN-e3774a672e",
+    "f2e544edb05c:BAs-b4a97dada0",
+    "f2e544edb05c:BC2N-4035695a9f",
+    "d6bfd81d58bf:C-e31620d409",
+    "d6bfd81d58bf:BN-e3774a672e",
+    "d6bfd81d58bf:BAs-b4a97dada0",
+    "d6bfd81d58bf:BC2N-4035695a9f"
+  ],
+  "mode": "live",
+  "set_name": "loop.l1.v1.fc2scan",
+  "target": "fc2_min_width",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "variants": [
+    {
+      "value": 10.0,
+      "param_hash": "743da8f9f68a",
+      "kappa_params": {
+        "displacement": 0.03,
+        "is_plusminus": "auto",
+        "symprec": 1e-05,
+        "temperatures": [
+          300.0
+        ],
+        "use_reference_settings": false,
+        "fc3_min_width": 8.0,
+        "fc2_min_width": 10.0,
+        "q_mesh_length": 40.0,
+        "is_isotope": true,
+        "boundary_mfp_um": 1000000.0,
+        "transport": "MS-SMM19",
+        "imaginary_threshold_thz": -0.01,
+        "kappa_if_symmetry_broken": false,
+        "dtype": "float64",
+        "chunk_size": 4
+      }
+    },
+    {
+      "value": 12.0,
+      "param_hash": "f2e544edb05c",
+      "kappa_params": {
+        "displacement": 0.03,
+        "is_plusminus": "auto",
+        "symprec": 1e-05,
+        "temperatures": [
+          300.0
+        ],
+        "use_reference_settings": false,
+        "fc3_min_width": 8.0,
+        "fc2_min_width": 12.0,
+        "q_mesh_length": 40.0,
+        "is_isotope": true,
+        "boundary_mfp_um": 1000000.0,
+        "transport": "MS-SMM19",
+        "imaginary_threshold_thz": -0.01,
+        "kappa_if_symmetry_broken": false,
+        "dtype": "float64",
+        "chunk_size": 4
+      }
+    },
+    {
+      "value": 14.0,
+      "param_hash": "d6bfd81d58bf",
+      "kappa_params": {
+        "displacement": 0.03,
+        "is_plusminus": "auto",
+        "symprec": 1e-05,
+        "temperatures": [
+          300.0
+        ],
+        "use_reference_settings": false,
+        "fc3_min_width": 8.0,
+        "fc2_min_width": 14.0,
+        "q_mesh_length": 40.0,
+        "is_isotope": true,
+        "boundary_mfp_um": 1000000.0,
+        "transport": "MS-SMM19",
+        "imaginary_threshold_thz": -0.01,
+        "kappa_if_symmetry_broken": false,
+        "dtype": "float64",
+        "chunk_size": 4
+      }
+    }
+  ],
+  "sids": [
+    "743da8f9f68a:C-e31620d409",
+    "743da8f9f68a:BN-e3774a672e",
+    "743da8f9f68a:BAs-b4a97dada0",
+    "743da8f9f68a:BC2N-4035695a9f",
+    "f2e544edb05c:C-e31620d409",
+    "f2e544edb05c:BN-e3774a672e",
+    "f2e544edb05c:BAs-b4a97dada0",
+    "f2e544edb05c:BC2N-4035695a9f",
+    "d6bfd81d58bf:C-e31620d409",
+    "d6bfd81d58bf:BN-e3774a672e",
+    "d6bfd81d58bf:BAs-b4a97dada0",
+    "d6bfd81d58bf:BC2N-4035695a9f"
+  ],
+  "db_ids": [
+    "883",
+    "884",
+    "885"
+  ],
+  "flow_uuid": "d5e766ee-7175-4c79-80f5-af9985fbdd26",
+  "n_jobs": 3,
+  "jobs": [
+    {
+      "uuid": "2964c741-d158-45a6-abb8-bb79a93e299d",
+      "name": "loop.l1.v1.fc2scan-fc2_min_width=10-kappa-dpa41_max_oam-000",
+      "sids": [
+        "C-e31620d409",
+        "BN-e3774a672e",
+        "BAs-b4a97dada0",
+        "BC2N-4035695a9f"
+      ],
+      "kind": "mlip_kappa",
+      "param_hash": "743da8f9f68a"
+    },
+    {
+      "uuid": "1d747354-b623-4dab-b35e-b3878a088be2",
+      "name": "loop.l1.v1.fc2scan-fc2_min_width=12-kappa-dpa41_max_oam-000",
+      "sids": [
+        "C-e31620d409",
+        "BN-e3774a672e",
+        "BAs-b4a97dada0",
+        "BC2N-4035695a9f"
+      ],
+      "kind": "mlip_kappa",
+      "param_hash": "f2e544edb05c"
+    },
+    {
+      "uuid": "270071b9-8546-46e5-b59a-9514f2055088",
+      "name": "loop.l1.v1.fc2scan-fc2_min_width=14-kappa-dpa41_max_oam-000",
+      "sids": [
+        "C-e31620d409",
+        "BN-e3774a672e",
+        "BAs-b4a97dada0",
+        "BC2N-4035695a9f"
+      ],
+      "kind": "mlip_kappa",
+      "param_hash": "d6bfd81d58bf"
+    }
+  ]
+}

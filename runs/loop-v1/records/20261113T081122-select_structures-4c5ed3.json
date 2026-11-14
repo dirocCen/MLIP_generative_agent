@@ -1,0 +1,44 @@
+{
+  "step_id": "20261113T081122-select_structures-4c5ed3",
+  "run_id": "loop-v1",
+  "tool": "select_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "fc2_min_width 14 A is a phononDB heuristic never converged here, and it alone pushes 58 of 118 L1 structures past 399 atoms (FC3 max 384). Scan 10/12/14 A on diamond, c-BN, BAs and a 504-atom BC2N to decide whether later rounds can use a smaller FC2 cell. User chose this 11-13.",
+  "parent_ids": [
+    "20261113T073546-sample_l1-dde579"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.l1.v1",
+    "sids": [
+      "C-e31620d409",
+      "BN-e3774a672e",
+      "BAs-b4a97dada0",
+      "BC2N-4035695a9f"
+    ]
+  },
+  "outputs": {
+    "n": 4
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.046,
+  "host": "cenyj",
+  "created_at": "2026-11-13T08:11:22+00:00"
+}
