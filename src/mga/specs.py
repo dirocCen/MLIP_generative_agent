@@ -91,7 +91,9 @@ class MLIPPhononKappaParams(ParamSpec):
     imaginary_threshold_thz: float = P(-0.01, KSRME_IMAG, le=0, ge=-1.0)
     kappa_if_symmetry_broken: bool = P(False, KSRME + " (conductivity_broken_symm)")
     dtype: Literal["model_default", "float64", "float32"] = P("model_default", "see MLIPRelaxParams.dtype")
-    chunk_size: int = P(4, EXEC, affects_result=False, ge=1, le=256)
+    chunk_size: int = P(1, EXEC + "; structures per job: one L1 structure takes 0.1-10 GPU h, so a chunk of 4 "
+                        "ran a round's 3 large cells serially (~26 h instead of ~10 h, 11-14)",
+                        affects_result=False, ge=1, le=256)
 
 
 ConvergenceTarget = Literal["fc3_min_width", "fc2_min_width", "q_mesh_length", "displacement"]

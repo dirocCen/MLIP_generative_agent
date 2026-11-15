@@ -1,0 +1,229 @@
+{
+  "step_id": "20261114T141544-submit_mlip_phonon_kappa-c6bc76",
+  "kind": "mlip_kappa",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "5b38ae92e6ac",
+  "all_sids": [
+    "BC6N-dd97b91d20",
+    "BC2N-c3fe44ad23",
+    "B3C2N3-89b4bd27e4"
+  ],
+  "mode": "live",
+  "set_name": "loop.round.r1.a100",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 10.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 1
+  },
+  "settings": {
+    "BC6N-dd97b91d20": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 10.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 384,
+      "n_atoms_fc2_supercell": 480
+    },
+    "BC2N-c3fe44ad23": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 10.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 384,
+      "n_atoms_fc2_supercell": 480
+    },
+    "B3C2N3-89b4bd27e4": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 10.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 384,
+      "n_atoms_fc2_supercell": 480
+    }
+  },
+  "sids": [
+    "BC6N-dd97b91d20",
+    "BC2N-c3fe44ad23",
+    "B3C2N3-89b4bd27e4"
+  ],
+  "db_ids": [
+    "890",
+    "891",
+    "892"
+  ],
+  "flow_uuid": "cb41d00c-1e33-48c2-8794-f161854db1d4",
+  "n_jobs": 3,
+  "jobs": [
+    {
+      "uuid": "33f5d0c1-e0b2-4661-897a-89b6f33004e7",
+      "name": "loop.round.r1.a100-kappa-dpa41_max_oam-000",
+      "sids": [
+        "BC6N-dd97b91d20"
+      ],
+      "kind": "mlip_kappa"
+    },
+    {
+      "uuid": "a9f18509-d03f-4b29-9817-a4b0fc912a7e",
+      "name": "loop.round.r1.a100-kappa-dpa41_max_oam-001",
+      "sids": [
+        "BC2N-c3fe44ad23"
+      ],
+      "kind": "mlip_kappa"
+    },
+    {
+      "uuid": "7d846003-8ef4-49aa-b0b5-97cb8dd543eb",
+      "name": "loop.round.r1.a100-kappa-dpa41_max_oam-002",
+      "sids": [
+        "B3C2N3-89b4bd27e4"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}
