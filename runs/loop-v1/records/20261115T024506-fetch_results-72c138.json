@@ -1,0 +1,79 @@
+{
+  "step_id": "20261115T024506-fetch_results-72c138",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261113T080410-submit_mlip_phonon_kappa-01b3b1"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261113T080410-submit_mlip_phonon_kappa-01b3b1",
+    "kind": "mlip_kappa",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_kappa",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 40,
+      "n_already_cached": 14,
+      "jobs": {
+        "n_jobs": 15,
+        "states": {
+          "COMPLETED": 14,
+          "FAILED": 1
+        },
+        "all_final": true,
+        "n_completed": 14,
+        "n_failed": 1,
+        "failed_examples": [
+          {
+            "name": "loop.l1.v1.a100-kappa-dpa41_max_oam-010",
+            "state": "FAILED",
+            "error": "The output file jfremote_out.json was downloaded, but it does not contain the response. The job was likely killed before completing",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/b1/67/62/b16762ae-5d19-4334-860d-35572cf3b20d_1"
+          }
+        ]
+      }
+    },
+    "derived": {
+      "n_results": 54,
+      "n_missing": 4,
+      "n_failed": 15,
+      "n_imaginary": 1,
+      "skipped": {
+        "imaginary_modes": 1
+      },
+      "n_with_kappa": 38,
+      "kappa_300K_W_mK": {
+        "min": 16.614878009753237,
+        "median": 217.43693838024262,
+        "max": 1599.7068150663952
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 20.161,
+  "host": "cenyj",
+  "created_at": "2026-11-15T02:45:06+00:00"
+}

@@ -11,7 +11,7 @@ the replay. Dry run by default; ``--commit`` writes a ``loop_round`` record and 
 ``loop.round.<round>``. Submitting L1 for that set is a separate step that needs the user's approval.
 
 Usage: MGA_RUN_ID=loop-v1 python scripts/loop_round.py --set <L0 set> [--set ...] --round r1 \
-    --exclude-set <every set already sent to L1> [--commit]
+    --exclude-set <every set already sent to L1> [--pending-set <sets still running>] [--max-fc2-atoms 360] [--commit]
 """
 
 from __future__ import annotations
@@ -31,10 +31,13 @@ from mga.records import recorded_step
 from mga.tools._common import parent_steps
 
 ROOT = Path(__file__).resolve().parents[1]
-# L1 cost (GPU h) ~ H_PER_DISP_ATOM * n_fc3_displacements * n_atoms_fc3: median over the 84
-# loop.l1.v1 labels (L40S + A100, 11-14), per-structure ratio 0.67-1.82 (10-90 %). The old rule
-# (0.69 h per 8 primitive atoms) predicted 66 GPU h for a sample that took ~150.
-H_PER_DISP_ATOM = 1.03e-6
+# L1 cost (GPU h) ~ COST_A * n_fc3_displacements * n_atoms_fc3**COST_P: least squares in log space
+# on the 98 L1 labels of loop.l1.v1 + loop.round.r1 (L40S + A100, 11-15), per-structure ratio
+# 0.69-1.41 (10-90 %). Superlinear in atoms because the DPA neighbour search is dense O(N^2)
+# (no vesin on the cluster); the linear fit (1.03e-6 * disp * atoms) said 10 h for the 384-atom
+# FC3 cells of r1, which took > 24 h. The old rule (0.69 h per 8 primitive atoms) was worse still.
+COST_A, COST_P, COST_RANGE = 3.55e-8, 1.757, (0.69, 1.41)
+JOB_LIMIT_H = 24.0  # GpuResources.time default; a cell whose 90 % estimate exceeds it needs a longer --time
 # FC2 supercell atoms that fit (11-14): <= 360 on L40S 44 GB (>= 399 OOM), <= 672 on A100 80 GB
 # (>= 720 OOM); "untested" = larger: run those at a smaller --fc2-min-width (10 A).
 FC2_FIT = ((360, "l40s"), (672, "a100"))
@@ -61,7 +64,7 @@ def l1_cost(sids: list[str], fc2_min_width: float) -> pd.DataFrame:
         gpu = next((g for n, g in FC2_FIT if st["n_atoms_fc2"] <= n), "untested")
         rows.append({"sid": it["sid"], "n_atoms_fc2": st["n_atoms_fc2"], "n_atoms_fc3": st["n_atoms_fc3"],
                      "n_fc3_disp": st["n_fc3_displacements"], "gpu": gpu,
-                     "est_gpu_h": H_PER_DISP_ATOM * st["n_fc3_displacements"] * st["n_atoms_fc3"]})
+                     "est_gpu_h": COST_A * st["n_fc3_displacements"] * st["n_atoms_fc3"] ** COST_P})
     return pd.DataFrame(rows).set_index("sid")
 
 
@@ -72,6 +75,11 @@ def main() -> None:
     ap.add_argument("--exclude-set", action="append", default=[],
                     help="sets whose sids are never candidates: L1 already attempted or in flight "
                          "(failed L1 has no label, so without this it would be proposed again)")
+    ap.add_argument("--pending-set", action="append", default=[],
+                    help="sets still running L1: excluded like --exclude-set, and their unlabelled sids count "
+                         "toward --max-per-formula (else a round re-picks the formulas of the one in flight)")
+    ap.add_argument("--max-fc2-atoms", type=int, default=None,
+                    help="skip candidates whose FC2 supercell is larger (e.g. 360 = fits an L40S)")
     ap.add_argument("--strategy", default="ucb", choices=STRATEGIES)
     ap.add_argument("--batch", type=int, default=10)
     ap.add_argument("--beta", type=float, default=1.0)
@@ -89,7 +97,8 @@ def main() -> None:
     t = build_table(sids)
     t = t[t["l0_ok"]].dropna(subset=list(FEATURES))
     train = t[t["kappa_l1"].notna()]
-    excluded = {x for s in a.exclude_set for x in registry.set_sids(s)}
+    pending = {x for s in a.pending_set for x in registry.set_sids(s)}
+    excluded = {x for s in a.exclude_set for x in registry.set_sids(s)} | pending
     cand = t[t["kappa_l1"].isna() & ~t.index.isin(excluded)]
     if len(train) < 5:
         raise SystemExit(f"only {len(train)} labelled structures: run the stratified L1 sample first")
@@ -101,10 +110,16 @@ def main() -> None:
 
     order = rank(a.strategy, X(cand), cand["kappa_slack"].to_numpy(float),
                  np.random.default_rng(a.seed), sur, a.beta)
-    picked, per_formula = [], {}
+    picked, per_formula, costs, n_too_big = [], {}, [], 0
+    for f in t.loc[t.index.isin(pending) & t["kappa_l1"].isna(), "formula"]:
+        per_formula[f] = per_formula.get(f, 0) + 1
     for i in order:
         sid, f = cand.index[i], cand["formula"].iloc[i]
         if per_formula.get(f, 0) >= a.max_per_formula:
+            continue
+        costs.append(l1_cost([sid], a.fc2_min_width))
+        if a.max_fc2_atoms and costs[-1]["n_atoms_fc2"].iloc[0] > a.max_fc2_atoms:
+            n_too_big += 1
             continue
         picked.append(sid)
         per_formula[f] = per_formula.get(f, 0) + 1
@@ -119,13 +134,15 @@ def main() -> None:
             "sd_log_kappa", "ucb", "picked", "n_atoms_primitive"]
     t[cols].sort_values("ucb", ascending=False).to_csv(out, index=False)
 
-    batch = t.loc[picked].join(l1_cost(picked, a.fc2_min_width))
+    batch = t.loc[picked].join(pd.concat(costs))
     est = float(batch["est_gpu_h"].sum())
     summary = {
         "round": a.round, "strategy": a.strategy, "n_train": len(train), "n_candidates": len(cand),
         "n_excluded_unlabelled": int((t["kappa_l1"].isna() & t.index.isin(excluded)).sum()),
+        "n_pending": len(pending), "n_skipped_fc2_too_big": n_too_big,
         "batch": len(picked), "fc2_min_width": a.fc2_min_width, "est_l1_gpu_h": round(est, 1),
-        "est_l1_gpu_h_range": [round(0.67 * est, 1), round(1.82 * est, 1)],
+        "est_l1_gpu_h_range": [round(COST_RANGE[0] * est, 1), round(COST_RANGE[1] * est, 1)],
+        "over_job_limit": batch.index[batch["est_gpu_h"] * COST_RANGE[1] > JOB_LIMIT_H].tolist(),
         "gpu_counts": batch["gpu"].value_counts().to_dict(), "predictions": str(out.relative_to(ROOT)),
         "train_best": train.nlargest(3, "kappa_l1")[["formula", "kappa_l1"]].round(0).values.tolist(),
     }
@@ -139,7 +156,8 @@ def main() -> None:
     new_set = f"loop.round.{a.round}"
     with recorded_step(
         "loop_round",
-        inputs={"sets": a.set, "exclude_sets": a.exclude_set, "round": a.round, "strategy": a.strategy, "batch": a.batch,
+        inputs={"sets": a.set, "exclude_sets": a.exclude_set, "pending_sets": a.pending_set,
+                "max_fc2_atoms": a.max_fc2_atoms, "round": a.round, "strategy": a.strategy, "batch": a.batch,
                 "beta": a.beta, "max_per_formula": a.max_per_formula, "seed": a.seed},
         parent_ids=[p for s in a.set for p in parent_steps(s)],
         decided_by=a.decided_by,

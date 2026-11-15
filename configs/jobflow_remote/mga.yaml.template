@@ -70,6 +70,7 @@ workers:
     type: remote
     host: cluster.datalab.tuwien.ac.at
     user: yujie.cen
+    connect_timeout: 30   # without it a dead ssh connection (e.g. after the laptop sleeps) hangs the runner
     scheduler_type: slurm
     work_dir: TODO/mga_jobs/mace
     resources:

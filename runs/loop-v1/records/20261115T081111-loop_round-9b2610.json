@@ -1,0 +1,99 @@
+{
+  "step_id": "20261115T081111-loop_round-9b2610",
+  "run_id": "loop-v1",
+  "tool": "loop_round",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Loop round r2: slack_ucb on a GP surrogate fitted to 98 L1 labels.",
+  "parent_ids": [
+    "20261113T072036-merge_sets-304990"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "sets": [
+      "loop.pool.v1.bcn200.l0stable.w10"
+    ],
+    "exclude_sets": [
+      "loop.l1.v1",
+      "loop.round.r1"
+    ],
+    "pending_sets": [
+      "loop.round.r1.a100"
+    ],
+    "max_fc2_atoms": 360,
+    "round": "r2",
+    "strategy": "slack_ucb",
+    "batch": 10,
+    "beta": 1.0,
+    "max_per_formula": 2,
+    "seed": 0
+  },
+  "outputs": {
+    "round": "r2",
+    "strategy": "slack_ucb",
+    "n_train": 98,
+    "n_candidates": 186,
+    "n_excluded_unlabelled": 30,
+    "n_pending": 3,
+    "n_skipped_fc2_too_big": 4,
+    "batch": 10,
+    "fc2_min_width": 12.0,
+    "est_l1_gpu_h": 19.4,
+    "est_l1_gpu_h_range": [
+      13.4,
+      27.4
+    ],
+    "over_job_limit": [],
+    "gpu_counts": {
+      "l40s": 10
+    },
+    "predictions": "runs/loop-v1/rounds/r2.csv",
+    "train_best": [
+      [
+        "C",
+        1600.0
+      ],
+      [
+        "C",
+        1362.0
+      ],
+      [
+        "BAs",
+        1255.0
+      ]
+    ],
+    "new_set_name": "loop.round.r2",
+    "sids": [
+      "BC7-c9dde6c3c9",
+      "BC6N-07a277b03b",
+      "B3As2P-d918ae3f16",
+      "B4As3P-7abe9c3bf3",
+      "AlC2N-d6430c5a72",
+      "BeCN2-fea4e45c51",
+      "BC2N-7a22cd508b",
+      "BN-df2e7b7e20",
+      "BC5-1f9571ecf2",
+      "BPC6-6c62fd8694"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.063,
+  "host": "cenyj",
+  "created_at": "2026-11-15T08:11:11+00:00"
+}

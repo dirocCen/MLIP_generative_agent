@@ -1,0 +1,16 @@
+{
+  "name": "loop.round.r1.a100.long",
+  "n": 2,
+  "sids": [
+    "BC6N-dd97b91d20",
+    "B3C2N3-89b4bd27e4"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.round.r1.a100"
+  ],
+  "description": "Round r1 A100 cells predicted past the 24 h slurm limit (~32 GPU h each); rerun with a 3-day limit",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-15T07:30:49+00:00"
+}

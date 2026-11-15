@@ -1,0 +1,83 @@
+{
+  "step_id": "20261115T084127-fetch_results-44a11f",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261114T141544-submit_mlip_phonon_kappa-c6bc76"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261114T141544-submit_mlip_phonon_kappa-c6bc76",
+    "kind": "mlip_kappa",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_kappa",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 1,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 3,
+        "states": {
+          "USER_STOPPED": 2,
+          "COMPLETED": 1
+        },
+        "all_final": true,
+        "n_completed": 1,
+        "n_failed": 2,
+        "failed_examples": [
+          {
+            "name": "loop.round.r1.a100-kappa-dpa41_max_oam-000",
+            "state": "USER_STOPPED",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/33/f5/d0/33f5d0c1-e0b2-4661-897a-89b6f33004e7_1"
+          },
+          {
+            "name": "loop.round.r1.a100-kappa-dpa41_max_oam-002",
+            "state": "USER_STOPPED",
+            "error": "",
+            "run_dir": "/share/yujie.cen/mga/jobs/dpa/7d/84/60/7d846003-8ef4-49aa-b0b5-97cb8dd543eb_1"
+          }
+        ]
+      }
+    },
+    "derived": {
+      "n_results": 1,
+      "n_missing": 2,
+      "n_failed": 0,
+      "n_imaginary": 0,
+      "skipped": {},
+      "n_with_kappa": 1,
+      "kappa_300K_W_mK": {
+        "min": 656.7110718804319,
+        "median": 656.7110718804319,
+        "max": 656.7110718804319
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.857,
+  "host": "cenyj",
+  "created_at": "2026-11-15T08:41:27+00:00"
+}
