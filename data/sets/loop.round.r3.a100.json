@@ -1,0 +1,16 @@
+{
+  "name": "loop.round.r3.a100",
+  "n": 2,
+  "sids": [
+    "BC2N-54d3f82304",
+    "BC2N-bd92daa20d"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.pool.v1.bcn200.l0stable.w10"
+  ],
+  "description": "Round r3 large cells: UCB ranks 2 and 3 (mu ~622 W/mK), skipped by the L40S cap (FC2 720 atoms at 12 A); run on A100 at 10 A",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-15T15:12:19+00:00"
+}
