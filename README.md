@@ -228,7 +228,7 @@ MLIP × 结构枚举 × agent：一个会从自己算过的结果里学习、每
 1. 第 1 轮的两个大胞和第 3 轮出结果后重训 GP。候选池里高 κ 的部分基本已经选完，第 4 轮主要是探索，是否继续要看成本。
 2. **扩池**：对命中结构（BC₂N、BC₆N 等）做同族替换（`scripts/grow_pool.py`）。新结构要走 relax → L0 → 代理模型，才可能被选中。
 3. 用全部标签（110 个以上）跑最终回放，五种策略一起比较；真实轮次按同样的指标打分。
-4. 前几名上 L2（LBTE），和 S0 的 c-BN、BAs 阶梯结果放在一起。
+4. 前几名上 L2（LBTE），和 S0 中 c-BN、BAs 的 L1–L3 结果放在一起。
 
 ## 之前的结论（`main` 分支，详见 search_log）
 
@@ -244,7 +244,7 @@ MLIP × 结构枚举 × agent：一个会从自己算过的结果里学习、每
 - **MLIP 会让生成的结构坍缩**：原子靠得太近时 DPA 的排斥力不够，E_hull 可以低到 −210 eV/atom。现在有三道防线：生成时的最短间距、E_hull 下限、弛豫后的最短间距检查。
 - **Slack 只能当门槛**：它对微小的对称性破缺很敏感，和 L1 的排序相关性弱（τ = 0.36）。这是闭环里用代理模型替代它的原因。
 
-## 保真度阶梯
+## 计算级别：精度逐级提高
 
 | 级 | 内容 | 工具状态 |
 |---|---|---|
@@ -252,7 +252,7 @@ MLIP × 结构枚举 × agent：一个会从自己算过的结果里学习、每
 | L1 | 3ph Wigner-RTA κ（κ_SRME 协议），力常数存入缓存 | 已有 |
 | L2 | LBTE 直接解，读 L1 的力常数缓存 | 已有 |
 | L3 | MLIP 四阶力常数（随机位移 + symfc）→ FourPhonon，3+4ph κ | 已有，闭环里暂不用 |
-| L4 | DFT：**人批准后才提交** | 已有，闭环里暂不用 |
+| L4 | DFT | 已有，闭环里暂不用 |
 
 主力 MLIP 是 DPA-4.1-Max-OAM；TECE-OAM-RRA 和 PET-OAM-XL 作为委员会，只在复核时使用。
 
@@ -269,7 +269,7 @@ MLIP × 结构枚举 × agent：一个会从自己算过的结果里学习、每
 | server | 作用 | 主要工具 |
 |---|---|---|
 | `mga-structures` | 结构导入、过滤、去重、新颖性和泄漏检查 | `import_structures` `filter_structures` `deduplicate` `check_novelty` `check_benchmark_leakage` |
-| `mga-mlip` | MatterGen 生成；MLIP 弛豫、声子和 κ；阶梯 L0 / L2 / L3；收敛检查 | `submit_mlip_relax` `submit_mlip_fc2_descriptors` `submit_mlip_phonon_kappa` `submit_mlip_kappa_lbte` `submit_mlip_fc4_fourphonon` `submit_mlip_convergence` |
+| `mga-mlip` | MatterGen 生成；MLIP 弛豫、声子和 κ；L0 / L2 / L3 各级计算；收敛检查 | `submit_mlip_relax` `submit_mlip_fc2_descriptors` `submit_mlip_phonon_kappa` `submit_mlip_kappa_lbte` `submit_mlip_fc4_fourphonon` `submit_mlip_convergence` |
 | `mga-dft` | VASP 输入预览、成本估计、审批单、提交 | `preview_vasp_inputs` `estimate_vasp_cost` `request_vasp_submission` `submit_vasp` |
 | `mga-analysis` | 作业状态、取回结果、E_hull、κ_SRME、模型分歧；预算账本和升级策略基线 | `job_status` `fetch_results` `compute_ehull` `model_disagreement` `budget_ledger` `escalation_baseline` `query_records` |
 
