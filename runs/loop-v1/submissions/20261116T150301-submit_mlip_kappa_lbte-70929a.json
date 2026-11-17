@@ -1,0 +1,357 @@
+{
+  "step_id": "20261116T150301-submit_mlip_kappa_lbte-70929a",
+  "kind": "mlip_lbte",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "134f7ea6f17b",
+  "all_sids": [
+    "C-e31620d409",
+    "BN-e3774a672e",
+    "BAs-b4a97dada0",
+    "BC4N-a54a00eaf4",
+    "BC2N-48338b409c"
+  ],
+  "mode": "live",
+  "set_name": "loop.l2.v1.w14",
+  "rung": "lbte",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 1
+  },
+  "rung_params": {
+    "temperatures": [
+      300.0
+    ],
+    "max_collision_matrix_gb": 32.0,
+    "min_mesh_scale": 0.5,
+    "pinv_cutoff": 1e-08
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "C-e31620d409": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -2,
+          2,
+          0
+        ],
+        [
+          -2,
+          -2,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 128,
+      "n_atoms_fc2_supercell": 512
+    },
+    "BN-e3774a672e": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -2,
+          -2,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        19,
+        19,
+        19
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 128,
+      "n_atoms_fc2_supercell": 512
+    },
+    "BAs-b4a97dada0": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        14,
+        14,
+        14
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 64,
+      "n_atoms_fc2_supercell": 216
+    },
+    "BC4N-a54a00eaf4": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -5,
+          0,
+          -1
+        ],
+        [
+          3,
+          2,
+          -2
+        ],
+        [
+          -2,
+          -6,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        6
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 192,
+      "n_atoms_fc2_supercell": 504
+    },
+    "BC2N-48338b409c": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -6,
+          -5,
+          0
+        ],
+        [
+          -2,
+          2,
+          -1
+        ],
+        [
+          1,
+          -3,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 192,
+      "n_atoms_fc2_supercell": 540
+    }
+  },
+  "sids": [
+    "C-e31620d409",
+    "BN-e3774a672e",
+    "BAs-b4a97dada0",
+    "BC4N-a54a00eaf4",
+    "BC2N-48338b409c"
+  ],
+  "db_ids": [
+    "919",
+    "920",
+    "921",
+    "922",
+    "923"
+  ],
+  "flow_uuid": "4d41194b-856d-4390-8cd1-022aba6b7f2a",
+  "n_jobs": 5,
+  "jobs": [
+    {
+      "uuid": "d3b3404b-dd60-4244-8dcd-4687bf0ccb08",
+      "name": "loop.l2.v1.w14-lbte-dpa41_max_oam-000",
+      "sids": [
+        "C-e31620d409"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "02719b31-8fd2-456b-9291-80ba7bdae12f",
+      "name": "loop.l2.v1.w14-lbte-dpa41_max_oam-001",
+      "sids": [
+        "BN-e3774a672e"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "21622e4a-7925-488f-9d01-5efbd5441070",
+      "name": "loop.l2.v1.w14-lbte-dpa41_max_oam-002",
+      "sids": [
+        "BAs-b4a97dada0"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "fd5aa050-ab8b-43bb-9a75-9ae386bda1f4",
+      "name": "loop.l2.v1.w14-lbte-dpa41_max_oam-003",
+      "sids": [
+        "BC4N-a54a00eaf4"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "9cbe4063-e21c-49d4-af0f-e1abd4916081",
+      "name": "loop.l2.v1.w14-lbte-dpa41_max_oam-004",
+      "sids": [
+        "BC2N-48338b409c"
+      ],
+      "kind": "mlip_lbte"
+    }
+  ]
+}

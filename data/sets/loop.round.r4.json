@@ -1,0 +1,50 @@
+{
+  "name": "loop.round.r4",
+  "n": 2,
+  "sids": [
+    "BC6N-ad76729f0d",
+    "BC6N-a01b2762b8"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.pool.v1.bcn200.l0stable.w10"
+  ],
+  "description": "Loop round r4: next L1 batch (slack_ucb)",
+  "details": {
+    "round": "r4",
+    "strategy": "slack_ucb",
+    "n_train": 121,
+    "n_candidates": 164,
+    "n_excluded_unlabelled": 29,
+    "n_pending": 2,
+    "n_skipped_fc2_too_big": 0,
+    "batch": 2,
+    "fc2_min_width": 12.0,
+    "est_l1_gpu_h": 7.3,
+    "est_l1_gpu_h_range": [
+      5.1,
+      10.4
+    ],
+    "over_job_limit": [],
+    "gpu_counts": {
+      "l40s": 2
+    },
+    "predictions": "runs/loop-v1/rounds/r4.csv",
+    "train_best": [
+      [
+        "C",
+        1600.0
+      ],
+      [
+        "C",
+        1362.0
+      ],
+      [
+        "BAs",
+        1255.0
+      ]
+    ]
+  },
+  "created_by_step": "20261116T145718-loop_round-211b0a",
+  "created_at": "2026-11-16T14:57:18+00:00"
+}

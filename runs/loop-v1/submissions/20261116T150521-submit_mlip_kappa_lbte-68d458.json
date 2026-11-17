@@ -1,0 +1,121 @@
+{
+  "step_id": "20261116T150521-submit_mlip_kappa_lbte-68d458",
+  "kind": "mlip_lbte",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "f3ff42d6f2c7",
+  "all_sids": [
+    "BC6N-dd97b91d20"
+  ],
+  "mode": "live",
+  "set_name": "loop.l2.v1.w10",
+  "rung": "lbte",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 10.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 1
+  },
+  "rung_params": {
+    "temperatures": [
+      300.0
+    ],
+    "max_collision_matrix_gb": 32.0,
+    "min_mesh_scale": 0.5,
+    "pinv_cutoff": 1e-08
+  },
+  "kappa_param_hash": "5b38ae92e6ac",
+  "settings": {
+    "BC6N-dd97b91d20": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        18,
+        18,
+        18
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 10.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 384,
+      "n_atoms_fc2_supercell": 480
+    }
+  },
+  "sids": [
+    "BC6N-dd97b91d20"
+  ],
+  "db_ids": [
+    "927"
+  ],
+  "flow_uuid": "680c1a58-92dc-44d6-b31a-3d48e4da5fc9",
+  "n_jobs": 1,
+  "jobs": [
+    {
+      "uuid": "239eea1b-5251-4ce2-9152-0e49f1412b53",
+      "name": "loop.l2.v1.w10-lbte-dpa41_max_oam-000",
+      "sids": [
+        "BC6N-dd97b91d20"
+      ],
+      "kind": "mlip_lbte"
+    }
+  ]
+}

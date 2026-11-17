@@ -1,0 +1,36 @@
+{
+ "set": "loop.pool.v1.bcn200.l0stable.w10",
+ "extra_sets": [],
+ "n_universe": 121,
+ "hit_threshold": 627.6626374128367,
+ "targets": {
+  "R3m-BNC2": [
+   "BC2N-48338b409c"
+  ],
+  "BAs": [
+   "BAs-b4a97dada0"
+  ],
+  "c-BN": [
+   "BN-e3774a672e"
+  ],
+  "BP": [
+   "BP-e19715064d"
+  ],
+  "diamond": [
+   "C-e31620d409"
+  ],
+  "SiC": [
+   "SiC-e801dce02d",
+   "SiC-d46eee3d68",
+   "SiC-465b8d6f81"
+  ]
+ },
+ "config": {
+  "n_init": 10,
+  "batch": 10,
+  "n_rounds": 6,
+  "hit_quantile": 0.9,
+  "beta": 1.0
+ },
+ "seeds": 20
+}

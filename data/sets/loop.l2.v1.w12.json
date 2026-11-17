@@ -1,0 +1,17 @@
+{
+  "name": "loop.l2.v1.w12",
+  "n": 3,
+  "sids": [
+    "BC6N-ed32eb6943",
+    "BC6N-07a277b03b",
+    "BC2N-1a47443331"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.pool.v1.bcn200.l0stable.w10"
+  ],
+  "description": "L2 for the top 12 A L1 labels found by the GP rounds: BC6N-ed32 (894), BC6N-07a2 (887), BC2N-1a47 (726)",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-16T15:01:44+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "loop.l2.v1.w10",
+  "n": 1,
+  "sids": [
+    "BC6N-dd97b91d20"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.pool.v1.bcn200.l0stable.w10"
+  ],
+  "description": "L2 for the top round-r1 hit BC6N-dd97 (kappa_L1 902, L1 at 10 A on A100)",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-16T15:02:37+00:00"
+}

@@ -1,0 +1,170 @@
+{
+  "step_id": "20261116T145720-submit_mlip_phonon_kappa-39a826",
+  "kind": "mlip_kappa",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "4187d607eb10",
+  "all_sids": [
+    "BC6N-ad76729f0d",
+    "BC6N-a01b2762b8"
+  ],
+  "mode": "live",
+  "set_name": "loop.round.r4",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 12.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 1
+  },
+  "settings": {
+    "BC6N-ad76729f0d": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          -4,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 12.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 128,
+      "n_atoms_fc2_supercell": 352
+    },
+    "BC6N-a01b2762b8": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          -4,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          -1,
+          1,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        9
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 12.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 128,
+      "n_atoms_fc2_supercell": 352
+    }
+  },
+  "sids": [
+    "BC6N-ad76729f0d",
+    "BC6N-a01b2762b8"
+  ],
+  "db_ids": [
+    "917",
+    "918"
+  ],
+  "flow_uuid": "6c4b8444-0416-47a6-8e87-f247ad992558",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "uuid": "1393007c-c4a1-48df-bec2-00861e790441",
+      "name": "loop.round.r4-kappa-dpa41_max_oam-000",
+      "sids": [
+        "BC6N-ad76729f0d"
+      ],
+      "kind": "mlip_kappa"
+    },
+    {
+      "uuid": "fcd948bb-c348-484a-ae7c-b322c629b965",
+      "name": "loop.round.r4-kappa-dpa41_max_oam-001",
+      "sids": [
+        "BC6N-a01b2762b8"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}
