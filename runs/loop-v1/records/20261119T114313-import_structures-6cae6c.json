@@ -1,0 +1,51 @@
+{
+  "step_id": "20261119T114313-import_structures-6cae6c",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Variant A (I at the anion's octahedral hole, from MP LiBeSb) gave imaginary modes for LiMgN/P/As, which exist experimentally in the antifluorite-derived ordering; same 20 compositions in that ordering (both cations tetrahedral).",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/imports/pool.nowotny_juza.v1b.extxyz",
+    "sha256": "322ec8ef717c3df0a387dc53b737294e9bc8f0c766a9905109cb509bb2c6c243",
+    "set_name": "pool.nowotny_juza.v1b",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "pool.nowotny_juza.v1b",
+    "n_read": 20,
+    "n_in_set": 20,
+    "n_newly_registered": 20,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "LiBeN-1190c83e92",
+      "LiBeP-c131916a5b",
+      "LiBeAs-5dd9bc9c3a",
+      "LiBeSb-f1dc06cdbf",
+      "LiBeBi-9160ce2fd8"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.783,
+  "host": "cenyj",
+  "created_at": "2026-11-19T11:43:13+00:00"
+}

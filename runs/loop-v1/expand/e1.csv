@@ -1,0 +1,651 @@
+formula,n_atoms,spg,source,map,parent,parent_formula,parent_reason,parent_kappa,parent_mu_kappa,formula_in_mp,mp_matches,mp_min_ehull_formula,selected
+Al2AsN,4,115,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""As""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2AsN,4,115,subst,"{""As"": ""As"", ""B"": ""Al"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2AsN,4,156,swap,"{""C"": ""Al"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2AsN,4,156,swap,"{""C"": ""As"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2BAsN2,6,160,swap,"{""C"": ""As"", ""Si"": ""B""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BAsN2,6,160,swap,"{""C"": ""B"", ""Si"": ""As""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BN3,6,160,swap,"{""C"": ""N"", ""Si"": ""B""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Al2BPN2,6,160,swap,"{""C"": ""P"", ""Si"": ""B""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Al2BPN2,6,160,swap,"{""C"": ""B"", ""Si"": ""P""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Al2BSbN2,6,160,swap,"{""C"": ""Sb"", ""Si"": ""B""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BSbN2,6,160,swap,"{""C"": ""B"", ""Si"": ""Sb""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BiBN2,6,160,swap,"{""C"": ""Bi"", ""Si"": ""B""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BiBN2,6,160,swap,"{""C"": ""B"", ""Si"": ""Bi""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2BiN,4,115,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2BiN,4,115,subst,"{""As"": ""Bi"", ""B"": ""Al"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2BiN,4,156,swap,"{""C"": ""Al"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2BiN,4,156,swap,"{""C"": ""Bi"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2CO,4,156,swap,"{""N"": ""O"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.07650396250000036,False
+Al2CS,4,156,swap,"{""N"": ""S"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2GaAsN2,6,160,swap,"{""C"": ""As"", ""Si"": ""Ga""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaAsN2,6,160,swap,"{""C"": ""Ga"", ""Si"": ""As""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaBiN2,6,160,swap,"{""C"": ""Bi"", ""Si"": ""Ga""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaBiN2,6,160,swap,"{""C"": ""Ga"", ""Si"": ""Bi""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaN3,6,160,swap,"{""C"": ""N"", ""Si"": ""Ga""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,True,,0.004115225000003164,False
+Al2GaN3,6,160,swap,"{""C"": ""Ga"", ""Si"": ""N""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,True,,0.004115225000003164,False
+Al2GaPN2,6,160,swap,"{""C"": ""P"", ""Si"": ""Ga""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaPN2,6,160,swap,"{""C"": ""Ga"", ""Si"": ""P""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaSbN2,6,160,swap,"{""C"": ""Sb"", ""Si"": ""Ga""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GaSbN2,6,160,swap,"{""C"": ""Ga"", ""Si"": ""Sb""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeAs2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeAs2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeBi2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeBi2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeCN2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeCN2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeP2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeP2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeSb2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2GeSb2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2PN,4,115,subst,"{""As"": ""P"", ""B"": ""Al"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+Al2PN,4,115,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""P""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+Al2PN,4,156,swap,"{""C"": ""Al"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2PN,4,156,swap,"{""C"": ""P"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2SbN,4,115,subst,"{""As"": ""Sb"", ""B"": ""Al"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2SbN,4,115,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Al2SbN,4,156,swap,"{""C"": ""Al"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2SbN,4,156,swap,"{""C"": ""Sb"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Al2SiAs2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiAs2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiBi2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiBi2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiGeN2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiGeN2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiP2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiP2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiSb2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al2SiSb2C,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3As2N,6,160,swap,"{""C"": ""As"", ""Si"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3As2N,6,160,swap,"{""C"": ""Al"", ""Si"": ""As""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3As2N,6,44,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""As""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Al3AsN2,6,160,swap,"{""C"": ""As"", ""Si"": ""Al""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3AsN2,6,160,swap,"{""C"": ""Al"", ""Si"": ""As""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3AsN2,6,44,subst,"{""As"": ""As"", ""B"": ""Al"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Al3Bi2N,6,160,swap,"{""C"": ""Bi"", ""Si"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3Bi2N,6,160,swap,"{""C"": ""Al"", ""Si"": ""Bi""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3Bi2N,6,44,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Al3BiN2,6,160,swap,"{""C"": ""Bi"", ""Si"": ""Al""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3BiN2,6,160,swap,"{""C"": ""Al"", ""Si"": ""Bi""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3BiN2,6,44,subst,"{""As"": ""Bi"", ""B"": ""Al"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Al3P2N,6,160,swap,"{""C"": ""P"", ""Si"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3P2N,6,160,swap,"{""C"": ""Al"", ""Si"": ""P""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3P2N,6,44,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""P""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Al3PN2,6,160,swap,"{""C"": ""P"", ""Si"": ""Al""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Al3PN2,6,160,swap,"{""C"": ""Al"", ""Si"": ""P""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Al3PN2,6,44,subst,"{""As"": ""P"", ""B"": ""Al"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Al3Sb2N,6,160,swap,"{""C"": ""Sb"", ""Si"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3Sb2N,6,160,swap,"{""C"": ""Al"", ""Si"": ""Sb""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Al3Sb2N,6,44,subst,"{""As"": ""N"", ""B"": ""Al"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Al3SbN2,6,160,swap,"{""C"": ""Sb"", ""Si"": ""Al""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3SbN2,6,160,swap,"{""C"": ""Al"", ""Si"": ""Sb""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Al3SbN2,6,44,subst,"{""As"": ""Sb"", ""B"": ""Al"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+AlAsC,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlAsC2,4,156,swap,"{""N"": ""C"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlAsC2,4,160,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""As""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+AlAsC4,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""As""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+AlB2As2N,6,160,swap,"{""C"": ""As"", ""Si"": ""B""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlB2As2N,6,160,swap,"{""C"": ""B"", ""Si"": ""As""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlB2N3,6,160,swap,"{""C"": ""N"", ""Si"": ""B""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+AlB2P2N,6,160,swap,"{""C"": ""P"", ""Si"": ""B""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+AlB2P2N,6,160,swap,"{""C"": ""B"", ""Si"": ""P""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlB2Sb2N,6,160,swap,"{""C"": ""Sb"", ""Si"": ""B""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlB2Sb2N,6,160,swap,"{""C"": ""B"", ""Si"": ""Sb""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlBAsN,4,156,swap,"{""C"": ""As"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBAsN,4,156,swap,"{""C"": ""B"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBCO,4,156,swap,"{""N"": ""O"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+AlBCS,4,156,swap,"{""N"": ""S"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBN2,4,156,swap,"{""C"": ""N"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.3846442475000007,True
+AlBO,6,156,swap,"{""C"": ""Al"", ""N"": ""O""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+AlBPN,4,156,swap,"{""C"": ""B"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBPN,4,156,swap,"{""C"": ""P"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBS,6,156,swap,"{""C"": ""Al"", ""N"": ""S""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlBSbN,4,156,swap,"{""C"": ""B"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBSbN,4,156,swap,"{""C"": ""Sb"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBi2B2N,6,160,swap,"{""C"": ""Bi"", ""Si"": ""B""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlBi2B2N,6,160,swap,"{""C"": ""B"", ""Si"": ""Bi""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlBiBN,4,156,swap,"{""C"": ""B"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBiBN,4,156,swap,"{""C"": ""Bi"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBiC,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlBiC2,4,156,swap,"{""N"": ""C"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlBiC2,4,160,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Bi""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+AlBiC4,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Bi""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+AlC2N,4,156,swap,"{""Al"": ""C"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+AlCN,6,156,swap,"{""B"": ""C"", ""C"": ""Al""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+AlGa2As2N,6,160,swap,"{""C"": ""As"", ""Si"": ""Ga""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2As2N,6,160,swap,"{""C"": ""Ga"", ""Si"": ""As""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2Bi2N,6,160,swap,"{""C"": ""Bi"", ""Si"": ""Ga""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2Bi2N,6,160,swap,"{""C"": ""Ga"", ""Si"": ""Bi""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2N3,6,160,swap,"{""C"": ""N"", ""Si"": ""Ga""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2N3,6,160,swap,"{""C"": ""Ga"", ""Si"": ""N""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2P2N,6,160,swap,"{""C"": ""P"", ""Si"": ""Ga""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2P2N,6,160,swap,"{""C"": ""Ga"", ""Si"": ""P""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2Sb2N,6,160,swap,"{""C"": ""Sb"", ""Si"": ""Ga""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGa2Sb2N,6,160,swap,"{""C"": ""Ga"", ""Si"": ""Sb""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGaAsN,4,156,swap,"{""C"": ""As"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaAsN,4,156,swap,"{""C"": ""Ga"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaBiN,4,156,swap,"{""C"": ""Bi"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaBiN,4,156,swap,"{""C"": ""Ga"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaCO,4,156,swap,"{""N"": ""O"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaCS,4,156,swap,"{""N"": ""S"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaN2,4,156,swap,"{""C"": ""N"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.00717303000000058,False
+AlGaPN,4,156,swap,"{""C"": ""Ga"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaPN,4,156,swap,"{""C"": ""P"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaSbN,4,156,swap,"{""C"": ""Ga"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGaSbN,4,156,swap,"{""C"": ""Sb"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGe2AsC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2AsC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2BiC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2BiC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2C2N,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2C2N,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2N,4,160,subst,"{""B"": ""Al"", ""C"": ""Ge"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+AlGe2PC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2PC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2SbC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe2SbC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlGe4N,6,156,subst,"{""B"": ""Al"", ""C"": ""Ge"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+AlGeAsC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeAsC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeAsC,4,156,swap,"{""N"": ""Ge"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeBiC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeBiC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeBiC,4,156,swap,"{""N"": ""Ge"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeCN,4,156,swap,"{""N"": ""Ge"", ""Si"": ""N""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeCN,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeCN,4,156,swap,"{""Al"": ""Ge"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeCN,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeN,6,156,swap,"{""B"": ""Ge"", ""C"": ""Al""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlGeN,6,156,subst,"{""B"": ""Al"", ""C"": ""Ge"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlGePC,4,156,swap,"{""N"": ""Ge"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGePC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGePC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeSbC,4,156,swap,"{""N"": ""Ge"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeSbC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlGeSbC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlN,4,187,swap,"{""C"": ""N"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0,False
+AlN,6,160,swap,"{""C"": ""N"", ""Si"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,True,,0.0,True
+AlN,6,160,swap,"{""C"": ""Al"", ""Si"": ""N""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,True,,0.0,True
+AlPC,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlPC2,4,156,swap,"{""N"": ""C"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlPC2,4,160,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""P""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+AlPC4,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""P""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+AlSbC,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlSbC2,4,156,swap,"{""N"": ""C"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSbC2,4,160,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Sb""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+AlSbC4,6,156,subst,"{""B"": ""Al"", ""C"": ""C"", ""N"": ""Sb""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+AlSi2AsC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2AsC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2BiC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2BiC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2C2N,6,160,perm,"{""Al"": ""N"", ""N"": ""Al""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+AlSi2Ge2N,6,160,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2Ge2N,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2N,4,156,swap,"{""C"": ""N"", ""N"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSi2PC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2PC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2SbC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi2SbC2,6,160,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+AlSi4N,6,156,subst,"{""B"": ""Al"", ""C"": ""Si"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+AlSiAsC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiAsC,4,156,swap,"{""C"": ""As"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiAsC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiAsC,4,156,swap,"{""N"": ""Si"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBO,4,156,swap,"{""C"": ""B"", ""N"": ""O""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBS,4,156,swap,"{""C"": ""B"", ""N"": ""S""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBiC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBiC,4,156,swap,"{""C"": ""Bi"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBiC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiBiC,4,156,swap,"{""N"": ""Si"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiCN,4,156,perm,"{""Al"": ""N"", ""C"": ""Al"", ""N"": ""C"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0369356026842107,False
+AlSiCN,4,156,perm,"{""Al"": ""C"", ""C"": ""Si"", ""N"": ""Al"", ""Si"": ""N""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0369356026842107,False
+AlSiCN,4,156,swap,"{""Al"": ""Si"", ""Si"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0369356026842107,False
+AlSiCN,4,156,perm,"{""Al"": ""Al"", ""C"": ""N"", ""N"": ""Si"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0369356026842107,False
+AlSiGeN,4,156,swap,"{""Al"": ""Ge"", ""C"": ""Al""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiGeN,4,156,subst,"{""Al"": ""Al"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiGeN,4,156,swap,"{""C"": ""N"", ""N"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiGeN,4,156,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiN,6,156,swap,"{""B"": ""Si"", ""C"": ""Al""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlSiN,6,156,subst,"{""B"": ""Al"", ""C"": ""Si"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+AlSiPC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiPC,4,156,swap,"{""C"": ""P"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiPC,4,156,swap,"{""N"": ""Si"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiPC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiSbC,4,156,subst,"{""Al"": ""Al"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiSbC,4,156,swap,"{""C"": ""Sb"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiSbC,4,156,swap,"{""N"": ""Si"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+AlSiSbC,4,156,subst,"{""Al"": ""Al"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+B2AsN,4,115,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""As""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2AsN,4,115,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2CO,4,115,swap,"{""As"": ""O"", ""P"": ""C""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2CO,4,115,swap,"{""As"": ""C"", ""P"": ""O""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2CS,4,115,swap,"{""As"": ""S"", ""P"": ""C""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2CS,4,115,swap,"{""As"": ""C"", ""P"": ""S""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2O,6,156,swap,"{""C"": ""B"", ""N"": ""O""}",BCN-40546215c8,BCN,label,610.2,610.5,True,,0.9245854276388883,True
+B2PN,4,115,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2PN,4,115,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""P""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+B2S,6,156,swap,"{""C"": ""B"", ""N"": ""S""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+B2SbAs,4,115,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""As""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2SbAs,4,115,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2SbN,4,115,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2SbN,4,115,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2SbP,4,115,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""P""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B2SbP,4,115,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+B3As2N,6,44,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""As""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3AsN2,6,44,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3P2N,6,44,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""P""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3PN2,6,44,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3Sb2As,6,44,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+B3Sb2N,6,44,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3Sb2P,6,44,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+B3SbAs2,6,44,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""As""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+B3SbN2,6,44,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+B3SbP2,6,44,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""P""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+BAsC,6,156,swap,"{""C"": ""As"", ""N"": ""C""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BAsC,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BAsC2,4,160,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""As""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+BAsC4,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""As""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+BPC,6,156,swap,"{""C"": ""P"", ""N"": ""C""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+BSbC,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BSbC,6,156,swap,"{""C"": ""Sb"", ""N"": ""C""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BSbC2,4,160,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Sb""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+BSbC4,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Sb""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Be2C,3,216,swap,"{""Bi"": ""C"", ""Li"": ""Be""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,True,,0.0,True
+Be2Ge,3,216,swap,"{""Bi"": ""Ge"", ""Li"": ""Be""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+Be2Ge,3,225,swap,"{""Li"": ""Be"", ""N"": ""Ge""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+Be2Si,3,216,swap,"{""Bi"": ""Si"", ""Li"": ""Be""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,True,,0.25882476333333404,True
+Be2SiCO2,6,160,swap,"{""Al"": ""Be"", ""N"": ""O""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Be2SiCS2,6,160,swap,"{""Al"": ""Be"", ""N"": ""S""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+BeAsCN,4,156,swap,"{""Al"": ""Be"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeAsN,6,156,swap,"{""B"": ""Be"", ""C"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BeBiCN,4,156,swap,"{""Al"": ""Be"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeBiN,6,156,swap,"{""B"": ""Be"", ""C"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BeC2O,4,160,swap,"{""B"": ""Be"", ""N"": ""O""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+BeC2S,4,160,swap,"{""B"": ""Be"", ""N"": ""S""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+BeC4O,6,156,swap,"{""B"": ""Be"", ""N"": ""O""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+BeC4S,6,156,swap,"{""B"": ""Be"", ""N"": ""S""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+BeCO,6,156,swap,"{""B"": ""Be"", ""N"": ""O""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+BeCS,6,156,swap,"{""B"": ""Be"", ""N"": ""S""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+BeN2,6,156,swap,"{""B"": ""Be"", ""C"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+BePCN,4,156,swap,"{""Al"": ""Be"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+BePN,6,156,swap,"{""B"": ""Be"", ""C"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+BeSbCN,4,156,swap,"{""Al"": ""Be"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeSbN,6,156,swap,"{""B"": ""Be"", ""C"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BeSi2C2O,6,160,swap,"{""Al"": ""Be"", ""N"": ""O""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+BeSi2C2S,6,160,swap,"{""Al"": ""Be"", ""N"": ""S""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+BeSiAsN,4,156,swap,"{""Al"": ""Be"", ""C"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeSiBiN,4,156,swap,"{""Al"": ""Be"", ""C"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeSiCO,4,156,swap,"{""Al"": ""Be"", ""N"": ""O""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+BeSiCS,4,156,swap,"{""Al"": ""Be"", ""N"": ""S""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeSiN2,4,156,swap,"{""Al"": ""Be"", ""C"": ""N""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0,True
+BeSiPN,4,156,swap,"{""Al"": ""Be"", ""C"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+BeSiSbN,4,156,swap,"{""Al"": ""Be"", ""C"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Bi2B3As,6,44,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Bi2B3N,6,44,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Bi2B3P,6,44,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Bi2B3Sb,6,44,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+BiB,2,216,subst,"{""B"": ""B"", ""N"": ""Bi""}",BN-e3774a672e,BN,label,703.4,703.4,True,mp-1006880,0.8213030854166661,False
+BiB,2,216,subst,"{""As"": ""Bi"", ""B"": ""B""}",BAs-b4a97dada0,BAs,label,2392.2,2390.4,True,mp-1006880,0.8213030854166661,False
+BiB2As,4,115,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""As""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2As,4,115,subst,"{""As"": ""As"", ""B"": ""B"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2N,4,115,subst,"{""As"": ""N"", ""B"": ""B"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2N,4,115,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2P,4,115,subst,"{""As"": ""P"", ""B"": ""B"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2P,4,115,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""P""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2Sb,4,115,subst,"{""As"": ""Sb"", ""B"": ""B"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB2Sb,4,115,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+BiB3As2,6,44,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""As""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+BiB3N2,6,44,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+BiB3P2,6,44,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""P""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+BiB3Sb2,6,44,subst,"{""As"": ""Bi"", ""B"": ""B"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+BiBC,6,156,swap,"{""C"": ""Bi"", ""N"": ""C""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BiBC,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+BiBC2,4,160,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Bi""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+BiBC4,6,156,subst,"{""B"": ""B"", ""C"": ""C"", ""N"": ""Bi""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Ga2AsN,4,115,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""As""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2AsN,4,115,subst,"{""As"": ""As"", ""B"": ""Ga"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2BiN,4,115,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""Bi""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,True,,0.2238678118749995,False
+Ga2BiN,4,115,subst,"{""As"": ""Bi"", ""B"": ""Ga"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,True,,0.2238678118749995,False
+Ga2GeAs2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeAs2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeBi2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeBi2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeCN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeCN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeP2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeP2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeSb2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2GeSb2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2PN,4,115,subst,"{""As"": ""P"", ""B"": ""Ga"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2PN,4,115,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""P""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2SbN,4,115,subst,"{""As"": ""Sb"", ""B"": ""Ga"", ""P"": ""N""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2SbN,4,115,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""Sb""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+Ga2SiAs2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiAs2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiBi2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiBi2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiCN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiCN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiGeN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiGeN2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiP2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiP2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiSb2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga2SiSb2C,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Ga3As2N,6,44,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""As""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Ga3AsN2,6,44,subst,"{""As"": ""As"", ""B"": ""Ga"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Ga3Bi2N,6,44,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""Bi""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Ga3BiN2,6,44,subst,"{""As"": ""Bi"", ""B"": ""Ga"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Ga3P2N,6,44,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""P""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Ga3PN2,6,44,subst,"{""As"": ""P"", ""B"": ""Ga"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,True
+Ga3Sb2N,6,44,subst,"{""As"": ""N"", ""B"": ""Ga"", ""P"": ""Sb""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+Ga3SbN2,6,44,subst,"{""As"": ""Sb"", ""B"": ""Ga"", ""P"": ""N""}",B3AsP2-f8ce148bc9,B3AsP2,ucb,,300.7,False,,,False
+GaAsC,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaAsC2,4,160,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""As""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+GaAsC4,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""As""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GaBO,6,156,swap,"{""C"": ""Ga"", ""N"": ""O""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaBS,6,156,swap,"{""C"": ""Ga"", ""N"": ""S""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaBiC,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaBiC2,4,160,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Bi""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+GaBiC4,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Bi""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GaC2N,4,156,swap,"{""Al"": ""C"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaC2N,4,160,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+GaC4N,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+GaCN,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaCN,6,156,swap,"{""B"": ""C"", ""C"": ""Ga""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaGe2AsC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2AsC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2BiC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2BiC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2C2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2C2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2N,4,160,subst,"{""B"": ""Ga"", ""C"": ""Ge"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+GaGe2PC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2PC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2SbC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe2SbC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaGe4N,6,156,subst,"{""B"": ""Ga"", ""C"": ""Ge"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GaGeAsC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeAsC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeBiC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeBiC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeCN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeCN,4,156,swap,"{""Al"": ""Ge"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeCN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeN,6,156,swap,"{""B"": ""Ge"", ""C"": ""Ga""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaGeN,6,156,subst,"{""B"": ""Ga"", ""C"": ""Ge"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaGePC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGePC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeSbC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaGeSbC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaPC,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaPC2,4,160,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""P""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+GaPC4,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""P""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+GaSbC,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaSbC2,4,160,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Sb""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+GaSbC4,6,156,subst,"{""B"": ""Ga"", ""C"": ""C"", ""N"": ""Sb""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GaSi2AsC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2AsC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2BiC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2BiC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2C2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2C2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2Ge2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2Ge2N,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2N,4,156,swap,"{""Al"": ""Si"", ""C"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSi2N,4,160,subst,"{""B"": ""Ga"", ""C"": ""Si"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+GaSi2PC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2PC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2SbC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi2SbC2,6,160,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+GaSi4N,6,156,subst,"{""B"": ""Ga"", ""C"": ""Si"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GaSiAsC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiAsC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiBiC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiBiC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiCN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.3828463845937513,False
+GaSiCN,4,156,swap,"{""Al"": ""Si"", ""Si"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.3828463845937513,False
+GaSiCN,4,156,swap,"{""Al"": ""C"", ""C"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.3828463845937513,False
+GaSiCN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.3828463845937513,False
+GaSiGeN,4,156,swap,"{""Al"": ""Ge"", ""C"": ""Ga""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiGeN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiGeN,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiN,6,156,swap,"{""B"": ""Si"", ""C"": ""Ga""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaSiN,6,156,subst,"{""B"": ""Ga"", ""C"": ""Si"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GaSiPC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiPC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiSbC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GaSiSbC,4,156,subst,"{""Al"": ""Ga"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Ge2BAs,4,160,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""As""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Ge2BAsC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BAsC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BC2N,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BC2N,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BN,4,160,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Ge2BP,4,160,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""P""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Ge2BPC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BPC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BSb,4,160,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Sb""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Ge2BSbC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BSbC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BiB,4,160,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Bi""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Ge2BiBC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2BiBC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Ge2C,6,156,swap,"{""B"": ""Ge"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+Ge4BAs,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""As""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Ge4BN,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Ge4BP,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""P""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Ge4BSb,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Sb""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Ge4BiB,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Bi""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GeB2As2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeB2As2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeB2CN2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+GeB2CN2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+GeB2O,4,115,swap,"{""As"": ""O"", ""P"": ""Ge""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+GeB2O,4,115,swap,"{""As"": ""Ge"", ""P"": ""O""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+GeB2P2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeB2P2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeB2S,4,115,swap,"{""As"": ""S"", ""P"": ""Ge""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+GeB2S,4,115,swap,"{""As"": ""Ge"", ""P"": ""S""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,False
+GeB2Sb2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeB2Sb2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeBAs,6,156,swap,"{""C"": ""As"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBAs,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBAsC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBAsC,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBCN,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBCN,4,156,swap,"{""Al"": ""Ge"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBCN,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBN,6,156,swap,"{""B"": ""Ge"", ""C"": ""B""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBN,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBN,6,156,swap,"{""C"": ""N"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBP,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBP,6,156,swap,"{""C"": ""P"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBPC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBPC,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBSb,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBSb,6,156,swap,"{""C"": ""Sb"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBSbC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBSbC,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBi2B2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeBi2B2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+GeBiB,6,156,swap,"{""C"": ""Bi"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBiB,6,156,subst,"{""B"": ""B"", ""C"": ""Ge"", ""N"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeBiBC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeBiBC,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+GeC,2,216,swap,"{""As"": ""C"", ""B"": ""Ge""}",BAs-b4a97dada0,BAs,label,2392.2,2390.4,True,mp-1002164,0.43837332875,False
+GeC,2,216,swap,"{""As"": ""Ge"", ""B"": ""C""}",BAs-b4a97dada0,BAs,label,2392.2,2390.4,True,mp-1002164,0.43837332875,False
+GeC,4,160,swap,"{""B"": ""Ge"", ""N"": ""Ge""}",BC2N-48338b409c,BC2N,label,861.0,861.0,True,,0.43837332875,False
+GeC2,6,156,swap,"{""B"": ""C"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeC2,6,156,swap,"{""B"": ""Ge"", ""N"": ""Ge""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+GeC2,6,156,swap,"{""B"": ""Ge"", ""N"": ""C""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+GeC3,4,160,swap,"{""B"": ""C"", ""N"": ""Ge""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+GeC5,6,156,swap,"{""B"": ""C"", ""N"": ""Ge""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+GeC5,6,156,swap,"{""B"": ""Ge"", ""N"": ""C""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+LiAlC,3,216,swap,"{""Be"": ""Al"", ""Bi"": ""C""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+LiAlC,3,216,swap,"{""Be"": ""Al"", ""N"": ""C""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+LiBC,3,216,swap,"{""Be"": ""B"", ""Bi"": ""C""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,True,,0.0,True
+LiBC,3,216,swap,"{""Be"": ""B"", ""N"": ""C""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,True,,0.0,True
+LiBeBi,3,216,swap,"{""Be"": ""Li"", ""Li"": ""Be""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+LiBeBi,3,216,perm,"{""Be"": ""Li"", ""Bi"": ""Be"", ""Li"": ""Bi""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+LiBeN,3,216,perm,"{""Be"": ""N"", ""Li"": ""Be"", ""N"": ""Li""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,True,,0.0,True
+LiBeN,3,216,perm,"{""Be"": ""Be"", ""Li"": ""N"", ""N"": ""Li""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,True,,0.0,True
+LiGaC,3,216,swap,"{""Be"": ""Ga"", ""N"": ""C""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+LiGaC,3,216,swap,"{""Be"": ""Ga"", ""Bi"": ""C""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+LiGeB,3,216,swap,"{""Be"": ""B"", ""Bi"": ""Ge""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+LiGeB,3,216,swap,"{""Be"": ""B"", ""N"": ""Ge""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+LiSiB,3,216,swap,"{""Be"": ""B"", ""Bi"": ""Si""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,True,mp-1100392,0.04932601732974806,False
+LiSiB,3,216,swap,"{""Be"": ""B"", ""N"": ""Si""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,True,,0.04932601732974806,True
+Mg2SiCO2,6,160,swap,"{""Al"": ""Mg"", ""N"": ""O""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+Mg2SiCS2,6,160,swap,"{""Al"": ""Mg"", ""N"": ""S""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+MgAsCN,4,156,swap,"{""Al"": ""Mg"", ""Si"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgAsN,6,156,swap,"{""B"": ""Mg"", ""C"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+MgBeC,3,216,swap,"{""Bi"": ""C"", ""Li"": ""Mg""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+MgBeC,3,216,swap,"{""Li"": ""Mg"", ""N"": ""C""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+MgBeGe,3,216,swap,"{""Bi"": ""Ge"", ""Li"": ""Mg""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+MgBeGe,3,216,swap,"{""Li"": ""Mg"", ""N"": ""Ge""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+MgBeSi,3,216,swap,"{""Bi"": ""Si"", ""Li"": ""Mg""}",LiBeBi-6083d6cf0f,LiBeBi,label,677.4,677.4,False,,,True
+MgBeSi,3,216,swap,"{""Li"": ""Mg"", ""N"": ""Si""}",LiBeN-1190c83e92,LiBeN,ucb,,83.3,False,,,True
+MgBiCN,4,156,swap,"{""Al"": ""Mg"", ""Si"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgBiN,6,156,swap,"{""B"": ""Mg"", ""C"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+MgC2O,4,160,swap,"{""B"": ""Mg"", ""N"": ""O""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+MgC2S,4,160,swap,"{""B"": ""Mg"", ""N"": ""S""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+MgC4O,6,156,swap,"{""B"": ""Mg"", ""N"": ""O""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+MgC4S,6,156,swap,"{""B"": ""Mg"", ""N"": ""S""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+MgCN2,4,156,swap,"{""Al"": ""Mg"", ""Si"": ""N""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0,True
+MgCO,6,156,swap,"{""B"": ""Mg"", ""N"": ""O""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+MgCS,6,156,swap,"{""B"": ""Mg"", ""N"": ""S""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+MgN2,6,156,swap,"{""B"": ""Mg"", ""C"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+MgPCN,4,156,swap,"{""Al"": ""Mg"", ""Si"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgPN,6,156,swap,"{""B"": ""Mg"", ""C"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+MgSbCN,4,156,swap,"{""Al"": ""Mg"", ""Si"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgSbN,6,156,swap,"{""B"": ""Mg"", ""C"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+MgSi2C2O,6,160,swap,"{""Al"": ""Mg"", ""N"": ""O""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+MgSi2C2S,6,160,swap,"{""Al"": ""Mg"", ""N"": ""S""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+MgSiAsN,4,156,swap,"{""Al"": ""Mg"", ""C"": ""As""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgSiBiN,4,156,swap,"{""Al"": ""Mg"", ""C"": ""Bi""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgSiCO,4,156,swap,"{""Al"": ""Mg"", ""N"": ""O""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+MgSiCS,4,156,swap,"{""Al"": ""Mg"", ""N"": ""S""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgSiN2,4,156,swap,"{""Al"": ""Mg"", ""C"": ""N""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0,True
+MgSiPN,4,156,swap,"{""Al"": ""Mg"", ""C"": ""P""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+MgSiSbN,4,156,swap,"{""Al"": ""Mg"", ""C"": ""Sb""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Si2BAs,4,160,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""As""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Si2BAsC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2BAsC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2BC2N,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+Si2BC2N,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+Si2BN,4,156,swap,"{""Al"": ""Si"", ""C"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+Si2BN,4,160,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""N""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+Si2BP,4,160,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""P""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+Si2BPC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+Si2BPC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,True
+Si2BSb,4,160,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Sb""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Si2BSbC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2BSbC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2BiB,4,160,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Bi""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,False
+Si2BiBC2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2BiBC2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2C,6,156,swap,"{""B"": ""Si"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+Si2C,6,160,swap,"{""Al"": ""Si"", ""N"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BAs,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BAs,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BN,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BN,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BP,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BP,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BSb,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BSb,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BiB,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2Ge2BiB,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2GeC,4,156,swap,"{""Al"": ""Si"", ""N"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Si2GeC,4,156,swap,"{""Al"": ""Ge"", ""N"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Si2GeC3,6,160,swap,"{""Al"": ""C"", ""N"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si2GeC3,6,160,swap,"{""Al"": ""Ge"", ""N"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si3C,4,156,swap,"{""Al"": ""Si"", ""N"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+Si3Ge2C,6,160,swap,"{""Al"": ""Ge"", ""N"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Si3Ge2C,6,160,swap,"{""Al"": ""Si"", ""N"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+Si3GeC2,6,160,swap,"{""Al"": ""Ge"", ""N"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si3GeC2,6,160,swap,"{""Al"": ""Si"", ""N"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+Si4BAs,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""As""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Si4BN,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""N""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+Si4BP,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""P""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Si4BSb,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Sb""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Si4BiB,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Bi""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,False
+Si5C,6,160,swap,"{""Al"": ""Si"", ""N"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiB2As2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiB2As2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiB2CN2,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+SiB2CN2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+SiB2O,4,115,swap,"{""As"": ""Si"", ""P"": ""O""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+SiB2O,4,115,swap,"{""As"": ""O"", ""P"": ""Si""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+SiB2P2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+SiB2P2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+SiB2S,4,115,swap,"{""As"": ""Si"", ""P"": ""S""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+SiB2S,4,115,swap,"{""As"": ""S"", ""P"": ""Si""}",B2AsP-e8480fbf81,B2AsP,label,353.8,352.8,False,,,True
+SiB2Sb2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiB2Sb2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiBAs,6,156,swap,"{""C"": ""As"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBAs,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""As""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBAsC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""As"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBAsC,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBCN,4,156,swap,"{""Al"": ""C"", ""C"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+SiBCN,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""N"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+SiBCN,4,156,swap,"{""Al"": ""Si"", ""Si"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+SiBCN,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,True
+SiBN,6,156,swap,"{""B"": ""Si"", ""C"": ""B""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+SiBN,6,156,swap,"{""C"": ""N"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+SiBN,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""N""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,True
+SiBP,6,156,swap,"{""C"": ""P"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBP,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""P""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBPC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""P"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBPC,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBSb,6,156,swap,"{""C"": ""Sb"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBSb,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Sb""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBSbC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBSbC,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBi2B2C,6,160,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiBi2B2C,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiBiB,6,156,swap,"{""C"": ""Bi"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBiB,6,156,subst,"{""B"": ""B"", ""C"": ""Si"", ""N"": ""Bi""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiBiBC,4,156,subst,"{""Al"": ""B"", ""C"": ""C"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiBiBC,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiC,4,160,swap,"{""B"": ""Si"", ""N"": ""Si""}",BC2N-48338b409c,BC2N,label,861.0,861.0,True,,0.0,True
+SiC,4,187,swap,"{""Al"": ""Si"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,True,,0.0,True
+SiC,6,160,swap,"{""Al"": ""C"", ""N"": ""Si""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,True,,0.0,True
+SiC,6,160,swap,"{""Al"": ""Si"", ""N"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,True,,0.0,True
+SiC2,6,156,swap,"{""B"": ""Si"", ""N"": ""Si""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,True,,0.5629332144999992,True
+SiC2,6,160,swap,"{""Al"": ""C"", ""N"": ""C""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,True,,0.5629332144999992,True
+SiC5,6,160,swap,"{""Al"": ""C"", ""N"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,True
+SiGe(BAs)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BAs)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BN)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BN)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BP)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BP)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BSb)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BSb)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BiB)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""Si""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe(BiB)2,6,160,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe2C,4,156,swap,"{""Al"": ""Ge"", ""N"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGe2C3,6,160,swap,"{""Al"": ""C"", ""N"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe2C3,6,160,swap,"{""Al"": ""Ge"", ""N"": ""C""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGe4C,6,160,swap,"{""Al"": ""Ge"", ""N"": ""Ge""}",Al2SiCN2-67a9b35cd1,Al2SiCN2,ucb,,244.4,False,,,False
+SiGeBAs,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""As"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBAs,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""As"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBN,4,156,swap,"{""Al"": ""Ge"", ""C"": ""B""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBN,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""N"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBN,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""N"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBP,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""P"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBP,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""P"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBSb,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Sb"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBSb,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Sb"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBiB,4,156,subst,"{""Al"": ""B"", ""C"": ""Ge"", ""N"": ""Bi"", ""Si"": ""Si""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeBiB,4,156,subst,"{""Al"": ""B"", ""C"": ""Si"", ""N"": ""Bi"", ""Si"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeC,6,156,swap,"{""B"": ""Ge"", ""N"": ""Si""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiGeC,6,156,swap,"{""B"": ""Si"", ""N"": ""Ge""}",BCN-40546215c8,BCN,label,610.2,610.5,False,,,False
+SiGeC,6,160,swap,"{""Al"": ""Ge"", ""N"": ""Ge""}",AlSi2C2N-d4615bc0ca,AlSi2C2N,ucb,,306.7,False,,,False
+SiGeC2,4,156,swap,"{""Al"": ""Ge"", ""N"": ""C""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeC2,4,156,swap,"{""Al"": ""C"", ""N"": ""Ge""}",AlSiCN-889e3826a2,AlSiCN,ucb,,240.1,False,,,False
+SiGeC2,4,160,swap,"{""B"": ""Ge"", ""N"": ""Si""}",BC2N-48338b409c,BC2N,label,861.0,861.0,False,,,True
+SiGeC4,6,156,swap,"{""B"": ""Ge"", ""N"": ""Si""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True
+SiGeC4,6,156,swap,"{""B"": ""Si"", ""N"": ""Ge""}",BC4N-a54a00eaf4,BC4N,label,890.3,890.2,False,,,True

@@ -42,7 +42,8 @@ def main() -> None:
 
     run_id = os.environ.get("MGA_RUN_ID", "loop-v1")
     pred = pd.read_csv(ROOT / "runs" / run_id / "rounds" / f"{a.round}.csv")
-    pred["score"] = pred["kappa_l1"].fillna(pred["mu_kappa"])
+    label = pred["kappa"] if "kappa" in pred else pred["kappa_l1"]  # rounds before 11-19: L1 only
+    pred["score"] = label.fillna(pred["mu_kappa"])
     top = pred.nlargest(a.top, "score")
 
     protos = [(registry.load_structure(sid), sid, None) for sid in top["sid"]]

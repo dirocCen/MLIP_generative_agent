@@ -41,6 +41,32 @@ def space_group_number(atoms: Atoms, symprec: float) -> int | None:
     return int(dataset.number if hasattr(dataset, "number") else dataset["number"])
 
 
+def symmetry_lowered(before: Atoms, after: Atoms, symprec: float) -> bool:
+    """True when ``after`` lost a point operation of ``before``: a genuine symmetry break.
+
+    The space-group number alone also changes when symmetry is *raised*: a slightly distorted
+    input (low group at ``symprec``) that FixSymmetry, detecting at the looser
+    ``relax_symprec``, snaps onto the higher group. That is not a break. ``before`` and
+    ``after`` share the cell basis (relaxation strains it but never re-bases), so their
+    rotations, integer matrices in that basis, compare exactly; translations are skipped since
+    they move with the origin. A lost rotation, or fewer operations, means lowered.
+    """
+    import spglib
+
+    def ops(a: Atoms):
+        ds = spglib.get_symmetry_dataset(
+            (np.asarray(a.cell), a.get_scaled_positions(), a.numbers), symprec=symprec)
+        if ds is None:
+            return None
+        rots = ds.rotations if hasattr(ds, "rotations") else ds["rotations"]
+        return {r.astype(int).tobytes() for r in rots}, len(rots)
+
+    b, a = ops(before), ops(after)
+    if a is None or b is None:  # spglib failed: on the result -> treat as broken
+        return a is None
+    return not b[0] <= a[0] or a[1] < b[1]
+
+
 def conventional_cell(atoms: Atoms, symprec: float = 1e-5) -> Atoms:
     """spglib standardised conventional cell (no idealisation of positions)."""
     import spglib
@@ -70,6 +96,7 @@ def relax(atoms: Atoms, calculator, p: dict[str, Any]) -> tuple[Atoms, dict[str,
     from ase.constraints import FixSymmetry
 
     atoms = atoms.copy()
+    initial = atoms.copy()
     initial_spg = space_group_number(atoms, p["symprec"])
     filter_cls = _cell_filter(p["cell_filter"])
     opt_cls = _optimizer(p["optimizer"])
@@ -113,10 +140,16 @@ def relax(atoms: Atoms, calculator, p: dict[str, Any]) -> tuple[Atoms, dict[str,
     atoms.calc = None
     atoms.set_constraint()
     final_spg = space_group_number(atoms, p["symprec"])
+    # 11-19: a raise (final group contains every initial rotation) no longer counts as broken;
+    # before, any spg change did and skipped kappa. Same param hashes: only results that the old
+    # rule skipped can differ, and cached ones keep their skip (rerun those with
+    # kappa_if_symmetry_broken, as for the 9cd3d1dbe642 set).
+    lowered = initial_spg != final_spg and symmetry_lowered(initial, atoms, p["symprec"])
     info = {
         "initial_spg_num": initial_spg,
         "final_spg_num": final_spg,
-        "broken_symmetry": initial_spg != final_spg,
+        "broken_symmetry": lowered,
+        "symmetry_raised": initial_spg != final_spg and not lowered,
         "redirected_to_symmetry": redirected,
         "n_steps": n_steps,
         "reached_max_steps": reached_max,

@@ -1,0 +1,443 @@
+{
+  "step_id": "20261119T115323-submit_mlip_kappa_lbte-8829a0",
+  "kind": "mlip_lbte",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "134f7ea6f17b",
+  "all_sids": [
+    "LiBeBi-6083d6cf0f",
+    "NaBeBi-e7d26ac8e7",
+    "LiBeP-03177b890b",
+    "LiBeAs-507e76782f",
+    "NaBeSb-a14cb8c9dd",
+    "LiZnAs-7b679d2689",
+    "LiZnP-f6b9d60540"
+  ],
+  "mode": "live",
+  "set_name": "pool.nowotny_juza.v1.l2sel",
+  "rung": "lbte",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 3
+  },
+  "rung_params": {
+    "temperatures": [
+      300.0
+    ],
+    "max_collision_matrix_gb": 32.0,
+    "min_mesh_scale": 0.5,
+    "pinv_cutoff": 1e-08
+  },
+  "kappa_param_hash": "cc4191d4d8d0",
+  "settings": {
+    "LiBeBi-6083d6cf0f": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          -1,
+          -2
+        ],
+        [
+          -2,
+          1,
+          -1
+        ],
+        [
+          1,
+          2,
+          -1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        11,
+        11,
+        11
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 48,
+      "n_atoms_fc2_supercell": 168
+    },
+    "NaBeBi-e7d26ac8e7": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        11,
+        11,
+        11
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 48,
+      "n_atoms_fc2_supercell": 168
+    },
+    "LiBeP-03177b890b": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          -1,
+          2,
+          -2
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        14,
+        14,
+        14
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 288
+    },
+    "LiBeAs-507e76782f": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          -1,
+          -2,
+          2
+        ],
+        [
+          2,
+          -2,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        13,
+        13,
+        13
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 96,
+      "n_atoms_fc2_supercell": 264
+    },
+    "NaBeSb-a14cb8c9dd": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -1,
+          2,
+          1
+        ],
+        [
+          -1,
+          -1,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        11,
+        11,
+        11
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 48,
+      "n_atoms_fc2_supercell": 168
+    },
+    "LiZnAs-7b679d2689": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          2
+        ],
+        [
+          -1,
+          -2,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        11,
+        11,
+        11
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 48,
+      "n_atoms_fc2_supercell": 168
+    },
+    "LiZnP-f6b9d60540": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          -1,
+          -2,
+          -2
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          -1,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        12,
+        12,
+        12
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 48,
+      "n_atoms_fc2_supercell": 240
+    }
+  },
+  "sids": [
+    "LiBeBi-6083d6cf0f",
+    "NaBeBi-e7d26ac8e7",
+    "LiBeP-03177b890b",
+    "LiBeAs-507e76782f",
+    "NaBeSb-a14cb8c9dd",
+    "LiZnAs-7b679d2689",
+    "LiZnP-f6b9d60540"
+  ],
+  "db_ids": [
+    "982",
+    "983",
+    "984"
+  ],
+  "flow_uuid": "d33640ec-bb29-4c37-b693-2f1c19095020",
+  "n_jobs": 3,
+  "jobs": [
+    {
+      "uuid": "25566bbd-a79e-456c-8af2-717ac3081360",
+      "name": "pool.nowotny_juza.v1.l2sel-lbte-dpa41_max_oam-000",
+      "sids": [
+        "LiBeBi-6083d6cf0f",
+        "NaBeBi-e7d26ac8e7",
+        "LiBeP-03177b890b"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "35f20b45-2fd0-4b96-9be4-35029f332ba2",
+      "name": "pool.nowotny_juza.v1.l2sel-lbte-dpa41_max_oam-001",
+      "sids": [
+        "LiBeAs-507e76782f",
+        "NaBeSb-a14cb8c9dd",
+        "LiZnAs-7b679d2689"
+      ],
+      "kind": "mlip_lbte"
+    },
+    {
+      "uuid": "7282f95d-cec6-4c75-988c-1bfc52abd73c",
+      "name": "pool.nowotny_juza.v1.l2sel-lbte-dpa41_max_oam-002",
+      "sids": [
+        "LiZnP-f6b9d60540"
+      ],
+      "kind": "mlip_lbte"
+    }
+  ]
+}

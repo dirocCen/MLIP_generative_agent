@@ -1,0 +1,36 @@
+{
+  "name": "pool.nowotny_juza.v1b",
+  "n": 20,
+  "sids": [
+    "LiBeN-1190c83e92",
+    "LiBeP-c131916a5b",
+    "LiBeAs-5dd9bc9c3a",
+    "LiBeSb-f1dc06cdbf",
+    "LiBeBi-9160ce2fd8",
+    "LiMgN-39866e1f34",
+    "LiMgP-03a25603c7",
+    "LiMgAs-6c594258a8",
+    "LiMgSb-6d9bdf4ceb",
+    "LiMgBi-a5c3bfcf2e",
+    "LiZnN-c4963d9c14",
+    "LiZnP-2c181ae673",
+    "LiZnAs-1e5a326dc2",
+    "LiZnSb-a5953a39f6",
+    "LiZnBi-3e465874db",
+    "NaBeN-22a4600e70",
+    "NaBeP-780290559c",
+    "NaBeAs-7620c97b52",
+    "NaBeSb-6304a083b6",
+    "NaBeBi-756cf68af9"
+  ],
+  "operation": "import",
+  "parent_sets": [],
+  "description": "Nowotny-Juza F-43m I-II-V, ordering B: V 4a, II 4c, I 4d; Li x {Be,Mg,Zn} x {N,P,As,Sb,Bi} + Na-Be-V",
+  "details": {
+    "file": "data/imports/pool.nowotny_juza.v1b.extxyz",
+    "sha256": "322ec8ef717c3df0a387dc53b737294e9bc8f0c766a9905109cb509bb2c6c243",
+    "origin_kind": "file"
+  },
+  "created_by_step": "20261119T114313-import_structures-6cae6c",
+  "created_at": "2026-11-19T11:43:13+00:00"
+}

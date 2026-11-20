@@ -96,22 +96,23 @@ def main() -> None:
         sids += [x for x in registry.set_sids(s) if x not in sids]
     t = build_table(sids)
     t = t[t["l0_ok"]].dropna(subset=list(FEATURES))
-    train = t[t["kappa_l1"].notna()]
+    train = t[t["kappa"].notna()]
     pending = {x for s in a.pending_set for x in registry.set_sids(s)}
     excluded = {x for s in a.exclude_set for x in registry.set_sids(s)} | pending
-    cand = t[t["kappa_l1"].isna() & ~t.index.isin(excluded)]
+    # unlabelled and not already shown to give an invalid label (L2 present but failing)
+    cand = t[t["kappa"].isna() & t["kappa_l1"].isna() & ~t["l2_invalid"] & ~t.index.isin(excluded)]
     if len(train) < 5:
         raise SystemExit(f"only {len(train)} labelled structures: run the stratified L1 sample first")
 
     X = lambda d: d[list(FEATURES)].to_numpy(float)  # noqa: E731
-    sur = Surrogate(a.seed).fit(X(train), train["log_kappa_l1"].to_numpy(float))
+    sur = Surrogate(a.seed).fit(X(train), train["log_kappa"].to_numpy(float))
     mu, sd = sur.predict(X(t))
     t = t.assign(mu_log_kappa=mu, sd_log_kappa=sd, mu_kappa=10 ** mu, ucb=mu + a.beta * sd, picked=False)
 
     order = rank(a.strategy, X(cand), cand["kappa_slack"].to_numpy(float),
                  np.random.default_rng(a.seed), sur, a.beta)
     picked, per_formula, costs, n_too_big = [], {}, [], 0
-    for f in t.loc[t.index.isin(pending) & t["kappa_l1"].isna(), "formula"]:
+    for f in t.loc[t.index.isin(pending) & t["kappa"].isna(), "formula"]:
         per_formula[f] = per_formula.get(f, 0) + 1
     for i in order:
         sid, f = cand.index[i], cand["formula"].iloc[i]
@@ -130,21 +131,21 @@ def main() -> None:
     run_id = os.environ.get("MGA_RUN_ID", "loop-v1")
     out = ROOT / "runs" / run_id / "rounds" / f"{a.round}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
-    cols = ["sid", "formula", "chemsys", "kappa_slack", "kappa_l1", "mu_kappa", "mu_log_kappa",
+    cols = ["sid", "formula", "chemsys", "kappa_slack", "kappa_l1", "kappa_l2", "kappa", "label_source", "mu_kappa", "mu_log_kappa",
             "sd_log_kappa", "ucb", "picked", "n_atoms_primitive"]
     t[cols].sort_values("ucb", ascending=False).to_csv(out, index=False)
 
     batch = t.loc[picked].join(pd.concat(costs))
     est = float(batch["est_gpu_h"].sum())
     summary = {
-        "round": a.round, "strategy": a.strategy, "n_train": len(train), "n_candidates": len(cand),
-        "n_excluded_unlabelled": int((t["kappa_l1"].isna() & t.index.isin(excluded)).sum()),
+        "round": a.round, "strategy": a.strategy, "n_train": len(train), "train_label_source": train["label_source"].value_counts().to_dict(), "n_candidates": len(cand),
+        "n_excluded_unlabelled": int((t["kappa"].isna() & t.index.isin(excluded)).sum()),
         "n_pending": len(pending), "n_skipped_fc2_too_big": n_too_big,
         "batch": len(picked), "fc2_min_width": a.fc2_min_width, "est_l1_gpu_h": round(est, 1),
         "est_l1_gpu_h_range": [round(COST_RANGE[0] * est, 1), round(COST_RANGE[1] * est, 1)],
         "over_job_limit": batch.index[batch["est_gpu_h"] * COST_RANGE[1] > JOB_LIMIT_H].tolist(),
         "gpu_counts": batch["gpu"].value_counts().to_dict(), "predictions": str(out.relative_to(ROOT)),
-        "train_best": train.nlargest(3, "kappa_l1")[["formula", "kappa_l1"]].round(0).values.tolist(),
+        "train_best": train.nlargest(3, "kappa")[["formula", "kappa"]].round(0).values.tolist(),
     }
     print(json.dumps(summary, indent=1, default=str))
     print(batch[["formula", "kappa_slack", "mu_kappa", "sd_log_kappa", "n_atoms_fc2", "n_fc3_disp", "gpu",

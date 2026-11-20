@@ -1,0 +1,28 @@
+{
+  "LiBeSb-ddfb6b185d": {
+    "nsites": 3,
+    "n_calcs": 6,
+    "kpts_irreducible": 20,
+    "kpts_supercell_mesh": 8,
+    "supercell_matrix": [
+      [
+        -2,
+        2,
+        2
+      ],
+      [
+        2,
+        -2,
+        2
+      ],
+      [
+        2,
+        2,
+        -2
+      ]
+    ],
+    "n_atoms_supercell": 96,
+    "n_displacements": 3,
+    "cost_index": 10622772
+  }
+}

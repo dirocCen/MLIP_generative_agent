@@ -1,0 +1,38 @@
+{
+  "name": "pool.nowotny_juza.v1.l0stable.dpa41_max_oam.504f29",
+  "n": 9,
+  "sids": [
+    "LiBeP-03177b890b",
+    "LiBeAs-507e76782f",
+    "LiBeBi-6083d6cf0f",
+    "LiZnP-f6b9d60540",
+    "LiZnAs-7b679d2689",
+    "NaBeP-2a56ba7dd0",
+    "NaBeAs-fc9474bba4",
+    "NaBeSb-a14cb8c9dd",
+    "NaBeBi-e7d26ac8e7"
+  ],
+  "operation": "filter",
+  "parent_sets": [
+    "pool.nowotny_juza.v1"
+  ],
+  "description": "L0 (dpa41_max_oam): FC2 finished without imaginary modes",
+  "details": {
+    "model": "dpa41_max_oam",
+    "param_hash": "504f29978e8c",
+    "criterion": "ok and has_imaginary_modes is false",
+    "dropped": [
+      "LiBeN-8bc1b1a701",
+      "LiMgN-27da6269e0",
+      "LiMgP-b40782125b",
+      "LiMgAs-e68348a571",
+      "LiMgSb-c525066402",
+      "LiMgBi-53b0d9ea81",
+      "LiZnSb-d8616e7148",
+      "LiZnBi-bdf60d6e9e",
+      "NaBeN-f626f0d0ff"
+    ]
+  },
+  "created_by_step": "20261119T114125-fetch_results-3c4f61",
+  "created_at": "2026-11-19T11:41:26+00:00"
+}

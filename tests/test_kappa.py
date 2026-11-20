@@ -185,3 +185,19 @@ def test_length_rule_q_mesh_respects_body_centred_symmetry():
     hexa = bulk("Mg", "hcp", a=3.21, c=5.21)
     assert symmetric_q_mesh(kp["q_mesh_length"], hexa, kp["symprec"]) == [
         int(x) for x in length2mesh(kp["q_mesh_length"], _primitive_cell(hexa, kp["symprec"]).cell)]
+
+
+def test_symmetry_raise_is_not_a_break():
+    """FixSymmetry snapping a slightly distorted cell onto the higher group is not a break."""
+    from ase.build import bulk
+
+    from mga.workflows.kappa_protocol import space_group_number, symmetry_lowered
+
+    ideal = bulk("ZnS", "zincblende", a=5.41)
+    distorted = ideal.copy()
+    distorted.positions[1] += [2e-4, 0.0, 0.0]
+    assert space_group_number(ideal, 1e-5) == 216
+    assert space_group_number(distorted, 1e-5) != 216
+    assert not symmetry_lowered(distorted, ideal, 1e-5)  # raise
+    assert symmetry_lowered(ideal, distorted, 1e-5)  # genuine lowering
+    assert not symmetry_lowered(ideal, ideal, 1e-5)

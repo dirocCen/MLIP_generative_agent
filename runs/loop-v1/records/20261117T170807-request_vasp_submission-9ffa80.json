@@ -1,0 +1,281 @@
+{
+  "step_id": "20261117T170807-request_vasp_submission-9ffa80",
+  "run_id": "loop-v1",
+  "tool": "request_vasp_submission",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "User asked (2026-11-18) to start DFT validation of the top BC6N; pilot pair first to validate the pipeline and calibrate core-hours before 07a2/dd97.",
+  "parent_ids": [],
+  "params": {
+    "potcar_functional": {
+      "value": "PBE_54",
+      "source": "default",
+      "ref": "dirona ~/vasp/potpaw/potpaw_PBE (docs/mcp_servers_plan.md \u00a72.1); DESIGN \u00a72.2",
+      "reason": null
+    },
+    "encut": {
+      "value": 520.0,
+      "source": "default",
+      "ref": "pymatgen MPRelaxSet (via atomate2 MPGGARelaxMaker); DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants",
+      "reason": null
+    },
+    "ediff": {
+      "value": 1e-08,
+      "source": "default",
+      "ref": "DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants",
+      "reason": null
+    },
+    "prec": {
+      "value": "Accurate",
+      "source": "default",
+      "ref": "pymatgen MPRelaxSet (via atomate2 MPGGARelaxMaker)",
+      "reason": null
+    },
+    "lreal": {
+      "value": false,
+      "source": "default",
+      "ref": "DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants (real-space projection off for forces)",
+      "reason": null
+    },
+    "ismear": {
+      "value": 0,
+      "source": "default",
+      "ref": "heuristic: Gaussian smearing for insulators with displaced cells",
+      "reason": null
+    },
+    "sigma": {
+      "value": 0.01,
+      "source": "default",
+      "ref": "heuristic: small smearing for insulators",
+      "reason": null
+    },
+    "reciprocal_density": {
+      "value": 100,
+      "source": "default",
+      "ref": "pymatgen MPStaticSet (via atomate2 MPGGAStaticMaker) default; used for all calcs for consistency",
+      "reason": null
+    },
+    "algo": {
+      "value": "Normal",
+      "source": "default",
+      "ref": "atomate2 PhononDisplacementMaker (ALGO Normal)",
+      "reason": null
+    },
+    "ediffg": {
+      "value": -0.001,
+      "source": "default",
+      "ref": "heuristic: tight force criterion before phonons (eV/Angstrom)",
+      "reason": null
+    },
+    "double_relax": {
+      "value": true,
+      "source": "default",
+      "ref": "atomate2 DoubleRelaxMaker (MP practice: relax twice)",
+      "reason": null
+    },
+    "ispin": {
+      "value": 1,
+      "source": "default",
+      "ref": "heuristic: closed-shell light-element insulators (see VaspPhononParams.ispin)",
+      "reason": null
+    },
+    "symprec": {
+      "value": 1e-05,
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755); same as the MLIP kappa tool",
+      "reason": null
+    },
+    "displacement_mode": {
+      "value": "auto",
+      "source": "default",
+      "ref": "heuristic: per order, the cheaper of systematic (traditional solver) and random + symfc; the request shows both counts",
+      "reason": null
+    },
+    "displacement": {
+      "value": 0.03,
+      "source": "default",
+      "ref": "phono3py default distance (systematic and random); phononDB-LTC random sets use 0.03",
+      "reason": null
+    },
+    "fit_cutoffs": {
+      "value": [
+        4.0,
+        5.0
+      ],
+      "source": "default",
+      "ref": "heuristic: symfc FC3 pair cutoffs; snapshots are sized for the largest, kappa at the smallest is the cutoff-convergence check (plan \u00a79.2 basis-size table)",
+      "reason": null
+    },
+    "fc3_snapshot_factor": {
+      "value": 4.0,
+      "source": "default",
+      "ref": "phono3py 3.30.0 generate_displacements(number_of_snapshots='auto'): symfc minimum x 4 for FC3",
+      "reason": null
+    },
+    "fc2_snapshot_factor": {
+      "value": 2.0,
+      "source": "default",
+      "ref": "phono3py 3.30.0 generate_fc2_displacements('auto'): symfc minimum x 2",
+      "reason": null
+    },
+    "learning_curve_fraction": {
+      "value": 0.5,
+      "source": "default",
+      "ref": "heuristic: kappa from this fraction of the FC3 snapshots is the snapshot-count check",
+      "reason": null
+    },
+    "random_seed": {
+      "value": 1103,
+      "source": "default",
+      "ref": "fixed so the approved displacement set is reproducible",
+      "reason": null
+    },
+    "fc3_min_width": {
+      "value": 8.0,
+      "source": "default",
+      "ref": "heuristic: calibrated on phononDB-PBE choices for light-element entries (docs/mcp_servers_plan.md \u00a72.2); validate with submit_mlip_convergence; same as MLIPPhononKappaParams",
+      "reason": null
+    },
+    "fc2_min_width": {
+      "value": 14.0,
+      "source": "default",
+      "ref": "heuristic: calibrated on phononDB-PBE choices for light-element entries (docs/mcp_servers_plan.md \u00a72.2); validate with submit_mlip_convergence; same as MLIPPhononKappaParams",
+      "reason": null
+    },
+    "fc2_supercell_shape": {
+      "value": "symmetric",
+      "source": "default",
+      "ref": "decided 11-07: the MLIP path takes the smallest FC2 cell of any shape (GPU memory), but random FC2 displacements at the symfc minimum x 2 gave imaginary modes in a symmetry-broken cell (EMT Cu3Au); DFT keeps the point group",
+      "reason": null
+    },
+    "q_mesh_length": {
+      "value": 40.0,
+      "source": "default",
+      "ref": "heuristic: calibrated on phononDB-PBE choices for light-element entries (docs/mcp_servers_plan.md \u00a72.2); validate with submit_mlip_convergence; same as MLIPPhononKappaParams",
+      "reason": null
+    },
+    "temperatures": {
+      "value": [
+        300.0
+      ],
+      "source": "default",
+      "ref": "matbench-discovery KappaSettings, protocol phonondb-v1 (commit 2b7bff9, 2026-10-19; Pota et al. arXiv:2408.00755)",
+      "reason": null
+    },
+    "is_isotope": {
+      "value": true,
+      "source": "default",
+      "ref": "matbench-discovery thermal_conductivity.calculate_conductivity (commit 2b7bff9)",
+      "reason": null
+    },
+    "boundary_mfp_um": {
+      "value": 1000000.0,
+      "source": "default",
+      "ref": "matbench-discovery thermal_conductivity.calculate_conductivity (commit 2b7bff9)",
+      "reason": null
+    },
+    "transport": {
+      "value": "MS-SMM19",
+      "source": "default",
+      "ref": "matbench-discovery thermal_conductivity.calculate_conductivity (commit 2b7bff9); requires phono3py==3.30.0 on the worker",
+      "reason": null
+    },
+    "imaginary_threshold_thz": {
+      "value": -0.01,
+      "source": "default",
+      "ref": "matbench-discovery phonons.IMAGINARY_FREQ_THRESHOLD (commit 2b7bff9)",
+      "reason": null
+    },
+    "born_charges": {
+      "value": false,
+      "source": "default",
+      "ref": "not done (user decision 10-20): noNAC, as kappa_SRME",
+      "reason": null
+    },
+    "resources.partition": {
+      "value": "normal",
+      "source": "default",
+      "ref": "dirona partitions, DESIGN \u00a72.2",
+      "reason": null
+    },
+    "resources.ntasks": {
+      "value": 32,
+      "source": "override",
+      "ref": "DESIGN \u00a72.2: 8-16 cores per job; calibrate in the core-count test",
+      "reason": "512-atom FC2 supercells: 16 cores likely too slow/low memory; 32 cores on the idle normal partition"
+    },
+    "resources.ncore": {
+      "value": 8,
+      "source": "override",
+      "ref": "heuristic; calibrate in the core-count test",
+      "reason": "512-atom FC2 supercells: 16 cores likely too slow/low memory; 32 cores on the idle normal partition"
+    },
+    "resources.kpar": {
+      "value": 1,
+      "source": "default",
+      "ref": "heuristic; calibrate in the core-count test",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "l4.dft.v1.pilot",
+    "calc": "phono3py_fd",
+    "n_structures": 2
+  },
+  "outputs": {
+    "approval_id": "vasp-20261117-703428",
+    "plan_hash": "bfb57fa41a2c256369f8c965221c0ebe86f1723d656e41c6fb2331296d18617e",
+    "summary": {
+      "calc": "phono3py_fd",
+      "set_name": "l4.dft.v1.pilot",
+      "n_structures": 2,
+      "formulas": {
+        "BN": 1,
+        "BC6N": 1
+      },
+      "n_calculations": 158,
+      "max_atoms_in_any_calc": 512,
+      "cost_index_total": 10362321920,
+      "overrides": {
+        "ntasks": {
+          "value": 32,
+          "reason": "512-atom FC2 supercells: 16 cores likely too slow/low memory; 32 cores on the idle normal partition"
+        },
+        "ncore": {
+          "value": 8,
+          "reason": "512-atom FC2 supercells: 16 cores likely too slow/low memory; 32 cores on the idle normal partition"
+        }
+      },
+      "resources": {
+        "partition": "normal",
+        "ntasks": 32,
+        "ncore": 8,
+        "kpar": 1
+      },
+      "benchmark_formula_overlap": 1,
+      "decided_by": "human",
+      "rationale": "User asked (2026-11-18) to start DFT validation of the top BC6N; pilot pair first to validate the pipeline and calibrate core-hours before 07a2/dd97."
+    },
+    "details_file": "runs/loop-v1/outputs/20261117T170807-request_vasp_submission-9ffa80.json"
+  },
+  "status": "pending_approval",
+  "error": null,
+  "wall_time_s": 40.602,
+  "host": "cenyj",
+  "created_at": "2026-11-17T17:08:07+00:00"
+}

@@ -1,0 +1,170 @@
+{
+  "estimate": {
+    "BN-e3774a672e": {
+      "nsites": 8,
+      "n_calcs": 28,
+      "kpts_irreducible": 35,
+      "n_atoms_supercell": 512,
+      "settings": {
+        "source": "length_rule_v2",
+        "fc3_supercell": [
+          [
+            -2,
+            -2,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ],
+        "fc2_supercell": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4
+          ]
+        ],
+        "fc2_supercell_shape": "symmetric",
+        "q_mesh": [
+          19,
+          19,
+          19
+        ],
+        "fc3_min_width": 8.0,
+        "fc2_min_width": 14.0,
+        "q_mesh_length": 40.0
+      },
+      "plan": {
+        "space_group": 216,
+        "n_atoms_unit": 8,
+        "n_atoms_primitive": 2,
+        "n_atoms_fc3": 128,
+        "n_atoms_fc2": 512,
+        "symfc_min_snapshots": {
+          "fc3_by_cutoff": {
+            "4.0": 2,
+            "5.0": 6
+          },
+          "fc2": 1
+        },
+        "n_systematic": {
+          "fc3": 834,
+          "fc2": 2
+        },
+        "n_random": {
+          "fc3": 24,
+          "fc2": 2
+        },
+        "fc3_mode": "random",
+        "n_fc3": 24,
+        "fc2_mode": "systematic",
+        "n_fc2": 2,
+        "learning_curve_snapshots": 12
+      },
+      "cost_index": 1728232448
+    },
+    "BC6N-ed32eb6943": {
+      "nsites": 16,
+      "n_calcs": 130,
+      "kpts_irreducible": 54,
+      "n_atoms_supercell": 512,
+      "settings": {
+        "source": "length_rule_v2",
+        "fc3_supercell": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            4,
+            0,
+            0
+          ]
+        ],
+        "fc2_supercell": [
+          [
+            4,
+            2,
+            0
+          ],
+          [
+            -4,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "fc2_supercell_shape": "symmetric",
+        "q_mesh": [
+          16,
+          10,
+          10
+        ],
+        "fc3_min_width": 8.0,
+        "fc2_min_width": 14.0,
+        "q_mesh_length": 40.0
+      },
+      "plan": {
+        "space_group": 38,
+        "n_atoms_unit": 16,
+        "n_atoms_primitive": 8,
+        "n_atoms_fc3": 128,
+        "n_atoms_fc2": 512,
+        "symfc_min_snapshots": {
+          "fc3_by_cutoff": {
+            "4.0": 17,
+            "5.0": 29
+          },
+          "fc2": 6
+        },
+        "n_systematic": {
+          "fc3": 9812,
+          "fc2": 28
+        },
+        "n_random": {
+          "fc3": 116,
+          "fc2": 12
+        },
+        "fc3_mode": "random",
+        "n_fc3": 116,
+        "fc2_mode": "random",
+        "n_fc2": 12,
+        "learning_curve_snapshots": 58
+      },
+      "cost_index": 8634089472
+    }
+  },
+  "leakage": {
+    "BN-e3774a672e": [
+      "self: formula BN is a kappa_SRME test formula",
+      "ancestor BN-c9186e0900: formula BN is a kappa_SRME test formula"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "step_id": "20261119T113343-import_structures-cac446",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Substitutions on the F-43m LiBeSb prototype (L2 138 W/mK, Slack 20, GP 6: large a-o gap) to probe the filled-tetrahedral I-II-V family; user approved 11-19.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/imports/pool.nowotny_juza.v1.extxyz",
+    "sha256": "fec3df5cf877e8f71889d97bb202069acf318af5f75dc4867e021190ff19dc51",
+    "set_name": "pool.nowotny_juza.v1",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "pool.nowotny_juza.v1",
+    "n_read": 18,
+    "n_in_set": 18,
+    "n_newly_registered": 18,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "LiBeN-8bc1b1a701",
+      "LiBeP-03177b890b",
+      "LiBeAs-507e76782f",
+      "LiBeBi-6083d6cf0f",
+      "LiMgN-27da6269e0"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 1.657,
+  "host": "cenyj",
+  "created_at": "2026-11-19T11:33:43+00:00"
+}

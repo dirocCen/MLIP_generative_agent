@@ -92,6 +92,11 @@ def _phonon_cells(struct: Structure, p: dict[str, Any]) -> dict[str, Any]:
     from phonopy import Phonopy
     from pymatgen.io.phonopy import get_phonopy_structure
 
+    # MP imports carry (zero) magmoms, which phonopy's primitive_matrix="auto" refuses; the flow
+    # never sees them (ISPIN=1 relax output), so drop them for the estimate too.
+    if "magmom" in struct.site_properties:
+        struct = struct.copy()
+        struct.remove_site_property("magmom")
     sc = np.asarray(get_supercell_matrix(structure=struct, min_length=p["supercell_min_length"], max_length=None,
                                          prefer_90_degrees=True, allow_orthorhombic=False))
     ph = Phonopy(get_phonopy_structure(struct), sc, primitive_matrix="auto", symprec=p["symprec"])

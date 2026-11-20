@@ -1,0 +1,147 @@
+{
+  "step_id": "20261119T034105-fetch_results-c65caf",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261118T144942-submit_mlip_fc2_descriptors-c20ddc"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261118T144942-submit_mlip_fc2_descriptors-c20ddc",
+    "kind": "mlip_fc2_descriptors",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_fc2_descriptors",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 107,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 14,
+        "states": {
+          "COMPLETED": 14
+        },
+        "all_final": true,
+        "n_completed": 14,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 107,
+      "n_missing": 0,
+      "n_failed": 7,
+      "failed_examples": [
+        {
+          "sid": "Ba2NiN2-2d4a2a3eb5",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "CsBS2-ad6d7bc7c3",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "HfMgN2-2929edc30c",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "MgMnN2-8a07460b68",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        },
+        {
+          "sid": "MgZrN2-50ea7d7a31",
+          "stage": "fc2",
+          "error": "RuntimeError: Grid symmetry is broken. If grid symmetry is uncertain, try automatic mesh generation using a scalar value."
+        }
+      ],
+      "wall_time_s": {
+        "n": 107,
+        "min": 1.32,
+        "median": 15.54,
+        "max": 204.61
+      },
+      "n_imaginary": 31,
+      "stable_set": "pool.mass_contrast.v1.l0stable.dpa41_max_oam.504f29",
+      "n_stable": 69,
+      "descriptors": {
+        "kappa_slack_W_mK": {
+          "n": 69,
+          "min": 0.8114069861639885,
+          "median": 25.51893199483071,
+          "max": 763.2853764476944
+        },
+        "kappa_proxy_cv2_over_wjdos": {
+          "n": 69,
+          "min": 0.0067841812147461655,
+          "median": 0.1378481666126042,
+          "max": 1.151724242550943e+38
+        },
+        "kappa_ctau_1ps_W_mK": {
+          "n": 69,
+          "min": 0.218857466919952,
+          "median": 2.4031061571843413,
+          "max": 10.766469275576167
+        },
+        "theta_acoustic_K": {
+          "n": 69,
+          "min": 86.79050203278757,
+          "median": 209.12197038292032,
+          "max": 753.2867935376643
+        },
+        "ao_gap_ratio": {
+          "n": 69,
+          "min": -0.7739859047750393,
+          "median": -0.27572788722465597,
+          "max": 1.6654486864293019
+        },
+        "acoustic_branch_spread": {
+          "n": 69,
+          "min": 0.13706770002294424,
+          "median": 0.2527869481796357,
+          "max": 0.5721088290010093
+        },
+        "gamma_acoustic_rms": {
+          "n": 69,
+          "min": 0.24430611857815135,
+          "median": 0.9251028068635316,
+          "max": 5.353761028487047
+        },
+        "wjdos_cv_mean": {
+          "n": 69,
+          "min": 0.4362557279089322,
+          "median": 26.908471664008868,
+          "max": 250.7523131762046
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 13.149,
+  "host": "cenyj",
+  "created_at": "2026-11-19T03:41:05+00:00"
+}

@@ -1,0 +1,57 @@
+{
+  "estimate": {
+    "LiBeSb-ddfb6b185d": {
+      "nsites": 3,
+      "n_calcs": 6,
+      "kpts_irreducible": 20,
+      "kpts_supercell_mesh": 8,
+      "supercell_matrix": [
+        [
+          -2,
+          2,
+          2
+        ],
+        [
+          2,
+          -2,
+          2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "n_atoms_supercell": 96,
+      "n_displacements": 3,
+      "cost_index": 10622772
+    },
+    "LiBeSb-00db020ec7": {
+      "nsites": 6,
+      "n_calcs": 15,
+      "kpts_irreducible": 24,
+      "kpts_supercell_mesh": 4,
+      "supercell_matrix": [
+        [
+          3,
+          -2,
+          0
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "n_atoms_supercell": 144,
+      "n_displacements": 12,
+      "cost_index": 71720640
+    }
+  },
+  "leakage": {}
+}

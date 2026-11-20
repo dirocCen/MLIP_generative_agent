@@ -1,0 +1,170 @@
+{
+  "step_id": "20261118T033130-submit_mlip_phonon_kappa-c88b2a",
+  "kind": "mlip_kappa",
+  "model": "dpa41_max_oam",
+  "worker": "datalab_dpa",
+  "param_hash": "cc4191d4d8d0",
+  "all_sids": [
+    "TaN-a4ee80dc58",
+    "WC-c5e8973543"
+  ],
+  "mode": "live",
+  "set_name": "calib.heavy_light.v1",
+  "relax_params": {
+    "optimizer": "FIRE",
+    "cell_filter": "FrechetCellFilter",
+    "fmax": 0.0001,
+    "max_steps": 300,
+    "relaxation_mode": "single-stage",
+    "enforce_symmetry": true,
+    "relax_symprec": 0.01,
+    "symprec": 1e-05,
+    "dtype": "float64",
+    "chunk_size": 64
+  },
+  "kappa_params": {
+    "displacement": 0.03,
+    "is_plusminus": "auto",
+    "symprec": 1e-05,
+    "temperatures": [
+      300.0
+    ],
+    "use_reference_settings": true,
+    "fc3_min_width": 8.0,
+    "fc2_min_width": 14.0,
+    "q_mesh_length": 40.0,
+    "is_isotope": true,
+    "boundary_mfp_um": 1000000.0,
+    "transport": "MS-SMM19",
+    "imaginary_threshold_thz": -0.01,
+    "kappa_if_symmetry_broken": false,
+    "dtype": "float64",
+    "chunk_size": 1
+  },
+  "settings": {
+    "TaN-a4ee80dc58": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          -4,
+          -2,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          -4,
+          -5,
+          -2
+        ],
+        [
+          -5,
+          -1,
+          2
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        14
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 72,
+      "n_atoms_fc2_supercell": 276
+    },
+    "WC-c5e8973543": {
+      "source": "length_rule_v2_on_input",
+      "fc3_supercell": [
+        [
+          0,
+          0,
+          -3
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ]
+      ],
+      "fc2_supercell": [
+        [
+          3,
+          3,
+          -4
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      "fc2_supercell_shape": "any",
+      "q_mesh": [
+        16,
+        16,
+        14
+      ],
+      "fc3_min_width": 8.0,
+      "fc2_min_width": 14.0,
+      "q_mesh_length": 40.0,
+      "n_atoms_fc3_supercell": 72,
+      "n_atoms_fc2_supercell": 284
+    }
+  },
+  "sids": [
+    "TaN-a4ee80dc58",
+    "WC-c5e8973543"
+  ],
+  "db_ids": [
+    "928",
+    "929"
+  ],
+  "flow_uuid": "54c62d98-d163-497b-a3a9-8d422206c6e4",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "uuid": "90c59fa1-2a93-4905-9035-9b4d7375a123",
+      "name": "calib.heavy_light.v1-kappa-dpa41_max_oam-000",
+      "sids": [
+        "TaN-a4ee80dc58"
+      ],
+      "kind": "mlip_kappa"
+    },
+    {
+      "uuid": "5bb49e92-2e91-474e-8043-bed9bee98e0f",
+      "name": "calib.heavy_light.v1-kappa-dpa41_max_oam-001",
+      "sids": [
+        "WC-c5e8973543"
+      ],
+      "kind": "mlip_kappa"
+    }
+  ]
+}

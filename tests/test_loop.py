@@ -18,6 +18,7 @@ def universe():
     t = pd.DataFrame(rng.normal(size=(n, len(FEATURES))), columns=list(FEATURES))
     t["log_kappa_l1"] = t[FEATURES[0]] + 0.3 * rng.normal(size=n)
     t["kappa_l1"] = 10 ** t["log_kappa_l1"]
+    t["log_kappa"], t["kappa"] = t["log_kappa_l1"], t["kappa_l1"]
     t["kappa_slack"] = 10 ** t[FEATURES[1]]
     t["l1_gpu_h"] = 1.0
     t.index = [f"s{i}" for i in range(n)]
@@ -37,7 +38,7 @@ def test_every_strategy_runs(universe, strategy):
 def test_slack_ucb_starts_from_slack_head(universe):
     cfg = ReplayConfig(n_init=5, batch=3, n_rounds=1)
     slack_head = set(universe["kappa_slack"].nlargest(5).index)
-    best_head = universe.loc[list(slack_head), "kappa_l1"].max()
+    best_head = universe.loc[list(slack_head), "kappa"].max()
     su = run_one(universe, "slack_ucb", 0, cfg)
     sl = run_one(universe, "slack", 0, cfg)
     # round 0 identical to the Slack ranking, not to the shared random batch of ucb

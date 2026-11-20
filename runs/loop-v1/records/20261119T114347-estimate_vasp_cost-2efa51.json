@@ -1,0 +1,134 @@
+{
+  "step_id": "20261119T114347-estimate_vasp_cost-2efa51",
+  "run_id": "loop-v1",
+  "tool": "estimate_vasp_cost",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [],
+  "params": {
+    "potcar_functional": {
+      "value": "PBE_54",
+      "source": "default",
+      "ref": "dirona ~/vasp/potpaw/potpaw_PBE (docs/mcp_servers_plan.md \u00a72.1); DESIGN \u00a72.2",
+      "reason": null
+    },
+    "encut": {
+      "value": 520.0,
+      "source": "default",
+      "ref": "pymatgen MPRelaxSet (via atomate2 MPGGARelaxMaker); DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants",
+      "reason": null
+    },
+    "ediff": {
+      "value": 1e-08,
+      "source": "default",
+      "ref": "DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants",
+      "reason": null
+    },
+    "prec": {
+      "value": "Accurate",
+      "source": "default",
+      "ref": "pymatgen MPRelaxSet (via atomate2 MPGGARelaxMaker)",
+      "reason": null
+    },
+    "lreal": {
+      "value": false,
+      "source": "default",
+      "ref": "DESIGN \u00a71.4: MP-compatible PBE with tightened numerics for force constants (real-space projection off for forces)",
+      "reason": null
+    },
+    "ismear": {
+      "value": 0,
+      "source": "default",
+      "ref": "heuristic: Gaussian smearing for insulators with displaced cells",
+      "reason": null
+    },
+    "sigma": {
+      "value": 0.01,
+      "source": "default",
+      "ref": "heuristic: small smearing for insulators",
+      "reason": null
+    },
+    "reciprocal_density": {
+      "value": 100,
+      "source": "default",
+      "ref": "pymatgen MPStaticSet (via atomate2 MPGGAStaticMaker) default; used for all calcs for consistency",
+      "reason": null
+    },
+    "algo": {
+      "value": "Normal",
+      "source": "default",
+      "ref": "atomate2 PhononDisplacementMaker (ALGO Normal)",
+      "reason": null
+    },
+    "ediffg": {
+      "value": -0.001,
+      "source": "default",
+      "ref": "heuristic: tight force criterion before phonons (eV/Angstrom)",
+      "reason": null
+    },
+    "double_relax": {
+      "value": true,
+      "source": "default",
+      "ref": "atomate2 DoubleRelaxMaker (MP practice: relax twice)",
+      "reason": null
+    },
+    "displacement": {
+      "value": 0.01,
+      "source": "default",
+      "ref": "phonopy / atomate2 PhononMaker default",
+      "reason": null
+    },
+    "supercell_min_length": {
+      "value": 10.0,
+      "source": "default",
+      "ref": "starting point; fixed by a 10 vs 14 Angstrom convergence test before mass submission (plan \u00a79.3)",
+      "reason": null
+    },
+    "symprec": {
+      "value": 0.001,
+      "source": "default",
+      "ref": "atomate2 PhononMaker default",
+      "reason": null
+    },
+    "ispin": {
+      "value": 1,
+      "source": "default",
+      "ref": "heuristic: closed-shell light-element insulators; applied to relax, static and displacements. Also avoids atomate2 generate_phonon_displacements refusing non-zero magmoms with primitive_matrix='auto'. preview flags odd-electron cells",
+      "reason": null
+    },
+    "born_charges": {
+      "value": false,
+      "source": "default",
+      "ref": "not done (user decision 10-20): matches the noNAC kappa_SRME reference (plan \u00a79.1)",
+      "reason": null
+    }
+  },
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "dft.libesb.v1.zb",
+    "calc": "phonon_fd"
+  },
+  "outputs": {
+    "traceback": "Traceback (most recent call last):\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/records.py\", line 122, in recorded_step\n    yield rec\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/dft.py\", line 227, in estimate_vasp_cost\n    per = {sid: _estimate_one(registry.load_structure(sid), calc, pd) for sid in sids}\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/dft.py\", line 130, in _estimate_one\n    cells = _phonon_cells(struct, p)\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/projects/Obsidian/research_projects/MLIP_generative_agent/src/mga/tools/dft.py\", line 97, in _phonon_cells\n    ph = Phonopy(get_phonopy_structure(struct), sc, primitive_matrix=\"auto\", symprec=p[\"symprec\"])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/yjcen/.venvs/mga/lib/python3.12/site-packages/phonopy/api_phonopy.py\", line 244, in __init__\n    self._primitive_matrix = get_primitive_matrix_with_auto(\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/yjcen/.venvs/mga/lib/python3.12/site-packages/phonopy/structure/cells.py\", line 1741, in get_primitive_matrix_with_auto\n    return guess_primitive_matrix(unitcell, symprec=symprec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/yjcen/.venvs/mga/lib/python3.12/site-packages/phonopy/structure/cells.py\", line 1863, in guess_primitive_matrix\n    raise RuntimeError(msg)\nRuntimeError: Can not be used with the unit cell having magnetic moments.\n"
+  },
+  "status": "error",
+  "error": "RuntimeError: Can not be used with the unit cell having magnetic moments.",
+  "wall_time_s": 1.279,
+  "host": "cenyj",
+  "created_at": "2026-11-19T11:43:47+00:00"
+}

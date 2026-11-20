@@ -1,0 +1,17 @@
+{
+  "name": "l4.dft.v1.pilot",
+  "n": 2,
+  "sids": [
+    "BN-e3774a672e",
+    "BC6N-ed32eb6943"
+  ],
+  "operation": "manual",
+  "parent_sets": [
+    "loop.l2.v1.w14",
+    "loop.l2.v1.w12"
+  ],
+  "description": "L4 DFT kappa pilot: c-BN (phononDB reference, validates the DFT pipeline) + BC6N-ed32 (cheapest top BC6N)",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-17T17:08:07+00:00"
+}

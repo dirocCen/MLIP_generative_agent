@@ -1,0 +1,51 @@
+{
+  "step_id": "20261120T162939-import_structures-beefbf",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Pool expansion e1: subst/swap/perm children of 20 parents (top label + UCB), light strong-bond scope, deduplicated against the registry, none matching an MP structure.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/pool/loop_pool_expand_e1.extxyz",
+    "sha256": "9ce6a0e360b933e4dec9b2913f24dc4482b864097ebbe2d4c301174629629b9c",
+    "set_name": "loop.pool.expand.e1",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "loop.pool.expand.e1",
+    "n_read": 143,
+    "n_in_set": 143,
+    "n_newly_registered": 143,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "LiBC-80935d6132",
+      "LiBC-312082df35",
+      "LiBeN-7c4a83fcc2",
+      "LiBeN-466b92b322",
+      "Be2C-f93d75a679"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 4.359,
+  "host": "cenyj",
+  "created_at": "2026-11-20T16:29:39+00:00"
+}

@@ -34,13 +34,13 @@ class ReplayConfig:
 
 
 def hit_threshold(universe: pd.DataFrame, q: float) -> float:
-    return float(universe["kappa_l1"].quantile(q))
+    return float(universe["kappa"].quantile(q))
 
 
 def run_one(universe: pd.DataFrame, strategy: str, seed: int, cfg: ReplayConfig) -> list[dict]:
     X = universe[list(FEATURES)].to_numpy(float)
-    y = universe["log_kappa_l1"].to_numpy(float)
-    kappa = universe["kappa_l1"].to_numpy(float)
+    y = universe["log_kappa"].to_numpy(float)
+    kappa = universe["kappa"].to_numpy(float)
     cost = universe["l1_gpu_h"].fillna(universe["l1_gpu_h"].median()).to_numpy(float)
     slack = universe["kappa_slack"].to_numpy(float)
     sids = universe.index.to_numpy()

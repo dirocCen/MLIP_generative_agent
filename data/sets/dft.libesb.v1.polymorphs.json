@@ -1,0 +1,19 @@
+{
+  "name": "dft.libesb.v1.polymorphs",
+  "n": 2,
+  "sids": [
+    "LiBeSb-ddfb6b185d",
+    "LiBeSb-00db020ec7"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "pool.mass_contrast.v1"
+  ],
+  "description": "LiBeSb F-43m (MP theoretical, PBE ground state, MLIP L2 138 W/mK) vs P6_3mc (experimental, MP +18 meV/atom): DFT phonons for dynamical stability and F_vib(T) of both",
+  "details": {
+    "decided_by": "human",
+    "approved": "user 11-19 ('\u90fd\u540c\u610f': verify LiBeSb with DFT, zb vs wz + phonons)"
+  },
+  "created_by_step": null,
+  "created_at": "2026-11-19T11:55:48+00:00"
+}

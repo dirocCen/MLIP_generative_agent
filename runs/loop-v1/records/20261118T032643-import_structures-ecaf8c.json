@@ -1,0 +1,48 @@
+{
+  "step_id": "20261118T032643-import_structures-ecaf8c",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Calibration of the mass-contrast direction (user decision 11-18): theta-TaN (mp-1459) and WC (mp-1894) with literature kappa, to test whether the MLIP reproduces kappa of heavy-light compounds before a pool is built.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/imports/calib.heavy_light.v1.extxyz",
+    "sha256": "498213f4596f3957339d9b05dd96c3f062bd7ee45ec16f016781ac13e70ca461",
+    "set_name": "calib.heavy_light.v1",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "calib.heavy_light.v1",
+    "n_read": 2,
+    "n_in_set": 2,
+    "n_newly_registered": 2,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "TaN-a4ee80dc58",
+      "WC-c5e8973543"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.871,
+  "host": "cenyj",
+  "created_at": "2026-11-18T03:26:43+00:00"
+}

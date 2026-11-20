@@ -1,0 +1,47 @@
+{
+  "name": "pool.mass_contrast.v1.l2sel",
+  "n": 30,
+  "sids": [
+    "BeTe-b6f65b8f99",
+    "YN-a6c8c0abce",
+    "BP-d0194002f8",
+    "BeSe-4e728ad77d",
+    "BeS-6025c9a532",
+    "LiBeSb-ddfb6b185d",
+    "Al3GaN4-0d3469affb",
+    "AlGa3N4-cbf7342cc4",
+    "NaBeSb-87cd1ec432",
+    "GaN-16a39e1183",
+    "B2AsP-e8480fbf81",
+    "BAs-5dfdfd39e9",
+    "BAs-0a15791e7e",
+    "GaN-dfd57e0f3e",
+    "BeSiN2-16ddeedd10",
+    "SrLiN-bad89f49a9",
+    "LiBeP-49d01c080f",
+    "BeGeP2-4ddd4a2550",
+    "BeGeAs2-d9e864d2a4",
+    "BeSnAs2-0a15674b7b",
+    "AlGaN2-3d5c480a00",
+    "K4BeAs2-2ae2baeb42",
+    "K4BeP2-552c356e21",
+    "CuBSe2-835cd92a38",
+    "BeSnP2-b6a7584197",
+    "InGa3N4-b8e169a7d9",
+    "BeZnS2-f673c51a82",
+    "Li2MnN2-1d45a8f6e2",
+    "AlGa3N4-482df8e6c1",
+    "Al3GaN4-56cc62974c"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "pool.mass_contrast.v1.l1sel"
+  ],
+  "description": "L1 structures with a finite kappa (cc4191d4d8d0): excludes 5 broken_symmetry skips (rerun separately) and 2 with imaginary modes at FC2 14 A",
+  "details": {
+    "decided_by": "human",
+    "approved": "user 11-19 ('L1 then L2 automatically')"
+  },
+  "created_by_step": null,
+  "created_at": "2026-11-19T06:14:30+00:00"
+}

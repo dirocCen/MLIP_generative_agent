@@ -1,0 +1,24 @@
+{
+  "name": "pool.nowotny_juza.v1.l2sel",
+  "n": 7,
+  "sids": [
+    "LiBeBi-6083d6cf0f",
+    "NaBeBi-e7d26ac8e7",
+    "LiBeP-03177b890b",
+    "LiBeAs-507e76782f",
+    "NaBeSb-a14cb8c9dd",
+    "LiZnAs-7b679d2689",
+    "LiZnP-f6b9d60540"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "pool.nowotny_juza.v1.l0stable.dpa41_max_oam.504f29"
+  ],
+  "description": "Nowotny-Juza ordering A with an L1 kappa (no imaginary modes): L2 LBTE check, esp. LiBeBi L1 390 W/mK",
+  "details": {
+    "decided_by": "agent",
+    "approved": "user 11-19 L0+L1 < 1 GPU-h (L1 used 0.14); L2 reuses FC cache"
+  },
+  "created_by_step": null,
+  "created_at": "2026-11-19T11:53:23+00:00"
+}
