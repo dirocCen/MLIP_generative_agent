@@ -1,0 +1,71 @@
+{
+  "step_id": "20261121T123204-fetch_results-417574",
+  "run_id": "loop-v1",
+  "tool": "fetch_results",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": null,
+  "rationale": null,
+  "parent_ids": [
+    "20261121T055854-submit_mlip_phonon_kappa-d3dec5"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "step_id": "20261121T055854-submit_mlip_phonon_kappa-d3dec5",
+    "kind": "mlip_kappa",
+    "allow_partial": true,
+    "force": false
+  },
+  "outputs": {
+    "kind": "mlip_kappa",
+    "model": "dpa41_max_oam",
+    "ingest": {
+      "n_saved": 15,
+      "n_already_cached": 0,
+      "jobs": {
+        "n_jobs": 5,
+        "states": {
+          "COMPLETED": 5
+        },
+        "all_final": true,
+        "n_completed": 5,
+        "n_failed": 0,
+        "failed_examples": []
+      }
+    },
+    "derived": {
+      "n_results": 15,
+      "n_missing": 0,
+      "n_failed": 0,
+      "n_imaginary": 1,
+      "skipped": {
+        "imaginary_modes": 1
+      },
+      "n_with_kappa": 14,
+      "kappa_300K_W_mK": {
+        "min": 9.217081097023812,
+        "median": 106.37819227312693,
+        "max": 280.393670324479
+      }
+    }
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 6.736,
+  "host": "cenyj",
+  "created_at": "2026-11-21T12:32:04+00:00"
+}

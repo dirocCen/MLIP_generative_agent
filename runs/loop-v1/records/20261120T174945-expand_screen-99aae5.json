@@ -1,0 +1,55 @@
+{
+  "step_id": "20261120T174945-expand_screen-99aae5",
+  "run_id": "loop-v1",
+  "tool": "expand_screen",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "agent",
+  "rationale": "Phonon-stable expansion children; E_hull recorded, not filtered (user 11-19), except below-MP-hull artefacts.",
+  "parent_ids": [
+    "20261120T162939-import_structures-beefbf"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.expand.e1",
+    "ehull_floor": 0.1
+  },
+  "outputs": {
+    "tag": "e1",
+    "n": 143,
+    "l0_done": 143,
+    "stable": 77,
+    "artefact_below_hull": [],
+    "in_mp_after_relax": {},
+    "duplicates_after_relax": {
+      "B2CO-152b6cc960": "B2CO-1f0cd9d4bb",
+      "B2CS-8df06d8dc9": "B2CS-901c6d125d",
+      "B2PN-e12f9604ff": "B2PN-3c8c876868",
+      "SiB2S-d63c32ddda": "SiB2S-354d174186",
+      "GeC5-50b7606ae0": "GeC5-a557c87eac",
+      "Al2PN-2d6bcf85d4": "Al2PN-8b7a3655f1"
+    },
+    "kept": 71,
+    "csv": "runs/loop-v1/expand/e1.screen.csv",
+    "new_set_name": "loop.pool.expand.e1.screened"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.391,
+  "host": "cenyj",
+  "created_at": "2026-11-20T17:49:45+00:00"
+}

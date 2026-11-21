@@ -197,11 +197,36 @@ def screen(a) -> None:
     per, mp_meta = e_above_hull(items)
     t["e_above_hull"] = pd.Series({k: v.get("e_above_hull") for k, v in per.items()}, dtype=float)
     t["artefact"] = t["e_above_hull"] < -a.ehull_floor
-    keep = t[t["l0"] & t["stable"].fillna(False).astype(bool) & ~t["artefact"]]
+    ok = t["l0"] & t["stable"].fillna(False).astype(bool) & ~t["artefact"]
+
+    # The novelty check of `propose` saw the unrelaxed child; relaxation can turn it into an MP
+    # structure, or two children into the same structure (e1: 6 pairs). Both are checked again on
+    # the MLIP-relaxed cells; of a duplicate group the lowest-energy member is kept.
+    from mga.analysis.ehull import mp_structures
+
+    matcher = StructureMatcher(**MATCHER)
+    relaxed = {sid: s for sid, s, _ in items}
+    energy = {sid: en / len(s) for sid, s, en in items}
+    cand = [sid for sid in t.index[ok] if sid in relaxed]
+    nov = expand.mp_novelty([relaxed[sid] for sid in cand], matcher, mp_structures)
+    t["mp_match_relaxed"] = pd.Series({sid: ",".join(n["mp_matches"]) for sid, n in zip(cand, nov)}, dtype=object)
+    t["duplicate_of"] = None
+    reps: dict[str, list[str]] = defaultdict(list)
+    for sid in sorted(cand, key=lambda x: energy[x]):
+        f = t.at[sid, "formula"]
+        twin = next((r for r in reps[f] if matcher.fit(relaxed[sid], relaxed[r])), None)
+        if twin:
+            t.at[sid, "duplicate_of"] = twin
+        else:
+            reps[f].append(sid)
+    keep = t[ok & t.index.isin(cand) & (t["mp_match_relaxed"].fillna("") == "") & t["duplicate_of"].isna()]
     out = ROOT / "runs" / os.environ.get("MGA_RUN_ID", "loop-v1") / "expand" / f"{a.tag}.screen.csv"
     t.sort_values("kappa_slack", ascending=False).to_csv(out)
     summary = {"tag": a.tag, "n": len(t), "l0_done": int(t["l0"].sum()), "stable": int(t["stable"].fillna(False).sum()),
-               "artefact_below_hull": t.index[t["artefact"]].tolist(), "kept": len(keep), "csv": str(out.relative_to(ROOT))}
+               "artefact_below_hull": t.index[t["artefact"]].tolist(),
+               "in_mp_after_relax": {s: m for s, m in t["mp_match_relaxed"].dropna().items() if m},
+               "duplicates_after_relax": t["duplicate_of"].dropna().to_dict(),
+               "kept": len(keep), "csv": str(out.relative_to(ROOT))}
     print(json.dumps(summary, indent=1, default=str))
     print(keep[["formula", "kappa_slack", "e_above_hull", "min_frequency_thz"]].sort_values("kappa_slack", ascending=False)
           .round(3).to_string())

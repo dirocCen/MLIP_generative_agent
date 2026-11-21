@@ -1,0 +1,17 @@
+{
+  "name": "loop.round.r5.a100",
+  "n": 1,
+  "sids": [
+    "SiB2P2C-0addc4efa6"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.pool.expand.e1.screened"
+  ],
+  "description": "Loop round r5 (expansion e1): loop.round.r5.a100",
+  "details": {
+    "rationale": "Round r5 = first L1 on expansion e1 (user approved 11-21): UCB top 15 among e1 children with E_hull <= 0.5, <= 3 GPU-h each, one per formula, minus the AlN stacking polytype; plus Si2BPC2 and SiB2P2C (highest mu_kappa near the hull, above the cost cap). Est. 22 GPU-h (15-31)."
+  },
+  "created_by_step": "20261121T055853-loop_round-516a63",
+  "created_at": "2026-11-21T05:58:53+00:00"
+}
