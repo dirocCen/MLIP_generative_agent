@@ -1,0 +1,48 @@
+{
+  "step_id": "20261122T084514-expand_screen-80c1ab",
+  "run_id": "loop-v1",
+  "tool": "expand_screen",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Phonon-stable expansion children; E_hull recorded, not filtered (user 11-19), except below-MP-hull artefacts.",
+  "parent_ids": [
+    "20261122T033431-import_structures-1ab5d3"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set_name": "loop.pool.expand.e2",
+    "ehull_floor": 0.1
+  },
+  "outputs": {
+    "tag": "e2",
+    "n": 173,
+    "l0_done": 173,
+    "stable": 89,
+    "artefact_below_hull": [],
+    "in_mp_after_relax": {},
+    "duplicates_after_relax": {},
+    "kept": 89,
+    "csv": "runs/loop-v1/expand/e2.screen.csv",
+    "new_set_name": "loop.pool.expand.e2.screened"
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.514,
+  "host": "cenyj",
+  "created_at": "2026-11-22T08:45:14+00:00"
+}

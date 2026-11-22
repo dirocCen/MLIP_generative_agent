@@ -1,0 +1,51 @@
+{
+  "step_id": "20261122T033431-import_structures-1ab5d3",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Pool expansion e2: B/C/N orderings (n(B) = n(N), no B-B / N-N bonds) of the 4H stackings plus the B-C-N ternaries left out by the 11-11 cap; none matching an MP structure. r5 showed substitution children of the leaders lose kappa; the leaders are B/C/N orderings on the diamond network.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/pool/loop_pool_expand_e2.extxyz",
+    "sha256": "1f99b79bd0fa2027c95653aec7aababdf16a4d1df5cdf03a133545ec482538a3",
+    "set_name": "loop.pool.expand.e2",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "loop.pool.expand.e2",
+    "n_read": 173,
+    "n_in_set": 173,
+    "n_newly_registered": 91,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "B3C2N3-d2eaed1a0d",
+      "B3C2N3-25af476d33",
+      "B3C2N3-1aeaced345",
+      "B3C2N3-43839d5440",
+      "B3C2N3-2978b520ae"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 3.79,
+  "host": "cenyj",
+  "created_at": "2026-11-22T03:34:31+00:00"
+}

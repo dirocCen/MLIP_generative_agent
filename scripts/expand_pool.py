@@ -7,6 +7,8 @@ Two steps around the usual L0 job:
              same formula (novelty = absent from MP; ``formula_in_mp`` is kept as a flag) ->
              runs/<run>/expand/<tag>.csv. ``--commit`` writes the extxyz and imports set
              ``loop.pool.expand.<tag>``; L0 on it is a separate submission.
+``enumerate`` parent-free: B/C/N orderings of the 4H / 6H stackings (``expand.bcn_decorations``) and,
+             with --trimmed, the B-C-N ternaries the 11-11 cap left out; same novelty filter and output.
 ``screen``   after L0: phonon-stable children (no imaginary modes) with E_hull against MP recorded,
              not filtered, except below the MP hull by more than ``--ehull-floor`` (an MLIP artefact,
              not a discovery) -> set ``loop.pool.expand.<tag>.screened``. That set goes into
@@ -90,8 +92,6 @@ def _registered_by_formula(formulas: set[str]) -> dict[str, list[str]]:
 
 
 def propose(a) -> None:
-    from mga.analysis.ehull import mp_structures
-
     sids: list[str] = []
     for s in a.set:
         sids += [x for x in registry.set_sids(s) if x not in sids]
@@ -113,26 +113,50 @@ def propose(a) -> None:
     kids = [(s, i) for s, i in kids
             if not any(matcher.fit(s, registry.load_structure(x)) for x in known.get(s.composition.reduced_formula, []))]
     print(f"new vs registry: {len(kids)}", flush=True)
-
-    nov = expand.mp_novelty([s for s, _ in kids], matcher, mp_structures)
-    rows, new = [], []
-    for (s, info), n in zip(kids, nov):
-        row = {"formula": s.composition.reduced_formula, "n_atoms": len(s), "spg": fingerprint(s)[0] if fingerprint(s) else None,
-               **info, "formula_in_mp": n["formula_in_mp"], "mp_matches": ",".join(n["mp_matches"]),
-               "mp_min_ehull_formula": n["mp_min_ehull_formula"]}
-        rows.append(row)
-        if not n["mp_matches"]:
-            info.update(formula_in_mp=n["formula_in_mp"])
-            new.append((s, info))
+    rows, new = _mp_filter(kids, matcher)
     # at most --per-parent novel children per parent, lightest mean atomic mass first (Slack prior:
     # light atoms + strong bonds; without the cap the 4-element parents give ~200 children each)
-    mass = lambda s: s.composition.weight / s.composition.num_atoms  # noqa: E731
     capped, n_par = [], Counter()
-    for s, info in sorted(new, key=lambda it: mass(it[0])):
+    for s, info in sorted(new, key=lambda it: _mass(it[0])):
         if n_par[info["parent"]] < a.per_parent:
             capped.append((s, info))
             n_par[info["parent"]] += 1
     n_novel_uncapped, new = len(new), capped
+    summary = {
+        "tag": a.tag, "n_parents": len(par), "parents_by_reason": par["parent_reason"].value_counts().to_dict(),
+        "children_raw": len(raw), "new_vs_registry": len(rows), "novel_uncapped": n_novel_uncapped,
+        "novel_by_parent": dict(Counter(i["parent_formula"] for _, i in new).most_common()),
+    }
+    _write(a, rows, kids, new, summary,
+           rationale=f"Pool expansion {a.tag}: subst/swap/perm children of {len(par)} parents (top label + UCB), "
+                     "light strong-bond scope, deduplicated against the registry, none matching an MP structure.",
+           description=f"Expansion {a.tag}: novel (not in MP) children of the loop leaders")
+
+
+def _mass(s) -> float:
+    return s.composition.weight / s.composition.num_atoms
+
+
+def _mp_filter(kids, matcher):
+    """CSV rows for every candidate, and the candidates matching no MP structure."""
+    from mga.analysis.ehull import mp_structures
+
+    nov = expand.mp_novelty([s for s, _ in kids], matcher, mp_structures)
+    rows, new = [], []
+    for (s, info), n in zip(kids, nov):
+        fp = fingerprint(s)
+        rows.append({"formula": s.composition.reduced_formula, "n_atoms": len(s), "spg": fp[0] if fp else None,
+                     **info, "formula_in_mp": n["formula_in_mp"], "mp_matches": ",".join(n["mp_matches"]),
+                     "mp_min_ehull_formula": n["mp_min_ehull_formula"]})
+        if not n["mp_matches"]:
+            info.update(formula_in_mp=n["formula_in_mp"])
+            new.append((s, info))
+    return rows, new
+
+
+def _write(a, rows, kids, new, summary: dict, rationale: str, description: str) -> None:
+    """runs/<run>/expand/<tag>.csv (``selected`` = goes into the set); with --commit the extxyz and
+    the imported set loop.pool.expand.<tag>. Already registered structures keep their sid."""
     kept = {id(i) for _, i in new}
     for row, (_, info) in zip(rows, kids):
         row["selected"] = id(info) in kept
@@ -140,18 +164,15 @@ def propose(a) -> None:
     out = ROOT / "runs" / os.environ.get("MGA_RUN_ID", "loop-v1") / "expand" / f"{a.tag}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(out, index=False)
-
     summary = {
-        "tag": a.tag, "n_parents": len(par), "parents_by_reason": par["parent_reason"].value_counts().to_dict(),
-        "children_raw": len(raw), "new_vs_registry": len(rows), "known_in_mp": int((df["mp_matches"] != "").sum()),
-        "novel_uncapped": n_novel_uncapped, "novel": len(new), "novel_new_formula": sum(not i["formula_in_mp"] for _, i in new),
+        **summary, "known_in_mp": int((df["mp_matches"] != "").sum()) if len(df) else 0, "novel": len(new),
+        "novel_new_formula": sum(not i["formula_in_mp"] for _, i in new),
         "novel_by_source": dict(Counter(i["source"] for _, i in new)),
-        "novel_by_parent": dict(Counter(i["parent_formula"] for _, i in new).most_common()),
         "novel_n_atoms": dict(sorted(Counter(len(s) for s, _ in new).items())), "csv": str(out.relative_to(ROOT)),
     }
     print(json.dumps(summary, indent=1, default=str))
     if not a.commit or not new:
-        print("dry run: only the csv written (add --commit)" if new else "no novel children")
+        print("dry run: only the csv written (add --commit)" if new else "no novel candidates")
         return
 
     from ase.io import write
@@ -166,13 +187,57 @@ def propose(a) -> None:
         atoms.info.update({k: v for k, v in info.items() if v is not None})
         frames.append(atoms)
     write(xyz, frames, format="extxyz")
-    res = import_structures(
-        str(xyz.relative_to(ROOT)), f"loop.pool.expand.{a.tag}", "file", decided_by=a.decided_by,
-        rationale=f"Pool expansion {a.tag}: subst/swap/perm children of {len(par)} parents (top label + UCB), "
-                  "light strong-bond scope, deduplicated against the registry, none matching an MP structure.",
-        description=f"Expansion {a.tag}: novel (not in MP) children of the loop leaders",
-    )
+    res = import_structures(str(xyz.relative_to(ROOT)), f"loop.pool.expand.{a.tag}", "file",
+                            decided_by=a.decided_by, rationale=rationale, description=description)
     print(json.dumps({k: v for k, v in res.items() if k != "sids"}, indent=1, default=str))
+
+
+TRIM_SOURCE, TRIM_KEPT = "loop.pool.v1", "loop.pool.v1.bcn200"
+
+
+def enumerate_(a) -> None:
+    """Parent-free candidates: B/C/N orderings of new polytypes (``expand.bcn_decorations``) and,
+    with --trimmed, the B-C-N ternaries of the 11-10 pool that the 11-11 cap of 200 left out and
+    that no L0 has seen, both without B-B / N-N bonds."""
+    matcher = StructureMatcher(**MATCHER)
+    raw = []
+    for fw in a.frameworks:
+        nb = range(a.nb_min, a.nb_max + 1) if a.nb_max else None
+        raw += list(expand.bcn_decorations(fw, nb))
+    kids = _dedupe(raw, matcher)
+    known = _registered_by_formula({s.composition.reduced_formula for s, _ in kids})
+    kids = [(s, i) for s, i in kids
+            if not any(matcher.fit(s, registry.load_structure(x)) for x in known.get(s.composition.reduced_formula, []))]
+    n_enum_new = len(kids)
+    print(f"polytype decorations: {len(raw)} raw, {n_enum_new} new vs registry", flush=True)
+    n_trim = Counter()
+    if a.trimmed:
+        kept = set(registry.set_sids(TRIM_KEPT))
+        for e in registry.iter_entries(registry.set_sids(TRIM_SOURCE)):
+            if e["sid"] in kept or e["chemsys"] != "B-C-N":
+                continue
+            n_trim["b_c_n_left_out"] += 1
+            s = registry.load_structure(e["sid"])
+            hom = expand.homopolar_bonds(s)
+            if hom:
+                continue
+            n_trim["no_homopolar"] += 1
+            if _l0(e["sid"]) is not None:
+                continue
+            n_trim["no_l0"] += 1
+            kids.append((s, {"source": "trimmed", "map": "", "homopolar": 0, "orig_sid": e["sid"]}))
+        print(f"trimmed B-C-N: {dict(n_trim)}", flush=True)
+    rows, new = _mp_filter(kids, matcher)
+    if a.max_atoms:
+        new = [(s, i) for s, i in new if len(s) <= a.max_atoms]
+    summary = {"tag": a.tag, "frameworks": a.frameworks, "decorations_raw": len(raw), "decorations_new_vs_registry": n_enum_new,
+               "trimmed": dict(n_trim)}
+    _write(a, rows, kids, new, summary,
+           rationale=f"Pool expansion {a.tag}: B/C/N orderings (n(B) = n(N), no B-B / N-N bonds) of the "
+                     f"{'/'.join(a.frameworks)} stackings" + (" plus the B-C-N ternaries left out by the 11-11 cap" if a.trimmed else "")
+                     + "; none matching an MP structure. r5 showed substitution children of the leaders lose kappa; "
+                       "the leaders are B/C/N orderings on the diamond network.",
+           description=f"Expansion {a.tag}: novel B/C/N orderings on tetrahedral networks")
 
 
 def screen(a) -> None:
@@ -258,9 +323,15 @@ def main() -> None:
     p.add_argument("--per-parent", type=int, default=15, help="novel children kept per parent (lightest first)")
     p.add_argument("--operators", nargs="+", default=list(expand.OPERATORS), choices=list(expand.OPERATORS))
     p.add_argument("--seed", type=int, default=0)
+    e = sub.add_parser("enumerate")
+    e.add_argument("--frameworks", nargs="+", default=["4H"], choices=list(expand.POLYTYPES))
+    e.add_argument("--nb-min", type=int, default=1)
+    e.add_argument("--nb-max", type=int, default=0, help="n(B) = n(N) range (0: all)")
+    e.add_argument("--trimmed", action="store_true", help=f"add the B-C-N ternaries of {TRIM_SOURCE} not in {TRIM_KEPT}")
+    e.add_argument("--max-atoms", type=int, default=0, help="drop novel candidates above this primitive size (0: none)")
     s = sub.add_parser("screen")
     s.add_argument("--ehull-floor", type=float, default=0.1, help="eV/atom below the MP hull = MLIP artefact")
-    for x in (p, s):
+    for x in (p, e, s):
         x.add_argument("--tag", required=True)
         x.add_argument("--decided-by", default="agent", choices=["agent", "human"])
         x.add_argument("--commit", action="store_true")
@@ -268,6 +339,8 @@ def main() -> None:
     if a.cmd == "propose":
         a.set = a.set or DEFAULT_SETS
         propose(a)
+    elif a.cmd == "enumerate":
+        enumerate_(a)
     else:
         screen(a)
 

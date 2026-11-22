@@ -1,0 +1,70 @@
+{
+  "step_id": "20261122T120921-loop_round-327527",
+  "run_id": "loop-v1",
+  "tool": "loop_round",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Round r6 = L1 on expansion e2 (user approved option A, 11-22): UCB top 20 of the 89 L0-stable e2 B/C/N orderings (GP on 179 labels, beta 1, <= 10 per formula, fc2 12 A), minus the 3 with E_hull > 0.5 eV/atom. Est. 52 GPU-h (36-73), all L40S.",
+  "parent_ids": [
+    "20261122T084514-expand_screen-80c1ab"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "round": "r6",
+    "sets": [
+      "loop.pool.expand.e2.screened"
+    ],
+    "strategy": "ucb",
+    "batch": 20,
+    "beta": 1.0,
+    "max_per_formula": 10,
+    "dropped_ehull": [
+      "BC2N-f9d3318955",
+      "B3C2N3-a19d198af9",
+      "B3C2N3-91df908b14"
+    ],
+    "sids": [
+      "BC6N-060dd5580d",
+      "BC6N-1daa022795",
+      "BC2N-44e5dd645a",
+      "BC2N-5b84152340",
+      "BC2N-67ca8885ad",
+      "BC2N-1780876a9a",
+      "BC2N-fa40c3cfc0",
+      "B3C2N3-80c371c655",
+      "B3C2N3-c2819f19aa",
+      "BC2N-60c9f5c185",
+      "B3C2N3-02630af987",
+      "B3C2N3-8e0bad2838",
+      "BC2N-213cbc9a90",
+      "BC2N-97f89baff3",
+      "B3C2N3-d4f2b98cdb",
+      "BC2N-1a7e888f60",
+      "B3C2N3-e217a5b6c4"
+    ]
+  },
+  "outputs": {
+    "new_set_name": "loop.round.r6",
+    "n": 17
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.109,
+  "host": "cenyj",
+  "created_at": "2026-11-22T12:09:21+00:00"
+}

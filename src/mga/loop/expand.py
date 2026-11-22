@@ -18,6 +18,9 @@ Operators (``children``), all on the parent's MLIP-relaxed primitive cell, one o
 
 Scope (user decision 11-19): light elements with strong bonds plus heavy mass-contrast partners;
 every child contains at least one of Be, B, C, N.
+
+Enumeration (``bcn_decorations``, from e2): parent-free B/C/N orderings of tetrahedral stackings
+the 11-10 pool did not contain (4H, 6H), n(B) = n(N), no B-B / N-N bonds.
 """
 
 from __future__ import annotations
@@ -135,6 +138,85 @@ def children(parent: Structure, operators: Iterable[str] = tuple(OPERATORS)):
             if c is None or len(c) > MAX_ATOMS or min_dist(c) < MIN_DIST:
                 continue
             yield c, {"source": source, "map": json.dumps(mapping, sort_keys=True)}
+
+
+# --- ordered B/C/N decorations of tetrahedral polytypes -----------------------------------------
+# The leaders of loops r1-r4 (BC6N, BC4N, BC2N, 860-900 W/mK) are B/C/N orderings on the diamond
+# network, not new chemistry; e1's substitutions (r5, max 302 W/mK) only made them heavier. The
+# 11-10 pool enumerated zincblende / wurtzite (3C / 2H) supercells up to 8 atoms; these are the
+# stackings it did not have. Hexagonal stacking positions; a bilayer is c = sqrt(2/3) a high.
+POLYTYPES = {"4H": "ABCB", "6H": "ABCACB"}
+_STACK = {"A": (0.0, 0.0), "B": (1 / 3, 2 / 3), "C": (2 / 3, 1 / 3)}
+_BOND_IDEAL = (3 / 8) ** 0.5  # nearest-neighbour distance for in-plane a = 1
+
+
+def polytype(seq: str) -> Structure:
+    """Ideal tetrahedral network with stacking ``seq`` (a = 1), every site species "X"."""
+    from pymatgen.core import Lattice
+
+    n = len(seq)
+    xyz = []
+    for i, layer in enumerate(seq):
+        x, y = _STACK[layer]
+        xyz += [[x, y, i / n], [x, y, i / n + 3 / (4 * n)]]
+    return Structure(Lattice.hexagonal(1.0, (2 / 3) ** 0.5 * n), ["X"] * 2 * n, xyz)
+
+
+def _bonds(s: Structure, scale: float = 1.15) -> list[tuple[int, int]]:
+    dm = s.distance_matrix
+    i, j, _, _ = s.get_neighbor_list(float(dm[dm > 1e-6].min()) * scale)
+    return [(int(a), int(b)) for a, b in zip(i, j) if a < b]
+
+
+def homopolar_bonds(s: Structure) -> int:
+    """Nearest-neighbour B-B plus N-N bonds. In the 11-10 B-C-N pool 6 / 111 ternaries with such
+    bonds were L0-stable against 40 / 89 without; the labelled leaders have none."""
+    sp = [x.specie.symbol for x in s]
+    return sum(1 for a, b in _bonds(s) if sp[a] == sp[b] and sp[a] in ("B", "N"))
+
+
+def _site_permutations(s: Structure) -> list[np.ndarray]:
+    import spglib
+
+    frac = s.frac_coords
+    sym = spglib.get_symmetry((s.lattice.matrix, frac, [0] * len(s)), symprec=1e-4)
+    perms = set()
+    for rot, trans in zip(sym["rotations"], sym["translations"]):
+        d = (frac @ rot.T + trans)[:, None, :] - frac[None, :, :]
+        d -= np.round(d)
+        dist = np.linalg.norm(d @ s.lattice.matrix, axis=2)
+        perm = dist.argmin(axis=1)
+        if dist[np.arange(len(frac)), perm].max() < 1e-3 and len(set(perm)) == len(frac):
+            perms.add(tuple(perm))
+    return [np.array(p) for p in sorted(perms)]
+
+
+def bcn_decorations(name: str, nb_range: Iterable[int] | None = None, allow_homopolar: bool = False):
+    """(structure, info) for the symmetry-distinct B/C/N orderings of polytype ``name`` with
+    n(B) = n(N) (the 8-electron rule on a tetrahedral network) and, by default, no B-B / N-N bond.
+    Volume from the covalent radii of the bonded pairs; pure C is skipped (lonsdaleite family)."""
+    cell = polytype(POLYTYPES[name])
+    n = len(cell)
+    perms = _site_permutations(cell)
+    bonds = _bonds(cell)
+    seen: set[tuple[str, ...]] = set()
+    for nb in nb_range if nb_range is not None else range(1, n // 2 + 1):
+        for bpos in itertools.combinations(range(n), nb):
+            rest = [i for i in range(n) if i not in bpos]
+            for npos in itertools.combinations(rest, nb):
+                lab = np.array(["C"] * n, dtype=object)
+                lab[list(bpos)], lab[list(npos)] = "B", "N"
+                key = min(tuple(lab[p]) for p in perms)
+                if key in seen:
+                    continue
+                seen.add(key)
+                hom = sum(1 for a, b in bonds if key[a] == key[b] and key[a] in ("B", "N"))
+                if hom and not allow_homopolar:
+                    continue
+                s = Structure(cell.lattice, list(key), cell.frac_coords)
+                d = float(np.mean([RCOV[key[a]] + RCOV[key[b]] for a, b in bonds]))
+                s.scale_lattice(s.volume * (d / _BOND_IDEAL) ** 3)
+                yield s, {"source": f"enum_{name}", "map": "", "homopolar": hom}
 
 
 def select_parents(

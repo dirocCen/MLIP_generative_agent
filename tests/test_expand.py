@@ -53,3 +53,26 @@ def test_perm_gives_other_orderings_of_the_same_formula():
     kids = list(expand.children(p, ["perm"]))
     assert kids and all(c.composition.reduced_formula == "LiBeSb" for c, _ in kids)
     assert all(abs(c.volume - p.volume) < 1e-6 for c, _ in kids)
+
+
+def test_polytype_frameworks_are_ideal_tetrahedral():
+    from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+
+    for name, seq in expand.POLYTYPES.items():
+        cell = expand.polytype(seq)
+        assert len(cell) == 2 * len(seq)
+        assert len(expand._bonds(cell)) == 2 * len(cell)  # four bonds per site
+        assert SpacegroupAnalyzer(cell, symprec=1e-3).get_space_group_number() == 194
+
+
+def test_bcn_decorations_4h():
+    every = list(expand.bcn_decorations("4H", allow_homopolar=True))
+    clean = list(expand.bcn_decorations("4H"))
+    assert (len(every), len(clean)) == (290, 92)  # 8 sites, n(B) = n(N) = 1..4, symmetry-distinct
+    for s, info in clean:
+        el = s.composition.get_el_amt_dict()
+        assert el.get("B", 0) == el.get("N", 0) > 0
+        assert info["homopolar"] == 0 == expand.homopolar_bonds(s)
+    s, _ = next(c for c in clean if c[0].composition.reduced_formula == "BC6N")
+    d = sorted(s.distance_matrix[s.distance_matrix > 0])[0]
+    assert 1.45 < d < 1.65  # rescaled to C-C / B-C / C-N bond lengths
