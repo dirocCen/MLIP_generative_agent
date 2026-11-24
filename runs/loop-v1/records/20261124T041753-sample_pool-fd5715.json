@@ -1,0 +1,47 @@
+{
+  "step_id": "20261124T041753-sample_pool-fd5715",
+  "run_id": "loop-v1",
+  "tool": "sample_pool",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "User approved (11-23) the 6H enumeration with B+N >= 25 % and L0 on a ~150 sample (~10-15 GPU-h). e3 = 2468 novel 6H orderings; the 33 BC10N slipped in through an --nb-min bug (fixed) and are dropped. Stratified random sample (seed 0), weighted to the C-rich end allowed (BC4N, BC2N) since kappa_L1 rose with C in r6; the surrogate needs L0 descriptors, so it cannot prescreen.",
+  "parent_ids": [
+    "20261124T040939-import_structures-f017dd"
+  ],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "set": "loop.pool.expand.e3",
+    "quota": {
+      "BC4N": 50,
+      "BC2N": 50,
+      "BCN": 30,
+      "B5C2N5": 19,
+      "BN": 1
+    },
+    "seed": 0
+  },
+  "outputs": {
+    "new_set_name": "loop.pool.expand.e3.s150",
+    "n": 150
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 0.86,
+  "host": "cenyj",
+  "created_at": "2026-11-24T04:17:53+00:00"
+}

@@ -200,7 +200,7 @@ def bcn_decorations(name: str, nb_range: Iterable[int] | None = None, allow_homo
     perms = _site_permutations(cell)
     bonds = _bonds(cell)
     seen: set[tuple[str, ...]] = set()
-    for nb in nb_range if nb_range is not None else range(1, n // 2 + 1):
+    for nb in (range(1, n // 2 + 1) if nb_range is None else [k for k in nb_range if 1 <= k <= n // 2]):
         for bpos in itertools.combinations(range(n), nb):
             rest = [i for i in range(n) if i not in bpos]
             for npos in itertools.combinations(rest, nb):

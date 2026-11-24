@@ -76,3 +76,11 @@ def test_bcn_decorations_4h():
     s, _ = next(c for c in clean if c[0].composition.reduced_formula == "BC6N")
     d = sorted(s.distance_matrix[s.distance_matrix > 0])[0]
     assert 1.45 < d < 1.65  # rescaled to C-C / B-C / C-N bond lengths
+
+
+def test_bcn_decorations_nb_range_open_ended():
+    # an n(B) lower bound with no upper bound (expand_pool --nb-min 2, --nb-max 0) drops n(B) = 1
+    # and caps at n/2 instead of failing on the out-of-range values
+    kept = list(expand.bcn_decorations("4H", range(2, 10**6 + 1)))
+    assert len(kept) == 92 - 14  # 92 clean orderings minus the 14 BC6N (n(B) = 1)
+    assert all(s.composition["B"] >= 2 for s, _ in kept)

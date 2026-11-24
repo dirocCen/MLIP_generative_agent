@@ -28,8 +28,9 @@ DEFAULT_L1_HASH = "cc4191d4d8d0"
 # FixSymmetry *raised* (slightly distorted MP cells) and the old check skipped as "broken".
 L1_HASHES = (DEFAULT_L1_HASH, "4187d607eb10", "5b38ae92e6ac", "9cd3d1dbe642")
 # L2 = LBTE on the L1 force constants: the default protocol, and the same with
-# kappa_if_symmetry_broken (pairs with 9cd3d1dbe642 so it hits that FC cache).
-L2_HASHES = ("134f7ea6f17b", "2ba818643731")
+# kappa_if_symmetry_broken (pairs with 9cd3d1dbe642 so it hits that FC cache), and LBTE on the
+# FC2 12 A force constants (4039dd9bc338, 11-23: pairs with 4187d607eb10, the r2-r6 L1 protocol).
+L2_HASHES = ("134f7ea6f17b", "2ba818643731", "4039dd9bc338")
 
 # Label sanity (11-19). A kappa that is not positive, or absurdly large, is a numerical failure
 # (RTA diverges when linewidths -> 0; the LBTE pseudo-inverse can turn negative), not physics.

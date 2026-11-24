@@ -1,0 +1,19 @@
+{
+  "name": "loop.round.r6.l2top5",
+  "n": 5,
+  "sids": [
+    "BC6N-1daa022795",
+    "BC6N-060dd5580d",
+    "BC2N-67ca8885ad",
+    "BC2N-fa40c3cfc0",
+    "BC2N-5b84152340"
+  ],
+  "operation": "select",
+  "parent_sets": [
+    "loop.round.r6"
+  ],
+  "description": "top 5 kappa_L1 of r6 (4H B-C-N enumeration) for the L2 LBTE check",
+  "details": {},
+  "created_by_step": null,
+  "created_at": "2026-11-23T05:28:55+00:00"
+}

@@ -202,7 +202,7 @@ def enumerate_(a) -> None:
     matcher = StructureMatcher(**MATCHER)
     raw = []
     for fw in a.frameworks:
-        nb = range(a.nb_min, a.nb_max + 1) if a.nb_max else None
+        nb = range(a.nb_min, (a.nb_max or 10**6) + 1)  # nb_max 0: up to n/2 (capped in bcn_decorations)
         raw += list(expand.bcn_decorations(fw, nb))
     kids = _dedupe(raw, matcher)
     known = _registered_by_formula({s.composition.reduced_formula for s, _ in kids})

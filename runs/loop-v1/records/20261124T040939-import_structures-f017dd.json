@@ -1,0 +1,51 @@
+{
+  "step_id": "20261124T040939-import_structures-f017dd",
+  "run_id": "loop-v1",
+  "tool": "import_structures",
+  "actor": "unspecified",
+  "mode": "live",
+  "decided_by": "human",
+  "rationale": "Pool expansion e3: B/C/N orderings (n(B) = n(N), no B-B / N-N bonds) of the 6H stackings; none matching an MP structure. r5 showed substitution children of the leaders lose kappa; the leaders are B/C/N orderings on the diamond network.",
+  "parent_ids": [],
+  "params": {},
+  "code_versions": {
+    "mga": "0.1.0",
+    "python": "3.12.3",
+    "pymatgen": "2026.9.24",
+    "ase": "3.29.0",
+    "jobflow": "0.4.0",
+    "jobflow-remote": "1.0.1",
+    "atomate2": "0.1.5",
+    "phonopy": "3.5.1",
+    "phono3py": "3.30.0",
+    "mp-api": "0.47.0",
+    "mcp": "2.3.0",
+    "pydantic": "2.14.1"
+  },
+  "inputs": {
+    "path": "data/structures/pool/loop_pool_expand_e3.extxyz",
+    "sha256": "189114c87148ded2b931b2d144f528a760750318d14e63cc821fc608744e1fdd",
+    "set_name": "loop.pool.expand.e3",
+    "origin_kind": "file"
+  },
+  "outputs": {
+    "set_name": "loop.pool.expand.e3",
+    "n_read": 2468,
+    "n_in_set": 2468,
+    "n_newly_registered": 2468,
+    "n_failed": 0,
+    "failures": [],
+    "examples": [
+      "B5C2N5-c890f00aaa",
+      "B5C2N5-fdc11e445e",
+      "B5C2N5-1806af7c92",
+      "B5C2N5-708b1c6afa",
+      "B5C2N5-b244bf3c37"
+    ]
+  },
+  "status": "ok",
+  "error": null,
+  "wall_time_s": 78.375,
+  "host": "cenyj",
+  "created_at": "2026-11-24T04:09:39+00:00"
+}
